@@ -471,7 +471,7 @@ def train_new_data():
             ax.set_xlabel('Fold')
             ax.set_ylabel('Accuracy')
             ax.set_title('K-Fold Cross Validation Performance')
-            ax.set_ylim(-1, 1)
+            ax.set_ylim(0, 1)
             ax.grid(True)
 
             # Menampilkan plot di aplikasi Streamlit
