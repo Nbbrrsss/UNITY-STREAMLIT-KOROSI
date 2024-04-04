@@ -451,14 +451,23 @@ def train_new_data():
 
             kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
+            y_train_s = []
+            y_pred_s = []
+
             # Loop melalui setiap lipatan k-fold
             for train_index, val_index in kfold.split(x_normalisasi):
-                x_train, x_val = x_normalisasi[train_index], x_normalisasi[val_index]
-                y_train, y_val = y[train_index], y[val_index]
+                x_train_m, x_val = x_normalisasi[train_index], x_normalisasi[val_index]
+                y_train_m, y_val = y[train_index], y[val_index]
                 
-                model_new_training.fit(x_train, y_train)
-                y_pred = model_new_training.predict(x_val)
-            
+                model_new_training.fit(x_train_m, y_train_m)
+                y_pred_m = model_new_training.predict(x_val)
+
+                y_train_s.extend(y_train_m)
+                y_pred_s.extend(y_pred_m)
+
+            y_train = np.array(y_train_s)
+            y_pred = np.array(y_pred_s)
+
             # Define scoring metrics
             scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
