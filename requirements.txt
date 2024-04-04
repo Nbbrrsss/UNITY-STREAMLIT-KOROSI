@@ -9,3 +9,4 @@ tensorflow==2.15.0
 xgboost
 lightgbm
 catboost
+openpyxl
