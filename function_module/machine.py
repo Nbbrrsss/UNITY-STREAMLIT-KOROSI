@@ -462,8 +462,8 @@ def train_new_data():
                 model_new_training.fit(x_train_m, y_train_m)
                 y_pred_m = model_new_training.predict(x_val)
 
-                y_train_s.extend(y_train_m)
-                y_pred_s.extend(y_pred_m)
+                y_train_s[val_index] = y_train_m
+                y_pred_s[val_index] = y_pred_m
 
             y_train = np.array(y_train_s)
             y_pred = np.array(y_pred_s)
