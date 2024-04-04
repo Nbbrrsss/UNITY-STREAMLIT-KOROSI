@@ -453,7 +453,7 @@ def train_new_data():
 
             # List untuk menyimpan skor validasi setiap lipatan k-fold
             y_train = []
-            y_pred_list = []
+            y_pred = []
 
             # Loop melalui setiap lipatan k-fold
             for train_index, val_index in kfold.split(X):
@@ -461,10 +461,10 @@ def train_new_data():
                 y_train, y_val = y[train_index], y[val_index]
                 
                 model_new_training.fit(X_train, y_train)
-                y_pred = model_new_training.predict(x_val)
+                y_pred_m = model_new_training.predict(x_val)
 
                 y_train.extend(y_val)
-                y_pred_list.extend(y_pred)
+                y_pred.extend(y_pred_m)
             
             # Define scoring metrics
             scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
