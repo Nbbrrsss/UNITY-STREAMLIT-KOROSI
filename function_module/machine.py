@@ -456,7 +456,7 @@ def train_new_data():
             y_pred = []
 
             # Loop melalui setiap lipatan k-fold
-            for train_index, val_index in kfold.split(X):
+            for train_index, val_index in kfold.split(x_normalisasi):
                 x_train, x_val = x_normalisasi[train_index], x_normalisasi[val_index]
                 y_train, y_val = y[train_index], y[val_index]
                 
