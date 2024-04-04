@@ -460,7 +460,7 @@ def train_new_data():
                 x_train, x_val = x_normalisasi[train_index], x_normalisasi[val_index]
                 y_train, y_val = y[train_index], y[val_index]
                 
-                model_new_training.fit(X_train, y_train)
+                model_new_training.fit(x_train, y_train)
                 y_pred_m = model_new_training.predict(x_val)
 
                 y_train.extend(y_val)
