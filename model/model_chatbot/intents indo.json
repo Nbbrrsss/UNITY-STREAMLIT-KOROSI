@@ -1,0 +1,3811 @@
+{"intents": [
+  {
+      "tag": "greetings",
+      "patterns": [
+        "hello", 
+        "Hi",
+        "hello bot",
+        "Hi bot",
+        "Can you help me?"
+      ],
+      "responses": [
+        "Hello! Can I help you?", 
+        "Hi! How can I help you?", 
+        "Hi! How are you? Anything to ask?", 
+        "Hello! How can I help you?",
+        "Hi! How can I help you today?",
+        "Hi there! How can I help you?",
+        "Welcome! What can I do for you?"
+      ]
+    },
+    {
+      "tag": "notfound",
+      "patterns": [" ", " ", " "],
+      "responses": ["Mohon maaf saya tidak mengetahui, Coba cek kembali pertanyaan kamu atau kamu bisa tanya saya mengenai Korosi atau inhibitor korosi"]
+    },
+    {
+      "tag": "good_morning",
+      "patterns": ["Morning", "Good Morning"],
+      "responses": ["Good morning! How can I help you today?", "Morning! Anything to ask?"]
+    },
+    {
+      "tag": "good_afternoon",
+      "patterns": ["Afternoon", "Good Afternoon"],
+      "responses": ["Good Afternoon! How can I help you today?", "Afternoon! Anything to ask?"]
+    },
+    {
+      "tag": "good_evening",
+      "patterns": ["Evening", "Good evening"],
+      "responses": ["Good Evening! How can I help you today?", "Evening! Anything to ask?"]
+    },
+    {
+      "tag": "good_night",
+      "patterns": ["Night", "Good Night"],
+      "responses": ["Good Night! How can I help you today?", "Night! Anything to ask?"]
+    },
+    {
+      "tag": "introduction",
+      "patterns": ["What is your name?", "Who are you?", "May I know you?", "What's your name?", "What can you do?"],
+      "responses": [
+        "I am CorrosionShieldBot, an intelligent bot focused on providing information about corrosion prevention from expired drug compounds.",
+        "Hello! I am CorrosionShieldBot, ready to assist you with information about corrosion inhibitors and drug compounds.",
+        "I am CorrosionShieldBot. My name reflects my focus on protecting metals from corrosion and providing information about expired drug compounds."
+      ]
+    },
+    {
+      "tag": "definition_inhibitor",
+      "patterns": [
+        "What is an inhibitor?",
+        "Definition of inhibitor?",
+        "What is an inhibitor?",
+        "Explain inhibitor"
+      ],
+      "responses": [
+        "Inhibitor, in the context of chemistry, is a substance or chemical compound added to a system to decrease the rate of a chemical reaction or prevent a particular reaction from occurring.",
+        "The definition of an inhibitor is a substance that inhibits or reduces the activity or effect of a biological or chemical process.",
+        "The basic concept of an inhibitor involves its ability to slow down or inhibit a process, such as a chemical reaction or biological activity."
+      ]
+    },
+    {
+      "tag": "types_of_inhibitor",
+      "patterns": [
+        "What are the types of inhibitors?",
+        "List various types of inhibitors?",
+        "List different types of inhibitors?",
+        "What are the diverse types of inhibitors?"
+      ],
+      "responses": [
+        "Inhibitors come in various types used in preventing metal corrosion. Generally, there are several main categories of inhibitors commonly used: Inorganic Inhibitors, Organic Inhibitors, Volatile Inhibitors, Solid Metal Inhibitors, Thin Film Inhibitors, Alternative Variants.",
+        "Inhibitors in preventing metal corrosion have various variations widely used. Generally, there are several core categories of inhibitors commonly used: Inorganic Inhibitors, Organic Inhibitors, Volatile Inhibitors, Solid Metal Inhibitors, and Thin Film Inhibitors, as well as Alternative Options.",
+        "In the effort to prevent metal corrosion, there are many types of inhibitors used. In general context, there are several core groups of inhibitors often utilized such as: Inorganic Inhibitors, Organic Inhibitors, Volatile Inhibitors, Solid Metal Inhibitors, and Thin Film Inhibitors along with Various Alternative Options."
+      ]
+    },
+    {
+      "tag": "inhibitor_mechanism",
+      "patterns": [
+        "Inhibitor mechanism?",
+        "How does an inhibitor work?",
+        "Inhibitor working mechanism?"
+      ],
+      "responses": [
+        "Inhibitors work by forming a protective layer or interfering with the chemical reactions that cause corrosion on metals. They can form thin layers to protect the metal or alter the involved chemical processes, preventing damage from corrosion.",
+        "Inhibitors play a role in protecting metals from corrosion by forming a protective layer or interfering with chemical processes that can damage them. They can form thin coatings that prevent direct contact of the metal with corrosive substances or alter the way these substances react, thus protecting the metal from corrosion damage.",
+        "In the prevention of metal corrosion, inhibitors play a crucial role by forming a protective layer or inhibiting damaging chemical reactions. Inhibitors can form a shield on the metal or alter the interactions of chemical substances that cause damage, thus protecting the metal from the adverse effects of corrosion."
+      ]
+    },
+    {
+      "tag": "definition_corrosion",
+      "patterns": [
+        "What is corrosion?",
+        "Definition of corrosion?",
+        "Explain the concept of corrosion?",
+        "Corrosion is?"
+      ],
+      "responses": [
+        "Corrosion is a natural process in which metals undergo damage or degradation due to chemical reactions with their environment.",
+        "The definition of corrosion is the damage or degradation of metals due to chemical reactions with their environment, particularly with water and oxygen.",
+        "The basic concept of corrosion involves the occurrence of chemical reactions between metals and their environment, resulting in compounds that weaken the metal's structure."
+      ]
+    },
+    {
+      "tag": "corrosion_process",
+      "patterns": [
+        "What is the corrosion process?",
+        "Explain corrosion process?",
+        "How does corrosion occur?"
+      ],
+      "responses": [
+        "The corrosion process involves the deterioration of metals due to chemical reactions with their environment. Typically, corrosion occurs when metals are exposed to substances such as water, oxygen, acids, or salts. The process can take various forms, including rusting in iron or steel, tarnishing in silver, or pitting in aluminum. Corrosion can weaken metals, leading to structural damage and potentially compromising their functionality."
+      ]
+    },
+    {
+      "tag": "corrosion_impact",
+      "patterns": [
+        "What are the impacts of corrosion?",
+        "Explain the effects of corrosion?",
+        "How does corrosion affect?"
+      ],
+      "responses": [
+        "The impacts of corrosion can be significant and wide-ranging. Corrosion can lead to structural damage, reducing the integrity and lifespan of metal components. In industrial settings, corrosion can result in equipment failure, production downtime, and increased maintenance costs. Additionally, corrosion can compromise safety, particularly in critical infrastructure such as bridges, pipelines, and aircraft. Economically, corrosion costs billions of dollars annually due to repair and replacement expenses. Moreover, corrosion may also have environmental consequences, such as contamination of soil and water sources."
+      ]
+    },  
+    {
+      "tag": "corrosion_prevention",
+      "patterns": [
+        "What is corrosion prevention?",
+        "How to prevent corrosion?",
+        "Please explain about corrosion prevention."
+      ],
+      "responses": [
+        "Corrosion prevention is a series of steps or actions taken to inhibit or prevent corrosion on metals. Some methods of corrosion prevention include: Coating, Cathodic Protection, Using Corrosion Inhibitors, Material Selection. Corrosion prevention is important to maintain the structural integrity and aesthetics of metals, as well as to enhance the lifespan of equipment and infrastructure made from metal."
+      ]
+    },    
+    {
+      "tag": "definition_corrosion_inhibitor",
+      "patterns": [
+        "What is a corrosion inhibitor?", 
+        "Definition of corrosion inhibitor?", 
+        "Explain the concept of corrosion inhibitor?",
+        "Corrosion inhibitor is?"
+      ],
+      "responses": [
+        "A corrosion inhibitor is a chemical compound or substance added to a corrosive environment or metal surface to reduce or prevent corrosion. Corrosion inhibitors aim to protect metals from damage caused by chemical reactions with corrosive substances in their surroundings.",
+        "A corrosion inhibitor is a substance inserted into an environment prone to cause corrosion or onto the surface of metal to prevent or reduce damage resulting from chemical reactions with corrosive substances. Its main purpose is to protect the metal from damage caused by corrosion."
+      ]
+    },
+    {
+      "tag": "definition_drug",
+      "patterns": [
+        "What is a drug?",
+        "Definition of drug",
+        "Explain the concept of drug"
+      ],
+      "responses": [
+        "A drug is a chemical substance used to prevent, reduce, or treat diseases or symptoms of diseases in humans or animals.",
+        "The definition of a drug is a chemical compound or substance that has pharmacological effects and is used for medical purposes.",
+        "The basic concept of a drug involves its ability to influence biological systems in a specific way to achieve the desired effect."
+      ]
+    },    
+    {
+      "tag": "drug_function",
+      "patterns": [
+        "What is the function of a drug?",
+        "Explain the function of drug",
+        "Purpose of drug",
+        "What do drug do?"
+      ],
+      "responses": [
+        "The functions of medicine include treating disease, alleviating symptoms, preventing disease, and restoring or maintaining health."
+      ]
+    },
+    {
+      "tag": "how_drug_work",
+      "patterns": [
+        "How do drug work?",
+        "Explain how drug function",
+        "Mechanism of action of drug",
+        "What is the working mechanism of drug?"
+      ],
+      "responses": [
+        "The mode of action of a drug varies depending on the type, but generally involves interaction with a biological target or biochemical pathway to produce the desired response."
+      ]
+    },
+    {
+      "tag": "definition_expiry",
+      "patterns": [
+        "What is expiry?",
+        "Definition of expiry",
+        "Explain the concept of expiry"
+      ],
+      "responses": [
+        "Expiry refers to the last valid period of a product, during which the product is considered no longer safe or effective to use.",
+        "The definition of expiry is the date or period of time when a product, such as medicine or food, is no longer considered beneficial or safe for consumption.",
+        "The basic concept of expiry involves determining the time limit at which a product is deemed unreliable or no longer beneficial."
+      ]
+    },
+    {
+      "tag": "reasons_expiry",
+      "patterns": [
+        "Why do drugs expire?",
+        "What causes medications to expire?",
+        "Reasons for drug expiry"
+      ],
+      "responses": [
+        "Drugs can expire due to various factors, including chemical degradation, loss of potency, and changes in physical properties over time. Exposure to light, moisture, air, and temperature fluctuations can accelerate degradation processes in medications, leading to decreased effectiveness or safety concerns. Moreover, prolonged storage or improper handling can also contribute to drug expiry by compromising their integrity and quality."
+      ]
+    },
+    {
+      "tag": "definition_expired_drug",
+      "patterns": [
+        "What is an expired drug?",
+        "Definition of expired drug",
+        "Explain the concept of expired drug",
+        "Expired drug is?"
+      ],
+      "responses": [
+        "An expired drug is a medication that has passed the expiration date set by the manufacturer.",
+        "The definition of an expired drug is a medication that is no longer considered safe or effective for consumption after passing the expiration date.",
+        "The concept of an expired drug involves determining the time limit at which the medication is deemed unable to provide the desired benefits or may even potentially cause health issues."
+      ]
+    },
+    {
+      "tag": "impact_of_consuming_expired_drugs",
+      "patterns": [
+        "What are the consequences of consuming expired drugs?",
+        "Effects of using expired medications",
+        "Impact of taking expired drugs"
+      ],
+      "responses": [
+        "Consuming expired drugs can have various adverse effects on health. Expired medications may have degraded in potency or undergone chemical changes, rendering them less effective or even harmful. Ingesting expired drugs may fail to treat the intended condition, leading to prolonged illness or worsening symptoms."
+      ]
+    },  
+    {
+      "tag": "expired_drug_corrosion_inhibitor",
+      "patterns": [
+        "How can expired drugs become corrosion inhibitors?",
+        "Describe how expired drugs are involved in corrosion prevention",
+        "The relationship between expired drugs and protecting metals from corrosion"
+      ],
+      "responses": [
+        "In this scenario, expired drugs may contain compounds or chemicals that unexpectedly exhibit protective properties against corrosion on metals. When applied to the metal surface, these compounds form a protective layer that prevents corrosion.",
+        "Expired drugs may contain ingredients that miraculously or unexpectedly interact with metals to prevent corrosion. The expired drug's health properties could provide an additional benefit for the protected metal."
+      ]
+    },
+    {
+      "tag": "definition_acid",
+      "patterns": [
+        "What is an acid?",
+        "Acid is?",
+        "What is the definition of acid?",
+        "What is the meaning of acid?",
+        "Explain the definition of proton?"
+        
+      ],
+      "responses": [
+        "An acid can be described as a chemical substance that has a sour taste, can change the color of acid-base indicators, conducts electricity, and reacts with bases to form salts. Acids play an important role in everyday life, including in industry, agriculture, food, and the human body.",
+        "An acid is a chemical substance that possesses unique properties, including a sour taste, the ability to change the color of acid-base indicators, conductivity of electricity, and the ability to react with bases to form salts. These unique properties make acids essential in human life."
+      ]
+    },
+    {
+      "tag": "definition_base",
+      "patterns": [
+        "What is a base?",
+        "Base is?",
+        "What does base mean?",
+        "Explain the definition of base?"
+      ],
+      "responses": [
+        "A base can be described as a chemical substance that has a bitter taste, can change the color of acid-base indicators to blue, conducts electricity, and reacts with acids to form salts. Bases play an important role in everyday life, including in industry, agriculture, food, and the human body.",
+        "A base is a chemical substance that can give a bitter taste, change the color of acid-base indicators to blue, conduct electricity, and react with acids to form salts and water. These properties are due to the base's ability to accept hydrogen ions (H+) from other substances."
+      ]
+    },
+    {
+      "tag": "definition_electron",
+      "patterns": [
+        "What is an electron?",
+        "Electron is?",
+        "Explain what an electron is",
+        "What is meant by electron"
+      ],
+      "responses": [
+        "An electron is one of the three fundamental particles that make up an atom, along with protons and neutrons. Electrons surround the atom's nucleus in orbits. The number of electrons an atom has is equal to its number of protons.",
+        "An electron is one of the fundamental particles that form an atom and has a negative charge. Electrons orbit around the atom's nucleus, which consists of protons (positively charged) and neutrons (neutral). The atomic structure with electrons orbiting around the nucleus is known as the Bohr atomic model."
+      ]
+    },
+    {
+      "tag": "definition_proton",
+      "patterns": [
+        "What is a proton?",
+        "Proton is?",
+        "Definition of proton",
+        "What does proton mean",
+        "Explain the definition of proton?"
+      ],
+      "responses": [
+        "A proton is a subatomic particle that carries a positive charge and is one of the constituents of an atom's nucleus. The number of protons in an atom's nucleus determines the type of chemical element it forms.",
+        "A proton is a positively charged particle located within the nucleus of an atom. The varying number of protons in the nucleus of an atom is what distinguishes different elements in their properties and behaviors.",
+        "In chemistry, a proton is a positively charged particle found in the nucleus of an atom. The chemical properties of an element are heavily influenced by the number of protons in its nucleus."
+      ]
+    },
+    {
+      "tag": "definition_neutron",
+      "patterns": [
+        "What is a neutron?",
+        "Neutron is",
+        "Explain what a neutron is",
+        "Definition of neutron",
+        "What does proton neutron"
+      ],
+      "responses": [
+        "A neutron is a neutral subatomic particle that, together with protons, forms the nucleus of an atom. The primary role of neutrons is to maintain the stability of the atomic nucleus through interactions via the strong nuclear force.",
+        "A neutron is one of the components of an atomic nucleus that influences its stability. Together with protons, neutrons form the nucleus of an atom.",
+        "Within an atomic nucleus, a neutron is a neutral particle that helps maintain nucleus stability alongside protons through interactions via the strong nuclear force."
+      ]
+    },    
+    {
+      "tag": "definition_ionization",
+      "patterns": [
+        "What is ionization?",
+        "What is the definition of ionization?",
+        "What does ionization mean?",
+        "explain the definition of ionization?",
+        "Ionization is?"
+      ],
+      "responses": [
+        "Ionization is the process of changing an atom or molecule into an ion by adding or removing charged particles such as electrons or others. The process of ionization into positive or negative charges is slightly different.",
+        "Ionization is the process in which an atom or molecule gains or loses one or more electrons to form ions. In this process, the atom or molecule becomes electrically charged due to the loss or gain of electrons. The resulting ions can be positive ions (called cations) if the atom loses electrons, or negative ions (called anions) if the atom gains electrons."
+      ]
+    },
+    {
+      "tag": "definition_ionization_energy",
+      "patterns": [
+        "What is the definition of ionization energy?",
+        "What is ionization energy?",
+        "Explain ionization energy?",
+        "Ionization energy is?"
+      ],
+      "responses": [
+        "Ionization energy is the energy required to remove an electron from an atom or molecule. The first ionization energy is the energy required to remove the first electron from a neutral atom or molecule. The second ionization energy is the energy required to remove the second electron from an atom or molecule that has already lost one electron, and so on.",
+        "Ionization energy is the energy required to 'remove' an electron from an atom or molecule. The first ionization energy is the energy required to 'remove' the first electron from a neutral atom or molecule. The second ionization energy is the energy required to 'remove' the second electron from an atom or molecule that has already lost one electron, and so on."
+      ]
+    },    
+    {
+      "tag": "definition_atom",
+      "patterns": [
+        "What is an atom?",
+        "Atom is?",
+        "Definition of atom?",
+        "What does atom mean?",
+        "Explain about atom?",
+        "Atom explanation"
+      ],
+      "responses": [
+        "An atom is the basic unit of matter that cannot be further divided without losing its chemical properties. It consists of a dense atomic nucleus containing positively charged protons and neutral neutrons, as well as electrons orbiting the nucleus.",
+        "An atom is the smallest unit of an element that still retains its chemical properties. It consists of an atomic nucleus containing protons and neutrons, as well as electrons that orbit around the nucleus.",
+        "An atom is the fundamental unit of matter consisting of a dense nucleus containing positively charged protons and neutral neutrons. Negatively charged electrons move in orbitals around the atomic nucleus."
+      ]
+    },    
+    {
+      "tag": "definition_atomic_structure",
+      "patterns": [
+        "What is atomic structure?",
+        "Atomic structure is?",
+        "Definition of atomic structure",
+        "What does atomic structure mean?",
+        "Explain about atomic structure?"
+      ],
+      "responses": [
+        "Atomic structure refers to the arrangement of the basic components of an atom, including the dense atomic nucleus consisting of positively charged protons and neutral neutrons. Electrons, negatively charged, move in orbitals around the nucleus in different energy levels.",
+        "Atomic structure is the configuration of the components of an atom, namely the atomic nucleus containing protons and neutrons, as well as electrons orbiting the nucleus in orbitals with different energy levels.",
+        "The definition of atomic structure includes the layout of the components of an atom, where the dense atomic nucleus consists of positively charged protons and neutral neutrons, while electrons move in orbitals around the nucleus."
+      ]
+    },    
+    {
+      "tag": "atomic_model",
+      "patterns": [
+        "What is an atomic model?",
+        "Atomic model is?",
+        "Definition of atomic model",
+        "Explain about atomic model?"
+      ],
+      "responses": [
+        "An atomic model is a representation or theoretical concept used to explain the behavior, structure, and properties of atoms based on scientific research, experiments, and theories in the fields of physics and chemistry.",
+        "An atomic model is a visual or theoretical explanation of the arrangement, behavior, and interaction between the main components of an atom, such as protons, neutrons, and electrons. This model evolves over time as science advances.",
+        "An atomic model is a visual or theoretical concept used to understand the structure of atoms and the behavior of particles within them. Various models have been developed over time to attempt to explain the properties and behaviors of atoms under various conditions."
+      ]
+    },
+    {
+      "tag": "atomic_properties",
+      "patterns": [
+        "What are the properties of atoms?",
+        "What properties do atoms have?",
+        "List the properties of atoms."
+      ],
+      "responses": [
+        "The properties of atoms include size, mass, charge, and the distribution of electrons within the atom.",
+        "Atoms have very small sizes, with radii ranging from about 0.1 nanometers to several angstroms (Å).",
+        "Atomic mass is related to the number of protons and neutrons in the atomic nucleus, while electrons have a much smaller mass compared to protons and neutrons."
+      ]
+    },
+    {
+      "tag": "periodic_table_definition",
+      "patterns": [
+        "What is the periodic table?",
+        "Periodic table is?",
+        "Definition of the periodic table of elements?",
+        "What is meant by the periodic table?",
+        "Explain the periodic table?"
+      ],
+      "responses": [
+        "The periodic table is an arrangement of chemical elements organized systematically based on the number of protons in the atomic nucleus. It helps in understanding the regular patterns of chemical properties among elements.",
+        "The periodic table is a layout of chemical elements arranged in order of increasing atomic number, allowing us to observe recurring patterns in the chemical properties among these elements."
+      ]
+    },    
+    {
+      "tag": "naming_compounds_definition",
+      "patterns": [
+        "What is naming compounds?",
+        "Naming compounds is?",
+        "Definition of chemical compound naming?",
+        "What is meant by naming compounds?",
+        "Explain about naming compounds"
+      ],
+      "responses": [
+        "Naming compounds is a set of rules used in chemistry to name chemical compounds based on the composition of elements that form the compound.",
+        "Chemical compound naming is a set of rules used to name chemical compounds, which clarify the composition and chemical structure of the compound.",
+        "The names of chemical compounds are created based on the composition of their constituent elements. These names reflect the structure and chemical composition of the compound."
+      ]
+    },    
+    {
+      "tag": "compound_naming_systems",
+      "patterns": [
+        "How many types of chemical compound naming systems are there?",
+        "How is the naming of chemical compounds organized?",
+        "What are the types of chemical compound naming?",
+        "Which naming system is used in chemistry?"
+      ],
+      "responses": [
+        "There are two main types of chemical compound naming systems: the IUPAC naming system for organic compounds and specific rules for inorganic compounds. IUPAC has detailed rules for naming organic compounds based on molecular structure, while inorganic compounds follow specific rules depending on the type of compound, such as ionic compounds or binary compounds.",
+        "The naming system for chemical compounds is usually divided into two main categories: the IUPAC naming for organic compounds which follows specific rules based on their molecular structure, and specific rules used to name inorganic compounds. IUPAC organic naming often relies on carbon chains, functional groups, and isomerism."
+      ]
+    },
+    {
+      "tag": "inorganic_compound_naming",
+      "patterns": [
+        "How are inorganic compound names organized?",
+        "Naming rules for inorganic compounds?",
+        "Explain the naming of inorganic compounds?",
+        "What is meant by the naming of inorganic compounds?"
+      ],
+      "responses": [
+        "The naming of inorganic compounds follows specific rules depending on the type of compound. Some examples of naming systems for inorganic compounds include naming of ionic compounds, binary compounds, covalent compounds, and complex compounds. Each type of compound has different naming rules, such as the use of specific prefixes and suffixes, oxidation numbers, and identification of its chemical structure.",
+        "The naming of inorganic compounds often follows specific rules according to their type. For example, in ionic compounds, the compound name is formed by writing the name of the cation followed by the name of the anion. For binary compounds, the use of prefixes such as 'hydro-', 'oxide-', 'sulfide-', and others is often applied to name compounds based on their components."
+      ]
+    },    
+    {
+      "tag": "organic_compound_naming",
+      "patterns": [
+        "What is meant by the naming of organic compounds?",
+        "How are organic compound names organized?",
+        "Naming rules for organic compounds?",
+        "Explain the naming of organic compounds?"
+      ],
+      "responses": [
+        "Organic compound naming refers to the chemical naming system for compounds primarily consisting of carbon atoms. IUPAC is the body that regulates and develops the naming rules for organic compounds. For example, in alkene compounds, naming is based on the lowest carbon number sequence on the carbon chain forming the double bond.",
+        "The naming of organic compounds follows rules established by IUPAC, which identifies compounds based on carbon chains, double bonds, and substituents attached to the main chain. For example, compounds with double bonds are identified with the suffix '-ene', such as ethene for compounds with one double bond."
+      ]
+    },
+    {
+      "tag": "chemical_reaction_equation",
+      "patterns": [
+        "What is a chemical reaction equation?",
+        "Can I have an example of a chemical reaction equation?",
+        "How do you formulate a chemical reaction equation?",
+        "Definition of a chemical reaction equation?"
+      ],
+      "responses": [
+        "A chemical reaction equation is a statement written with chemical formulas that provides information about the identities and quantities of substances involved in a chemical or physical change. A simple example is the combustion of methane: CH4 + 2O2 -> CO2 + 2H2O.",
+        "A chemical reaction equation is a representation using chemical formulas to present the changes that occur in a chemical reaction. Its purpose is to show the reactant substances that react and the products produced. Every reaction adheres to the laws of conservation of mass and atoms. A simple example is the combustion of methane: CH4 + 2O2 -> CO2 + 2H2O."
+      ]
+    },    
+    {
+      "tag": "fundamental_chemical_laws",
+      "patterns": [
+        "What is a fundamental chemical law?",
+        "What does fundamental chemical law mean?",
+        "Can you explain the fundamental chemical laws?",
+        "What is the law of conservation of mass?",
+        "How does the law of definite proportions work?"
+      ],
+      "responses": [
+        "Fundamental chemical laws are a set of principles that underlie the behavior of chemical substances. Some of these include: The laws include the Law of Conservation of Mass, Law of Definite Proportions, Dalton's Law, Gay-Lussac's Law, and Avogadro's Hypothesis.",
+        "In chemistry, there are several fundamental laws that underlie modern chemical principles. These laws include the Law of Conservation of Mass, Law of Definite Proportions, Dalton's Law, Gay-Lussac's Law, and Avogadro's Hypothesis."
+      ]
+    },    
+    {
+      "tag": "law_of_conservation_of_mass",
+      "patterns": [
+        "What is the Law of Conservation of Mass?",
+        "What does the Law of Conservation of Mass mean?",
+        "Can you define the Law of Conservation of Mass?",
+        "Explain the Law of Conservation of Mass"
+      ],
+      "responses": [
+        "The Law of Conservation of Mass, also known as Lavoisier's Law, states that in a closed system, the total mass cannot be created or destroyed during a chemical reaction. The mass of all reactants involved in a reaction equals the mass of the products produced.",
+        "The Law of Conservation of Mass, or Lavoisier's Law, states that in a chemical reaction, the total mass of the reacting substances is equal to the total mass of the products formed. Mass is neither created nor destroyed, only transformed or redistributed in a chemical reaction."
+      ]
+    },    
+    {
+      "tag": "law_of_definite_proportions",
+      "patterns": [
+        "What is the Law of Definite Proportions?",
+        "What does the Law of Definite Proportions mean?",
+        "Can you define the Law of Definite Proportions?",
+        "Explain the Law of Definite Proportions"
+      ],
+      "responses": [
+        "The Law of Definite Proportions, also known as Proust's Law, states that in a chemical compound, the elements are always combined in fixed ratios by mass, regardless of the amount of the compound formed or decomposed.",
+        "The Law of Definite Proportions, or Proust's Law, asserts that in a chemical compound, the ratio of masses of the elements forming the compound is always constant, irrespective of the quantity of the compound formed or decomposed."
+      ]
+    },
+    {
+      "tag": "law_of_multiple_proportions",
+      "patterns": [
+        "What is the Law of Multiple Proportions?",
+        "What does the Law of Multiple Proportions mean?",
+        "Can you define the Law of Multiple Proportions?",
+        "Explain the Law of Multiple Proportions"
+      ],
+      "responses": [
+        "The Law of Multiple Proportions, proposed by John Dalton, states that if two elements form more than one compound, the masses of one element that combine with a fixed mass of the other element are in ratios of small whole numbers.",
+        "The Law of Multiple Proportions, also known as Dalton's Law, as described by John Dalton, states that the masses of one element that combine with a fixed mass of another element to form different compounds are in ratios of small whole numbers."
+      ]
+    },
+    {
+      "tag": "law_of_combining_volumes",
+      "patterns": [
+        "What is the Law of Combining Volumes?",
+        "What does the Law of Combining Volumes mean?",
+        "Can you define the Law of Combining Volumes?",
+        "Explain the Law of Combining Volumes",
+        "Who discovered the Law of Combining Volumes?"
+      ],
+      "responses": [
+        "The Law of Combining Volumes, also known as Gay-Lussac's Law, states that at constant temperature and pressure, the volumes of gases involved in a chemical reaction are in simple integer ratios. This means that the volumes of these gases can be expressed in simple ratio of numbers.",
+        "The Law of Combining Volumes, or Gay-Lussac's Law, was discovered by the French scientist Joseph Louis Gay-Lussac in the early 19th century. This law states that the volumes of gases involved in a chemical reaction are in simple volumetric ratios if the temperature and pressure are kept constant."
+      ]
+    },    
+    {
+      "tag": "avogadro_hypothesis",
+      "patterns": [
+        "What are the consequences of Avogadro's Law?",
+        "How is Avogadro's Hypothesis related to gases?",
+        "Why is Avogadro's Law important in chemistry?"
+      ],
+      "responses": [
+        "The consequence of Avogadro's Law is that gases with the same volume at the same pressure and temperature also have the same number of particles, which can be measured using molecules or moles.",
+        "Avogadro's Hypothesis explains that, under the same conditions, the same volume of different gases will contain the same number of particles, which is important in measuring the amount of substance in chemistry.",
+        "Avogadro's Law is important in chemistry because it provides the basis for the concept of molecules and moles, allowing for consistent and standard measurement in comparing the number of particles in different gases."
+      ]
+    },    
+    {
+      "tag": "stoichiometry",
+      "patterns": [
+        "What is stoichiometry?",
+        "What does stoichiometry mean?",
+        "Define stoichiometry",
+        "Explanation of stoichiometry"
+      ],
+      "responses": [
+        "Stoichiometry is a branch of chemistry that deals with the quantitative relationships between reactants and products in a chemical reaction.",
+        "Stoichiometry is applied to calculate the relative amounts of reactants and products in a reaction, determining the mole, mass, or volume ratios."
+      ]
+    },    
+    {
+      "tag": "hydrogen_bonding",
+      "patterns": [
+        "What is hydrogen bonding?",
+        "What does hydrogen bonding mean?",
+        "Define hydrogen bonding",
+        "Explanation of hydrogen bonding"
+      ],
+      "responses": [
+        "Hydrogen bonding is an attractive force between a hydrogen atom bonded to an atom with high electronegativity such as oxygen, nitrogen, or fluorine. This occurs due to the difference in electronegativity between the hydrogen atom and the bonded atom, creating polarity and electrostatic interactions.",
+        "Hydrogen bonding is the interaction between a hydrogen atom and an atom of oxygen, nitrogen, or fluorine that has high electronegativity. It occurs when the hydrogen atom bonded to a sufficiently electronegative atom attracts electrons, creating a tendency for polarity."
+      ]
+    },    
+    {
+      "tag": "electrolyte_solution",
+      "patterns": [
+        "What is an electrolyte solution?",
+        "Define electrolyte solution",
+        "Explanation of electrolyte solution",
+        "What does electrolyte solution mean?"
+      ],
+      "responses": [
+        "An electrolyte solution is a solution that contains ions capable of conducting electricity. Typically, these solutions consist of ionic compounds dissolved in a solvent such as water, separating into positive and negative ions that contribute to the electrical conductivity of the solution.",
+        "An electrolyte solution is a solution that contains charged ions capable of conducting electricity. It forms when ionic compounds or compounds soluble in water dissociate into ions that can move freely."
+      ]
+    },    
+    {
+      "tag": "non_electrolyte_solution",
+      "patterns": [
+        "What is a non-electrolyte?",
+        "Define non-electrolyte",
+        "Explanation of non-electrolyte",
+        "What does non-electrolyte mean?"
+      ],
+      "responses": [
+        "A non-electrolyte solution is a solution that does not contain charged ions capable of conducting electricity. Typically, polar covalent compounds or non-polar compounds soluble in water form non-electrolyte solutions.",
+        "A non-electrolyte solution is a solution that does not contain ions capable of conducting electricity. It usually consists of polar covalent compounds or non-polar compounds that do not ionize in water."
+      ]
+    },
+    {
+      "tag": "redox_reaction",
+      "patterns": [
+        "What is a redox reaction?",
+        "Define redox reaction",
+        "Explanation of redox reaction",
+        "What does redox reaction mean?"
+      ],
+      "responses": [
+        "A redox reaction is a type of chemical reaction that involves the transfer of electrons between chemical species. It consists of oxidation reactions (loss of electrons) and reduction reactions (gain of electrons).",
+        "A redox reaction is a chemical reaction in which there is a transfer of electrons between chemical species. Simultaneously, there is a substance that loses electrons (oxidized) and a substance that gains electrons (reduced)."
+      ]
+    },    
+    {
+      "tag": "hydrocarbon_compounds",
+      "patterns": [
+        "What is a hydrocarbon compound?",
+        "Define hydrocarbon compound",
+        "Explanation of hydrocarbon compound",
+        "What does hydrocarbon compound mean?"
+      ],
+      "responses": [
+        "A hydrocarbon compound is a chemical compound composed of carbon and hydrogen atoms. These molecules form carbon chain structures, which can be straight chains, branched, or cyclic.",
+        "A hydrocarbon compound is a group of organic compounds consisting of carbon and hydrogen atoms. Examples include methane, ethane, propane, butane, various types of petroleum, and other aliphatic compounds.",
+        "Hydrocarbons are chemical compounds composed only of carbon and hydrogen atoms. Examples include methane (CH4), ethane (C2H6), and gasoline, which is a mixture of hydrocarbons."
+      ]
+    },
+    {
+      "tag": "caffeine_definition",
+      "patterns": [
+        "What is caffeine?",
+        "Define caffeine",
+        "Can you explain caffeine?",
+        "What does caffeine mean?"
+      ],
+      "responses": [
+        "Caffeine is a substance that naturally occurs in more than 60 plants, but is most commonly found in coffee, tea, and cacao. Caffeine works by stimulating (increasing activity in) the brain and nervous system, while also boosting the circulation of hormones cortisol and adrenaline in the body."
+      ]
+    },    
+    {
+      "tag": "acenocoumarol_definition",
+      "patterns": [
+        "What is Acenocoumarol?",
+        "Define Acenocoumarol",
+        "Can you explain Acenocoumarol?",
+        "What does Acenocoumarol mean?"
+      ],
+      "responses": [
+        "Acenocoumarol is an anticoagulant medicine used to prevent blood clotting. It belongs to a group of drugs called vitamin K antagonists and is used to treat or prevent unwanted blood clotting, such as deep vein thrombosis, pulmonary embolism, or stroke due to blood clots.",
+        "Acenocoumarol medication works by inhibiting the activity of vitamin K needed for the formation of blood clotting factors, helping to prevent the formation of blood clots that can block blood vessels."
+      ]
+    },    
+    {
+      "tag": "acetaminophen_definition",
+      "patterns": [
+        "What is Acetaminophen?",
+        "Define Acetaminophen",
+        "Can you explain Acetaminophen?",
+        "What does Acetaminophen mean?"
+      ],
+      "responses": [
+        "Acetaminophen, also known as paracetamol, is a common pain reliever and fever reducer. It works by reducing the production of chemicals in the body that cause pain and fever.",
+        "Acetaminophen, also known as paracetamol, is an analgesic or pain reliever medication. It can be found in various forms such as capsules, liquids, drops, tablets, and even used in intravenous fluids. Additionally, it is an over-the-counter medication available at pharmacies."
+      ]
+    },
+    {
+      "tag": "acetazolamide_definition",
+      "patterns": [
+        "What is Acetazolamide?",
+        "Define Acetazolamide",
+        "Can you explain Acetazolamide?",
+        "What does Acetazolamide mean?"
+      ],
+      "responses": [
+        "Acetazolamide is a medication classified as a diuretic, which is used to reduce excess fluid in the body by increasing urine production. Additionally, it can be used to lower pressure inside the eye in certain medical conditions.",
+        "Acetazolamide is a medication used to treat glaucoma, epilepsy, or altitude sickness. It can also be used to alleviate fluid buildup (edema) in patients with heart failure."
+      ]
+    },
+    {
+      "tag": "acetic_acid_definition",
+      "patterns": [
+        "What is Acetic Acid?",
+        "Define Acetic Acid",
+        "Can you explain Acetic Acid?",
+        "What does Acetic Acid mean?"
+      ],
+      "responses": [
+        "Acetic Acid, also known as Ethanoic Acid, is an antibiotic that can be used to treat infections caused by bacteria or fungi. There is also acetic acid otic specifically for the ears and used to treat infections in the ear canal. However, this medication will not treat inner ear infections (also called otitis media)."
+      ]
+    },
+    {
+      "tag": "acepromazine_definition",
+      "patterns": [
+        "What is Acepromazine?",
+        "Define Acepromazine",
+        "Can you explain Acepromazine?",
+        "What does Acepromazine mean?"
+      ],
+      "responses": [
+        "Acepromazine is a medication belonging to the phenothiazine group, commonly used as a tranquilizer, antiemetic, and anxiolytic in animals, particularly in pets such as dogs and cats.",
+        "Acepromazine is a medication that can calm and reduce nausea in animals, especially dogs and cats. This medication belongs to the phenothiazine group."
+      ]
+    },    
+    {
+      "tag": "acetylmethadol_definition",
+      "patterns": [
+        "What is Acetylmethadol?",
+        "Define Acetylmethadol",
+        "Can you explain Acetylmethadol?",
+        "What does Acetylmethadol mean?"
+      ],
+      "responses": [
+        "Acetylmethadol, also known as LAAM (Levo-Alpha-Acetyl-Methadol), is an opioid medication that was previously used for the treatment of opioid dependence. It works similarly to other opioid medications, helping to reduce cravings for other opioids and alleviate withdrawal symptoms."
+      ]
+    },
+    {
+      "tag": "alphameprodine_definition",
+      "patterns": [
+        "What is Alphameprodine?",
+        "Define Alphameprodine",
+        "Can you explain Alphameprodine?",
+        "What does Alphameprodine mean?"
+      ],
+      "responses": [
+        "Alphameprodine is a narcotic or opioid medication that has been withdrawn from circulation in several countries due to its side effects and potential for addiction. Its use should only be done based on a doctor's prescription, and information regarding dosage and usage should be obtained from reliable medical sources."
+      ]
+    },
+    {
+      "tag": "alphaprodine_definition",
+      "patterns": [
+        "What is Alphaprodine?",
+        "Define Alphaprodine",
+        "Can you explain Alphaprodine?",
+        "What does Alphaprodine mean?"
+      ],
+      "responses": [
+        "Alphaprodine is a narcotic analgesic medication classified as an opioid or semi-synthetic opioid. It is intended to relieve moderate to severe pain. The use of Alphaprodine needs to be closely monitored due to its potential for addiction and serious side effects. Further information about the use of Alphaprodine should be obtained from a doctor who can provide more accurate and medically specific information."
+      ]
+    },    
+    {
+      "tag": "alprenolol_definition",
+      "patterns": [
+        "What is Alprenolol?",
+        "Define Alprenolol",
+        "Can you explain Alprenolol?",
+        "What does Alprenolol mean?"
+      ],
+      "responses": [
+        "Alprenolol is a beta-blocker medication used to treat high blood pressure, heart rhythm disorders, and other cardiovascular conditions. It works by blocking the effects of epinephrine on beta receptors in the heart and blood vessels, helping to lower blood pressure and reduce the workload on the heart."
+      ]
+    },
+    {
+      "tag": "amantadine_definition",
+      "patterns": [
+        "What is Amantadine?",
+        "Define Amantadine",
+        "Can you explain Amantadine?",
+        "What does Amantadine mean?"
+      ],
+      "responses": [
+        "Amantadine is a medication that can be used as an antiviral and antiparkinsonian agent. It is indicated for several conditions such as the treatment and therapy of Parkinson's disease and certain types of influenza A."
+      ]
+    },
+    {
+      "tag": "aminobenzoic_acid_definition",
+      "patterns": [
+        "What is Aminobenzoic acid?",
+        "Define Aminobenzoic acid",
+        "Can you explain Aminobenzoic acid?",
+        "What does Aminobenzoic acid mean?"
+      ],
+      "responses": [
+        "Aminobenzoic acid is a member of the complex of B vitamins. This medication is used as a skin protector against the harmful effects of sunlight such as sunburn and premature aging (such as wrinkled, rough skin)."
+      ]
+    },    
+    {
+      "tag": "aminocaproic_acid_definition",
+      "patterns": [
+        "What is Aminocaproic acid?",
+        "Define Aminocaproic acid",
+        "Can you explain Aminocaproic acid?",
+        "What does Aminocaproic acid mean?"
+      ],
+      "responses": [
+        "Aminocaproic acid is an antifibrinolytic agent that works by inhibiting plasminogen activators which have fibrinolytic properties. This medication is a synthetic form of a protein naturally found in the body that helps blood to clot."
+      ]
+    },
+    {
+      "tag": "aminophylline_definition",
+      "patterns": [
+        "What is Aminophylline?",
+        "Define Aminophylline",
+        "Can you explain Aminophylline?",
+        "What does Aminophylline mean?"
+      ],
+      "responses": [
+        "Aminophylline is a medication used to treat various respiratory disorders, including shortness of breath, asthma, bronchitis, chronic obstructive pulmonary disease (COPD), and many others."
+      ]
+    },    
+    {
+      "tag": "aminohippuric_acid_definition",
+      "patterns": [
+        "What is Aminohippuric acid?",
+        "Define Aminohippuric acid",
+        "Can you explain Aminohippuric acid?",
+        "What does Aminohippuric acid mean?"
+      ],
+      "responses": [
+        "Aminohippuric acid is a derivative injection of hippuric acid used in the measurement of effective renal plasma flow (ERPF) and the functional capacity of the renal excretory system."
+      ]
+    },
+    {
+      "tag": "aminosalicylic_acid_definition",
+      "patterns": [
+        "What is Aminosalicylic Acid?",
+        "Define Aminosalicylic Acid",
+        "Can you explain Aminosalicylic Acid?",
+        "What does Aminosalicylic Acid mean?"
+      ],
+      "responses": [
+        "Aminosalicylic acid is an anti-mycobacterial agent used with other anti-tuberculosis drugs (most commonly isoniazid) for the treatment of all forms of active tuberculosis caused by susceptible strains of tubercle bacilli."
+      ]
+    },
+    {
+      "tag": "amitriptyline_definition",
+      "patterns": [
+        "What is Amitriptyline?",
+        "Define Amitriptyline",
+        "Can you explain Amitriptyline?",
+        "What does Amitriptyline mean?"
+      ],
+      "responses": [
+        "Amitriptyline is a medication used to alleviate symptoms of depression. Additionally, it can also be used to treat neuropathic pain, migraines, and nocturnal enuresis (bedwetting) in children."
+      ]
+    },    
+    {
+      "tag": "amobarbital_definition",
+      "patterns": [
+        "What is Amobarbital?",
+        "Define Amobarbital",
+        "Can you explain Amobarbital?",
+        "What does Amobarbital mean?"
+      ],
+      "responses": [
+        "Amobarbital is a medication used in the treatment of severe insomnia. Additionally, it is also a sedative used in anesthesia procedures prior to surgery. This medication should not be used without proper prescription and guidance from a doctor."
+      ]
+    },
+    {
+      "tag": "amoxicillin_definition",
+      "patterns": [
+        "What is Amoxicillin?",
+        "Define Amoxicillin",
+        "Can you explain Amoxicillin?",
+        "What does Amoxicillin mean?"
+      ],
+      "responses": [
+        "Amoxicillin is an antibiotic medication used to treat various bacterial infections, such as ear infections, tonsillitis, or bronchitis. This medication should only be used based on a doctor's prescription."
+      ]
+    },
+    {
+      "tag": "amphetamine_definition",
+      "patterns": [
+        "What is Amphetamine?",
+        "Define Amphetamine",
+        "Can you explain Amphetamine?",
+        "What does Amphetamine mean?"
+      ],
+      "responses": [
+        "Amphetamine is a central nervous system stimulant medication used to treat attention deficit hyperactivity disorder (ADHD) and narcolepsy. It works by increasing the activity of dopamine and norepinephrine in the brain."
+      ]
+    },    
+    {
+      "tag": "amphotericin_definition",
+      "patterns": [
+        "What is Amphotericin B?",
+        "Define Amphotericin B",
+        "Can you explain Amphotericin B?",
+        "What does Amphotericin B mean?"
+      ],
+      "responses": [
+        "Amphotericin B is a medication used to treat serious and life-threatening fungal infections. It is available in oral (tablet) and injectable forms. Amphotericin B works by stopping the growth and reproduction of fungi."
+      ]
+    },
+    {
+      "tag": "anileridine_definition",
+      "patterns": [
+        "What is Anileridine?",
+        "Define Anileridine",
+        "Can you explain Anileridine?",
+        "What does Anileridine mean?"
+      ],
+      "responses": [
+        "Anileridine is a synthetic opioid and potent analgesic. It is a narcotic pain reliever used to treat moderate to severe pain. Narcotic analgesics work in the central nervous system (CNS) to alleviate pain. Some of its side effects are also due to actions on the CNS."
+      ]
+    },
+    {
+      "tag": "anisindione_definition",
+      "patterns": [
+        "What is Anisindione?",
+        "Define Anisindione",
+        "Can you explain Anisindione?",
+        "What does Anisindione mean?"
+      ],
+      "responses": [
+        "Anisindione is a synthetic anticoagulant and a derivative of indanedione. Its anticoagulant action is mediated by inhibiting vitamin K-mediated gamma-carboxylation of precursor proteins essential in the liver for the formation of active procoagulant factors II, VII, IX, and X, as well as anticoagulant proteins C and S."
+      ]
+    },
+    {
+      "tag": "antazoline_definition",
+      "patterns": [
+        "What is Antazoline?",
+        "Define Antazoline",
+        "Can you explain Antazoline?",
+        "What does Antazoline mean?"
+      ],
+      "responses": [
+        "Antazoline is a medication used to relieve red, watery, and itchy eyes due to allergies. This eye drop medication is usually combined with other eye medications, such as naphazoline."
+      ]
+    },
+    {
+      "tag": "antipyrine_definition",
+      "patterns": [
+        "What is Antipyrine?",
+        "Define Antipyrine",
+        "Can you explain Antipyrine?",
+        "What does Antipyrine mean?"
+      ],
+      "responses": [
+        "Antipyrine is a medication with analgesic, anti-inflammatory, and antipyretic effects. It is often used alone or combined with other medications to enhance therapeutic effects."
+      ]
+    },    
+    {
+      "tag": "apomorphine_definition",
+      "patterns": [
+        "What is Apomorphine?",
+        "Define Apomorphine",
+        "Can you explain Apomorphine?",
+        "What does Apomorphine mean?"
+      ],
+      "responses": [
+        "Apomorphine is a dopamine agonist that plays a role in improving motor function and reducing 'off' periods (periods when the effects of levodopa medication wear off) in Parkinson's disease patients, such as tremors, muscle stiffness, slow movements, and imbalance. Additionally, apomorphine is used to treat erectile dysfunction and acute alcohol intoxication."
+      ]
+    },
+    {
+      "tag": "aprobarbital_definition",
+      "patterns": [
+        "What is Aprobarbital?",
+        "Define Aprobarbital",
+        "Can you explain Aprobarbital?",
+        "What does Aprobarbital mean?"
+      ],
+      "responses": [
+        "Aprobarbital is a barbiturate derivative synthesized in the 1920s by Ernst Preiswerk. It was found to exhibit sedative, hypnotic, and anticonvulsant effects. The primary indication for the use of aprobarbital later became insomnia treatment."
+      ]
+    },
+    {
+      "tag": "arecoline_definition",
+      "patterns": [
+        "What is Arecoline?",
+        "Define Arecoline",
+        "Can you explain Arecoline?",
+        "What does Arecoline mean?"
+      ],
+      "responses": [
+        "Arecoline is a natural alkaloid found in the betel nut of the Areca palm. This compound has cytomodulatory effects and is involved in the pathogenesis of oral cancer and oral submucosal fibrosis."
+      ]
+    },
+    {
+      "tag": "vitamin_c_definition",
+      "patterns": [
+        "What is Vitamin C?",
+        "Define Vitamin C",
+        "Can you explain Vitamin C?",
+        "What does Vitamin C mean?"
+      ],
+      "responses": [
+        "Ascorbic acid, commonly known as vitamin C, is one of the essential vitamins and supplements for the human body. Ascorbic acid has been shown to help reduce inflammation, lower blood pressure, and maintain immune function."
+      ]
+    },    
+    {
+      "tag": "aspirin_definition",
+      "patterns": [
+        "What is Aspirin?",
+        "Define Aspirin",
+        "Can you explain Aspirin?",
+        "What does Aspirin mean?"
+      ],
+      "responses": [
+        "Aspirin is a medication used to relieve pain, fever, and inflammation. Also known as acetylsalicylic acid, this drug is also used to prevent blood clots, reducing the risk of heart attacks or strokes in patients with cardiovascular disease."
+      ]
+    },
+    {
+      "tag": "atropine_definition",
+      "patterns": [
+        "What is Atropine?",
+        "Define Atropine",
+        "Can you explain Atropine?",
+        "What does Atropine mean?"
+      ],
+      "responses": [
+        "Atropine is a medication used to treat slow heart rate (bradycardia) and insecticide poisoning. It can also be used before eye examinations or as premedication before anesthesia procedures."
+      ]
+    },
+    {
+      "tag": "barbital_definition",
+      "patterns": [
+        "What is Barbital?",
+        "Define Barbital",
+        "Can you explain Barbital?",
+        "What does Barbital mean?"
+      ],
+      "responses": [
+        "Barbital is a group of drugs used to treat seizures, severe insomnia, or anxiety disorders. These drugs can also be used in the anesthesia process during surgery. Barbital should only be used as directed by a doctor."
+      ]
+    },
+    {
+      "tag": "barbital_acid_definition",
+      "patterns": [
+        "What is Barbital Acid?",
+        "Define Barbital Acid",
+        "Can you explain Barbital Acid?",
+        "What does Barbital Acid mean?"
+      ],
+      "responses": [
+        "Barbital Acid is an organic compound based on the pyrimidine heterocyclic framework. It is a odorless powder that is soluble in water. Barbital acid is the parent compound of barbiturate drugs."
+      ]
+    },    
+    {
+      "tag": "bemegride_definition",
+      "patterns": [
+        "What is Bemegride?",
+        "Define Bemegride",
+        "Can you explain Bemegride?",
+        "What does Bemegride mean?"
+      ],
+      "responses": [
+        "Bemegride is a central nervous system stimulant used to induce convulsions in experimental animals. It has also been used as a respiratory stimulant and in the treatment of barbiturate overdoses."
+      ]
+    },
+    {
+      "tag": "benzilic_acid_definition",
+      "patterns": [
+        "What is Benzilic Acid?",
+        "Define Benzilic Acid",
+        "Can you explain Benzilic Acid?",
+        "What does Benzilic Acid mean?"
+      ],
+      "responses": [
+        "Benzilic Acid is a white crystalline aromatic acid, soluble in many primary alcohols, used in the preparation of glycolate drugs including clidinium, dilantin, flutropium, and mepenzolate which are muscarinic acetylcholine receptor antagonists."
+      ]
+    },
+    {
+      "tag": "benzocaine_definition",
+      "patterns": [
+        "What is Benzocaine?",
+        "Define Benzocaine",
+        "Can you explain Benzocaine?",
+        "What does Benzocaine mean?"
+      ],
+      "responses": [
+        "Benzocaine, also known as benzokain, is a local anesthetic or numbing medication available as a mouthwash, gel, ointment, and powder. It works by inhibiting nerve signals in the body."
+      ]
+    },
+    {
+      "tag": "benzylpenicillin_definition",
+      "patterns": [
+        "What is Benzathine Benzylpenicillin?",
+        "Define Benzathine Benzylpenicillin",
+        "Can you explain Benzathine Benzylpenicillin?",
+        "What does Benzathine Benzylpenicillin mean?"
+      ],
+      "responses": [
+        "Benzathine Benzylpenicillin is a narrow-spectrum antibiotic administered only through injection or infusion. It can treat conditions caused by bacterial infections such as syphilis, gonorrhea, and meningitis. However, its use should be carefully monitored."
+      ]
+    },
+    {
+      "tag": "benzoic_acid_definition",
+      "patterns": [
+        "What is Benzoic Acid?",
+        "Define Benzoic Acid",
+        "Can you explain Benzoic Acid?",
+        "What does Benzoic Acid mean?"
+      ],
+      "responses": [
+        "Benzoic Acid is a fungistatic compound commonly used as a food and product preservative. When ingested, it is conjugated to glycine in the liver and excreted as hippuric acid."
+      ]
+    },
+    {
+      "tag": "benznidazole_definition",
+      "patterns": [
+        "What is Benznidazole?",
+        "Define Benznidazole",
+        "Can you explain Benznidazole?",
+        "What does Benznidazole mean?"
+      ],
+      "responses": [
+        "Benznidazole is a nitroimidazole compound similar to metronidazole and is associated with serum enzyme elevation during therapy in up to 10% of patients but not associated with clinically apparent acute liver injury cases. This antibiotic is used to treat Chagas disease in children aged 2 to 12 years."
+      ]
+    },
+    {
+      "tag": "benzfetamine_definition",
+      "patterns": [
+        "What is Benzfetamine?",
+        "Define Benzfetamine",
+        "Can you explain Benzfetamine?",
+        "What does Benzfetamine mean?"
+      ],
+      "responses": [
+        "Benzfetamine is a substitute amphetamine used in the short term along with a low-calorie diet, exercise, and doctor-approved behavior modification program to help you lose weight."
+      ]
+    },
+    {
+      "tag": "benzylamine_definition",
+      "patterns": [
+        "What is Benzylamine?",
+        "Define Benzylamine",
+        "Can you explain Benzylamine?",
+        "What does Benzylamine mean?"
+      ],
+      "responses": [
+        "Benzylamine is a primary amine compound having benzyl as a substituent N. It has been isolated from Moringa oleifera (horseradish tree). It has a role as an EC 3.5.5.1 (nitrilase) inhibitor, plant metabolite, and allergen. It is a primary amine and an aralkylamine."
+      ]
+    },
+    {
+      "tag": "benzquinamide_definition",
+      "patterns": [
+        "What is Benzquinamide?",
+        "Define Benzquinamide",
+        "Can you explain Benzquinamide?",
+        "What does Benzquinamide mean?"
+      ],
+      "responses": [
+        "Benzquinamide is a monocarboxylic amino acid. It has roles as an antiemetic, tranquilizer, H1 receptor antagonist, muscarinic antagonist, and antipsychotic agent."
+      ]
+    },    
+    {
+      "tag": "betahistine_definition",
+      "patterns": [
+        "What is Betahistine?",
+        "Define Betahistine",
+        "Can you explain Betahistine?",
+        "What does Betahistine mean?"
+      ],
+      "responses": [
+        "Betahistine is a medication used to relieve symptoms of vertigo, hearing loss, and ringing in the ears (tinnitus) caused by Meniere's disease. This medication should only be used with a doctor's prescription."
+      ]
+    },
+    {
+      "tag": "betadine_definition",
+      "patterns": [
+        "What is Betadine?",
+        "Define Betadine",
+        "Can you explain Betadine?",
+        "What does Betadine mean?"
+      ],
+      "responses": [
+        "Betadine is an antiseptic product used to prevent the growth and kill infectious microorganisms. This antiseptic medication is available in the form of liquid, ointment, spray, and stick."
+      ]
+    },
+    {
+      "tag": "ethyl_biscoumacetate_definition",
+      "patterns": [
+        "What is Ethyl biscoumacetate?",
+        "Define Ethyl biscoumacetate",
+        "Can you explain Ethyl biscoumacetate?",
+        "What does Ethyl biscoumacetate mean?"
+      ],
+      "responses": [
+        "Ethyl biscoumacetate or ethyl biscumacetate is a coumarin used as an anticoagulant. It has actions similar to Warfarin."
+      ]
+    },
+    {
+      "tag": "brucine_definition",
+      "patterns": [
+        "What is Brucine?",
+        "Define Brucine",
+        "Can you explain Brucine?",
+        "What does Brucine mean?"
+      ],
+      "responses": [
+        "Brucine is an alkaloid closely related to strychnine, most commonly found in the Strychnos nux-vomica tree. Brucine poisoning is rare, as it is usually ingested along with strychnine, which is more toxic than brucine. In synthetic chemistry, it can be used as a tool for stereospecific chemical synthesis."
+      ]
+    },
+    {
+      "tag": "bupivacaine_definition",
+      "patterns": [
+        "What is Bupivacaine?",
+        "Define Bupivacaine",
+        "Can you explain Bupivacaine?",
+        "What does Bupivacaine mean?"
+      ],
+      "responses": [
+        "Bupivacaine is a medication used to numb pain or provide anesthesia during surgical procedures, medical procedures, or childbirth. This medication is used as a regional anesthesia, meaning it will only affect a specific area of the body."
+      ]
+    },
+    {
+      "tag": "butabarbital_definition",
+      "patterns": [
+        "What is Butabarbital?",
+        "Define Butabarbital",
+        "Can you explain Butabarbital?",
+        "What does Butabarbital mean?"
+      ],
+      "responses": [
+        "Butabarbital is a medication used in the treatment of severe insomnia. This medication is not intended for long-term use. Additionally, it can also be used as a sedative before surgery."
+      ]
+    },
+    {
+      "tag": "butylparaben_definition",
+      "patterns": [
+        "What is Butylparaben?",
+        "Define Butylparaben",
+        "Can you explain Butylparaben?",
+        "What does Butylparaben mean?"
+      ],
+      "responses": [
+        "Butylparaben is one of the most common bactericidal/fungicidal additives in cosmetics, serving as a component of paraben preservatives commonly used to prevent microbial growth in products. This preservative is also frequently found in cosmetic products."
+      ]
+    },
+    {
+      "tag": "capreomycin_definition",
+      "patterns": [
+        "What is Capreomycin?",
+        "Define Capreomycin",
+        "Can you explain Capreomycin?",
+        "What does Capreomycin mean?"
+      ],
+      "responses": [
+        "Capreomycin is an antibiotic used in the treatment of tuberculosis caused by the bacteria Mycobacterium tuberculosis. This medication is also one of the options besides kanamycin or amikacin in the treatment of drug-resistant tuberculosis. This medication was previously listed in the World Health Organization's List of Essential Medicines before being removed from the list in 2019."
+      ]
+    },
+    {
+      "tag": "carbachol_definition",
+      "patterns": [
+        "What is Carbachol?",
+        "Define Carbachol",
+        "Can you explain Carbachol?",
+        "What does Carbachol mean?"
+      ],
+      "responses": [
+        "Carbachol is a prescription medication used to treat glaucoma symptoms and inhibit perioperative intraocular pressure. Carbachol can be used alone or with other medications."
+      ]
+    },
+    {
+      "tag": "carbenicillin_definition",
+      "patterns": [
+        "What is Carbenicillin?",
+        "Define Carbenicillin",
+        "Can you explain Carbenicillin?",
+        "What does Carbenicillin mean?"
+      ],
+      "responses": [
+        "Carbenicillin or Karbenisilin is an antibiotic in the penicillin drug group. It fights bacteria in your body. Carbenicillin is used to treat various types of bacterial infections, such as urinary tract infections. Carbenicillin can also be used for other purposes not listed in the medication guide."
+      ]
+    },
+    {
+      "tag": "carbenoxolone_definition",
+      "patterns": [
+        "What is Carbenoxolone?",
+        "Define Carbenoxolone",
+        "Can you explain Carbenoxolone?",
+        "What does Carbenoxolone mean?"
+      ],
+      "responses": [
+        "Carbenoxolone is a synthetic derivative of glycyrrhizinic acid (a constituent of licorice root) that has a structure closely resembling steroids and contains substances not far different from those in licorice root. It is often used to prevent symptoms of acid reflux disease (gastroesophageal reflux disease/GERD), canker sores, or diseases causing mouth ulcers (mouth ulceration)."
+      ]
+    },
+    {
+      "tag": "cephalexin_definition",
+      "patterns": [
+        "What is Cephalexin?",
+        "Define Cephalexin",
+        "Can you explain Cephalexin?",
+        "What does Cephalexin mean?"
+      ],
+      "responses": [
+        "Cephalexin is an antibiotic medication used to treat infectious diseases caused by bacterial infections, such as Staphylococcus aureus, Streptococcus pneumoniae, Haemophilus influenzae, or Escherichia coli."
+      ]
+    },
+    {
+      "tag": "cephaloglycin_definition",
+      "patterns": [
+        "What is Cephaloglycin?",
+        "Define Cephaloglycin",
+        "Can you explain Cephaloglycin?",
+        "What does Cephaloglycin mean?"
+      ],
+      "responses": [
+        "Cephaloglycin is an antibiotic related to cephalosporin but is no longer commonly used. It is an orally absorbed derivative of cephalosporin C. The bactericidal activity of Cephaloglycin is produced by inhibiting cell wall synthesis through an affinity for penicillin-binding proteins (PBPs)."
+      ]
+    },
+    {
+      "tag": "pengertian_cephaloridine",
+      "patterns": [
+        "Cephaloridine adalah?",
+        "Pengertian Cephaloridine?",
+        "Apa itu definisi Cephaloridine?",
+        "tolong jelaskan Cephaloridine?",
+        "apakah yang dimaksud dengan Cephaloridine"
+      ],
+      "responses": [
+        "Cephaloridine atau cefaloridine adalah sefalosporin semisintetik generasi pertama. Ini berasal dari sefalosporin C dan merupakan zwitterion pada pH fisiologis."
+      ]
+    },
+    {
+      "tag": "pengertian_cephalothin",
+      "patterns": [
+        "Cephalothin adalah?",
+        "Pengertian Cephalothin?",
+        "Apa itu definisi Cephalothin?",
+        "tolong jelaskan Cephalothin?",
+        "apakah yang dimaksud dengan Cephalothin"
+      ],
+      "responses": [
+        "Cefalotin adalah antibiotik digunakan untuk mengobati dan mencegah berbagai macam infeksi bakteri. Obat ini dikenal sebagai antibiotik cephalosporin yang bekerja dengan cara menghentikan pertumbuhan bakteri"
+      ]
+    },
+    {
+      "tag": "pengertian_cephapirin",
+      "patterns": [
+        "Cephapirin adalah?",
+        "Pengertian Cephapirin?",
+        "Apa itu definisi Cephapirin?",
+        "tolong jelaskan Cephapirin?",
+        "apakah yang dimaksud dengan Cephapirin"
+      ],
+      "responses": [
+        "Cephapirin atau Cefapirin adalah antibiotik sefalosporin generasi pertama yang tersedia dalam formulasi injeksi. Cefapirin sebagian terikat plasma dan efektif melawan organisme gram negatif dan gram positif. Obat ini juga memiliki peran dalam kedokteran hewan sebagai Metricure, persiapan intrauterin, dan dikombinasikan dengan prednisolon di Mastiplan, persiapan intramammary. Keduanya dilisensikan pada sapi."
+      ]
+    },
+    {
+      "tag": "pengertian_cefazolin",
+      "patterns": [
+        "Cefazolin adalah?",
+        "Pengertian Cefazolin?",
+        "Apa itu definisi Cefazolin?",
+        "tolong jelaskan Cefazolin?",
+        "apakah yang dimaksud dengan Cefazolin"
+      ],
+      "responses": [
+        "Cefazolin adalah obat untuk menangani penyakit infeksi bakteri, seperti infeksi saluran kemih, sepsis, infeksi tulang dan sendi, atau pneumonia. Obat ini juga dapat digunakan untuk mencegah infeksi bakteri pada seseorang yang akan atau baru menjalani operasi."
+      ]
+    },
+    {
+      "tag": "pengertian_cephradine",
+      "patterns": [
+        "Cephradine adalah?",
+        "Pengertian Cephradine?",
+        "Apa itu definisi Cephradine?",
+        "tolong jelaskan Cephradine?",
+        "apakah yang dimaksud dengan Cephradine"
+      ],
+      "responses": [
+        "Cephradine termasuk dalam kelompok obat yang disebut antibiotik sefalosporin (SEF a low spor in). Cephradine melawan bakteri dalam tubuh. Cephradine digunakan untuk mengobati infeksi yang disebabkan oleh bakteri, termasuk infeksi saluran pernapasan atas, infeksi telinga, infeksi kulit, dan infeksi saluran kemih."
+      ]
+    },
+    {
+      "tag": "pengertian_cyclizine",
+      "patterns": [
+        "Cyclizine adalah?",
+        "Pengertian Cyclizine?",
+        "Apa itu definisi Cyclizine?",
+        "tolong jelaskan Cyclizine?",
+        "apakah yang dimaksud dengan Cyclizine"
+      ],
+      "responses": [
+        "Cyclizine adalah obat antihistamin. Obat ini digunakan untuk mencegah atau mengobati mual, muntah, dan pusing yang disebabkan oleh mabuk perjalanan. Obat ini juga dapat digunakan untuk mengurangi keliyengan, pusing, dan kehilangan keseimbangan (vertigo) yang disebabkan oleh penyakit yang memengaruhi telinga bagian dalam. "
+      ]
+    },
+    {
+      "tag": "pengertian_cyclobarbital",
+      "patterns": [
+        "Cyclobarbital adalah?",
+        "Pengertian Cyclobarbital?",
+        "Apa itu definisi Cyclobarbital?",
+        "tolong jelaskan Cyclobarbital?",
+        "apakah yang dimaksud dengan Cyclobarbital"
+      ],
+      "responses": [
+        "Cyclobarbital merupakan turunan barbiturat Obat ini tersedia di Rusia sebagai kombinasi dosis tetap dengan diazepam (100 mg siklobarbital + 10 mg diazepam nama merek Reladorm ) untuk pengobatan insomnia tetapi dihentikan pada tahun 2019."
+      ]
+    },
+    {
+      "tag": "pengertian_cyclopentamine",
+      "patterns": [
+        "Cyclopentamine adalah?",
+        "Pengertian Cyclopentamine?",
+        "Apa itu definisi Cyclopentamine?",
+        "tolong jelaskan Cyclopentamine?",
+        "apakah yang dimaksud dengan Cyclopentamine"
+      ],
+      "responses": [
+        "Cyclopentamine merupakan obat simpatomimetik (sympathomimetics), yakni obat yang bekerja pada sistem saraf simpatik (sistem yang bertanggung jawab atas respon tubuh pada saat bergerak atau berlari) karena obat ini diyakini memiliki kemampuan aktivitas yang mirip seperti efek adrenalin, noradrenalin dan dopamin."
+      ]
+    },
+    {
+      "tag": "pengertian_cyclopentolate",
+      "patterns": [
+        "Cyclopentolate adalah?",
+        "Pengertian Cyclopentolate?",
+        "Apa itu definisi Cyclopentolate?",
+        "tolong jelaskan Cyclopentolate?",
+        "apakah yang dimaksud dengan Cyclopentolate"
+      ],
+      "responses": [
+        "Cyclopentolate adalah obat tetes mata untuk mengatasi gejala radang di dalam mata, seperti radang uvea (uveitis) dan radang iris (iritis). Obat ini juga digunakan untuk melebarkan pupil sehingga mata pasien lebih mudah diperiksa oleh dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_cycloserine",
+      "patterns": [
+        "Cycloserine adalah?",
+        "Pengertian Cycloserine?",
+        "Apa itu definisi Cycloserine?",
+        "tolong jelaskan Cycloserine?",
+        "apakah yang dimaksud dengan Cycloserine"
+      ],
+      "responses": [
+        "Cyloserine adalah abat antibiotik. Cycloserine adalah antibiotik yang sering digunakan untuk mengatasi infeksi bakteri seperti tuberkulosis (TB). Dalam beberapa kasus, obat ini juga dapat digunakan untuk mengobati infeksi saluran kencing (ISK)."
+      ]
+    },
+    {
+      "tag": "pengertian_cimetidine",
+      "patterns": [
+        "Cimetidine adalah?",
+        "Pengertian Cimetidine?",
+        "Apa itu definisi Cimetidine?",
+        "tolong jelaskan Cimetidine?",
+        "apakah yang dimaksud dengan Cimetidine"
+      ],
+      "responses": [
+        "Cimetidine adalah obat untuk mengobati asam lambung berlebih, seperti pada penyakit asam lambung (GERD) atau sindrom Zollinger-Ellison. Obat ini juga digunakan dalam penanganan tukak lambung, ulkus duodenum, atau esofagitis erosif yang termasuk sebagai komplikasi asam lambung berlebih."
+      ]
+    },
+    {
+      "tag": "pengertian_cinchonidine",
+      "patterns": [
+        "Cinchonidine adalah?",
+        "Pengertian Cinchonidine?",
+        "Apa itu definisi Cinchonidine?",
+        "tolong jelaskan Cinchonidine?",
+        "apakah yang dimaksud dengan Cinchonidine"
+      ],
+      "responses": [
+        "Cinchonidine adalah alkaloid yang ditemukan di Cinchona officinalis dan Gongronema latifolium . [2] Ini digunakan dalam sintesis asimetris dalam kimia organik."
+      ]
+    },
+    {
+      "tag": "pengertian_cinchocaine",
+      "patterns": [
+        "Cinchocaine adalah?",
+        "Pengertian Cinchocaine?",
+        "Apa itu definisi Cinchocaine?",
+        "tolong jelaskan Cinchocaine?",
+        "apakah yang dimaksud dengan Cinchocaine"
+      ],
+      "responses": [
+        "Cinchocaine adalah jenis anestesi lokal. Cinchocaine tersedia dalam bentuk salep dan supositoria digunakan untuk meringankan gejala nyeri dan gatal karena wasir. Obat ini bekerja dengan cara menghentikan kerja saraf untuk sementara waktu sehingga Anda tidak merasakan sakit."
+      ]
+    },
+    {
+      "tag": "pengertian_Cytarabine",
+      "patterns": [
+        "Cytarabine adalah?",
+        "Pengertian Cytarabine?",
+        "Apa itu definisi Cytarabine?",
+        "tolong jelaskan Cytarabine?",
+        "apakah yang dimaksud dengan Cytarabine"
+      ],
+      "responses": [
+        "Cytarabine adalah obat untuk mengatasi beberapa jenis kanker darah, termasuk leukemia mieloblastik akut, leukemia limfoblastik akut, dan leukemia mieloblastik kronis. Obat ini juga bisa digunakan untuk mencegah dan mengatasi penyebaran leukemia ke selaput otak (meninges)."
+      ]
+    },
+    {
+      "tag": "pengertian_citric_acid",
+      "patterns": [
+        "Citric Acid adalah?",
+        "Pengertian Citric Acid?",
+        "Apa itu definisi Citric Acid?",
+        "tolong jelaskan Citric Acid?",
+        "apakah yang dimaksud dengan Citric Acid"
+      ],
+      "responses": [
+        "Citric Acid atau asam sitrat merupakan asam yang beguna untuk mencerahkan kulit, meminimalisir tampilan noda hitam dan mengurangi garis halus. asam sitrat merupakan zat keratolitik atau eksfolian yang dapat menyebabkan pengelupasan sel kulit mati."
+      ]
+    },
+    {
+      "tag": "pengertian_clindamycin",
+      "patterns": [
+        "Clindamycin adalah?",
+        "Pengertian Clindamycin?",
+        "Apa itu definisi Clindamycin?",
+        "tolong jelaskan Clindamycin?",
+        "apakah yang dimaksud dengan Clindamycin"
+      ],
+      "responses": [
+        "Klindamisin atau clindamycin adalah obat untuk mengatasi berbagai infeksi bakteri, seperti infeksi pada paru, kulit, darah, organ reproduksi wanita, atau organ dalam. Perlu diketahui bahwa antibiotik tidak dapat digunakan untuk mengobati infeksi virus, seperti flu."
+      ]
+    },
+    {
+      "tag": "pengertian_codeine",
+      "patterns": [
+        "Codeine adalah?",
+        "Pengertian Codeine?",
+        "Apa itu definisi Codeine?",
+        "tolong jelaskan Codeine?",
+        "apakah yang dimaksud dengan Codeine"
+      ],
+      "responses": [
+        "Codeine adalah obat untuk meredakan nyeri berat yang tidak dapat diatasi dengan pereda nyeri lain. Selain itu, obat ini juga bisa digunakan untuk meredakan batuk. odeine dapat ditemukan dalam bentuk sediaan tunggal atau dalam kombinasi dengan obat lain."
+      ]
+    },
+    {
+      "tag": "pengertian_colchicine",
+      "patterns": [
+        "Colchicine adalah?",
+        "Pengertian Colchicine?",
+        "Apa itu definisi Colchicine?",
+        "tolong jelaskan Colchicine?",
+        "apakah yang dimaksud dengan Colchicine"
+      ],
+      "responses": [
+        "Colchicine adalah obat untuk mengatasi atau mencegah nyeri yang muncul akibat penyakit asam urat atau serangan gout. Obat ini juga bisa digunakan untuk membantu menangani penyakit bawaan genetik familial Mediterranean fever (FMF)."
+      ]
+    },
+    {
+      "tag": "pengertian_dacarbazine",
+      "patterns": [
+        "Dacarbazine adalah?",
+        "Pengertian Dacarbazine?",
+        "Apa itu definisi Dacarbazine?",
+        "tolong jelaskan Dacarbazine?",
+        "apakah yang dimaksud dengan Dacarbazine"
+      ],
+      "responses": [
+        "Dacarbazine adalah obat kemoterapi untuk mengatasi kanker stadium lanjut, meliputi kanker jaringan lunak, kanker kulit melanoma, dan Hodgkin's lymphoma. Obat ini dapat diberikan sebagai terapi tunggal atau dikombinasikan dengan obat kanker lain."
+      ]
+    },
+    {
+      "tag": "pengertian_dantrolene",
+      "patterns": [
+        "Dantrolene adalah?",
+        "Pengertian Dantrolene?",
+        "Apa itu definisi Dantrolene?",
+        "tolong jelaskan Dantrolene?",
+        "apakah yang dimaksud dengan Dantrolene"
+      ],
+      "responses": [
+        "Dantrolene adalah obat untuk mengobati kekencangan otot, kejang, dan kram akibat gangguan saraf tertentu seperti cedera saraf tulang belakang, stroke, cerebral palsy, dan multiple sclerosis. Dantrolene adalah salah satu obat yang masuk dalam golongan relaksan otot. Obat ini bekerja dengan cara melemaskan otot-otot. Dantrolene membantu mengurangi nyeri otot dan kekakuan, meningkatkan kemampuan Anda untuk bergerak dan membantu Anda melakukan kegiatan sehari-hari."
+      ]
+    },
+    {
+      "tag": "pengertian_dapsone",
+      "patterns": [
+        "Dapsone adalah?",
+        "Pengertian Dapsone?",
+        "Apa itu definisi Dapsone?",
+        "tolong jelaskan Dapsone?",
+        "apakah yang dimaksud dengan Dapsone"
+      ],
+      "responses": [
+        "Dapsone adalah obat untuk mengobati kusta, dermatitis herpetiformis, dan jerawat. Dalam pengobatan kusta, dapsone dapat dikombinasikan dengan rifampicin atau clofazimine.Dapsone akan menghentikan pertumbuhan bakteri dengan cara menghambat jalur metabolisme asam folat. Perlu diketahui, obat ini tidak dapat digunakan untuk mengobati infeksi virus, seperti flu."
+      ]
+    },
+    {
+      "tag": "pengertian_daunorubicin",
+      "patterns": [
+        "Daunorubicin adalah?",
+        "Pengertian Daunorubicin?",
+        "Apa itu definisi Daunorubicin?",
+        "tolong jelaskan Daunorubicin?",
+        "apakah yang dimaksud dengan Daunorubicin"
+      ],
+      "responses": [
+        "Daunorubicin adalah obat antineoplastik golongan antrasiklin yang digunakan dalam tata laksana leukemia anak ataupun dewasa. Obat ini bekerja dengan menghambat replikasi DNA dan menghambat sintesis RNA. Daunorubicin diberikan hanya melalui rute intravena. Pemberian lewat rute intramuskular atau subkutan tidak diperbolehkan karena obat ini memiliki sifat korosif."
+      ]
+    },
+    {
+      "tag": "pengertian_debrisoquine",
+      "patterns": [
+        "Debrisoquine adalah?",
+        "Pengertian Debrisoquine?",
+        "Apa itu definisi Debrisoquine?",
+        "tolong jelaskan Debrisoquine?",
+        "apakah yang dimaksud dengan Debrisoquine"
+      ],
+      "responses": [
+        "Debrisoquine adalah obat antihipertensi. Obat ini bekerja untuk menurunkan tekanan darah dengan mengurangi tingkat zat kimia tertentu dalam darah. Obat ini memungkinkan pembuluh darah Anda (vena dan arteri) melebar sehingga sirkulasi darah menjadi lebih lancar."
+      ]
+    },
+    {
+      "tag": "pengertian_dehydrocholic_acid",
+      "patterns": [
+        "Dehydrocholic acid adalah?",
+        "Pengertian Dehydrocholic acid?",
+        "Apa itu definisi Dehydrocholic acid?",
+        "tolong jelaskan Dehydrocholic acid?",
+        "apakah yang dimaksud dengan Dehydrocholic acid"
+      ],
+      "responses": [
+        "Asam dehidrokolat adalah asam empedu sintetik,iproduksi melalui oksidasi asam kolat.Ia bertindak sebagai hidrokoleretik,meningkatkan keluaran empedu untuk membersihkan peningkatan beban asam empedu."
+      ]
+    },
+    {
+      "tag": "pengertian_deserpidine",
+      "patterns": [
+        "Deserpidine adalah?",
+        "Pengertian Deserpidine?",
+        "Apa itu definisi Deserpidine?",
+        "tolong jelaskan Deserpidine?",
+        "apakah yang dimaksud dengan Deserpidine"
+      ],
+      "responses": [
+        "Deserpidine merupakan obat yang memiliki sifat anti-psikotik dan anti-hipertensi yang digunakan untuk mengendalikan tekanan darah tinggi dan untuk menghilangkan perilaku psikotik."
+      ]
+    },
+    {
+      "tag": "pengertian_desipramine",
+      "patterns": [
+        "Desipramine adalah?",
+        "Pengertian Desipramine?",
+        "Apa itu definisi Desipramine?",
+        "tolong jelaskan Desipramine?",
+        "apakah yang dimaksud dengan Desipramine"
+      ],
+      "responses": [
+        "Desipramine terutama digunakan untuk pengobatan depresi. Mungkin juga berguna untuk mengobati gejala gangguan pemusatan perhatian dan hiperaktivitas (ADHD). Bukti manfaatnya hanya dalam jangka pendek, dan karena kekhawatiran akan efek sampingnya, kegunaannya secara keseluruhan tidak jelas."
+      ]
+    },
+    {
+      "tag": "pengertian_dextromethorphan",
+      "patterns": [
+        "Dextromethorphan adalah?",
+        "Pengertian Dextromethorphan?",
+        "Apa itu definisi Dextromethorphan?",
+        "tolong jelaskan Dextromethorphan?",
+        "apakah yang dimaksud dengan Dextromethorphan"
+      ],
+      "responses": [
+        "Dextromethorphan adalah obat untuk meredakan batuk kering atau batuk tidak berdahak. Obat ini banyak ditemukan dalam produk obat flu dan batuk pilek. Dextromethorphan tersedia dalam bentuk tablet, kapsul, sirop, dan serbuk."
+      ]
+    },
+    {
+      "tag": "pengertian_dextromoramide",
+      "patterns": [
+        "Dextromoramide adalah?",
+        "Pengertian Dextromoramide?",
+        "Apa itu definisi Dextromoramide?",
+        "tolong jelaskan Dextromoramide?",
+        "apakah yang dimaksud dengan Dextromoramide"
+      ],
+      "responses": [
+        "Dextromoramide merupakan analgesik yang banyak digunakan untuk meredakan nyeri sedang hingga berat. Ini termasuk dalam kelas analgesik opioid dan digunakan sebagai pengganti morfin dalam beberapa kasus, terutama dalam kasus di mana morfin tidak cocok karena efek samping atau efek yang tidak diinginkan."
+      ]
+    },
+    {
+      "tag": "pengertian_diethanolamine",
+      "patterns": [
+        "Diethanolamine adalah?",
+        "Pengertian Diethanolamine?",
+        "Apa itu definisi Diethanolamine?",
+        "tolong jelaskan Diethanolamine?",
+        "apakah yang dimaksud dengan Diethanolamine"
+      ],
+      "responses": [
+        "Diethanolamine adalah senyawa organic cair tidak berwarna dan berminyak. Berbau amonia. Lebih padat dari air. Diethanolamine (DEA) sering digunakan dalam persiapan diethanolamides dan garam diethanolamine dari asam lemak yang diformulasikan menjadi sabun, serta surfaktan yang digunakan dalam deterjen cair, deterjen pencuci piring, kosmetik, shampoo, dan kondisioner rambut."
+      ]
+    },
+    {
+      "tag": "pengertian_diethylamine",
+      "patterns": [
+        "Diethylamine adalah?",
+        "Pengertian Diethylamine?",
+        "Apa itu definisi Diethylamine?",
+        "tolong jelaskan Diethylamine?",
+        "apakah yang dimaksud dengan Diethylamine"
+      ],
+      "responses": [
+        "Diethylamine adalah obat yang digunakan untuk mengurangi rasa sakit akibat rematik dan kondisi otot ringan lainnya termasuk sakit pinggang, fibrositis, linu panggul, memar dan tegang otot."
+      ]
+    },
+    {
+      "tag": "pengertian_diphenhydramine",
+      "patterns": [
+        "Diphenhydramine adalah?",
+        "Pengertian Diphenhydramine?",
+        "Apa itu definisi Diphenhydramine?",
+        "tolong jelaskan Diphenhydramine?",
+        "apakah yang dimaksud dengan Diphenhydramine"
+      ],
+      "responses": [
+        "Diphenhydramine adalah obat untuk meredakan gejala alergi dan batuk pilek (common cold). Selain itu, obat ini juga dapat digunakan untuk mengatasi mabuk perjalanan, serta kondisi tremor dan kaku otot pada penderita Parkinson."
+      ]
+    },
+    {
+      "tag": "pengertian_diphenoxylat",
+      "patterns": [
+        "Diphenoxylat adalah?",
+        "Pengertian Diphenoxylat?",
+        "Apa itu definisi Diphenoxylat?",
+        "tolong jelaskan Diphenoxylat?",
+        "apakah yang dimaksud dengan Diphenoxylat"
+      ],
+      "responses": [
+        "Diphenoxylat adalah obat yang digunakan dalam pengelolaan dan pengobatan diare. Itu termasuk dalam kelas obat antimotilitas. Kegiatan ini menjelaskan indikasi, tindakan, dan kontraindikasi Diphenoxylate/Atropin sebagai agen yang berharga dalam mengobati diare akut dan kronis."
+      ]
+    },
+    {
+      "tag": "pengertian_dihydrocodeine",
+      "patterns": [
+        "Dihydrocodeine adalah?",
+        "Pengertian Dihydrocodeine?",
+        "Apa itu definisi Dihydrocodeine?",
+        "tolong jelaskan Dihydrocodeine?",
+        "apakah yang dimaksud dengan Dihydrocodeine"
+      ],
+      "responses": [
+        "Dihydrocodeine adalah obat yang digunakan untuk menghilangkan rasa sakit. Obat ini adalah obat penghilang rasa sakit opioid, kadang-kadang dikenal sebagai analgesik opioid. Digunakan untuk mengontrol dan mengurangi nyeri sedang sampai berat. Dihydrocodeine bekerja pada reseptor opioid di otak dan menghambat rasa sakit."
+      ]
+    },
+    {
+      "tag": "pengertian_dihydroergocornine",
+      "patterns": [
+        "Dihydroergocornine adalah?",
+        "Pengertian Dihydroergocornine?",
+        "Apa itu definisi Dihydroergocornine?",
+        "tolong jelaskan Dihydroergocornine?",
+        "apakah yang dimaksud dengan Dihydroergocornine"
+      ],
+      "responses": [
+        "Dihydroergocornine adalah alkaloid ergot. Di samping dihydroergocristine dan dihydroergocryptine, ini adalah salah satu dari tiga komponen ergoloid."
+      ]
+    },
+    {
+      "tag": "pengertian_dihydroergocryptine",
+      "patterns": [
+        "Dihydroergocryptine adalah?",
+        "Pengertian Dihydroergocryptine?",
+        "Apa itu definisi Dihydroergocryptine?",
+        "tolong jelaskan Dihydroergocryptine?",
+        "apakah yang dimaksud dengan Dihydroergocryptine"
+      ],
+      "responses": [
+        "Dihydroergocryptin (DHEC) adalah obat yang digunakan untuk mengobati Penyakit Parkinson (kelumpuhan gemetar). Obat itu berasal dari ergot alkaloid. Zat tersebut dapat digunakan terutama sebagai a dopamin Agonis D2 serta agonis parsial D1."
+      ]
+    },
+    {
+      "tag": "pengertian_dihydroergocristine",
+      "patterns": [
+        "Dihydroergocristine adalah?",
+        "Pengertian Dihydroergocristine?",
+        "Apa itu definisi Dihydroergocristine?",
+        "tolong jelaskan Dihydroergocristine?",
+        "apakah yang dimaksud dengan Dihydroergocristine"
+      ],
+      "responses": [
+        "Dihydroergocristine adalah obat yang di gunakan untuk pengobatan kejadian pembuluh darah otak dan perifer.Obat ini memiliki peran sebagai antagonis adrenergik dan agen vasodilator.Dihydroergocristine berasal dari hidrida, ergotaman dan ergocristine."
+      ]
+    },
+    {
+      "tag": "pengertian_dihydroergotamine",
+      "patterns": [
+        "Dihydroergotamine adalah?",
+        "Pengertian Dihydroergotamine?",
+        "Apa itu definisi Dihydroergotamine?",
+        "tolong jelaskan Dihydroergotamine?",
+        "apakah yang dimaksud dengan Dihydroergotamine"
+      ],
+      "responses": [
+        "Dihydroergotamine digunakan untuk mengobati sakit kepala migrain. Dihydroergotamine berada dalam kelas obat yang disebut alkaloid ergot.Dihydroergotamine terdaftar di FDA pada 12 April 1946, didaftarkan pertama kali oleh perusahaan yang bernama BAUSCH"
+      ]
+    },
+    {
+      "tag": "pengertian_dihydrostreptomycin",
+      "patterns": [
+        "Dihydrostreptomycin adalah?",
+        "Pengertian Dihydrostreptomycin?",
+        "Apa itu definisi Dihydrostreptomycin?",
+        "tolong jelaskan Dihydrostreptomycin?",
+        "apakah yang dimaksud dengan Dihydrostreptomycin"
+      ],
+      "responses": [
+        "Dihydrostreptomycin  adalah antibiotik aminoglikosida. Pada manusia, penggunaan dihydrostreptomisin telah dikaitkan dengan ototoksisitas. FDA mencabut persetujuannya atas penggunaan semua produk obat yang mengandung dihydrostreptomycin sulfate."
+      ]
+    },
+    {
+      "tag": "pengertian_dinoprostone",
+      "patterns": [
+        "Dinoprostone adalah?",
+        "Pengertian Dinoprostone?",
+        "Apa itu definisi Dinoprostone?",
+        "tolong jelaskan Dinoprostone?",
+        "apakah yang dimaksud dengan Dinoprostone"
+      ],
+      "responses": [
+        "Dinoprostone adalah obat yang digunakan untuk membantu mempersiapkan serviks (pembukaan yang lebih rendah dari rahim) untuk persalinan. Hal ini digunakan pada wanita yang mengalami kehamilan normal dan yang berada pada atau dekat tanggal jatuh tempo persalinan."
+      ]
+    },
+    {
+      "tag": "pengertian_dipyridamole",
+      "patterns": [
+        "Dipyridamole adalah?",
+        "Pengertian Dipyridamole?",
+        "Apa itu definisi Dipyridamole?",
+        "tolong jelaskan Dipyridamole?",
+        "apakah yang dimaksud dengan Dipyridamole"
+      ],
+      "responses": [
+        "Dipyridamole adalah obat untuk mencegah terbentuknya gumpalan darah setelah operasi penggantian katup jantung. Gumpalan darah yang menyumbat pembuluh darah dapat menyebabkan terjadinya stroke, emboli paru, atau serangan jantung."
+      ]
+    },
+    {
+      "tag": "pengertian_disopyramide",
+      "patterns": [
+        "Disopyramide adalah?",
+        "Pengertian Disopyramide?",
+        "Apa itu definisi Disopyramide?",
+        "tolong jelaskan Disopyramide?",
+        "apakah yang dimaksud dengan Disopyramide"
+      ],
+      "responses": [
+        "Disopyramide adalah obat yang digunakan untuk mengobati beberapa kondisi serius (mungkin fatal) yang berkaitan dengan denyut jantung yang tidak teratur, seperti persistent ventricular takikardia. Obat ini digunakan untuk mengembalikan irama jantung ke tingkat normal dan mempertahankan detak jantung agar tetap stabil."
+      ]
+    },
+    {
+      "tag": "pengertian_doxepine",
+      "patterns": [
+        "Doxepine adalah?",
+        "Pengertian Doxepine?",
+        "Apa itu definisi Doxepine?",
+        "tolong jelaskan Doxepine?",
+        "apakah yang dimaksud dengan Doxepine"
+      ],
+      "responses": [
+        "Doxepine atau doxepin topikal adalah obat untuk meredakan rasa gatal akibat kondisi kulit tertentu, seperti dermatitis atopik atau neurodermatitis. Bentuk sediaan doxepine yang tersedia di Indonesia adalah krim dengan kandungan 5% doxepin hydrochloride."
+      ]
+    },
+    {
+      "tag": "pengertian_doxycycline",
+      "patterns": [
+        "Doxycycline adalah?",
+        "Pengertian Doxycycline?",
+        "Apa itu definisi Doxycycline?",
+        "tolong jelaskan Doxycycline?",
+        "apakah yang dimaksud dengan Doxycycline"
+      ],
+      "responses": [
+        "Doxycycline adalah obat untuk mengatasi berbagai penyakit akibat infeksi bakteri. Antibiotik ini juga digunakan dalam pengobatan jerawat yang berat dan pencegahan malaria. Doxycycline tersedia dalam bentuk kapsul dan penggunaannya harus dengan resep dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_doxylamine",
+      "patterns": [
+        "Doxylamine adalah?",
+        "Pengertian Doxylamine?",
+        "Apa itu definisi Doxylamine?",
+        "tolong jelaskan Doxylamine?",
+        "apakah yang dimaksud dengan Doxylamine"
+      ],
+      "responses": [
+        "Doxylamine adalah obat untuk meredakan gejala alergi dan rhinitis alergi. Obat ini biasanya dikombinasikan dengan pereda batuk (antitusif) atau dekongestan untuk meredakan gejala batuk pilek (common cold). Terkadang, obat ini juga digunakan dalam penanganan jangka pendek untuk insomnia."
+      ]
+    },
+    {
+      "tag": "pengertian_doxorubicin",
+      "patterns": [
+        "Doxorubicin adalah?",
+        "Pengertian Doxorubicin?",
+        "Apa itu definisi Doxorubicin?",
+        "tolong jelaskan Doxorubicin?",
+        "apakah yang dimaksud dengan Doxorubicin"
+      ],
+      "responses": [
+        "Doxorubicin adalah obat kemoterapi untuk mengobati berbagai jenis kanker, seperti kanker payudara, kanker prostat, kanker lambung, kanker tiroid, kanker hati, atau limfoma."
+      ]
+    },
+    {
+      "tag": "pengertian_ephedrine",
+      "patterns": [
+        "Ephedrine adalah?",
+        "Pengertian Ephedrine?",
+        "Apa itu definisi Ephedrine?",
+        "tolong jelaskan Ephedrine?",
+        "apakah yang dimaksud dengan Ephedrine"
+      ],
+      "responses": [
+        "Efedrin adalah obat yang digunakan untuk mengatasi masalah yang berhubungan dengan pernapasan dan paru-paru. Obat ini juga sering kali dimanfaatkan untuk bantuan sementara sesak napas, sesak dada, mengi karena asma bronkial, dan sejumlah kondisi lain yang ditentukan oleh dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_emetine",
+      "patterns": [
+        "Emetine adalah?",
+        "Pengertian Emetine?",
+        "Apa itu definisi Emetine?",
+        "tolong jelaskan Emetine?",
+        "apakah yang dimaksud dengan Emetine"
+      ],
+      "responses": [
+        "Emetine adalah obat yang memiliki kegunaan sebagai anti-protozoa dalam pengobatan amebiasis. Obat ini juga sering digunakan untuk menginduksi pasien untuk muntah"
+      ]
+    },
+    {
+      "tag": "pengertian_epinefrin",
+      "patterns": [
+        "Epinefrin adalah?",
+        "Pengertian Epinefrin?",
+        "Apa itu definisi Epinefrin?",
+        "tolong jelaskan Epinefrin?",
+        "apakah yang dimaksud dengan Epinefrin"
+      ],
+      "responses": [
+        "Epinefrin atau adrenalin adalah katekolamin endogen dari kelenjar adrenal, yang dalam bentuk obat sering digunakan untuk menangani anafilaksis, bradikardi, cardiac arrest, hipotensi akibat syok sepsis, dan untuk menginduksi serta menjaga midriasis selama operasi okular."
+      ]
+    },
+    {
+      "tag": "pengertian_equilenin",
+      "patterns": [
+        "Equilenin adalah?",
+        "Pengertian Equilenin?",
+        "Apa itu definisi Equilenin?",
+        "tolong jelaskan Equilenin?",
+        "apakah yang dimaksud dengan Equilenin"
+      ],
+      "responses": [
+        "Equilenin adalah steroid estrogenik yang diproduksi oleh kuda. Ia memiliki total lima ikatan rangkap di cincin A dan B. Konsentrasi equilenin yang tinggi ditemukan dalam urin kuda hamil."
+      ]
+    },
+    {
+      "tag": "pengertian_ergometrine",
+      "patterns": [
+        "Ergometrine adalah?",
+        "Pengertian Ergometrine?",
+        "Apa itu definisi Ergometrine?",
+        "tolong jelaskan Ergometrine?",
+        "apakah yang dimaksud dengan Ergometrine"
+      ],
+      "responses": [
+        "Ergometrine adalah obat untuk mencegah dan mengatasi perdarahan setelah proses persalinan atau aborsi. Cara kerja obat ini yaitu dengan meningkatkan kontraksi uterus (rahim) yang dapat mengurangi kehabisan darah setelah persalinan. Obat ini juga menyebabkan penyempitan pembuluh darah bagian tepi dan otak."
+      ]
+    },
+    {
+      "tag": "pengertian_ergotamine",
+      "patterns": [
+        "Ergotamine adalah?",
+        "Pengertian Ergotamine?",
+        "Apa itu definisi Ergotamine?",
+        "tolong jelaskan Ergotamine?",
+        "apakah yang dimaksud dengan Ergotamine"
+      ],
+      "responses": [
+        "Ergotamine adalah obat untuk meredakan atau mencegah sakit kepala sebelah atau migrain. Ergotamine bisa ditemukan dalam produk obat yang dikombinasikan dengan kafein. Ergotamine bekerja dengan cara memengaruhi reseptor serotonin dan menyebabkan efek vasokonstriksi pembuluh darah."
+      ]
+    },
+    {
+      "tag": "pengertian_erythromycin",
+      "patterns": [
+        "Erythromycin adalah?",
+        "Pengertian Erythromycin?",
+        "Apa itu definisi Erythromycin?",
+        "tolong jelaskan Erythromycin?",
+        "apakah yang dimaksud dengan Erythromycin"
+      ],
+      "responses": [
+        "Erythromycin adalah obat untuk mengatasi infeksi bakteri di berbagai bagian tubuh, seperti kulit, saluran pernapasan, saluran pencernaan, saluran kemih, dan organ genital. Obat ini tersedia dalam berbagai bentuk sediaan, seperti tablet, kapsul, sirop kering, cairan obat luar, krim, dan gel."
+      ]
+    },
+    {
+      "tag": "pengertian_scopolamine",
+      "patterns": [
+        "Scopolamine adalah?",
+        "Pengertian Scopolamine?",
+        "Apa itu definisi Scopolamine?",
+        "tolong jelaskan Scopolamine?",
+        "apakah yang dimaksud dengan Scopolamine"
+      ],
+      "responses": [
+        "Scopolamine adalah obat untuk mengatasi kram perut, usus, atau saluran kemih. Scopolamine dikenal juga dengan nama hyoscine. Hyoscine terdiri dari dua jenis, yaitu hyoscine butylbromide dan hyoscine hydrobromide."
+      ]
+    },
+    {
+      "tag": "pengertian_spectinomycin",
+      "patterns": [
+        "Spectinomycin adalah?",
+        "Pengertian Spectinomycin?",
+        "Apa itu definisi Spectinomycin?",
+        "tolong jelaskan Spectinomycin?",
+        "apakah yang dimaksud dengan Spectinomycin"
+      ],
+      "responses": [
+        "pektinomisina (spectinomycin) adalah antibiotik yang termasuk  aminosiklitol yang terkait sangat dekat dengan antibiotik golongan Aminoglikosida. Antibiotik ini diberikan dalam bentuk garamnya yaitu dalam bentuk spectinomycin hydrochloride (spectinomycin - HCl), yang bekerja dengan cara mengikat ribosom 30s pada bakteri yang menyebabkan kegagalan pembacaan mRNA sehingga bakteri tidak mampu mensintesa protein yang dibutuhkan untuk pertumbuhannya."
+      ]
+    },
+    {
+      "tag": "pengertian_ethinylestradiol",
+      "patterns": [
+        "Ethinylestradiol adalah?",
+        "Pengertian Ethinylestradiol?",
+        "Apa itu definisi Ethinylestradiol?",
+        "tolong jelaskan Ethinylestradiol?",
+        "apakah yang dimaksud dengan Ethinylestradiol"
+      ],
+      "responses": [
+        "Ethinylestradiol atau etinilestradiol merupakan estrogen semisintetik yang sering digunakan sebagai komponen estrogen pada kontrasepsi kombinasi oral, bersama dengan progesteron atau progestin. Ethinylestradiol juga digunakan sebagai terapi sulih hormon untuk mengatasi gejala dan mencegah osteoporosis pada wanita pasca menopause."
+      ]
+    },
+    {
+      "tag": "pengertian_ethambutol",
+      "patterns": [
+        "Ethambutol adalah?",
+        "Pengertian Ethambutol?",
+        "Apa itu definisi Ethambutol?",
+        "tolong jelaskan Ethambutol?",
+        "apakah yang dimaksud dengan Ethambutol"
+      ],
+      "responses": [
+        "Ethambutol bermanfaat untuk mengatasi tuberkulosis (TBC). Obat ini biasanya dikombinasikan dengan beberapa antibiotik lain, seperti rifampicin dan isoniazid, untuk menghentikan pertumbuhan bakteri penyebab tuberkulosis."
+      ]
+    },
+    {
+      "tag": "pengertian_ethanolamine",
+      "patterns": [
+        "Ethanolamine adalah?",
+        "Pengertian Ethanolamine?",
+        "Apa itu definisi Ethanolamine?",
+        "tolong jelaskan Ethanolamine?",
+        "apakah yang dimaksud dengan Ethanolamine"
+      ],
+      "responses": [
+        "Ethanolamine (EA) adalah sumber karbon dan/atau nitrogen yang berharga bagi bakteri yang mampu melakukan katabolismenya. Karena berasal dari membran fosfolipid fosfatidletanolamin, senyawa ini sangat lazim di saluran pencernaan, yang kaya akan membran karena pergantian epitel usus dan mikrobiota yang menetap."
+      ]
+    },
+    {
+      "tag": "pengertian_ethylamine",
+      "patterns": [
+        "Ethylamine adalah?",
+        "Pengertian Ethylamine?",
+        "Apa itu definisi Ethylamine?",
+        "tolong jelaskan Ethylamine?",
+        "apakah yang dimaksud dengan Ethylamine"
+      ],
+      "responses": [
+        "Ethylamine (Etilamin) adalah Gas tidak berwarna ini memiliki bau seperti amonia yang kuat. Ia mengembun tepat di bawah suhu kamar menjadi cairan yang dapat bercampur dengan hampir semua pelarut. Ini adalah basa nukleofilik , seperti khas untuk amina. Etilamin banyak digunakan dalam industri kimia dan sintesis organik."
+      ]
+    },
+    {
+      "tag": "pengertian_etidocaine",
+      "patterns": [
+        "Etidocaine adalah?",
+        "Pengertian Etidocaine?",
+        "Apa itu definisi Etidocaine?",
+        "tolong jelaskan Etidocaine?",
+        "apakah yang dimaksud dengan Etidocaine"
+      ],
+      "responses": [
+        "Etidocaine (Etidokain) adalah asam amino Amida dimana asam 2-[etil(propil)amino]butanoat dan 2,6-dimetilanilin telah bergabung membentuk ikatan Amida. Digunakan sebagai anestesi lokal (amide caine), obat ini mempunyai onset cepat dan sifat kerja panjang, mirip dengan bupivacaine , dan diberikan melalui suntikan selama prosedur pembedahan dan selama persalinan. Ini memiliki peran sebagai anestesi lokal."
+      ]
+    },
+    {
+      "tag": "pengertian_ethoheptazine",
+      "patterns": [
+        "Ethoheptazine adalah?",
+        "Pengertian Ethoheptazine?",
+        "Apa itu definisi Ethoheptazine?",
+        "tolong jelaskan Ethoheptazine?",
+        "apakah yang dimaksud dengan Ethoheptazine"
+      ],
+      "responses": [
+        "Ethoheptazine dipasarkan dengan nama Zactane. Ini adalah analgesik opioid berbasis fenazepin. Obat ini ditemukan pada tahun 1950an dan berhubungan dengan obat lain seperti proheptazine. Ethoheptazine tidak lagi dipasarkan di Amerika Serikat."
+      ]
+    },
+    {
+      "tag": "pengertian_ethoxzolamide",
+      "patterns": [
+        "Ethoxzolamide adalah?",
+        "Pengertian Ethoxzolamide?",
+        "Apa itu definisi Ethoxzolamide?",
+        "tolong jelaskan Ethoxzolamide?",
+        "apakah yang dimaksud dengan Ethoxzolamide"
+      ],
+      "responses": [
+        "Ethoxzolamide adalah sulfonamida yang digunakan sebagai diuretik dan pada glaukoma. Ini menghambat aktivitas karbonat anhidrase di tubulus ginjal proksimal untuk menurunkan reabsorpsi air, natrium, kalium, bikarbonat. Aktivitas farmakologisnya menimbulkan risiko hipokalemia."
+      ]
+    },
+    {
+      "tag": "pengertian_phenacetin",
+      "patterns": [
+        "Phenacetin adalah?",
+        "Pengertian Phenacetin?",
+        "Apa itu definisi Phenacetin?",
+        "tolong jelaskan Phenacetin?",
+        "apakah yang dimaksud dengan Phenacetin"
+      ],
+      "responses": [
+        "Phenacetin adalah obat analgesik dan penurun demam pada pengobatan manusia dan hewan selama bertahun-tahun. Ini diperkenalkan ke dalam terapi pada tahun 1887 dan banyak digunakan dalam campuran analgesik sampai terlibat dalam penyakit ginjal (nefropati) akibat penyalahgunaan analgesik dan dihentikan penggunaannya karena efek sampingnya yang serius."
+      ]
+    },
+    {
+      "tag": "pengertian_phenazocine",
+      "patterns": [
+        "Phenazocine adalah?",
+        "Pengertian Phenazocine?",
+        "Apa itu definisi Phenazocine?",
+        "tolong jelaskan Phenazocine?",
+        "apakah yang dimaksud dengan Phenazocine"
+      ],
+      "responses": [
+        "Phenazocine adalah obat analgesik opioid yang berhubungan dengan Pentazocine (P274300) dan memiliki profil efek yang serupa. Penggunaan Phenazocine menghasilkan analgesia dan euforia dan dalam beberapa kasus disforia dan halusinasi pada dosis tinggi."
+      ]
+    },
+    {
+      "tag": "pengertian_phendimetrazine",
+      "patterns": [
+        "Phendimetrazine adalah?",
+        "Pengertian Phendimetrazine?",
+        "Apa itu definisi Phendimetrazine?",
+        "tolong jelaskan Phendimetrazine?",
+        "apakah yang dimaksud dengan Phendimetrazine"
+      ],
+      "responses": [
+        "Phendimetrazine adalah obat yang digunakan dengan olahraga yang disetujui dokter, perubahan perilaku, dan program diet rendah kalori untuk membantu Anda menurunkan berat badan. Ini digunakan oleh orang-orang tertentu yang kelebihan berat badan, seperti mereka yang mengalami obesitas atau memiliki masalah kesehatan terkait berat badan."
+      ]
+    },
+    {
+      "tag": "pengertian_Pheneticillin",
+      "patterns": [
+        "Pheneticillin adalah?",
+        "Pengertian Pheneticillin?",
+        "Apa itu definisi Pheneticillin?",
+        "tolong jelaskan Pheneticillin?",
+        "apakah yang dimaksud dengan Pheneticillin"
+      ],
+      "responses": [
+        "Pheneticillin (Penisilin) adalah antibiotik yang digunakan untuk mengobati infeksi bakteri. Penyakit yang bisa diatasi dengan penisilin antara lain infeksi saluran pernapasan, infeksi telinga tengah, atau demam reumatik."
+      ]
+    },
+    {
+      "tag": "pengertian_fenformina",
+      "patterns": [
+        "Fenformina adalah?",
+        "Pengertian Fenformina?",
+        "Apa itu definisi Fenformina?",
+        "tolong jelaskan Fenformina?",
+        "apakah yang dimaksud dengan Fenformina"
+      ],
+      "responses": [
+        "Fenformina (Phenformin) merupakan obat antidiabetes dari golongan biguanida . Itu dipasarkan sebagai DBI oleh Ciba-Geigy, tetapi ditarik dari sebagian besar pasar pada akhir tahun 1970an karena risiko tinggi asidosis laktat , yang berakibat fatal pada 50% kasus."
+      ]
+    },
+    {
+      "tag": "pengertian_phenylbutazone",
+      "patterns": [
+        "Phenylbutazone adalah?",
+        "Pengertian Phenylbutazone?",
+        "Apa itu definisi Phenylbutazone?",
+        "tolong jelaskan Phenylbutazone?",
+        "apakah yang dimaksud dengan Phenylbutazone"
+      ],
+      "responses": [
+        "Phenylbutazone adalah obat resep yang efektif mengatasi nyeri dan peradangan pada pengidap rematik, asam urat (gout) dan osteoarthritis. Obat diklasifikasikan ke dalam antiinflamasi nonsteroid. Phenylbutazone memiliki efek antiperadangan, antidemam dan antinyeri. Obat bekerja dengan cara menurunkan produksi prostaglandin dalam tubuh. Ini adalah senyawa yang dapat merangsang kontraksi otot rahim."
+      ]
+    },
+    {
+      "tag": "pengertian_phenylephrine",
+      "patterns": [
+        "Phenylephrine adalah?",
+        "Pengertian Phenylephrine?",
+        "Apa itu definisi Phenylephrine?",
+        "tolong jelaskan Phenylephrine?",
+        "apakah yang dimaksud dengan Phenylephrine"
+      ],
+      "responses": [
+        "Phenylephrine adalah obat untuk meredakan hidung tersumbat karena flu, batuk pilek, alergi, atau sinusitis. Obat ini efektif untuk meredakan gejala, tetapi tidak bisa menyembuhkan penyakit yang menjadi penyebab hidung tersumbat."
+      ]
+    },
+    {
+      "tag": "pengertian_phenylethylamine",
+      "patterns": [
+        "Phenylethylamine adalah?",
+        "Pengertian Phenylethylamine?",
+        "Apa itu definisi Phenylethylamine?",
+        "tolong jelaskan Phenylethylamine?",
+        "apakah yang dimaksud dengan Phenylethylamine"
+      ],
+      "responses": [
+        "Phenylethylamine (PEA) adalah stimulan sistem saraf pusat. Jumlah normal PEA yang diproduksi dalam tubuh mendukung tingkat energi yang sehat serta perhatian dan fokus, kesejahteraan, kebahagiaan, dan fungsi kognitif."
+      ]
+    },
+    {
+      "tag": "pengertian_phenylpropanolamine",
+      "patterns": [
+        "Phenylpropanolamine adalah?",
+        "Pengertian Phenylpropanolamine?",
+        "Apa itu definisi Phenylpropanolamine?",
+        "tolong jelaskan Phenylpropanolamine?",
+        "apakah yang dimaksud dengan Phenylpropanolamine"
+      ],
+      "responses": [
+        "Phenylpropanolamine atau phenylpropanolamine hcl adalah obat untuk meredakan hidung tersumbat akibat flu, batuk pilek (common cold), alergi, atau radang sinus (sinusitis). Phenylpropanolamine bisa ditemukan dalam bentuk kombinasi dengan obat lain."
+      ]
+    },
+    {
+      "tag": "pengertian_phenyltoloxamine",
+      "patterns": [
+        "Phenyltoloxamine adalah?",
+        "Pengertian Phenyltoloxamine?",
+        "Apa itu definisi Phenyltoloxamine?",
+        "tolong jelaskan Phenyltoloxamine?",
+        "apakah yang dimaksud dengan Phenyltoloxamine"
+      ],
+      "responses": [
+        "Phenyltoloxamine adalah antihistamin yang mengurangi efek kimia histamin alami dalam tubuh. Histamin dapat menimbulkan gejala bersin, gatal, mata berair, dan pilek."
+      ]
+    },
+    {
+      "tag": "pengertian_phenindamine",
+      "patterns": [
+        "Phenindamine adalah?",
+        "Pengertian Phenindamine?",
+        "Apa itu definisi Phenindamine?",
+        "tolong jelaskan Phenindamine?",
+        "apakah yang dimaksud dengan Phenindamine"
+      ],
+      "responses": [
+        "Phenindamine adalah obat yang masuk ke dalam kelas obat antihistamine. Phenindamine memblokir efek histamin kimiawi yang terjadi secara alami di tubuh. Phenindamine digunakan untuk mengobati, bersin, hidung merah, gatal, ruam dan gejala alergi lainnya dan juga gejala selesma (common cold) lainnya."
+      ]
+    },
+    {
+      "tag": "pengertian_phenyramidol",
+      "patterns": [
+        "Phenyramidol adalah?",
+        "Pengertian Phenyramidol?",
+        "Apa itu definisi Phenyramidol?",
+        "tolong jelaskan Phenyramidol?",
+        "apakah yang dimaksud dengan Phenyramidol"
+      ],
+      "responses": [
+        "Phenyramidol adalah analgesik dan pelemas otot yang digunakan untuk meredakan nyeri muskuloskeletal ringan hingga sedang, nyeri leher dan bahu, nyeri punggung bawah, atau nyeri dan ketidaknyamanan yang berhubungan dengan kejang otot yang mungkin disebabkan oleh cedera otot atau keseleo. Disarankan untuk menggunakan obat ini bersamaan dengan istirahat dan terapi fisik untuk mendapatkan efek terbaik."
+      ]
+    },
+    {
+      "tag": "pengertian_pheniramine",
+      "patterns": [
+        "Pheniramine adalah?",
+        "Pengertian Pheniramine?",
+        "Apa itu definisi Pheniramine?",
+        "tolong jelaskan Pheniramine?",
+        "apakah yang dimaksud dengan Pheniramine"
+      ],
+      "responses": [
+        "Pheniramine adalah antihistamin yang disetujui untuk mengobati gejala alergi seperti hidung tersumbat dan mata bengkak. Ia juga telah digunakan untuk mengobati dermatitis (radang kulit) dan mabuk perjalanan. Pheniramine mungkin terdaftar sebagai pheniramine maleate pada label obat. Pheniramine dapat ditemukan dalam obat multi-gejala yang dijual bebas."
+      ]
+    },
+    {
+      "tag": "pengertian_phenytoin",
+      "patterns": [
+        "Phenytoin adalah?",
+        "Pengertian Phenytoin?",
+        "Apa itu definisi Phenytoin?",
+        "tolong jelaskan Phenytoin?",
+        "apakah yang dimaksud dengan Phenytoin"
+      ],
+      "responses": [
+        "Phenytoin adalah obat untuk mengendalikan kejang pada penderita epilepsi. Obat ini juga digunakan untuk mengatasi trigeminal neuralgia, serta mencegah dan menangani kejang yang terjadi selama atau setelah prosedur bedah saraf."
+      ]
+    },
+    {
+      "tag": "pengertian_phenmetrazine",
+      "patterns": [
+        "Phenmetrazine adalah?",
+        "Pengertian Phenmetrazine?",
+        "Apa itu definisi Phenmetrazine?",
+        "tolong jelaskan Phenmetrazine?",
+        "apakah yang dimaksud dengan Phenmetrazine"
+      ],
+      "responses": [
+        "Phenmetrazine adalah obat simpatomimetik yang digunakan terutama sebagai penekan nafsu makan. Tindakan dan mekanismenya mirip dengan dextroamphetamine. Phenmetrazine awalnya dijual dengan nama dagang Preludin sebagai obat anoreksia. Sejak itu telah dihapus dari pasar. Oleh beberapa pihak, obat ini dianggap memiliki potensi kecanduan yang lebih besar dibandingkan amfetamin, dan telah disalahgunakan di banyak negara, misalnya Swedia."
+      ]
+    },
+    {
+      "tag": "pengertian_phenobarbital",
+      "patterns": [
+        "Phenobarbital adalah?",
+        "Pengertian Phenobarbital?",
+        "Apa itu definisi Phenobarbital?",
+        "tolong jelaskan Phenobarbital?",
+        "apakah yang dimaksud dengan Phenobarbital"
+      ],
+      "responses": [
+        "Phenobarbital adalah obat untuk mengontrol dan meredakan kejang. Selain itu, obat ini juga bermanfaat sebagai obat penenang yang biasa digunakan menjelang operasi, dan untuk mengatasi insomnia atau susah tidur."
+      ]
+    },
+    {
+      "tag": "pengertian_phenolphthalein",
+      "patterns": [
+        "Phenolphthalein adalah?",
+        "Pengertian Phenolphthalein?",
+        "Apa itu definisi Phenolphthalein?",
+        "tolong jelaskan Phenolphthalein?",
+        "apakah yang dimaksud dengan Phenolphthalein"
+      ],
+      "responses": [
+        "Phenolphthalein (Fenolftalein) merupakan senyawa organik yang digunakan sebagai reagen laboratorium dan indikator pH. Phenolphthalein memberikan efek pencahar dengan merangsang mukosa usus dan mengkonstriksi otot polos. Namun, fenolftalein tidak lagi digunakan sebagai obat pencahar karena diduga bersifat karsinogenisitas senyawa ini."
+      ]
+    },
+    {
+      "tag": "pengertian_fenoprofen",
+      "patterns": [
+        "Fenoprofen adalah?",
+        "Pengertian Fenoprofen?",
+        "Apa itu definisi Fenoprofen?",
+        "tolong jelaskan Fenoprofen?",
+        "apakah yang dimaksud dengan Fenoprofen"
+      ],
+      "responses": [
+        "Fenoprofen merupakan obat anti inflamasi nonsteroid ( NSAID ) yang efektif untuk mengatasi demam , nyeri , dan bengkak akibat peradangan. Fenoprofen termasuk dalam kelas obat yang disebut obat antiinflamasi nonsteroid ( NSAID ). Anggota obat golongan NSAID lainnya antara lain ibuprofen ( Motrin ), indometasin (Indocin), nabumetone (Relafen), naproxen ( Aleve ) dan beberapa lainnya."
+      ]
+    },
+    {
+      "tag": "pengertian_phentermine",
+      "patterns": [
+        "Phentermine adalah?",
+        "Pengertian Phentermine?",
+        "Apa itu definisi Phentermine?",
+        "tolong jelaskan Phentermine?",
+        "apakah yang dimaksud dengan Phentermine"
+      ],
+      "responses": [
+        "Phentermine digunakan untuk mempercepat penurunan berat badan pada orang yang kelebihan berat badan. Ini digunakan bersamaan dengan diet dan olahraga untuk mengobati obesitas, terutama pada orang dengan faktor risiko seperti tekanan darah tinggi, kolesterol tinggi, atau diabetes."
+      ]
+    },
+    {
+      "tag": "pengertian_phenoxypropazine",
+      "patterns": [
+        "Phenoxypropazine adalah?",
+        "Pengertian Phenoxypropazine?",
+        "Apa itu definisi Phenoxypropazine?",
+        "tolong jelaskan Phenoxypropazine?",
+        "apakah yang dimaksud dengan Phenoxypropazine"
+      ],
+      "responses": [
+        "Phenoxypropazine adalah penghambat enzim monoamine oksidase (MAOI) non-selektif dan ireversibel, yang termasuk dalam kelas kimia hidrazin . Obat ini dipasarkan sebagai antidepresan pada tahun 1961 tetapi kemudian ditarik pada tahun 1966 karena potensi hepatotoksiknya."
+      ]
+    },
+    {
+      "tag": "pengertian_phentolamine",
+      "patterns": [
+        "Phentolamine adalah?",
+        "Pengertian Phentolamine?",
+        "Apa itu definisi Phentolamine?",
+        "tolong jelaskan Phentolamine?",
+        "apakah yang dimaksud dengan Phentolamine"
+      ],
+      "responses": [
+        "Phentolamine adalah obat penghambat alfa-adrenergik yang dapat digunakan untuk mengatasi kondisi kesehatan tertentu, seperti: pheochromocytoma (tumor pada kelenjar adrenal), hipertensi, impotensi (kelainan ereksi), penyakit pembuluh darah perifer"
+      ]
+    },
+    {
+      "tag": "pengertian_fluorouracil",
+      "patterns": [
+        "Fluorouracil adalah?",
+        "Pengertian Fluorouracil?",
+        "Apa itu definisi Fluorouracil?",
+        "tolong jelaskan Fluorouracil?",
+        "apakah yang dimaksud dengan Fluorouracil"
+      ],
+      "responses": [
+        "Fluorouracil adalah regimen standar yang digunakan dalam terapi tumor padat multipel, baik sebagai adjuvan dalam terapi kuratif maupun terapi paliatif untuk penanganan metastasis."
+      ]
+    },
+    {
+      "tag": "pengertian_gentamicina",
+      "patterns": [
+        "Gentamicina adalah?",
+        "Pengertian Gentamicina?",
+        "Apa itu definisi Gentamicina?",
+        "tolong jelaskan Gentamicina?",
+        "apakah yang dimaksud dengan Gentamicina"
+      ],
+      "responses": [
+        "Gentamicina(Gentamicin) adalah obat untuk mengatasi infeksi bakteri di berbagai bagian tubuh, mulai dari telinga luar, mata, kulit, hingga otak. Perlu diketahui bahwa obat ini tidak bisa digunakan untuk mengobati infeksi akibat virus atau jamur."
+      ]
+    },
+    {
+      "tag": "pengertian_glycolic_acid",
+      "patterns": [
+        "Glycolic acid adalah?",
+        "Pengertian Glycolic acid?",
+        "Apa itu definisi Glycolic acid?",
+        "tolong jelaskan Glycolic acid?",
+        "apakah yang dimaksud dengan Glycolic acid"
+      ],
+      "responses": [
+        "Glycolic acid (asam glikolat) adalah salah satu asam dari golongan alpha hydroxy acid (AHA) yang berasal dari tebu. Glycolic acid banyak digunakan sebagai bahan aktif dalam berbagai produk kecantikan, seperti krim, serum, dan toner wajah."
+      ]
+    },
+    {
+      "tag": "pengertian_glucuronic_acid",
+      "patterns": [
+        "D-Glucuronic acid adalah?",
+        "Pengertian D-Glucuronic acid?",
+        "Apa itu definisi D-Glucuronic acid?",
+        "tolong jelaskan D-Glucuronic acid?",
+        "apakah yang dimaksud dengan D-Glucuronic acid"
+      ],
+      "responses": [
+        "D-Glucuronic acid (Asam D-glukopiranuronat) adalah asam D-glukuronat dalam bentuk piranosa siklik. Ia memiliki peran sebagai metabolit alga. Ini adalah asam konjugat dari D-glukopiranuronate. Ini adalah enantiomer dari asam L-glukopiranuronat ."
+      ]
+    },
+    {
+      "tag": "pengertian_glutethimide",
+      "patterns": [
+        "glutethimide adalah?",
+        "Pengertian glutethimide?",
+        "Apa itu definisi glutethimide?",
+        "tolong jelaskan glutethimide?",
+        "apakah yang dimaksud dengan glutethimide"
+      ],
+      "responses": [
+        "Glutethimide adalah obat hipnotis dan obat penenang. Penggunaannya sebagian besar telah digantikan oleh obat lain dikarenakan dapat menyebabkan ketergantungan psikologis atau fisik yang parah. Ini adalah zat Depresan."
+      ]
+    },
+    {
+      "tag": "pengertian_guanethidine",
+      "patterns": [
+        "Guanethidine adalah?",
+        "Pengertian Guanethidine?",
+        "Apa itu definisi Guanethidine?",
+        "tolong jelaskan Guanethidine?",
+        "apakah yang dimaksud dengan Guanethidine"
+      ],
+      "responses": [
+        "Guanethidine adalah obat kelas umum yang disebut antihipertensi. Ini digunakan untuk mengobati tekanan darah tinggi (hipertensi). Guanethidine bekerja dengan mengendalikan impuls saraf di sepanjang jalur saraf tertentu."
+      ]
+    },
+    {
+      "tag": "pengertian_guanoxan",
+      "patterns": [
+        "Guanoxan adalah?",
+        "Pengertian Guanoxan?",
+        "Apa itu definisi Guanoxan?",
+        "tolong jelaskan Guanoxan?",
+        "apakah yang dimaksud dengan Guanoxan"
+      ],
+      "responses": [
+        "Guanoxan adalah agen antihipertensi yang mekanisme kerjanya mirip dengan guanethidine. namun, dapat menyebabkan kerusakan hati. Guanoxan disetujui di Inggris tetapi ditarik dari pasaran karena hepatotoksisitas."
+      ]
+    },
+    {
+      "tag": "pengertian_diamorphine",
+      "patterns": [
+        "Diamorphine adalah?",
+        "Pengertian Diamorphine?",
+        "Apa itu definisi Diamorphine?",
+        "tolong jelaskan Diamorphine?",
+        "apakah yang dimaksud dengan Diamorphine"
+      ],
+      "responses": [
+        "Diamorphine (Diamorfin) adalah agen analgesik opioid yang digunakan untuk menghilangkan nyeri hebat yang berhubungan dengan prosedur pembedahan, infark miokard atau nyeri pada pasien yang sakit parah dan untuk menghilangkan dispnea pada edema paru akut."
+      ]
+    },
+    {
+      "tag": "pengertian_hexylcaine",
+      "patterns": [
+        "Hexylcaine adalah?",
+        "Pengertian Hexylcaine?",
+        "Apa itu definisi Hexylcaine?",
+        "tolong jelaskan Hexylcaine?",
+        "apakah yang dimaksud dengan Hexylcaine"
+      ],
+      "responses": [
+        "Hexylcaine hydrochloride juga dikenal sebagai cyclaine dan osmokain. Ini adalah anestesi lokal jangka pendek yang bekerja melalui penghambatan saluran natrium. Pasien yang mengalami overdosis dapat muncul dengan gejala sakit kepala, tinnitus, mati rasa dan kesemutan di sekitar mulut dan lidah, kejang, ketidakmampuan bernapas, dan penurunan fungsi jantung. Hexylcaine telah dihentikan di pasar AS."
+      ]
+    },
+    {
+      "tag": "pengertian_hexobarbital ",
+      "patterns": [
+        "Hexobarbital adalah?",
+        "Pengertian Hexobarbital?",
+        "Apa itu definisi Hexobarbital?",
+        "tolong jelaskan Hexobarbital?",
+        "apakah yang dimaksud dengan Hexobarbital"
+      ],
+      "responses": [
+        "Hexobarbital adalah turunan barbiturat yang memiliki efek hipnotis dan sedatif. Itu kemudian digunakan pada tahun 1940-an dan 1950-an sebagai anestesi untuk operasi. Selain itu, agen juga menunjukkan permulaan tindakan yang cukup cepat dan juga memiliki durasi tindakan yang singkat."
+      ]
+    },
+    {
+      "tag": "pengertian_hydrocodone",
+      "patterns": [
+        "Hydrocodone adalah?",
+        "Pengertian Hydrocodone?",
+        "Apa itu definisi Hydrocodone?",
+        "tolong jelaskan Hydrocodone?",
+        "apakah yang dimaksud dengan Hydrocodone"
+      ],
+      "responses": [
+        "Hydrocodone adalah obat untuk meredakan nyeri sedang hingga berat. Obat ini bisa dikombinasikan dengan ibuprofen atau paracetamol. Hydrocodone merupakan obat antinyeri golongan opioid yang bekerja dengan cara menghambat penghantaran sinyal rasa sakit di sistem saraf pusat. Dengan begitu, rasa nyeri bisa berkurang."
+      ]
+    },
+    {
+      "tag": "pengertian_hydrocortisone",
+      "patterns": [
+        "Hydrocortisone adalah?",
+        "Pengertian Hydrocortisone?",
+        "Apa itu definisi Hydrocortisone?",
+        "tolong jelaskan Hydrocortisone?",
+        "apakah yang dimaksud dengan Hydrocortisone"
+      ],
+      "responses": [
+        "Hydrocortisone adalah obat yang digunakan untuk meredakan peradangan, mengurangi reaksi sistem kekebalan tubuh yang berlebihan, dan mengatasi kekurangan hormon kortisol."
+      ]
+    },
+    {
+      "tag": "pengertian_hydromorphone",
+      "patterns": [
+        "Hydromorphone adalah?",
+        "Pengertian Hydromorphone?",
+        "Apa itu definisi Hydromorphone?",
+        "tolong jelaskan Hydromorphone?",
+        "apakah yang dimaksud dengan Hydromorphone"
+      ],
+      "responses": [
+        "Hydromorphone atau hydromorphone hydrochloride adalah obat untuk meredakan nyeri sedang hingga berat. Obat ini tidak boleh digunakan sembarangan dan harus sesuai dengan resep dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_histamin",
+      "patterns": [
+        "Histamin adalah?",
+        "Pengertian Histamin?",
+        "Apa itu definisi Histamin?",
+        "tolong jelaskan Histamin?",
+        "apakah yang dimaksud dengan Histamin"
+      ],
+      "responses": [
+        "Histamin adalah zat kimia yang diproduksi oleh sel-sel darah putih di dalam tubuh ketika Anda mengalami reaksi alergi atau infeksi. Namun, jika zat ini diproduksi secara berlebihan, dampaknya bisa menyebabkan masalah kesehatan dan mengganggu beberapa fungsi tubuh."
+      ]
+    },
+    {
+      "tag": "pengertian_ibuprofen",
+      "patterns": [
+        "Ibuprofen adalah?",
+        "Pengertian Ibuprofen?",
+        "Apa itu definisi Ibuprofen?",
+        "tolong jelaskan Ibuprofen?",
+        "apakah yang dimaksud dengan Ibuprofen"
+      ],
+      "responses": [
+        "Ibuprofen adalah obat untuk untuk meredakan nyeri dan menurunkan deman. Obat ini juga memiliki efek antiradang. Ibuprofen bisa digunakan untuk meredakan nyeri haid, sakit kepala, sakit gigi, nyeri otot, atau nyeri sendi akibat radang sendi. Obat ini tersedia dalam bentuk tablet, kapsul, dan sirop."
+      ]
+    },
+    {
+      "tag": "pengertian_imidazol",
+      "patterns": [
+        "Imidazol adalah?",
+        "Pengertian Imidazol?",
+        "Apa itu definisi Imidazol?",
+        "tolong jelaskan Imidazol?",
+        "apakah yang dimaksud dengan Imidazol"
+      ],
+      "responses": [
+        "Imidazol adalah cincin heterosiklik yang mengandung nitrogen yang memiliki kepentingan biologis dan farmasi. Dengan demikian, senyawa imidazol telah menjadi sumber yang menarik bagi para peneliti selama lebih dari satu abad. Cincin imidazol merupakan penyusun beberapa produk alami penting, termasuk purin, histamin, histidin, dan asam nukleat."
+      ]
+    },
+    {
+      "tag": "pengertian_imipramine",
+      "patterns": [
+        "Imipramine adalah?",
+        "Pengertian Imipramine?",
+        "Apa itu definisi Imipramine?",
+        "tolong jelaskan Imipramine?",
+        "apakah yang dimaksud dengan Imipramine"
+      ],
+      "responses": [
+        "Imipramine adalah obat untuk meredakan gejala depresi. Selain itu, obat ini juga dapat digunakan dalam pengobatan mengompol yang terjadi terus-menerus (enuresis) pada anak-anak yang berusia di atas 6 tahun."
+      ]
+    },
+    {
+      "tag": "pengertian_indoprofen",
+      "patterns": [
+        "Indoprofen adalah?",
+        "Pengertian Indoprofen?",
+        "Apa itu definisi Indoprofen?",
+        "tolong jelaskan Indoprofen?",
+        "apakah yang dimaksud dengan Indoprofen"
+      ],
+      "responses": [
+        "Indoprofen adalah Obat yang memiliki sifat analgesik dan antiinflamasi. Menyusul laporan reaksi merugikan termasuk laporan karsinogenisitas pada penelitian pada hewan, produk ini ditarik dari pasar di seluruh dunia."
+      ]
+    },
+    {
+      "tag": "pengertian_indoramin",
+      "patterns": [
+        "Indoramin adalah?",
+        "Pengertian Indoramin?",
+        "Apa itu definisi Indoramin?",
+        "tolong jelaskan Indoramin?",
+        "apakah yang dimaksud dengan Indoramin"
+      ],
+      "responses": [
+        "Indoramin adalah obat untuk meredakan gejala pembesaran kelenjar prostat jinak, seperti sulit berkemih, lemahnya pancaran urine, atau sering buang air kecil. Selain itu, obat ini juga bisa digunakan untuk menurunkan tekanan darah pada hipertensi."
+      ]
+    },
+    {
+      "tag": "pengertian_isocarboxazid",
+      "patterns": [
+        "Isocarboxazid adalah?",
+        "Pengertian Isocarboxazid?",
+        "Apa itu definisi Isocarboxazid?",
+        "tolong jelaskan Isocarboxazid?",
+        "apakah yang dimaksud dengan Isocarboxazid"
+      ],
+      "responses": [
+        "Isocarboxazid adalah obat untuk meredakan gejala depresi, termasuk kecemasan, gangguan panik, atau ketakutan yang berlebihan. Isocarboxazid tidak boleh digunakan sembarangan dan harus sesuai resep dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_isoniazid",
+      "patterns": [
+        "Isoniazid adalah?",
+        "Pengertian Isoniazid?",
+        "Apa itu definisi Isoniazid?",
+        "tolong jelaskan Isoniazid?",
+        "apakah yang dimaksud dengan Isoniazid"
+      ],
+      "responses": [
+        "Isoniazid adalah obat antibiotik untuk mengobati tuberkulosis (TBC). Dalam pengobatan TBC, isoniazid akan dikombinasikan dengan obat TBC lainnya, seperti rifampicin, ethambutol, atau pyrazinamide."
+      ]
+    },
+    {
+      "tag": "pengertian_isoproterenol",
+      "patterns": [
+        "Isoproterenol adalah?",
+        "Pengertian Isoproterenol?",
+        "Apa itu definisi Isoproterenol?",
+        "tolong jelaskan Isoproterenol?",
+        "apakah yang dimaksud dengan Isoproterenol"
+      ],
+      "responses": [
+        "Isoprenalin adalah agonis reseptor beta adrenergik non-selektif yang diindikasikan untuk mengobati blok jantung, serangan Adams-Stokes, bronkospasme dalam anestesi, henti jantung, syok hipovolemik, syok septik, hipoperfusi, gagal pendengaran kongestif, dan syok kardiogenik."
+      ]
+    },
+    {
+      "tag": "pengertian_isoxsuprine",
+      "patterns": [
+        "Isoxsuprine adalah?",
+        "Pengertian Isoxsuprine?",
+        "Apa itu definisi Isoxsuprine?",
+        "tolong jelaskan Isoxsuprine?",
+        "apakah yang dimaksud dengan Isoxsuprine"
+      ],
+      "responses": [
+        "Isoxsuprine adalah obat untuk menangani penyakit dengan gangguan aliran darah, seperti penyakit Raynaud, arteriosklerosis, penyakit Buerger, atau insufisiensi pembuluh darah otak. Obat ini tersedia dalam bentuk tablet dan suntik."
+      ]
+    },
+    {
+      "tag": "pengertian_kanamycin",
+      "patterns": [
+        "Kanamycin adalah?",
+        "Pengertian Kanamycin?",
+        "Apa itu definisi Kanamycin?",
+        "tolong jelaskan Kanamycin?",
+        "apakah yang dimaksud dengan Kanamycin"
+      ],
+      "responses": [
+        "Kanamycin adalah obat untuk mengatasi infeksi bakteri yang sulit diatasi oleh obat lain. Beberapa penyakit infeksi yang bisa diobati dengan kanamycin adalah septikemia, infeksi saluran kemih yang mengalami komplikasi, peritonitis, atau infeksi saluran pernapasan."
+      ]
+    },
+    {
+      "tag": "pengertian_levodopa",
+      "patterns": [
+        "Levodopa adalah?",
+        "Pengertian Levodopa?",
+        "Apa itu definisi Levodopa?",
+        "tolong jelaskan Levodopa?",
+        "apakah yang dimaksud dengan Levodopa"
+      ],
+      "responses": [
+        "Levodopa adalah obat untuk meringankan gejala penyakit Parkinson, seperti tubuh gemetar, otot kaku, dan sulit bergerak. Untuk meningkatkan efektivitas pengobatan, levodopa sering dikombinasikan dengan carbidopa atau benserazide."
+      ]
+    },
+    {
+      "tag": "pengertian_levomepromazine",
+      "patterns": [
+        "Levomepromazine adalah?",
+        "Pengertian Levomepromazine?",
+        "Apa itu definisi Levomepromazine?",
+        "tolong jelaskan Levomepromazine?",
+        "apakah yang dimaksud dengan Levomepromazine"
+      ],
+      "responses": [
+        "Levomepromazine adalah obat yang digunakan untuk Mengurangi gejala yang mengganggu dalam perawatan paliatif, meredakan gejala skizofrenia Levomepromazine juga disebut sebagai antipsikotik yang biasa digunakan sebagai antiemetik untuk meredakan mual dan muntah dalam pengaturan perawatan paliatif."
+      ]
+    },
+    {
+      "tag": "pengertian_levorphanol",
+      "patterns": [
+        "Levorphanol adalah?",
+        "Pengertian Levorphanol?",
+        "Apa itu definisi Levorphanol?",
+        "tolong jelaskan Levorphanol?",
+        "apakah yang dimaksud dengan Levorphanol"
+      ],
+      "responses": [
+        "Levorphanol adalah analgesik opioid sintetik ampuh yang diindikasikan untuk penanganan nyeri sedang hingga berat atau sebagai pengobatan pra operasi jika analgesik opioid sesuai. Levorphanol mirip dengan morfin dalam cara kerjanya, namun efeknya 8 kali lebih kuat dibandingkan morfin."
+      ]
+    },
+    {
+      "tag": "pengertian_lidocaine",
+      "patterns": [
+        "Lidocaine adalah?",
+        "Pengertian Lidocaine?",
+        "Apa itu definisi Lidocaine?",
+        "tolong jelaskan Lidocaine?",
+        "apakah yang dimaksud dengan Lidocaine"
+      ],
+      "responses": [
+        "Lidocaine adalah obat untuk menghilangkan rasa sakit atau memberi efek mati rasa pada bagian tubuh tertentu (obat bius lokal). Obat ini juga bisa digunakan untuk mengatasi aritmia jenis tertentu, sehingga termasuk juga dalam golongan obat antiaritmia."
+      ]
+    },
+    {
+      "tag": "pengertian_lincomycin",
+      "patterns": [
+        "Lincomycin adalah?",
+        "Pengertian Lincomycin?",
+        "Apa itu definisi Lincomycin?",
+        "tolong jelaskan Lincomycin?",
+        "apakah yang dimaksud dengan Lincomycin"
+      ],
+      "responses": [
+        "Lincomycin adalah antibiotik untuk mengatasi infeksi bakteri berat pada paru-paru, tulang, sendi, dan kulit. Lincomycin biasanya diresepkan kepada pasien yang alergi terhadap antibiotik penisilin."
+      ]
+    },
+    {
+      "tag": "pengertian_mecamylamine",
+      "patterns": [
+        "Mecamylamine adalah?",
+        "Pengertian Mecamylamine?",
+        "Apa itu definisi Mecamylamine?",
+        "tolong jelaskan Mecamylamine?",
+        "apakah yang dimaksud dengan Mecamylamine"
+      ],
+      "responses": [
+        "Mecamylamine adalah agen antihipertensi oral yang manjur dan penghambat ganglion, dan merupakan amina sekunder. Mecamylamine diindikasikan untuk pengelolaan hipertensi esensial sedang hingga berat dan pada kasus hipertensi maligna tanpa komplikasi."
+      ]
+    },
+    {
+      "tag": "pengertian_mefenamic_acid",
+      "patterns": [
+        "Mefenamic Acid adalah?",
+        "Pengertian Mefenamic Acid?",
+        "Apa itu definisi Mefenamic Acid?",
+        "tolong jelaskan Mefenamic Acid?",
+        "apakah yang dimaksud dengan Mefenamic Acid"
+      ],
+      "responses": [
+        "Asam mefenamat (mefenamic acid) adalah obat untuk meredakan nyeri akibat nyeri haid, cedera, sakit gigi, sakit kepala, atau radang sendi. Asam mefenamat tersedia dalam bentuk tablet, kapsul, dan cairan suspensi."
+      ]
+    },
+    {
+      "tag": "pengertian_mephentermine",
+      "patterns": [
+        "Mephentermine adalah?",
+        "Pengertian Mephentermine?",
+        "Apa itu definisi Mephentermine?",
+        "tolong jelaskan Mephentermine?",
+        "apakah yang dimaksud dengan Mephentermine"
+      ],
+      "responses": [
+        "Mephentermine digunakan untuk mengontrol atau memelihara tekanan darah pada penderita hipotensi dan untuk menyeimbangkan tekanan darah pada saat bidan atau para ahli kandungan melakukan anestesi spinal (pembiusan) menjelang persalinan."
+      ]
+    },
+    {
+      "tag": "pengertian_meperidine",
+      "patterns": [
+        "Meperidine adalah?",
+        "Pengertian Meperidine?",
+        "Apa itu definisi Meperidine?",
+        "tolong jelaskan Meperidine?",
+        "apakah yang dimaksud dengan Meperidine"
+      ],
+      "responses": [
+        "Meperidine adalah agonis opiat sintetik yang termasuk dalam kelas fenilpiperidine. Meperidine dapat menyebabkan lebih sedikit kejang otot polos, konstipasi, dan depresi refleks batuk dibandingkan morfin dengan dosis setara. Permulaan kerja sedikit lebih cepat dibandingkan dengan morfin, dan durasi kerja sedikit lebih pendek."
+      ]
+    },
+    {
+      "tag": "pengertian_mepivacaine",
+      "patterns": [
+        "Mepivacaine adalah?",
+        "Pengertian Mepivacaine?",
+        "Apa itu definisi Mepivacaine?",
+        "tolong jelaskan Mepivacaine?",
+        "apakah yang dimaksud dengan Mepivacaine"
+      ],
+      "responses": [
+        "Mepivacaine adalah anestesi lokal yang kerap digunakan untuk operasi gigi. Obat ini juga digunakan sebagai bius spinal atau epidural.Obat ini bekerja dengan cara menghalangi impuls saraf mengirimkan sinyal rasa sakit ke otak Anda"
+      ]
+    },
+    {
+      "tag": "pengertian_metaproterenol",
+      "patterns": [
+        "Metaproterenol adalah?",
+        "Pengertian Metaproterenol?",
+        "Apa itu definisi Metaproterenol?",
+        "tolong jelaskan Metaproterenol?",
+        "apakah yang dimaksud dengan Metaproterenol"
+      ],
+      "responses": [
+        "Metaproterenol adalah bronkodilator. Ia bekerja dengan mengendurkan otot-otot di saluran udara untuk meningkatkan pernapasan. Metaproterenol digunakan untuk mengobati kondisi seperti asma, bronkitis, dan emfisema."
+      ]
+    },
+    {
+      "tag": "pengertian_methadone",
+      "patterns": [
+        "Methadone adalah?",
+        "Pengertian Methadone?",
+        "Apa itu definisi Methadone?",
+        "tolong jelaskan Methadone?",
+        "apakah yang dimaksud dengan Methadone"
+      ],
+      "responses": [
+        "Methadone adalah obat untuk meredakan nyeri berat dan mengobati ketergantungan opioid. Methadone tidak boleh digunakan sembarangan dan harus sesuai dengan resep dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_metamfetamin",
+      "patterns": [
+        "Metamfetamin adalah?",
+        "Pengertian Metamfetamin?",
+        "Apa itu definisi Metamfetamin?",
+        "tolong jelaskan Metamfetamin?",
+        "apakah yang dimaksud dengan Metamfetamin"
+      ],
+      "responses": [
+        "Metamfetamin adalah obat untuk mengatasi attention deficit hyperactivity disorder (ADHD). Obat ini juga digunakan untuk menurunkan berat badan pada pasien obesitas yang tidak berhasil dengan diet dan olahraga."
+      ]
+    },
+    {
+      "tag": "pengertian_methapyrilene",
+      "patterns": [
+        "Methapyrilene adalah?",
+        "Pengertian Methapyrilene?",
+        "Apa itu definisi Methapyrilene?",
+        "tolong jelaskan Methapyrilene?",
+        "apakah yang dimaksud dengan Methapyrilene"
+      ],
+      "responses": [
+        "Methapyrilene adalah Obat yang memiliki efek sedatif yang relatif kuat, sehingga penggunaan utamanya adalah sebagai obat insomnia dan bukan sebagai antihistamin. obat ini terbukti bersifat karsinogen yang kuat sehingga Produsen secara sukarela menarik produk obat ini."
+      ]
+    },
+    {
+      "tag": "pengertian_methaqualone",
+      "patterns": [
+        "methaqualone adalah?",
+        "Pengertian methaqualone?",
+        "Apa itu definisi methaqualone?",
+        "tolong jelaskan methaqualone?",
+        "apakah yang dimaksud dengan methaqualone"
+      ],
+      "responses": [
+        "Methaqualone (Quaaludes) adalah depresan sistem saraf pusat sintetis, mirip barbiturat. Bahan aktifnya, methaqualone, bersifat ansiolitik (menurunkan kecemasan) dan obat penenang-hipnotis yang menyebabkan keadaan mengantuk."
+      ]
+    },
+    {
+      "tag": "pengertian_metharbital",
+      "patterns": [
+        "Metharbital adalah?",
+        "Pengertian Metharbital?",
+        "Apa itu definisi Metharbital?",
+        "tolong jelaskan Metharbital?",
+        "apakah yang dimaksud dengan Metharbital"
+      ],
+      "responses": [
+        "Metharbital adalah antikonvulsan barbiturat suatu barbiturat yang digunakan untuk pengobatan insomnia jangka pendek. Itu termasuk dalam kelompok obat yang disebut depresan sistem saraf pusat (SSP) yang menyebabkan kantuk dan meredakan ketegangan atau kegugupan."
+      ]
+    },
+    {
+      "tag": "pengertian_methazolamide",
+      "patterns": [
+        "Methazolamide adalah?",
+        "Pengertian Methazolamide?",
+        "Apa itu definisi Methazolamide?",
+        "tolong jelaskan Methazolamide?",
+        "apakah yang dimaksud dengan Methazolamide"
+      ],
+      "responses": [
+        "Methazolamide seingkali digunakan sebagai obat untuk menurunkan tekanan di dalam mata (tekanan intraokular) pada pasien yang mengalami jenis glaukoma tertentu. Menurunkan tekanan tinggi di dalam mata membantu mencegah kehilangan penglihatan hingga pencegahan kerusakan saraf."
+      ]
+    },
+    {
+      "tag": "pengertian_methenamine",
+      "patterns": [
+        "Methenamine adalah?",
+        "Pengertian Methenamine?",
+        "Apa itu definisi Methenamine?",
+        "tolong jelaskan Methenamine?",
+        "apakah yang dimaksud dengan Methenamine"
+      ],
+      "responses": [
+        "Methenamine adalah obat antibiotik yang biasa digunakan untuk mengatasi infeksi saluran kemih. Biasanya dokter akan meresepkan obat ini ketika beragam obat-obatan lain tidak mempan mengobati infeksi yang Anda alami."
+      ]
+    },
+    {
+      "tag": "pengertian_methicillin",
+      "patterns": [
+        "Methicillin adalah?",
+        "Pengertian Methicillin?",
+        "Apa itu definisi Methicillin?",
+        "tolong jelaskan Methicillin?",
+        "apakah yang dimaksud dengan Methicillin"
+      ],
+      "responses": [
+        "Methicillin-resistant Staphylococcus aureus (MRSA) adalah bakteri stafilokokus yang sudah kebal terhadap beberapa jenis antibiotik, seperti amoxicillin dan penisilin. Infeksi MRSA bisa ditandai dengan munculnya benjolan di kulit yang mirip jerawat dan terasa nyeri."
+      ]
+    },
+    {
+      "tag": "pengertian_methylphenidate",
+      "patterns": [
+        "Methylphenidate adalah?",
+        "Pengertian Methylphenidate?",
+        "Apa itu definisi Methylphenidate?",
+        "tolong jelaskan Methylphenidate?",
+        "apakah yang dimaksud dengan Methylphenidate"
+      ],
+      "responses": [
+        "Methylphenidate adalah obat untuk mengendalikan gejala dari attention deficit hyperactivity disorder (ADHD). Obat ini juga digunakan dalam pengobatan narkolepsi, yaitu gangguan tidur yang bisa menyebabkan penderitanya tertidur secara tiba-tiba."
+      ]
+    },
+    {
+      "tag": "pengertian_methyprylon",
+      "patterns": [
+        "Methyprylon adalah?",
+        "Pengertian Methyprylon?",
+        "Apa itu definisi Methyprylon?",
+        "tolong jelaskan Methyprylon?",
+        "apakah yang dimaksud dengan Methyprylon"
+      ],
+      "responses": [
+        "Methyprylon adalah obat penenang dari keluarga turunan piperidinedione yang sebelumnya digunakan untuk pengobatan insomnia. Namun, dengan diperkenalkannya obat-obatan baru dengan efek samping yang lebih sedikit. Seperti benzodiazepin, penggunaan klinis methyprylon kini terbatas."
+      ]
+    },
+    {
+      "tag": "pengertian_methysergide",
+      "patterns": [
+        "Methysergide adalah?",
+        "Pengertian Methysergide?",
+        "Apa itu definisi Methysergide?",
+        "tolong jelaskan Methysergide?",
+        "apakah yang dimaksud dengan Methysergide"
+      ],
+      "responses": [
+        "Methysergide adalah alkaloid ergot yang digunakan untuk profilaksis migrain dan sakit kepala cluster. ini telah terbukti untuk menghambat atau memblokir efek serotonin, suatu zat yang mungkin terlibat dalam mekanisme sakit kepala vaskular."
+      ]
+    },
+    {
+      "tag": "pengertian_metoprolol",
+      "patterns": [
+        "Metoprolol adalah?",
+        "Pengertian Metoprolol?",
+        "Apa itu definisi Metoprolol?",
+        "tolong jelaskan Metoprolol?",
+        "apakah yang dimaksud dengan Metoprolol"
+      ],
+      "responses": [
+        "Metoprolol bermanfaat untuk menurunkan detak jantung, tekanan darah, dan beban kerja jantung. Obat ini biasanya digunakan untuk mengobati tekanan darah tinggi, nyeri dada (angina), dan gagal jantung."
+      ]
+    },
+    {
+      "tag": "pengertian_methotrexate",
+      "patterns": [
+        "Methotrexate adalah?",
+        "Pengertian Methotrexate?",
+        "Apa itu definisi Methotrexate?",
+        "tolong jelaskan Methotrexate?",
+        "apakah yang dimaksud dengan Methotrexate"
+      ],
+      "responses": [
+        "Methotrexate adalah obat untuk mengatasi kanker, seperti kanker payudara, choriocarcinoma, leukemia, kanker tulang, limfoma, atau mycosis fungoides. Selain itu, obat ini juga bisa digunakan dalam pengobatan penyakit autoimun, seperti psoriasis, rheumatoid arthritis, penyakit Crohn, atau lupus."
+      ]
+    },
+    {
+      "tag": "pengertian_methoxamine",
+      "patterns": [
+        "Methoxamine adalah?",
+        "Pengertian Methoxamine?",
+        "Apa itu definisi Methoxamine?",
+        "tolong jelaskan Methoxamine?",
+        "apakah yang dimaksud dengan Methoxamine"
+      ],
+      "responses": [
+        "Methoxamine adalah amina simpatomimetik ampuh yang meningkatkan tekanan darah sistolik dan diastolik. Methoxamine diindikasikan untuk pencegahan dan pengobatan keadaan hipotensi akut yang terjadi dengan anestesi tulang belakang."
+      ]
+    },
+    {
+      "tag": "pengertian_metronidazole",
+      "patterns": [
+        "Metronidazole adalah?",
+        "Pengertian Metronidazole?",
+        "Apa itu definisi Metronidazole?",
+        "tolong jelaskan Metronidazole?",
+        "apakah yang dimaksud dengan Metronidazole"
+      ],
+      "responses": [
+        "Metronidazole adalah antibiotik untuk mengobati infeksi bakteri di berbagai organ tubuh, termasuk di saluran pencernaan, paru-paru, darah, saluran kemih, hingga kelamin. Obat ini juga bisa digunakan untuk menangani infeksi parasit tertentu, seperti trikomoniasis atau amebiasis."
+      ]
+    },
+    {
+      "tag": "pengertian_minocycline",
+      "patterns": [
+        "Minocycline adalah?",
+        "Pengertian Minocycline?",
+        "Apa itu definisi Minocycline?",
+        "tolong jelaskan Minocycline?",
+        "apakah yang dimaksud dengan Minocycline"
+      ],
+      "responses": [
+        "Minocycline adalah obat antibiotik untuk mengatasi penyakit akibat infeksi bakteri, seperti gonore, sifilis, atau uretritis nongonore. Selain itu, minocycline juga digunakan untuk mengatasi jerawat atau periodontitis."
+      ]
+    },
+    {
+      "tag": "pengertian_molindone",
+      "patterns": [
+        "Molindone adalah?",
+        "Pengertian Molindone?",
+        "Apa itu definisi Molindone?",
+        "tolong jelaskan Molindone?",
+        "apakah yang dimaksud dengan Molindone"
+      ],
+      "responses": [
+        "Molindone adalah agen antipsikotik konvensional yang digunakan dalam terapi skizofrenia. Terapi molindone umumnya dikaitkan dengan peningkatan minor serum aminotransferase tetapi jarang dikaitkan dengan kasus cedera hati akut yang terlihat secara klinis."
+      ]
+    },
+    {
+      "tag": "pengertian_nafcillin",
+      "patterns": [
+        "Nafcillin adalah?",
+        "Pengertian Nafcillin?",
+        "Apa itu definisi Nafcillin?",
+        "tolong jelaskan Nafcillin?",
+        "apakah yang dimaksud dengan Nafcillin"
+      ],
+      "responses": [
+        "Nafcillin adalah antibiotik dalam kelompok obat penisilin yang digunakan untuk mengobati berbagai jenis infeksi, terutama yang disebabkan oleh bakteri staphylococcus (infeksi 'staph'). Nafcillin tersedia dalam bentuk generik."
+      ]
+    },
+    {
+      "tag": "pengertian_nalorphine",
+      "patterns": [
+        "Nalorphine adalah?",
+        "Pengertian Nalorphine?",
+        "Apa itu definisi Nalorphine?",
+        "tolong jelaskan Nalorphine?",
+        "apakah yang dimaksud dengan Nalorphine"
+      ],
+      "responses": [
+        "Nalorphine adalah obat untuk menangkal depresi pernapasan yang dihasilkan oleh overdosis narkotika. Obat ini adalah turunan morfin yang bertindak sebagai antagonis terhadap depresi dan efek stimulasi dari morfin dan narkotika lainya yang terkait."
+      ]
+    },
+    {
+      "tag": "pengertian_naloxone",
+      "patterns": [
+        "Naloxone adalah?",
+        "Pengertian Naloxone?",
+        "Apa itu definisi Naloxone?",
+        "tolong jelaskan Naloxone?",
+        "apakah yang dimaksud dengan Naloxone"
+      ],
+      "responses": [
+        "Naloxone adalah obat untuk mengatasi overdosis obat opioid. Beberapa jenis obat yang termasuk opioid antara lain codein, morfin, methadone, oxycodone, heroin, fentanyl, dan hydrocodone. Naloxone tersedia dalam bentuk suntik."
+      ]
+    },
+    {
+      "tag": "pengertian_naproxen",
+      "patterns": [
+        "Naproxen adalah?",
+        "Pengertian Naproxen?",
+        "Apa itu definisi Naproxen?",
+        "tolong jelaskan Naproxen?",
+        "apakah yang dimaksud dengan Naproxen"
+      ],
+      "responses": [
+        "Naproxen adalah obat untuk meredakan nyeri, demam, bengkak, dan kemerahan akibat peradangan. Obat ini bisa digunakan untuk mengatasi nyeri pada saat haid, nyeri akibat radang tendon, penyakit asam urat, rheumatoid arthritis, osteoarthritis, atau ankylosing spondylitis."
+      ]
+    },
+    {
+      "tag": "pengertian_nicotinamide",
+      "patterns": [
+        "Nicotinamide adalah?",
+        "Pengertian Nicotinamide?",
+        "Apa itu definisi Nicotinamide?",
+        "tolong jelaskan Nicotinamide?",
+        "apakah yang dimaksud dengan Nicotinamide"
+      ],
+      "responses": [
+        "Nicotinamide atau niacinamide adalah suplemen untuk mencegah dan mengatasi kekurangan vitamin B3. Salah satu kondisi yang bisa terjadi akibat defisiensi atau kekurangan vitamin B3 adalah pellagra. Nicotinamide tersedia dalam bentuk tablet dan gel."
+      ]
+    },
+    {
+      "tag": "pengertian_nitrazepam",
+      "patterns": [
+        "Nitrazepam adalah?",
+        "Pengertian Nitrazepam?",
+        "Apa itu definisi Nitrazepam?",
+        "tolong jelaskan Nitrazepam?",
+        "apakah yang dimaksud dengan Nitrazepam"
+      ],
+      "responses": [
+        "Nitrazepam adalah obat yang digunakan untuk mengatasi masalah sulit tidur. Penggunaan obat nz ini tidak boleh dilakukan sembarangan. Agar tidak salah, ketahui aturan pakai, dosis, efek samping, dan ketentuan lainnya dalam ulasan berikut."
+      ]
+    },
+    {
+      "tag": "pengertian_nitrofurantoin",
+      "patterns": [
+        "Nitrofurantoin adalah?",
+        "Pengertian Nitrofurantoin?",
+        "Apa itu definisi Nitrofurantoin?",
+        "tolong jelaskan Nitrofurantoin?",
+        "apakah yang dimaksud dengan Nitrofurantoin"
+      ],
+      "responses": [
+        "Nitrofurantoin adalah obat antibiotik yang digunakan untuk mengatasi infeksi saluran kemih, termasuk radang kandung kemih (cystitis) atau infeksi ginjal.Nitrofurantoin bekerja dengan cara menghambat pembentukan protein penyusun dinding sel bakteri."
+      ]
+    },
+    {
+      "tag": "pengertian_novobiocin",
+      "patterns": [
+        "Novobiocin adalah?",
+        "Pengertian Novobiocin?",
+        "Apa itu definisi Novobiocin?",
+        "tolong jelaskan Novobiocin?",
+        "apakah yang dimaksud dengan Novobiocin"
+      ],
+      "responses": [
+        "Novobiocin adalah antibiotik aminocoumarin yang diproduksi oleh actinomycete Streptomyces niveus. Novobiocin berikatan dengan DNA girase, dan menghambat aktivitas adenosine triphosphatase (ATPase)."
+      ]
+    },
+    {
+      "tag": "pengertian_orphenadrine",
+      "patterns": [
+        "Orphenadrine adalah?",
+        "Pengertian Orphenadrine?",
+        "Apa itu definisi Orphenadrine?",
+        "tolong jelaskan Orphenadrine?",
+        "apakah yang dimaksud dengan Orphenadrine"
+      ],
+      "responses": [
+        "Orphenadrine adalah antikolinergik dengan efek dominan sentral dan hanya efek perifer lemah. Orphenadrine diindikasikan sebagai tambahan untuk istirahat, terapi fisik, dan tindakan lain untuk menghilangkan ketidaknyamanan yang berhubungan dengan kondisi muskuloskeletal akut yang menyakitkan."
+      ]
+    },
+    {
+      "tag": "pengertian_oxacillin",
+      "patterns": [
+        "Oxacillin adalah?",
+        "Pengertian Oxacillin?",
+        "Apa itu definisi Oxacillin?",
+        "tolong jelaskan Oxacillin?",
+        "apakah yang dimaksud dengan Oxacillin"
+      ],
+      "responses": [
+        "Oxacillin adalah obat untuk mengatasi infeksi bakteri Staphylococcus yang kebal terhadap antibiotik penicillin G. Infeksi Staphylococcus dapat menyebabkan beragam penyakit, seperti radang paru (pneumonia), infeksi jantung (endokarditis), atau infeksi tulang dan otot (osteomielitis)."
+      ]
+    },
+    {
+      "tag": "pengertian_oxycodone",
+      "patterns": [
+        "Oxycodone adalah?",
+        "Pengertian Oxycodone?",
+        "Apa itu definisi Oxycodone?",
+        "tolong jelaskan Oxycodone?",
+        "apakah yang dimaksud dengan Oxycodone"
+      ],
+      "responses": [
+        "Oxycodone adalah obat pereda nyeri. Obat ini biasa digunakan untuk meredakan nyeri dengan intensitas sedang hingga parah, seperti nyeri pascaoperasi atau nyeri akibat kanker."
+      ]
+    },
+    {
+      "tag": "pengertian_oxyphenbutazone",
+      "patterns": [
+        "Oxyphenbutazone adalah?",
+        "Pengertian Oxyphenbutazone?",
+        "Apa itu definisi Oxyphenbutazone?",
+        "tolong jelaskan Oxyphenbutazone?",
+        "apakah yang dimaksud dengan Oxyphenbutazone"
+      ],
+      "responses": [
+        "Oxyphenbutazone adalah obat antiinflamasi nonsteroid (NSAID). Obat adalah metabolit fenilbutazon. Oxyphenbutazone ditarik dari pasar di seluruh dunia pada pertengahan 1980-an karena penekanan sumsum tulang dan risiko sindrom Stevens-Johnson."
+      ]
+    },
+    {
+      "tag": "pengertian_oxymorphone",
+      "patterns": [
+        "Oxymorphone adalah?",
+        "Pengertian Oxymorphone?",
+        "Apa itu definisi Oxymorphone?",
+        "tolong jelaskan Oxymorphone?",
+        "apakah yang dimaksud dengan Oxymorphone"
+      ],
+      "responses": [
+        "Oxymorphone adalah opioid semi-sintetik pengganti morfin. Ini adalah analgesik yang manjur. Analgesik opioid memberikan efek farmakologis utamanya pada SSP dan saluran cerna."
+      ]
+    },
+    {
+      "tag": "pengertian_oxypurinol",
+      "patterns": [
+        "Oxypurinol adalah?",
+        "Pengertian Oxypurinol?",
+        "Apa itu definisi Oxypurinol?",
+        "tolong jelaskan Oxypurinol?",
+        "apakah yang dimaksud dengan Oxypurinol"
+      ],
+      "responses": [
+        "Oxypurinol adalah penghambat enzim xanthine oxidase, menghalangi konversi oxypurines hypoxanthine dan xanthine menjadi asam urat. Peningkatan konsentrasi oksipurin dan penghambatan oksipurin xantin oksidase melalui umpan balik negatif menghasilkan penurunan konsentrasi asam urat dalam darah dan urin."
+      ]
+    },
+    {
+      "tag": "pengertian_oxytetracycline",
+      "patterns": [
+        "Oxytetracycline adalah?",
+        "Pengertian Oxytetracycline?",
+        "Apa itu definisi Oxytetracycline?",
+        "tolong jelaskan Oxytetracycline?",
+        "apakah yang dimaksud dengan Oxytetracycline"
+      ],
+      "responses": [
+        "Oxytetracycline adalah obat antibiotik untuk mengatasi infeksi bakteri di kulit dan mata. Obat ini juga bisa digunakan untuk mencegah infeksi pada luka terbuka, serta untuk mengobati jerawat dan rosacea. Oxytetracycline tersedia dalam bentuk salep kulit dan salep mata."
+      ]
+    },
+    {
+      "tag": "pengertian_papaverine",
+      "patterns": [
+        "Papaverine adalah?",
+        "Pengertian Papaverine?",
+        "Apa itu definisi Papaverine?",
+        "tolong jelaskan Papaverine?",
+        "apakah yang dimaksud dengan Papaverine"
+      ],
+      "responses": [
+        "Papaverine adalah obat untuk melebarkan pembuluh darah sehingga aliran darah lebih lancar dan tekanan darah menurun. Selain di pembuluh darah, obat ini juga bisa bekerja pada otot polos di organ-organ tertentu, misalnya lambung, saluran kemih, atau saluran empedu."
+      ]
+    },
+    {
+      "tag": "pengertian_pentazocine",
+      "patterns": [
+        "Pentazocine adalah?",
+        "Pengertian Pentazocine?",
+        "Apa itu definisi Pentazocine?",
+        "tolong jelaskan Pentazocine?",
+        "apakah yang dimaksud dengan Pentazocine"
+      ],
+      "responses": [
+        "Pentazocine adalah obat untuk meredakan nyeri sedang hingga berat. Obat ini juga digunakan sebagai bagian dari anestesi untuk operasi.Pentazocine termasuk kelas obat nyeri opioid kadang-kadang juga disebut sebagai narkotika."
+      ]
+    },
+    {
+      "tag": "pengertian_prilocaine",
+      "patterns": [
+        "Prilocaine adalah?",
+        "Pengertian Prilocaine?",
+        "Apa itu definisi Prilocaine?",
+        "tolong jelaskan Prilocaine?",
+        "apakah yang dimaksud dengan Prilocaine"
+      ],
+      "responses": [
+        "Prilocaine adalah obat anestesi yang memiliki kemiripan dengan lidocaine sehingga seringkali dikombinasikan secara bersamaan. Umumnya Prilocaine digunakan untuk mengurangi rasa nyeri saat menjalani sejumlah tindakan medis, termasuk dalam perawatan gigi tertentu, seperti cabut gigi."
+      ]
+    },
+    {
+      "tag": "pengertian_procarbazine",
+      "patterns": [
+        "Procarbazine adalah?",
+        "Pengertian Procarbazine?",
+        "Apa itu definisi Procarbazine?",
+        "tolong jelaskan Procarbazine?",
+        "apakah yang dimaksud dengan Procarbazine"
+      ],
+      "responses": [
+        "Procarbazine adalah antineoplastik di kelas agen alkilasi dan digunakan untuk mengobati berbagai bentuk kanker. Agen alkilasi dinamakan demikian karena kemampuannya untuk menambahkan gugus alkil ke banyak gugus elektronegatif dalam kondisi yang ada di dalam sel."
+      ]
+    },
+    {
+      "tag": "pengertian_promazine",
+      "patterns": [
+        "Promazine adalah?",
+        "Pengertian Promazine?",
+        "Apa itu definisi Promazine?",
+        "tolong jelaskan Promazine?",
+        "apakah yang dimaksud dengan Promazine"
+      ],
+      "responses": [
+        "Promazine adalah fenotiazin yang digunakan untuk menangani skizofrenia Digunakan sebagai tambahan untuk pengobatan jangka pendek agitasi psikomotorik sedang dan berat. Juga digunakan untuk mengobati agitasi atau kegelisahan pada orang tua."
+      ]
+    },
+    {
+      "tag": "pengertian_propranolol",
+      "patterns": [
+        "Propranolol adalah?",
+        "Pengertian Propranolol?",
+        "Apa itu definisi Propranolol?",
+        "tolong jelaskan Propranolol?",
+        "apakah yang dimaksud dengan Propranolol"
+      ],
+      "responses": [
+        "Propranolol adalah obat untuk menangani berbagai kondisi yang berhubungan dengan jantung dan pembuluh darah, seperti aritmia, angina pektoris, hipertensi, hypertrophic subaortic stenosis, atau hipertensi portal."
+      ]
+    },
+    {
+      "tag": "pengertian_pseudoephedrine",
+      "patterns": [
+        "Pseudoephedrine adalah?",
+        "Pengertian Pseudoephedrine?",
+        "Apa itu definisi Pseudoephedrine?",
+        "tolong jelaskan Pseudoephedrine?",
+        "apakah yang dimaksud dengan Pseudoephedrine"
+      ],
+      "responses": [
+        "Pseudoephedrine adalah obat yang dapat digunakan untuk mengatasi gejala hidung tersumbat akibat flu, batuk pilek, alergi, sinusitis, atau bronkitis. Obat ini tersedia dalam bentuk tablet, sirop, dan tetes."
+      ]
+    },
+    {
+      "tag": "pengertian_quinidine",
+      "patterns": [
+        "Quinidine adalah?",
+        "Pengertian Quinidine?",
+        "Apa itu definisi Quinidine?",
+        "tolong jelaskan Quinidine?",
+        "apakah yang dimaksud dengan Quinidine"
+      ],
+      "responses": [
+        "Quinidine adalah obat golongan antiaritmia yang digunakan untuk mengobati berbagai jenis gangguan irama jantung atau aritmia, seperti fibrilasi atrium dan atrial flutter. Quinidine termasuk ke dalam kelompok obat keras dan hanya bisa diperoleh dengan resep dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_reserpine",
+      "patterns": [
+        "Reserpine adalah?",
+        "Pengertian Reserpine?",
+        "Apa itu definisi Reserpine?",
+        "tolong jelaskan Reserpine?",
+        "apakah yang dimaksud dengan Reserpine"
+      ],
+      "responses": [
+        "Reserpine adalah obat untuk menurunkan tekanan darah pada penderita hipertensi. Reserpine juga dapat digunakan untuk menangani kegelisahan berat pada psikosis, yaitu kondisi ketika penderitanya sulit membedakan kenyataan dan khayalan."
+      ]
+    },
+    {
+      "tag": "pengertian_riboflavin",
+      "patterns": [
+        "Riboflavin adalah?",
+        "Pengertian Riboflavin?",
+        "Apa itu definisi Riboflavin?",
+        "tolong jelaskan Riboflavin?",
+        "apakah yang dimaksud dengan Riboflavin"
+      ],
+      "responses": [
+        "Riboflavin atau vitamin B2 adalah suplemen untuk mencegah dan mengatasi kekurangan (defisiensi) riboflavin. Di dalam tubuh, vitamin ini berperan penting dalam menjaga kesehatan mata, sistem saraf, kulit, saluran pencernaan, dan otak. Riboflavin juga membantu pembentukan sel darah."
+      ]
+    },
+    {
+      "tag": "pengertian_rifampicin",
+      "patterns": [
+        "Rifampicin adalah?",
+        "Pengertian Rifampicin?",
+        "Apa itu definisi Rifampicin?",
+        "tolong jelaskan Rifampicin?",
+        "apakah yang dimaksud dengan Rifampicin"
+      ],
+      "responses": [
+        "Rifampicin atau rifampin adalah obat antibiotik yang digunakan untuk mengobati dan mencegah beberapa penyakit akibat infeksi bakteri, seperti tuberkulosis. Untuk pengobatan, rifampicin biasanya harus dikombinasikan dengan obat antibiotik lain."
+      ]
+    },
+    {
+      "tag": "pengertian_saccharin",
+      "patterns": [
+        "Saccharin adalah?",
+        "Pengertian Saccharin?",
+        "Apa itu definisi Saccharin?",
+        "tolong jelaskan Saccharin?",
+        "apakah yang dimaksud dengan Saccharin"
+      ],
+      "responses": [
+        "Saccharin (Sakarin) merupakan salah satu jenis pemanis buatan pengganti gula. Pemanis ini dianggap memiliki banyak keunggulan dibandingkan gula biasa. Namun, penggunaannya tetap perlu dibatasi, sebab sakarin juga dapat menimbulkan berbagai risiko bila dikonsumsi secara berlebihan."
+      ]
+    },
+    {
+      "tag": "pengertian_secobarbital",
+      "patterns": [
+        "Secobarbital adalah?",
+        "Pengertian Secobarbital?",
+        "Apa itu definisi Secobarbital?",
+        "tolong jelaskan Secobarbital?",
+        "apakah yang dimaksud dengan Secobarbital"
+      ],
+      "responses": [
+        "Secobarbital adalah obat penenang untuk membantu pengobatan insomnia berat. Obat ini tidak boleh digunakan dalam jangka panjang. Selain itu, obat ini juga bisa digunakan untuk mengurangi kecemasan sebelum prosedur operasi."
+      ]
+    },
+    {
+      "tag": "pengertian_succinylsulfathiazole",
+      "patterns": [
+        "Succinylsulfathiazole adalah?",
+        "Pengertian Succinylsulfathiazole?",
+        "Apa itu definisi Succinylsulfathiazole?",
+        "tolong jelaskan Succinylsulfathiazole?",
+        "apakah yang dimaksud dengan Succinylsulfathiazole"
+      ],
+      "responses": [
+        "Sulfathiazole adalah sulfonamida kerja pendek dengan sifat yang mirip dengan sulfamethoxazole. Sekarang jarang digunakan secara sistemik karena toksisitasnya. Sulfathiazole dalam sediaan untuk pengobatan topikal infeksi vagina dan juga digunakan dengan obat lain dalam pengobatan infeksi kulit."
+      ]
+    },
+    {
+      "tag": "pengertian_sulfaguanidine",
+      "patterns": [
+        "Sulfaguanidine adalah?",
+        "Pengertian Sulfaguanidine?",
+        "Apa itu definisi Sulfaguanidine?",
+        "tolong jelaskan Sulfaguanidine?",
+        "apakah yang dimaksud dengan Sulfaguanidine"
+      ],
+      "responses": [
+        "Sulfaguanidine adalah obat antibiotik bergolongan sulfonamide. Obat ini diketahui sebagai obat pertama dari golongan sulfonamide yang digunakan untuk menangani infeksi yang berhubungan dengan usus. Obat ini juga dipakai dalam pengobatan hewan dan berfungsi sebagai agen antiinfektif."
+      ]
+    },
+    {
+      "tag": "pengertian_sulfamerazine",
+      "patterns": [
+        "Sulfamerazine adalah?",
+        "Pengertian Sulfamerazine?",
+        "Apa itu definisi Sulfamerazine?",
+        "tolong jelaskan Sulfamerazine?",
+        "apakah yang dimaksud dengan Sulfamerazine"
+      ],
+      "responses": [
+        "Sulfamerazine adalah agen antibakteri yang digunakan dalam pengobatan berbagai infeksi bakteri, seperti bronkitis, prostatitis, dan infeksi saluran kemih.Bertindak sebagai inhibitor kompetitif enzim dihydropteroate synthetase (DHPS), suatu enzim yang terlibat dalam sintesis folat pada bakteri."
+      ]
+    },
+    {
+      "tag": "pengertian_sulfameter",
+      "patterns": [
+        "Sulfameter adalah?",
+        "Pengertian Sulfameter?",
+        "Apa itu definisi Sulfameter?",
+        "tolong jelaskan Sulfameter?",
+        "apakah yang dimaksud dengan Sulfameter"
+      ],
+      "responses": [
+        "Sulfameter adalah zat antibakteri sulfonamida kerja panjang yang digunakan untuk mengobati infeksi saluran kemih dan kusta."
+      ]
+    },
+    {
+      "tag": "pengertian_sulfamethizole",
+      "patterns": [
+        "Sulfamethizole adalah?",
+        "Pengertian Sulfamethizole?",
+        "Apa itu definisi Sulfamethizole?",
+        "tolong jelaskan Sulfamethizole?",
+        "apakah yang dimaksud dengan Sulfamethizole"
+      ],
+      "responses": [
+        "Sulfamethizole adalah antibiotik sulfonamida yang digunakan untuk mengobati berbagai macam infeksi bakteri yang rentan."
+      ]
+    },
+    {
+      "tag": "pengertian_Sulfamethoxazole",
+      "patterns": [
+        "Sulfamethoxazole adalah?",
+        "Pengertian Sulfamethoxazole?",
+        "Apa itu definisi Sulfamethoxazole?",
+        "tolong jelaskan Sulfamethoxazole?",
+        "apakah yang dimaksud dengan Sulfamethoxazole"
+      ],
+      "responses": [
+        "Sulfamethoxazole adalah obat antibiotik untuk mengobati berbagai penyakit akibat infeksi bakteri. Obat ini selalu dikombinasikan dengan trimethoprim untuk meningkatkan efektivitasnya. Kombinasi kedua antibiotik tersebut dikenal sebagai kotrimoksazol."
+      ]
+    },
+    {
+      "tag": "pengertian_sulfanilamide",
+      "patterns": [
+        "Sulfanilamide adalah?",
+        "Pengertian Sulfanilamide?",
+        "Apa itu definisi Sulfanilamide?",
+        "tolong jelaskan Sulfanilamide?",
+        "apakah yang dimaksud dengan Sulfanilamide"
+      ],
+      "responses": [
+        "Sulfanilamide adalah obat untuk mengobati infeksi jamur Candida pada vulva dan vagina (vulvovaginal candidiasis). Sulfanilamide bekerja dengan cara menghentikan pertumbuhan jamur yang menyebabkan infeksi."
+      ]
+    },
+    {
+      "tag": "pengertian_sulfapyridine",
+      "patterns": [
+        "Sulfapyridine adalah?",
+        "Pengertian Sulfapyridine?",
+        "Apa itu definisi Sulfapyridine?",
+        "tolong jelaskan Sulfapyridine?",
+        "apakah yang dimaksud dengan Sulfapyridine"
+      ],
+      "responses": [
+        "Sulfapyridine adalah antibiotik sulfonamida yang digunakan untuk mengobati dermatitis herpetiformis, pemfigoid membran mukosa jinak, dan pioderma gangrenosum."
+      ]
+    },
+    {
+      "tag": "pengertian_talbutal",
+      "patterns": [
+        "Talbutal adalah?",
+        "Pengertian Talbutal?",
+        "Apa itu definisi Talbutal?",
+        "tolong jelaskan Talbutal?",
+        "apakah yang dimaksud dengan Talbutal"
+      ],
+      "responses": [
+        "Talbutal adalah barbiturat kerja pendek hingga menengah yang merupakan depresan sistem saraf pusat (SSP) nonselektif. Seperti barbiturat lainnya, talbutal mampu menyebabkan semua tingkat perubahan mood SSP mulai dari eksitasi hingga sedasi ringan, hipnosis, dan koma dalam."
+      ]
+    },
+    {
+      "tag": "pengertian_thenyldiamine",
+      "patterns": [
+        "Thenyldiamine adalah?",
+        "Pengertian Thenyldiamine?",
+        "Apa itu definisi Thenyldiamine?",
+        "tolong jelaskan Thenyldiamine?",
+        "apakah yang dimaksud dengan Thenyldiamine"
+      ],
+      "responses": [
+        "Thenyldiamine adalah bahan dalam produk yang diindikasikan untuk mengobati rinitis yang disebabkan oleh flu biasa."
+      ]
+    },
+    {
+      "tag": "pengertian_theobromine",
+      "patterns": [
+        "Theobromine adalah?",
+        "Pengertian Theobromine?",
+        "Apa itu definisi Theobromine?",
+        "tolong jelaskan Theobromine?",
+        "apakah yang dimaksud dengan Theobromine"
+      ],
+      "responses": [
+        "Theobromine adalah alkaloid utama dalam Theobroma cacao dan tanaman lainnya digunakan sebagai vasodilator, diuretik, dan stimulan jantung. Mirip dengan kafein, kafein mungkin berguna dalam mengatasi kelelahan dan hipotensi ortostatik."
+      ]
+    },
+    {
+      "tag": "pengertian_theophylline",
+      "patterns": [
+        "Theophylline adalah?",
+        "Pengertian Theophylline?",
+        "Apa itu definisi Theophylline?",
+        "tolong jelaskan Theophylline?",
+        "apakah yang dimaksud dengan Theophylline"
+      ],
+      "responses": [
+        "Theophylline atau teofilin adalah obat untuk meredakan gejala mengi, sesak napas, atau batuk akibat asma dan penyakit paru obstruktif kronis (PPOK), termasuk emfisema atau bronkitis kronis. Teofilin juga bisa mengurangi iritasi pada saluran napas. Obat ini harus dikonsumsi dengan resep dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_tetracaine",
+      "patterns": [
+        "Tetracaine adalah?",
+        "Pengertian Tetracaine?",
+        "Apa itu definisi Tetracaine?",
+        "tolong jelaskan Tetracaine?",
+        "apakah yang dimaksud dengan Tetracaine"
+      ],
+      "responses": [
+        "Tetracaine atau tetrakain adalah obat untuk mematikan rasa (kebas) selama persalinan, operasi, atau prosedur medis tertentu. Cara kerjanya yaitu dengan memblokir sinyal saraf dalam tubuh Anda."
+      ]
+    },
+    {
+      "tag": "pengertian_thiopental",
+      "patterns": [
+        "Thiopental adalah?",
+        "Pengertian Thiopental?",
+        "Apa itu definisi Thiopental?",
+        "tolong jelaskan Thiopental?",
+        "apakah yang dimaksud dengan Thiopental"
+      ],
+      "responses": [
+        "Thiopental adalah obat yang digunakan untuk memulai proses pembiusan, menurunkan tekanan di dalam otak akibat cedera atau kondisi tertentu, atau menangani status epileptikus. Obat ini akan diberikan di rumah sakit oleh dokter atau petugas medis di bawah pengawasan dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_triethylamine",
+      "patterns": [
+        "Triethylamine adalah?",
+        "Pengertian Triethylamine?",
+        "Apa itu definisi Triethylamine?",
+        "tolong jelaskan Triethylamine?",
+        "apakah yang dimaksud dengan Triethylamine"
+      ],
+      "responses": [
+        "Triethylamine adalah cairan mudah menguap tidak berwarna dengan bau amis yang kuat mengingatkan pada amonia.Seperti diisopropylethylamine (basa Hünig), trietilamina umumnya digunakan dalam sintesis organik, biasanya sebagai basa."
+      ]
+    },
+    {
+      "tag": "pengertian_trimethobenzamide",
+      "patterns": [
+        "Trimethobenzamide adalah?",
+        "Pengertian Trimethobenzamide?",
+        "Apa itu definisi Trimethobenzamide?",
+        "tolong jelaskan Trimethobenzamide?",
+        "apakah yang dimaksud dengan Trimethobenzamide"
+      ],
+      "responses": [
+        "Trimethobenzamide adalah antiemetik yang digunakan untuk mengobati mual dan muntah pasca operasi dan mual yang berhubungan dengan gastroenteritis."
+      ]
+    },
+    {
+      "tag": "pengertian_trimethoprim",
+      "patterns": [
+        "Trimethoprim adalah?",
+        "Pengertian Trimethoprim?",
+        "Apa itu definisi Trimethoprim?",
+        "tolong jelaskan Trimethoprim?",
+        "apakah yang dimaksud dengan Trimethoprim"
+      ],
+      "responses": [
+        "Trimethoprim adalah obat antibiotik untuk mengobati penyakit akibat infeksi bakteri, seperti infeksi saluran kemih dan infeksi telinga tengah (otitis media). Untuk meningkatkan efektivitasnya, penggunaan trimethoprim biasanya dikombinasikan dengan sulfamethoxazole."
+      ]
+    },
+    {
+      "tag": "pengertian_tripelennamine",
+      "patterns": [
+        "Tripelennamine adalah?",
+        "Pengertian Tripelennamine?",
+        "Apa itu definisi Tripelennamine?",
+        "tolong jelaskan Tripelennamine?",
+        "apakah yang dimaksud dengan Tripelennamine"
+      ],
+      "responses": [
+        "Tripelennamine adalah antagonis histamin H1 yang digunakan untuk mengobati reaksi hipersensitivitas, batuk, dan pilek. Ini memberikan bantuan sementara yang efektif untuk bersin, mata berair dan gatal, serta pilek karena demam dan alergi saluran pernapasan atas lainnya."
+      ]
+    },
+    {
+      "tag": "pengertian_tromethamine",
+      "patterns": [
+        "tromethamine adalah?",
+        "Pengertian tromethamine?",
+        "Apa itu definisi tromethamine?",
+        "tolong jelaskan tromethamine?",
+        "apakah yang dimaksud dengan tromethamine"
+      ],
+      "responses": [
+        "Tromethamine adalah akseptor proton yang digunakan untuk pencegahan dan koreksi asidosis metabolik yang berhubungan dengan berbagai kondisi klinis, seperti operasi bypass jantung."
+      ]
+    },
+    {
+      "tag": "pengertian_tuaminoheptane",
+      "patterns": [
+        "Tuaminoheptane adalah?",
+        "Pengertian Tuaminoheptane?",
+        "Apa itu definisi Tuaminoheptane?",
+        "tolong jelaskan Tuaminoheptane?",
+        "apakah yang dimaksud dengan Tuaminoheptane"
+      ],
+      "responses": [
+        "Tuaminoheptana adalah agen simpatomimetik dan vasokonstriktor yang sebelumnya digunakan sebagai dekongestan hidung. Ini juga telah digunakan sebagai stimulan"
+      ]
+    },
+    {
+      "tag": "pengertian_urea",
+      "patterns": [
+        "Urea adalah?",
+        "Pengertian Urea?",
+        "Apa itu definisi Urea?",
+        "tolong jelaskan Urea?",
+        "apakah yang dimaksud dengan Urea"
+      ],
+      "responses": [
+        "Urea adalah emolien keratolitik yang digunakan untuk mengobati lesi hiperkeratosis dan melembabkan kulit. Urea bermanfaat untuk pengobatan kondisi hiperkeratosis"
+      ]
+    },
+    {
+      "tag": "pengertian_vinbarbital",
+      "patterns": [
+        "Vinbarbital adalah?",
+        "Pengertian Vinbarbital?",
+        "Apa itu definisi Vinbarbital?",
+        "tolong jelaskan Vinbarbital?",
+        "apakah yang dimaksud dengan Vinbarbital"
+      ],
+      "responses": [
+        "Vinbarbital adalah obat hipnotis yang merupakan turunan barbiturat. Juga, digunakan untuk analgesia dan anestesi dalam kebidanan. Ini dikembangkan oleh Sharp dan Dohme pada tahun 1939."
+      ]
+    },
+    {
+      "tag": "pengertian_vincristine",
+      "patterns": [
+        "Vincristine adalah?",
+        "Pengertian Vincristine?",
+        "Apa itu definisi Vincristine?",
+        "tolong jelaskan Vincristine?",
+        "apakah yang dimaksud dengan Vincristine"
+      ],
+      "responses": [
+        "Vincristine adalah obat kemoterapi yang digunakan dalam pengobatan beberapa jenis kanker. Obat ini umumnya dikombinasikan dengan obat kemoterapi lain untuk mengatasi kanker darah pada orang dewasa dan beberapa jenis kanker pada anak-anak."
+      ]
+    },
+    {
+      "tag": "pengertian_viomycin",
+      "patterns": [
+        "Viomycin adalah?",
+        "Pengertian Viomycin?",
+        "Apa itu definisi Viomycin?",
+        "tolong jelaskan Viomycin?",
+        "apakah yang dimaksud dengan Viomycin"
+      ],
+      "responses": [
+        "Viomycin adalah antibiotik tuberactinomycin yang digunakan untuk mengobati Mycobacterium tuberkulosis sampai digantikan oleh capreomycin yang kurang beracun. Obat ini mengikat RNA pada ribosom bakteri dan menghambat sintesis protein."
+      ]
+    },
+    {
+      "tag": "pengertian_warfarin",
+      "patterns": [
+        "Warfarin adalah?",
+        "Pengertian Warfarin?",
+        "Apa itu definisi Warfarin?",
+        "tolong jelaskan Warfarin?",
+        "apakah yang dimaksud dengan Warfarin"
+      ],
+      "responses": [
+        "Warfarin bermanfaat untuk mencegah atau mengatasi bekuan darah yang bisa menyebabkan sumbatan pada pembuluh darah. Obat ini harus dikonsumsi secara rutin dan dalam pengawasan dokter."
+      ]
+    },
+    {
+      "tag": "pengertian_ethosuximide",
+      "patterns": [
+        "Ethosuximide adalah?",
+        "Pengertian Ethosuximide?",
+        "Apa itu definisi Ethosuximide?",
+        "tolong jelaskan Ethosuximide?",
+        "apakah yang dimaksud dengan Ethosuximide"
+      ],
+      "responses": [
+        "Ethosuximide adalah antikonvulsan yang digunakan untuk mengobati kejang petit mal ini sangat berguna dalam pengobatan kejang absen yang tidak disertai kejang jenis lain."
+      ]
+    },
+    {
+      "tag": "pengertian_glycine",
+      "patterns": [
+        "Glycine adalah?",
+        "Pengertian Glycine?",
+        "Apa itu definisi Glycine?",
+        "tolong jelaskan Glycine?",
+        "apakah yang dimaksud dengan Glycine"
+      ],
+      "responses": [
+        "Glycine adalah asam amino atau bahan penyusun protein. Pada dasarnya, tubuh dapat memproduksi glisin secara alami, namun juga bisa didapatkan dari makanan di sekitar kita seperti daging, ikan, produk susu, dan kacang-kacangan."
+      ]
+    },
+    {
+      "tag": "pengertian_hexetidine",
+      "patterns": [
+        "Hexetidine adalah?",
+        "Pengertian Hexetidine?",
+        "Apa itu definisi Hexetidine?",
+        "tolong jelaskan Hexetidine?",
+        "apakah yang dimaksud dengan Hexetidine"
+      ],
+      "responses": [
+        "Hexetidine merupakan salah satu jenis obat antiseptik. Obat ini memiliki kandungan antivirus dan antibakteri untuk membunuh kuman di mulut seperti kandidiasis, ulkus mulut, dan higienitas mulut yang buruk. "
+      ]
+    },
+    {
+      "tag": "pengertian_methacycline",
+      "patterns": [
+        "Methacycline adalah?",
+        "Pengertian Methacycline?",
+        "Apa itu definisi Methacycline?",
+        "tolong jelaskan Methacycline?",
+        "apakah yang dimaksud dengan Methacycline"
+      ],
+      "responses": [
+        "Methacycline (Metasiklin) adalah antibiotik tetrasiklin. Mirip dengan tetrasiklin lainnya, ia memiliki spektrum aksi antimikroba yang luas. Ini aktif melawan sebagian besar bakteri Gram positif dan bakteri Gram negatif dan terhadap agen penyebab onithosis, psittacosis, trachoma, dan beberapa Protozoa."
+      ]
+    },
+    {
+      "tag": "pengertian_sulfadiazine",
+      "patterns": [
+        "Sulfadiazine adalah?",
+        "Pengertian Sulfadiazine?",
+        "Apa itu definisi Sulfadiazine?",
+        "tolong jelaskan Sulfadiazine?",
+        "apakah yang dimaksud dengan Sulfadiazine"
+      ],
+      "responses": [
+        "Sulfadiazine adalah obat untuk mengatasi penyakit akibat infeksi bakteri, seperti infeksi saluran kemih, infeksi telinga, atau infeksi otak. Selain itu, obat ini juga bisa digunakan dalam pengobatan toksoplasmosis atau pencegahan demam rematik."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "Molecular_weight MW (g/mol)": {
+        "scale": 177.21249999999998,
+        "center": 245.285
+    },
+    "pKa": {
+        "scale": 5.797500000000001,
+        "center": 6.9
+    },
+    "Log P": {
+        "scale": 2.33,
+        "center": 0.39
+    },
+    "Log S": {
+        "scale": 2.215,
+        "center": -2.1100000000000003
+    },
+    "Polar Surface Area (\u00c52)": {
+        "scale": 61.642500000000005,
+        "center": 68.56
+    },
+    "Polarizability (\u00c53)": {
+        "scale": 18.470000000000002,
+        "center": 24.89
+    },
+    "HOMO (eV)": {
+        "scale": 0.6547499999999999,
+        "center": -5.893000000000001
+    },
+    "LUMO (eV)": {
+        "scale": 1.01425,
+        "center": -2.0935
+    },
+    "Electronegativity (eV)": {
+        "scale": 0.8091249999999999,
+        "center": 3.9699999999999998
+    },
+    "\u0394N_Fe": {
+        "scale": 0.26121515655507577,
+        "center": 92.0
+    }
+}
