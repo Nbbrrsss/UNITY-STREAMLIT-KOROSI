@@ -465,8 +465,8 @@ def train_new_data():
                 y_train_s[val_index] = y_train_m
                 y_pred_s[val_index] = y_pred_m
 
-            y_train = np.array(y_train_s)
-            y_pred = np.array(y_pred_s)
+            y_train = y_train_s
+            y_pred = y_pred_s
 
             # Define scoring metrics
             scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
