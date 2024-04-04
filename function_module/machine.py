@@ -451,23 +451,6 @@ def train_new_data():
 
             kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
-            y_train_s = []
-            y_pred_s = []
-
-            # Loop melalui setiap lipatan k-fold
-            for train_index, val_index in kfold.split(x_normalisasi):
-                x_train_m, x_val = x_normalisasi[train_index], x_normalisasi[val_index]
-                y_train_m, y_val = y[train_index], y[val_index]
-                
-                model_new_training.fit(x_train_m, y_train_m)
-                y_pred_m = model_new_training.predict(x_val)
-
-                y_train_s[val_index] = y_train_m
-                y_pred_s[val_index] = y_pred_m
-
-            y_train = y_train_s
-            y_pred = y_pred_s
-
             # Define scoring metrics
             scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
@@ -479,6 +462,11 @@ def train_new_data():
             rmse_training = np.mean(rmse_scores)
             r2_training = np.mean(r2_scores)
             mae_training = np.mean(mae_scores)
+
+            # Display the mean squared error
+            st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
+            # Plot grafik
+            st.line_chart(np.arange(1, kfold.n_splits + 1), r2_scores, use_container_width=True)
 
         else :
             X_train, X_test, y_train, y_test = train_test_split(
@@ -493,18 +481,17 @@ def train_new_data():
             rmse_training = np.sqrt(mse_training)
             r2_training = r2_score(y_train, y_pred)
 
-        # Display the mean squared error
-        st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
-        fig, ax = plt.subplots()
-        ax.scatter(y_train, y_pred, c='b', label='Data Point')
-        ax.plot([min(y_train), max(y_train)], [min(y_train), max(y_train)], color='m', linestyle='dotted', label='Prediction Line')
-        ax.set_xlabel("Actual Values")
-        ax.set_ylabel("Predicted Values")
-        ax.set_title("Predicted and Actual Values")
-        ax.legend()
+            # Display the mean squared error
+            st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
+            fig, ax = plt.subplots()
+            ax.scatter(y_train, y_pred, c='b', label='Data Point')
+            ax.plot([min(y_train), max(y_train)], [min(y_train), max(y_train)], color='m', linestyle='dotted', label='Prediction Line')
+            ax.set_xlabel("Actual Values")
+            ax.set_ylabel("Predicted Values")
+            ax.set_title("Predicted and Actual Values")
+            ax.legend()
 
-        st.pyplot(fig)
-
+            st.pyplot(fig)
 
 # def model_terbaik() :
 #     kolom_filteralgoritma_best = {
