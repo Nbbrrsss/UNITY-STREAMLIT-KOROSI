@@ -465,8 +465,18 @@ def train_new_data():
 
             # Display the mean squared error
             st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
-            # Plot grafik
-            st.line_chart(np.arange(1, kfold.n_splits + 1), r2_scores, use_container_width=True)
+            
+            st.write("# Cross-Validation Performance")
+            fig, ax = plt.subplots(figsize=(8, 6))
+            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores, marker='o')
+            ax.set_xlabel('Fold')
+            ax.set_ylabel('Accuracy')
+            ax.set_title('Cross-Validation Performance')
+            ax.set_ylim(0, 1)
+            ax.grid(True)
+
+            # Menampilkan plot di aplikasi Streamlit
+            st.pyplot(fig)
 
         else :
             X_train, X_test, y_train, y_test = train_test_split(
