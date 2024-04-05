@@ -204,13 +204,13 @@ def base_machine_learning():
 
                         if to_filternormalisasi == "MinMaxScaler()":
                             try:
-                                # Load normalization parameters from JSON
+                                # Load scaler parameters from JSON
                                 with open('model/min_max_values.json', 'r') as file:
-                                    normalization_params = json.load(file)
+                                    scaler_params = json.load(file)
 
                                 for feature in columns_to_scale:
-                                    min_value = normalization_params[feature]["min"]
-                                    max_value = normalization_params[feature]["max"]
+                                    min_value = scaler_params[feature]["min"]
+                                    max_value = scaler_params[feature]["max"]
                                     x_user[feature] = (
                                         x_user[feature] - min_value) / (max_value - min_value)
                             except Exception as e:

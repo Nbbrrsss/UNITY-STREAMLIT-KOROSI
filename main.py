@@ -63,13 +63,9 @@ if menuweb == "Home":
         to_filter_columns = st.selectbox("Masukkan filter Senyawa untuk ditampilkan", options=list(
             kolom_filter.keys()), format_func=lambda x: kolom_filter[x])
 
-        # Use a text_input to get the keywords to filter the dataframe
         text_search = st.text_input("Cari informasi tentang senyawa", value="")
         text_search = text_search.lower()
 
-        # Show the results, if you have a text_search
-        # Another way to show the filtered results
-        # Show the cards
         df["Common_name"] = df["Common_name"].str.lower()
         df["Formula"] = df["Formula"].str.lower()
 
@@ -135,8 +131,7 @@ if menuweb == "Home":
         # add filter senyawa by kategori
         kolom_filtertab2 = {
             'all': 'Semua',
-            'Drugs': 'Senyawa Drugs',
-            'Piridin': 'Piridins',
+            'Drugs': 'Senyawa Drugs'
         }
 
         # default kolom all
