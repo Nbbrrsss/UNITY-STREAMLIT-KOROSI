@@ -110,7 +110,7 @@ if menuweb == "Home":
                     st.markdown(
                         f"Persentase Energi Ionisasi **{round(row['IE EXP (%)'],2)}%**")
     with tab2:
-        st.error('Perhatian! Data IE EXP (Persentase eksperimental dari energi ionisasi) yang kami sajikan merupakan hasil dari gabungan prediksi dari model Machine Learning yang telah kami buat.Jika ingin melihat dataset asli bisa download pada Tab "Unduh Dataset" ')
+        st.error('Perhatian! Data IE EXP (Persentase eksperimental dari efisiensi penghambatan korosi) yang kami sajikan merupakan hasil dari gabungan prediksi dari model Machine Learning yang telah kami buat.Jika ingin melihat dataset asli bisa download pada Tab "Unduh Dataset" ')
 
         st.header("Filter Senyawa")
 
@@ -125,7 +125,7 @@ if menuweb == "Home":
             'LUMO (eV)': 'Energi orbital molekul yang tidak terisi',
             'Electronegativity (eV)': 'Electronegativity (eV)',
             ' ?N_Fe ': 'Indeks daya tunduk molekul',
-            'IE EXP (%)': 'Persentase Energi Ionisasi',
+            'IE EXP (%)': 'Efisiensi Anti Korosi',
         }
 
         # add filter senyawa by kategori
