@@ -272,7 +272,7 @@ def base_machine_learning():
 
             if uploaded_file is not None:
                 # Read the uploaded CSV file
-                df_uploaded = pd.read_csv(uploaded_file, sep = ',')
+                df_uploaded = pd.read_csv(uploaded_file)
                 df_concat = df_uploaded.copy()
 
                 # Define columns to scale
