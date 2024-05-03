@@ -272,7 +272,7 @@ def base_machine_learning():
 
             if uploaded_file is not None:
                 # Read the uploaded CSV file
-                df_uploaded = pd.read_csv(uploaded_file)
+                df_uploaded = pd.read_csv(uploaded_file, sep = ',')
                 df_concat = df_uploaded.drop('IE EXP (%)' , axis = 1).copy()
 
                 # Define columns to scale
