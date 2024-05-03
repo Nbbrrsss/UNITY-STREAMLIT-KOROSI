@@ -106,7 +106,7 @@ def analisis() :
 
 
     with tabprediksidata:
-        st.write("ini prediksi")
+        st.subheader("Hasil Prediksi Model dengan Prediksi Eksperimental")
 
         df_prediksi_data = dth.dataframe_prediksi_data()
         st.dataframe(df_prediksi_data)
