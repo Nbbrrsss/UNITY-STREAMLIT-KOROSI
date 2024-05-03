@@ -378,6 +378,7 @@ def analisis_model_terbaik():
     
     st.subheader("Evaluasi Performa Machine Learning")
     st.image('assets/graf1.png', use_column_width=True)
+    st.image('assets/plot_prediksi.png', use_column_width=True)
     st.image('assets/graf 2.png', use_column_width=True)
 
 def train_new_data():
