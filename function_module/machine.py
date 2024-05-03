@@ -273,9 +273,9 @@ def base_machine_learning():
             if uploaded_file is not None:
                 # Read the uploaded CSV file
                 df_uploaded = pd.read_csv(uploaded_file)
+                df_uploaded = df_uploaded.drop(columns = 'IE EXP (%)')
                 df_concat = df_uploaded.copy()
                 df_concat = df_concat.astype(float)
-                df_concat = df_concat.drop(columns='IE EXP (%)')
 
                 # Define columns to scale
                 columns_to_scale = ['Molecular_weight MW (g/mol)', 'pKa', 'Log P', 'Log S', 'Polar Surface Area (Å2)',
