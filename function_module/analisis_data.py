@@ -112,10 +112,16 @@ def analisis() :
         st.dataframe(df_prediksi_data)
 
         # Membuat line chart dengan data asli
+        # kolom_filter_model = {
+        #     'GBR 60:40 Polynomial': 'IE EXP (%)GBR_poli 6040 Polynomial 2',
+        #     'CatBoost 80:20 Polynomial': 'modelcatbost_poly',
+        #     'Random Forest 70:30': 'model_rf',
+        # }
+
         kolom_filter_model = {
-            'GBR 60:40 Polynomial': 'IE EXP (%)GBR_poli 6040 Polynomial 2',
-            'CatBoost 80:20 Polynomial': 'modelcatbost_poly',
-            'Random Forest 70:30': 'model_rf',
+            'GBR 60:40 Polynomial': 'GBR 60:40 Polynomial',
+            'CatBoost 80:20 Polynomial': 'CatBoost 80:20 Polynomial',
+            'Random Forest 70:30': 'Random Forest 70:30',
         }
 
         to_filter_columns = st.selectbox("Masukkan filter Senyawa untuk ditampilkan", options=list(
