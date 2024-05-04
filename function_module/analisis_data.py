@@ -58,21 +58,19 @@ def analisis() :
             target_col.subheader(feature)
             target_col.write(description)
 
-            # Tambahkan spasi hanya jika deskripsi memiliki satu baris
             if num_lines == 1:
-                target_col.write("")  # Menambahkan spasi antar fitur jika deskripsi satu baris
+                target_col.write("")
             else:
-                target_col.markdown("---")  # Garis pemisah antar fitur di kolom target
+                target_col.markdown("---")
 
     with tabkorelasi:
         # Heatmap korelasi
         st.write("Heatmap Korelasi Antar Variabel:")
         correlation_matrix = data_model_analisis.corr()
 
-        # Plot Heatmap dengan Plotly Express
         fig_heatmap = px.imshow(correlation_matrix, labels=dict(color="Korelasi"),
                                 x=correlation_matrix.columns, y=correlation_matrix.columns,
-                                color_continuous_scale="viridis")  # Anda dapat mengganti "viridis" dengan skala warna lainnya
+                                color_continuous_scale="viridis")  
         for i in range(len(correlation_matrix.columns)):
             for j in range(len(correlation_matrix.columns)):
                 fig_heatmap.add_annotation(
@@ -80,12 +78,12 @@ def analisis() :
                     y=correlation_matrix.columns[j],
                     text=f"{correlation_matrix.iloc[j, i]:.2f}",
                     showarrow=False,
-                    font=dict(size=8, color="white")
+                    font=dict(size=8)
                 )
         
         fig_heatmap.update_layout(
-            height=600,  # Ganti nilai ini sesuai kebutuhan
-            width=800    # Ganti nilai ini sesuai kebutuhan
+            width=800,
+            height=600,  
         )
         st.plotly_chart(fig_heatmap)
 
@@ -94,7 +92,6 @@ def analisis() :
         selected_x_variable = st.selectbox("Pilih Variabel X:", data_model_analisis.columns)
         selected_y_variable = st.selectbox("Pilih Variabel Y:", data_model_analisis.columns)
 
-        # Plot Scatter Plot dengan Plotly Express
         fig_scatter = px.scatter(data_model_analisis,
                                  x=selected_x_variable,
                                  y=selected_y_variable,
@@ -132,7 +129,7 @@ def analisis() :
             fig.add_trace(go.Scatter(x=df_prediksi_data.index, y=df_prediksi_data['IE EXP (%)'],
                                     mode='lines+markers', name='Data Asli'))
 
-            # Menambahkan line chart untuk model prediksi
+            # line chart untuk model prediksi
             fig.add_trace(go.Scatter(x=df_prediksi_data.index, y=df_prediksi_data['IE EXP (%)GBR_poli 6040 Polynomial 2'],
                                     mode='lines+markers', name='Prediksi Model'))
 
@@ -145,7 +142,7 @@ def analisis() :
             fig.add_trace(go.Scatter(x=df_prediksi_data.index, y=df_prediksi_data['IE EXP (%)'],
                                     mode='lines+markers', name='Data Asli'))
 
-            # Menambahkan line chart untuk model prediksi
+            # line chart untuk model prediksi
             fig.add_trace(go.Scatter(x=df_prediksi_data.index, y=df_prediksi_data['modelcatbost_poly'],
                                     mode='lines+markers', name='Prediksi Model'))
 
@@ -158,7 +155,6 @@ def analisis() :
             fig.add_trace(go.Scatter(x=df_prediksi_data.index, y=df_prediksi_data['IE EXP (%)'],
                                     mode='lines+markers', name='Data Asli'))
 
-            # Menambahkan line chart untuk model prediksi
             fig.add_trace(go.Scatter(x=df_prediksi_data.index, y=df_prediksi_data['model_rf'],
                                     mode='lines+markers', name='Prediksi Model'))
 

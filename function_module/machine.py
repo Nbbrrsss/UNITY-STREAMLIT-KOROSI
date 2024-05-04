@@ -89,12 +89,9 @@ def base_machine_learning():
             '0.2': 'HOCV 80:20',
             '0.3': 'HOCV 70:30',
             '0.4': 'HOCV 60:40',
-            '3': 'KFCV 3',
-            '5': 'KFCV 5',
-            '10': 'KFCV 10',
         }
 
-        to_filtersplit = st.selectbox("Masukkan Jenis Splitting Data", options=list(
+        to_filtersplit = st.selectbox("Masukkan Rasio Splitting Data", options=list(
             kolom_filtersplit.keys()), format_func=lambda x: kolom_filtersplit[x])
 
         namamodel = f"{to_filteralgoritma}_{to_filtersplit}_{to_filternormalisasi}"
@@ -124,35 +121,36 @@ def base_machine_learning():
         else:
             x_normalisasi = X
 
-        if float_split >= 3 :
-            model.fit(x_normalisasi, y)
+        ## kfold cv
+        # if float_split >= 3 :
+        #     model.fit(x_normalisasi, y)
 
-            kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
+        #     kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
-            # Define scoring metrics
-            scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
+        #     # Define scoring metrics
+        #     scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
-            # Lakukan validasi silang
-            r2_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
-            rmse_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
-            mae_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
+        #     # Lakukan validasi
+        #     r2_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
+        #     rmse_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
+        #     mae_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
 
-            rmse = np.mean(rmse_scores)
-            r2 = np.mean(r2_scores)
-            mae = np.mean(mae_scores)
+        #     rmse = np.mean(rmse_scores)
+        #     r2 = np.mean(r2_scores)
+        #     mae = np.mean(mae_scores)
 
-        else :
-            X_train, X_test, y_train, y_test = train_test_split(
-                x_normalisasi, y, test_size=float_split,random_state=42)
+        # else :
+        X_train, X_test, y_train, y_test = train_test_split(
+            x_normalisasi, y, test_size=float_split,random_state=42)
 
-            model.fit(X_train, y_train)
+        model.fit(X_train, y_train)
 
-            y_pred = model.predict(X_train)
+        y_pred = model.predict(X_train)
 
-            mae = mean_absolute_error(y_train,y_pred)
-            mse = mean_squared_error(y_train, y_pred)
-            rmse = np.sqrt(mse)
-            r2 = r2_score(y_train, y_pred)
+        mae = mean_absolute_error(y_train,y_pred)
+        mse = mean_squared_error(y_train, y_pred)
+        rmse = np.sqrt(mse)
+        r2 = r2_score(y_train, y_pred)
 
         # Display the mean squared error
         st.write(f"R2-Squared: ",r2," || Root Mean Squared Error: ", round(rmse, 6)," || Mean Absolute Error ",round(mae,6))
@@ -198,13 +196,13 @@ def base_machine_learning():
                             ' ΔN_Fe ': [delta_N_Fe]
                         })
 
-                        # Define columns to scale
+                        # columns to scale
                         columns_to_scale = ['Molecular_weight MW (g/mol)', 'pKa', 'Log P', 'Log S', 'Polar Surface Area (Å2)',
                                             'Polarizability (Å3)', 'HOMO (eV)', 'LUMO (eV)', 'Electronegativity (eV)', ' ΔN_Fe ']
 
                         if to_filternormalisasi == "MinMaxScaler()":
                             try:
-                                # Load scaler parameters from JSON
+                                # Load scaler dari JSON file
                                 with open('model/min_max_values.json', 'r') as file:
                                     scaler_params = json.load(file)
 
@@ -219,7 +217,7 @@ def base_machine_learning():
 
                         elif to_filternormalisasi == "StandardScaler()":
                             try:
-                                # Load scaler parameters from JSON file
+                                # Load scaler dari JSON file
                                 with open('model/standard_scaler_parameters.json', 'r') as file:
                                     scaler_params = json.load(file)
 
@@ -227,7 +225,7 @@ def base_machine_learning():
                                     mean_value = scaler_params[feature]["mean"]
                                     std_value = scaler_params[feature]["std"]
 
-                                    # Check if std_value is zero to avoid division by zero
+                                    # Cek untuk menghindari pembagian dengan 0
                                     if std_value == 0:
                                         continue
 
@@ -239,16 +237,16 @@ def base_machine_learning():
 
                         elif to_filternormalisasi == 'RobustScaler()':
                             try:
-                                # Load scaler parameters from JSON file
+                                # Load scaler dari JSON file
                                 with open('model/robust_scaler_parameters.json', 'r') as file:
                                     scaler_params = json.load(file)
 
-                                # Set scaler parameters based on loaded values
+                                # Set scaler parameters 
                                 for feature in columns_to_scale:
                                     center_value = scaler_params[feature]["center"]
                                     scale_value = scaler_params[feature]["scale"]
 
-                                    # Check if scale_value is zero to avoid division by zero
+                                    # Cek untuk menghindari pembagian dengan 0
                                     if scale_value == 0:
                                         continue
 
@@ -271,7 +269,7 @@ def base_machine_learning():
             uploaded_file = st.file_uploader("Upload file CSV untuk diprediksi", type=["csv"])
 
             if uploaded_file is not None:
-                # Read the uploaded CSV file
+                # Read CSV file
                 df_uploaded = pd.read_csv(uploaded_file)
                 df_uploaded = df_uploaded.drop(columns = 'IE EXP (%)')
                 df_concat = df_uploaded.copy()
@@ -281,10 +279,9 @@ def base_machine_learning():
                 columns_to_scale = ['Molecular_weight MW (g/mol)', 'pKa', 'Log P', 'Log S', 'Polar Surface Area (Å2)',
                                     'Polarizability (Å3)', 'HOMO (eV)', 'LUMO (eV)', 'Electronegativity (eV)', ' ΔN_Fe ']
 
-                # Scale specific columns using normalization parameters
                 if to_filternormalisasi == "MinMaxScaler()":
                     try:
-                        # Load normalization parameters from JSON
+                        # Load scaler dari JSON file
                         with open('model/min_max_values.json', 'r') as file:
                             normalization_params = json.load(file)
 
@@ -298,7 +295,7 @@ def base_machine_learning():
 
                 elif to_filternormalisasi == "StandardScaler()":
                     try:
-                        # Load scaler parameters from JSON file
+                        # Load scaler dari JSON file
                         with open('model/standard_scaler_parameters.json', 'r') as file:
                             scaler_params = json.load(file)
 
@@ -306,7 +303,7 @@ def base_machine_learning():
                             mean_value = scaler_params[feature]["mean"]
                             std_value = scaler_params[feature]["std"]
 
-                            # Check if std_value is zero to avoid division by zero
+                            # Cek untuk menghindari pembagian dengan 0
                             if std_value == 0:
                                 continue
 
@@ -317,16 +314,16 @@ def base_machine_learning():
 
                 elif to_filternormalisasi == 'RobustScaler()':
                     try:
-                        # Load scaler parameters from JSON file
+                        # Load scaler dari JSON file
                         with open('model/robust_scaler_parameters.json', 'r') as file:
                             scaler_params = json.load(file)
 
-                        # Set scaler parameters based on loaded values
+                        # Set scaler parameters 
                         for feature in columns_to_scale:
                             center_value = scaler_params[feature]["center"]
                             scale_value = scaler_params[feature]["scale"]
 
-                            # Check if scale_value is zero to avoid division by zero
+                            # Cek untuk menghindari pembagian dengan 0
                             if scale_value == 0:
                                 continue
 
@@ -335,19 +332,17 @@ def base_machine_learning():
                     except Exception as e:
                         print("Error when applying Robust Scaling: ", str(e))
 
-                # Make predictions for each row in the uploaded file
+                # prediksi data
                 predictions = model.predict(df_uploaded)
 
-                # Display the predictions
-                st.write("Predictions for the uploaded file:")
+                st.write("Prediksi IE data yang diunggah: ")
 
                 predictions_df = pd.DataFrame({namamodel: predictions})
 
-                # Concatenate the predictions DataFrame with the uploaded data
+                # Concatenate data prediksi dengan data inputan
                 merged_df = pd.concat([df_concat, predictions_df], axis=1)
                 st.dataframe(merged_df)
 
-                # Download the merged DataFrame as a CSV file
                 st.download_button(
                     label="Download Predictions",
                     data=merged_df.to_csv(index=False),
@@ -388,10 +383,42 @@ def train_new_data():
         df_new_data_ft = pd.read_csv(upload_new_trainingdata)
         df_for_training = df_new_data_ft.copy()
 
-        # Define columns to scale
-        columns_dftraining_to_scale = ['Molecular_weight MW (g/mol)', 'pKa', 'Log P', 'Log S', 'Polar Surface Area (Å2)',
-                            'Polarizability (Å3)', 'HOMO (eV)', 'LUMO (eV)', 'Electronegativity (eV)', ' ΔN_Fe ']
-        
+        # Heatmap korelasi
+        st.write("Matriks Korelasi")
+        correlation_matrix = df_for_training.corr(numeric_only = True)
+
+        fig_heatmap = px.imshow(correlation_matrix, labels=dict(color="Korelasi"),
+                                x=correlation_matrix.columns, y=correlation_matrix.columns,
+                                color_continuous_scale="viridis")  
+        for i in range(len(correlation_matrix.columns)):
+            for j in range(len(correlation_matrix.columns)):
+                fig_heatmap.add_annotation(
+                    x=correlation_matrix.columns[i],
+                    y=correlation_matrix.columns[j],
+                    text=f"{correlation_matrix.iloc[j, i]:.2f}",
+                    showarrow=False,
+                    font=dict(size=8, color="white")
+                )
+
+        fig_heatmap.update_layout(
+            width=800,
+            height=600,  
+        )
+
+        st.plotly_chart(fig_heatmap)
+
+        kolom_df_training = df_for_training.columns.to_list()
+
+        kolom_df_training.remove('IE EXP (%)')
+
+        # Pilih prediktor
+        kolom_training = st.multiselect("Pilih Deskriptor Model Machine Learning", kolom_df_training, placeholder = "Tentukan kolom yang menjadi fitur prediktor, Secara default menggunakan keseluruhan fitur")
+        if len(kolom_training) > 0 : 
+            kolom_training.append("IE EXP (%)")
+            df_training_selected = df_for_training[kolom_training]
+        else : 
+            df_training_selected = df_for_training
+
         kolom_algoritma_training = {
             "Linear Regression": LinearRegression(),
             "Ridge" : Ridge(),
@@ -410,7 +437,6 @@ def train_new_data():
         to_filteralgoritma_training = st.selectbox("Masukkan Jenis Algoritma", options=list(
             kolom_algoritma_training.keys()))
         
-
         kolom_normalisasi_training = {
             'MinMax Scaler': "MinMaxScaler()",
             'Standard Scaler': 'StandardScaler()',
@@ -425,15 +451,12 @@ def train_new_data():
             '0.2': 'HOCV 80:20',
             '0.3': 'HOCV 70:30',
             '0.4': 'HOCV 60:40',
-            '3': 'KFCV 3',
-            '5': 'KFCV 5',
-            '10': 'KFCV 10',
         }
 
-        to_filtersplit_training = st.selectbox("Masukkan Jenis Splitting Data", options=list(
+        to_filtersplit_training = st.selectbox("Masukkan Rasio Splitting Data", options=list(
             kolom_split_training.keys()), format_func=lambda x: kolom_split_training[x])
         
-        X = df_for_training.drop("IE EXP (%)",axis=1)
+        X = df_training_selected.drop("IE EXP (%)",axis=1)
         X = X.astype(float)
 
         y = df_for_training["IE EXP (%)"]
@@ -449,61 +472,62 @@ def train_new_data():
 
         model_new_training = kolom_algoritma_training[to_filteralgoritma_training]
 
-        if float_split >= 3 :
-            model_new_training.fit(x_normalisasi, y)
+        ## kfold cv
+        # if float_split >= 3 :
+        #     model_new_training.fit(x_normalisasi, y)
 
-            kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
+        #     kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
-            # Define scoring metrics
-            scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
+        #     # Define scoring metrics
+        #     scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
-            # Lakukan validasi silang
-            r2_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
-            rmse_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
-            mae_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
+        #     # Lakukan validasi silang
+        #     r2_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
+        #     rmse_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
+        #     mae_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
 
-            rmse_training = np.mean(rmse_scores)
-            r2_training = np.mean(r2_scores)
-            mae_training = np.mean(mae_scores)
+        #     rmse_training = np.mean(rmse_scores)
+        #     r2_training = np.mean(r2_scores)
+        #     mae_training = np.mean(mae_scores)
 
-            # Display the mean squared error
-            st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
+        #     # Display the mean squared error
+        #     st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
             
-            fig, ax = plt.subplots(figsize=(8, 6))
-            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores, marker='o')
-            ax.set_xlabel('Fold')
-            ax.set_ylabel('Accuracy')
-            ax.set_title('K-Fold Cross Validation Performance')
-            ax.set_ylim(0, 1)
-            ax.grid(True)
+        #     fig, ax = plt.subplots(figsize=(8, 6))
+        #     ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores, marker='o')
+        #     ax.set_xlabel('Fold')
+        #     ax.set_ylabel('Accuracy')
+        #     ax.set_title('K-Fold Cross Validation Performance')
+        #     ax.set_ylim(0, 1)
+        #     ax.grid(True)
 
-            # Menampilkan plot di aplikasi Streamlit
-            st.pyplot(fig)
+        #     # Menampilkan plot di aplikasi Streamlit
+        #     st.pyplot(fig)
 
-        else :
-            X_train, X_test, y_train, y_test = train_test_split(
-                x_normalisasi, y, test_size=float_split,random_state=42)
+        # else :
+        X_train, X_test, y_train, y_test = train_test_split(
+            x_normalisasi, y, test_size=float_split,random_state=42)
 
-            model_new_training.fit(X_train, y_train)
+        model_new_training.fit(X_train, y_train)
 
-            y_pred = model_new_training.predict(X_train)
+        y_pred = model_new_training.predict(X_train)
 
-            mae_training = mean_absolute_error(y_train,y_pred)
-            mse_training = mean_squared_error(y_train, y_pred)
-            rmse_training = np.sqrt(mse_training)
-            r2_training = r2_score(y_train, y_pred)
+        mae_training = mean_absolute_error(y_train,y_pred)
+        mse_training = mean_squared_error(y_train, y_pred)
+        rmse_training = np.sqrt(mse_training)
+        r2_training = r2_score(y_train, y_pred)
 
-            # Display the mean squared error
-            st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
-            fig, ax = plt.subplots()
-            ax.scatter(y_train, y_pred, c='b', label='Data Point')
-            ax.plot([min(y_train), max(y_train)], [min(y_train), max(y_train)], color='m', linestyle='dotted', label='Prediction Line')
-            ax.set_xlabel("Actual Values")
-            ax.set_ylabel("Predicted Values")
-            ax.set_title("Predicted and Actual Values")
-            ax.legend()
+        # Display the mean squared error
+        st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
+        fig, ax = plt.subplots()
+        ax.scatter(y_train, y_pred, c='b', label='Data Point')
+        ax.plot([min(y_train), max(y_train)], [min(y_train), max(y_train)], color='m', linestyle='dotted', label='Garis Prediksi')
+        ax.set_xlabel("Nilai Aktual")
+        ax.set_ylabel("Nilai Prediksi")
+        ax.set_title("Nilai Prediksi dan Aktual")
+        ax.legend()
 
-            st.pyplot(fig)
+        st.pyplot(fig)
 
 # def model_terbaik() :
 #     kolom_filteralgoritma_best = {
