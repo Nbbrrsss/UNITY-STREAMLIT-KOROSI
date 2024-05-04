@@ -384,7 +384,7 @@ def train_new_data():
         df_for_training = df_new_data_ft.copy()
 
         # Heatmap korelasi
-        st.write("Matriks Korelasi")
+        st.subheader("Matriks Korelasi")
         correlation_matrix = df_for_training.corr(numeric_only = True)
 
         fig_heatmap = px.imshow(correlation_matrix, labels=dict(color="Korelasi"),
