@@ -271,9 +271,11 @@ def base_machine_learning():
             if uploaded_file is not None:
                 # Read CSV file
                 df_uploaded = pd.read_csv(uploaded_file)
-                df_uploaded = df_uploaded.drop(columns = 'IE EXP (%)')
                 df_concat = df_uploaded.copy()
-                df_concat = df_concat.astype(float)
+
+                df_uploaded = df_uploaded[['Molecular_weight MW (g/mol)', 'pKa', 'Log P', 'Log S',
+                                            'Polar Surface Area (Å2)', 'Polarizability (Å3)', 'HOMO (eV)',
+                                            'LUMO (eV)', 'Electronegativity (eV)', ' ΔN_Fe ']]
 
                 # Define columns to scale
                 columns_to_scale = ['Molecular_weight MW (g/mol)', 'pKa', 'Log P', 'Log S', 'Polar Surface Area (Å2)',
@@ -382,6 +384,10 @@ def train_new_data():
     if upload_new_trainingdata is not None : 
         df_new_data_ft = pd.read_csv(upload_new_trainingdata)
         df_for_training = df_new_data_ft.copy()
+
+        df_for_training = df_for_training[['Molecular_weight MW (g/mol)', 'pKa', 'Log P', 'Log S',
+                                            'Polar Surface Area (Å2)', 'Polarizability (Å3)', 'HOMO (eV)',
+                                            'LUMO (eV)', 'Electronegativity (eV)', ' ΔN_Fe ', 'IE EXP (%)']]
 
         # Heatmap korelasi
         st.subheader("Matriks Korelasi")
