@@ -1,21 +1,17 @@
 {"intents": [
   {
-      "tag": "greetings",
+      "tag": "salam",
       "patterns": [
-        "hello", 
-        "Hi",
-        "hello bot",
-        "Hi bot",
-        "Can you help me?"
+        "hallo", 
+        "Hai",
+        "hallo bot",
+        "Hai bot"
       ],
       "responses": [
-        "Hello! Can I help you?", 
-        "Hi! How can I help you?", 
-        "Hi! How are you? Anything to ask?", 
-        "Hello! How can I help you?",
-        "Hi! How can I help you today?",
-        "Hi there! How can I help you?",
-        "Welcome! What can I do for you?"
+        "Halo! Apakah ada yang bisa saya bantu?", 
+        "Hi! Apa yang bisa saya bantu?", 
+        "Hai! Ada yang bisa saya bantu hari ini?",
+        "Hi there! Bagaimana saya bisa membantu Anda?"
       ]
     },
     {
@@ -24,705 +20,682 @@
       "responses": ["Mohon maaf saya tidak mengetahui, Coba cek kembali pertanyaan kamu atau kamu bisa tanya saya mengenai Korosi atau inhibitor korosi"]
     },
     {
-      "tag": "good_morning",
-      "patterns": ["Morning", "Good Morning"],
-      "responses": ["Good morning! How can I help you today?", "Morning! Anything to ask?"]
+      "tag": "selamat_pagi",
+      "patterns": ["Selamat pagi", "Pagi", "Pagii","Good morning"],
+      "responses": ["Selamat pagi! Bagaimana saya bisa membantu Anda hari ini?", "Pagi! Ada yang perlu ditanyakan?"]
     },
     {
-      "tag": "good_afternoon",
-      "patterns": ["Afternoon", "Good Afternoon"],
-      "responses": ["Good Afternoon! How can I help you today?", "Afternoon! Anything to ask?"]
+      "tag": "selamat_siang",
+      "patterns": ["Selamat siang", "Siang", "Siangg","Good afternoon"],
+      "responses": ["Selamat siang! Apa yang bisa saya bantu?", "Siang! Bagaimana saya bisa membantu Anda?"]
     },
     {
-      "tag": "good_evening",
-      "patterns": ["Evening", "Good evening"],
-      "responses": ["Good Evening! How can I help you today?", "Evening! Anything to ask?"]
+      "tag": "selamat_sore",
+      "patterns": ["Selamat sore", "Sore", "Soree","Good evening"],
+      "responses": ["Selamat sore! Ada yang perlu saya bantu?", "Sore! Bagaimana saya bisa membantu Anda?"]
     },
     {
-      "tag": "good_night",
-      "patterns": ["Night", "Good Night"],
-      "responses": ["Good Night! How can I help you today?", "Night! Anything to ask?"]
+      "tag": "selamat_malam",
+      "patterns": ["Selamat malam", "Malam", "Malamm" ,"Good night"],
+      "responses": ["Selamat malam! Apa yang bisa saya lakukan untuk Anda?", "Malam! Ada yang perlu ditanyakan?"]
     },
     {
-      "tag": "introduction",
-      "patterns": ["What is your name?", "Who are you?", "May I know you?", "What's your name?", "What can you do?"],
+      "tag": "perkenalan",
+      "patterns": ["Siapa namamu?", "Kamu siapa?", "Boleh kenalan?", "Namamu apa?", "Apa yang bisa kamu lakukan?"],
       "responses": [
-        "I am CorrosionShieldBot, an intelligent bot focused on providing information about corrosion prevention from expired drug compounds.",
-        "Hello! I am CorrosionShieldBot, ready to assist you with information about corrosion inhibitors and drug compounds.",
-        "I am CorrosionShieldBot. My name reflects my focus on protecting metals from corrosion and providing information about expired drug compounds."
+        "Saya adalah CorrosionShieldBot, bot cerdas yang fokus memberikan informasi seputar pencegahan korosi dari senyawa obat.",
+        "Halo! Saya adalah CorrosionShieldBot, siap membantu Anda dengan informasi seputar inhibitor korosi dan senyawa obat."
       ]
     },
     {
-      "tag": "definition_inhibitor",
+      "tag": "pengertian_inhibitor",
       "patterns": [
-        "What is an inhibitor?",
-        "Definition of inhibitor?",
-        "What is an inhibitor?",
-        "Explain inhibitor"
+        "inhibitor adalah?",
+        "Pengertian inhibitor?",
+        "Apa itu definisi inhibitor?",
+        "tolong jelaskan inhibitor?",
+        "apakah yang dimaksud dengan inhibitor"
       ],
       "responses": [
-        "Inhibitor, in the context of chemistry, is a substance or chemical compound added to a system to decrease the rate of a chemical reaction or prevent a particular reaction from occurring.",
-        "The definition of an inhibitor is a substance that inhibits or reduces the activity or effect of a biological or chemical process.",
-        "The basic concept of an inhibitor involves its ability to slow down or inhibit a process, such as a chemical reaction or biological activity."
+        "Definisi inhibitor adalah substansi yang menghambat atau mengurangi aktivitas atau efek dari suatu proses atau fungsi biologis atau kimia.",
+        "Konsep dasar dari inhibitor melibatkan kemampuannya untuk memperlambat atau menghambat suatu proses, seperti reaksi kimia atau aktivitas biologis.",
+        "Dalam kimia, inhibitor sering kali bekerja dengan mengurangi laju reaksi atau mencegah reaksi kimia tertentu, sehingga mempengaruhi proses keseluruhan."
       ]
     },
     {
-      "tag": "types_of_inhibitor",
+      "tag": "jenis_inhibitor",
       "patterns": [
-        "What are the types of inhibitors?",
-        "List various types of inhibitors?",
-        "List different types of inhibitors?",
-        "What are the diverse types of inhibitors?"
+        "Apa saja jenis-jenis inhibitor?",
+        "Sebutkan macam-macam inhibitor?",
+        "Sebutkan berbagai macam inhibitor?",
+        "Sebutkan beragam jenis inhibitor?"
       ],
       "responses": [
-        "Inhibitors come in various types used in preventing metal corrosion. Generally, there are several main categories of inhibitors commonly used: Inorganic Inhibitors, Organic Inhibitors, Volatile Inhibitors, Solid Metal Inhibitors, Thin Film Inhibitors, Alternative Variants.",
-        "Inhibitors in preventing metal corrosion have various variations widely used. Generally, there are several core categories of inhibitors commonly used: Inorganic Inhibitors, Organic Inhibitors, Volatile Inhibitors, Solid Metal Inhibitors, and Thin Film Inhibitors, as well as Alternative Options.",
-        "In the effort to prevent metal corrosion, there are many types of inhibitors used. In general context, there are several core groups of inhibitors often utilized such as: Inorganic Inhibitors, Organic Inhibitors, Volatile Inhibitors, Solid Metal Inhibitors, and Thin Film Inhibitors along with Various Alternative Options."
+        "Inhibitor memiliki beragam jenis yang digunakan dalam pencegahan korosi pada logam. Secara umum, terdapat beberapa kategori utama dari inhibitor yang sering digunakan: Inhibitor Anorganik, Inhibitor Organik, Inhibitor Volatil, Inhibitor Logam Padat,Inhibitor Film Tipis, Varian Alternatif.",
+        "Inhibitor memiliki banyak variasi yang diterapkan dalam menghambat korosi pada logam. Secara umum, terdapat beberapa kategori inti dari inhibitor yang sering diaplikasikan: Inhibitor Anorganik, Inhibitor Organik, Inhibitor yang Bersifat Menguap, Inhibitor Logam yang Padat, serta Inhibitor dengan Lapisan Tipis dan Opsi Pengganti."
       ]
     },
     {
-      "tag": "inhibitor_mechanism",
+      "tag": "mekanisme_inhibitor",
       "patterns": [
-        "Inhibitor mechanism?",
-        "How does an inhibitor work?",
-        "Inhibitor working mechanism?"
+        "mekanisme inhibitor korosi?",
+        "mekanisme kerja inhibitor korosi?",
+        "cara kerja inhibitor korosi?"
       ],
       "responses": [
-        "Inhibitors work by forming a protective layer or interfering with the chemical reactions that cause corrosion on metals. They can form thin layers to protect the metal or alter the involved chemical processes, preventing damage from corrosion.",
-        "Inhibitors play a role in protecting metals from corrosion by forming a protective layer or interfering with chemical processes that can damage them. They can form thin coatings that prevent direct contact of the metal with corrosive substances or alter the way these substances react, thus protecting the metal from corrosion damage.",
-        "In the prevention of metal corrosion, inhibitors play a crucial role by forming a protective layer or inhibiting damaging chemical reactions. Inhibitors can form a shield on the metal or alter the interactions of chemical substances that cause damage, thus protecting the metal from the adverse effects of corrosion."
+        "Inhibitor korosi bekerja dengan membentuk lapisan pelindung atau mengganggu reaksi kimia yang menyebabkan korosi pada logam. Mereka dapat membentuk lapisan tipis untuk melindungi logam atau mengubah proses kimia yang terlibat, mencegah kerusakan akibat korosi.",
+        "Inhibitor korosi berperan dalam melindungi logam dari korosi dengan membentuk lapisan perlindungan atau mengganggu proses-proses kimia yang dapat merusaknya. Mereka bisa membentuk pelapis tipis yang mencegah kontak langsung logam dengan zat-zat yang menyebabkan kerusakan atau mengubah cara zat-zat tersebut bereaksi, sehingga logam terlindungi dari kerusakan akibat korosi."
       ]
     },
     {
-      "tag": "definition_corrosion",
+      "tag": "pengertian_korosi",
       "patterns": [
-        "What is corrosion?",
-        "Definition of corrosion?",
-        "Explain the concept of corrosion?",
-        "Corrosion is?"
+        "korosi adalah?",
+        "Pengertian korosi?",
+        "Apa itu definisi korosi?",
+        "tolong jelaskan korosi?",
+        "apakah yang dimaksud dengan korosi"
       ],
       "responses": [
-        "Corrosion is a natural process in which metals undergo damage or degradation due to chemical reactions with their environment.",
-        "The definition of corrosion is the damage or degradation of metals due to chemical reactions with their environment, particularly with water and oxygen.",
-        "The basic concept of corrosion involves the occurrence of chemical reactions between metals and their environment, resulting in compounds that weaken the metal's structure."
+        "Korosi adalah proses alami di mana logam mengalami kerusakan atau degradasi karena reaksi kimia dengan lingkungannya.",
+        "Definisi korosi adalah kerusakan atau degradasi logam akibat reaksi kimia dengan lingkungannya, terutama dengan air dan oksigen."
       ]
     },
     {
-      "tag": "corrosion_process",
+      "tag": "Proses Korosi",
       "patterns": [
-        "What is the corrosion process?",
-        "Explain corrosion process?",
-        "How does corrosion occur?"
+        "Bagaimana proses korosi?",
+        "Jelaskan proses korosi?",
+        "Bagaimana korosi bisa terjadi?"
       ],
       "responses": [
-        "The corrosion process involves the deterioration of metals due to chemical reactions with their environment. Typically, corrosion occurs when metals are exposed to substances such as water, oxygen, acids, or salts. The process can take various forms, including rusting in iron or steel, tarnishing in silver, or pitting in aluminum. Corrosion can weaken metals, leading to structural damage and potentially compromising their functionality."
+        "Proses korosi melibatkan oksidasi logam, di mana logam mengalami degradasi atau kerusakan karena interaksi dengan lingkungan sekitarnya, seperti udara, air, atau bahan kimia lainnya. Hal ini terjadi ketika logam bereaksi dengan zat-zat tersebut dan menghasilkan perubahan pada struktur dan sifat fisiknya."
       ]
     },
     {
-      "tag": "corrosion_impact",
+      "tag": "Dampak Korosi",
       "patterns": [
-        "What are the impacts of corrosion?",
-        "Explain the effects of corrosion?",
-        "How does corrosion affect?"
+        "Apa dampak korosi",
+        "Jelaskan dampak korosi?",
+        "Bagaimana pengaruh korosi?"
       ],
       "responses": [
-        "The impacts of corrosion can be significant and wide-ranging. Corrosion can lead to structural damage, reducing the integrity and lifespan of metal components. In industrial settings, corrosion can result in equipment failure, production downtime, and increased maintenance costs. Additionally, corrosion can compromise safety, particularly in critical infrastructure such as bridges, pipelines, and aircraft. Economically, corrosion costs billions of dollars annually due to repair and replacement expenses. Moreover, corrosion may also have environmental consequences, such as contamination of soil and water sources."
+        "Dampak korosi bisa sangat besar dan luas. Korosi dapat menyebabkan kerusakan struktural, dan umur komponen logam. Dalam lingkungan industri, korosi dapat mengakibatkan kegagalan peralatan, dan peningkatan biaya pemeliharaan. Selain itu, korosi dapat membahayakan keselamatan, khususnya pada infrastruktur penting seperti jembatan, dan saluran pipa. Secara ekonomi, korosi menghabiskan biaya miliaran dolar setiap tahunnya karena biaya perbaikan dan penggantian. Selain itu, korosi juga dapat menimbulkan dampak lingkungan, seperti kontaminasi tanah dan sumber air."
       ]
     },  
     {
-      "tag": "corrosion_prevention",
+      "tag": "pencegahan_korosi",
       "patterns": [
-        "What is corrosion prevention?",
-        "How to prevent corrosion?",
-        "Please explain about corrosion prevention."
+        "Bagaimana cara mencegah korosi?",
+        "Tolong jelaskan mengenai pencegahan korosi.?",
+        "Adakah metode untuk mencegah korosi ?"
       ],
       "responses": [
-        "Corrosion prevention is a series of steps or actions taken to inhibit or prevent corrosion on metals. Some methods of corrosion prevention include: Coating, Cathodic Protection, Using Corrosion Inhibitors, Material Selection. Corrosion prevention is important to maintain the structural integrity and aesthetics of metals, as well as to enhance the lifespan of equipment and infrastructure made from metal."
+        "Mencegah korosi pada logam dapat dilakukan dengan menggunakan pelapis atau logam tahan karat, cat anti-korosi, serta sistem proteksi katodik. Selain itu, perawatan rutin dan pengendalian lingkungan juga penting untuk menghindari korosi."
       ]
     },    
     {
-      "tag": "definition_corrosion_inhibitor",
+      "tag": "engertian_obat",
       "patterns": [
-        "What is a corrosion inhibitor?", 
-        "Definition of corrosion inhibitor?", 
-        "Explain the concept of corrosion inhibitor?",
-        "Corrosion inhibitor is?"
+        "drug adalah?",
+        "Pengertian drug?",
+        "Apa itu definisi drug?",
+        "tolong jelaskan drug?",
+        "apakah yang dimaksud dengan drug"
       ],
       "responses": [
-        "A corrosion inhibitor is a chemical compound or substance added to a corrosive environment or metal surface to reduce or prevent corrosion. Corrosion inhibitors aim to protect metals from damage caused by chemical reactions with corrosive substances in their surroundings.",
-        "A corrosion inhibitor is a substance inserted into an environment prone to cause corrosion or onto the surface of metal to prevent or reduce damage resulting from chemical reactions with corrosive substances. Its main purpose is to protect the metal from damage caused by corrosion."
-      ]
-    },
-    {
-      "tag": "definition_drug",
-      "patterns": [
-        "What is a drug?",
-        "Definition of drug",
-        "Explain the concept of drug"
-      ],
-      "responses": [
-        "A drug is a chemical substance used to prevent, reduce, or treat diseases or symptoms of diseases in humans or animals.",
-        "The definition of a drug is a chemical compound or substance that has pharmacological effects and is used for medical purposes.",
-        "The basic concept of a drug involves its ability to influence biological systems in a specific way to achieve the desired effect."
+        "Obat adalah substansi kimia yang digunakan untuk mencegah, mengurangi, atau mengobati penyakit atau gejala penyakit pada manusia atau hewan.",
+        "Konsep dasar dari obat melibatkan kemampuannya untuk mempengaruhi sistem biologis dengan cara tertentu untuk mencapai efek yang diinginkan."
       ]
     },    
     {
-      "tag": "drug_function",
+      "tag": "fungsi_obat",
       "patterns": [
-        "What is the function of a drug?",
-        "Explain the function of drug",
-        "Purpose of drug",
-        "What do drug do?"
+        "Apa fungsi obat?",
+        "Jelaskan fungsi obat?",
+        "Tujuan obat ?"
       ],
       "responses": [
-        "The functions of medicine include treating disease, alleviating symptoms, preventing disease, and restoring or maintaining health."
+        "Fungsi obat mencakup untuk pengobatan penyakit, meredakan gejala, mencegah penyakit, dan memulihkan atau memelihara kesehatan."
       ]
     },
     {
-      "tag": "how_drug_work",
+      "tag": "bagaimana_obat_bekerja",
       "patterns": [
-        "How do drug work?",
-        "Explain how drug function",
-        "Mechanism of action of drug",
-        "What is the working mechanism of drug?"
+        "Bagaimana cara kerja obat?",
+        "Mekanisme cara kerja obat",
+        "Bagaimana mekanisme kerja obat?"
       ],
       "responses": [
-        "The mode of action of a drug varies depending on the type, but generally involves interaction with a biological target or biochemical pathway to produce the desired response."
+        "Obat bekerja dengan cara menghambat produksi zat tertentu, meningkatkan efek zat alami dalam tubuh, atau menggantikan fungsi zat yang hilang. Setiap obat memiliki target dan mekanisme aksi yang berbeda."
       ]
     },
     {
-      "tag": "definition_expiry",
+      "tag": "pengertian_Kedaluwarsa",
       "patterns": [
-        "What is expiry?",
-        "Definition of expiry",
-        "Explain the concept of expiry"
+        "Kedaluwarsa adalah?",
+        "Pengertian Kedaluwarsa?",
+        "Apa itu definisi Kedaluwarsa?",
+        "tolong jelaskan Kedaluwarsa?",
+        "apakah yang dimaksud dengan Kedaluwarsa?"
       ],
       "responses": [
-        "Expiry refers to the last valid period of a product, during which the product is considered no longer safe or effective to use.",
-        "The definition of expiry is the date or period of time when a product, such as medicine or food, is no longer considered beneficial or safe for consumption.",
-        "The basic concept of expiry involves determining the time limit at which a product is deemed unreliable or no longer beneficial."
+        "Kedaluwarsa adalah masa berlaku terakhir suatu produk, di mana produk tersebut dianggap tidak lagi aman atau efektif untuk digunakan.",
+        "Kedaluwarsa adalah tanggal atau periode waktu ketika suatu produk, seperti obat atau makanan, tidak lagi dianggap bermanfaat atau aman untuk dikonsumsi."
       ]
     },
     {
-      "tag": "reasons_expiry",
+      "tag": "alasan_kedaluwarsa",
       "patterns": [
-        "Why do drugs expire?",
-        "What causes medications to expire?",
-        "Reasons for drug expiry"
+        "Mengapa obat Kedaluwarsa",
+        "Apa yang menyebabkan obat kadaluwarsa?",
+        "Alasan kadaluwarsa obat"
       ],
       "responses": [
-        "Drugs can expire due to various factors, including chemical degradation, loss of potency, and changes in physical properties over time. Exposure to light, moisture, air, and temperature fluctuations can accelerate degradation processes in medications, leading to decreased effectiveness or safety concerns. Moreover, prolonged storage or improper handling can also contribute to drug expiry by compromising their integrity and quality."
+        "Obat dapat kedaluwarsa karena berbagai faktor, termasuk degradasi kimia, kehilangan potensi, dan perubahan sifat fisik seiring berjalannya waktu. Paparan terhadap cahaya, kelembapan, udara, dan fluktuasi suhu dapat mempercepat proses degradasi obat, sehingga menyebabkan penurunan efektivitas atau masalah keamanan."
       ]
     },
     {
-      "tag": "definition_expired_drug",
+      "tag": "pengertian_obat_Kedaluwarsa",
       "patterns": [
-        "What is an expired drug?",
-        "Definition of expired drug",
-        "Explain the concept of expired drug",
-        "Expired drug is?"
+        "obat Kedaluwarsa adalah?",
+        "Pengertian obat Kedaluwarsa?",
+        "Apa itu definisi obat Kedaluwarsa?",
+        "tolong jelaskan obat Kedaluwarsa?",
+        "apakah yang dimaksud dengan obat Kedaluwarsa?"
       ],
       "responses": [
-        "An expired drug is a medication that has passed the expiration date set by the manufacturer.",
-        "The definition of an expired drug is a medication that is no longer considered safe or effective for consumption after passing the expiration date.",
-        "The concept of an expired drug involves determining the time limit at which the medication is deemed unable to provide the desired benefits or may even potentially cause health issues."
+        "Obat Kedaluwarsa adalah obat yang telah melewati tanggal kedaluwarsa yang ditentukan oleh produsen.",
+        "obat Kedaluwarsa adalah obat yang tidak lagi dianggap aman atau efektif untuk dikonsumsi setelah melewati tanggal kedaluwarsa."
       ]
     },
     {
-      "tag": "impact_of_consuming_expired_drugs",
+      "tag": "dampak_mengonsumsi_obat_yang_Kedaluwarsa",
       "patterns": [
-        "What are the consequences of consuming expired drugs?",
-        "Effects of using expired medications",
-        "Impact of taking expired drugs"
+        "Apa akibat dari mengkonsumsi obat kadaluwarsa",
+        "Efek Penggunaan Obat Kedaluwarsa",
+        "Dampak Mengonsumsi Obat Kedaluwarsa"
       ],
       "responses": [
-        "Consuming expired drugs can have various adverse effects on health. Expired medications may have degraded in potency or undergone chemical changes, rendering them less effective or even harmful. Ingesting expired drugs may fail to treat the intended condition, leading to prolonged illness or worsening symptoms."
+        "Mengonsumsi obat Kedaluwarsa dapat menimbulkan berbagai dampak buruk terhadap kesehatan. Obat Kedaluwarsa mungkin telah menurun potensinya atau mengalami perubahan kimia, menjadikannya kurang efektif atau bahkan berbahaya. Menelan obat kadaluwarsa mungkin tidak dapat mengatasi kondisi yang diinginkan, sehingga menyebabkan penyakit berkepanjangan atau gejala yang semakin parah."
       ]
     },  
     {
-      "tag": "expired_drug_corrosion_inhibitor",
+      "tag": "kedaluwarsa_obat_penghambat_korosi",
       "patterns": [
-        "How can expired drugs become corrosion inhibitors?",
-        "Describe how expired drugs are involved in corrosion prevention",
-        "The relationship between expired drugs and protecting metals from corrosion"
+        "Bagaimana obat bisa menjadi penghambat korosi?",
+        "Jelaskan bagaimana obat terlibat dalam pencegahan korosi"
       ],
       "responses": [
-        "In this scenario, expired drugs may contain compounds or chemicals that unexpectedly exhibit protective properties against corrosion on metals. When applied to the metal surface, these compounds form a protective layer that prevents corrosion.",
-        "Expired drugs may contain ingredients that miraculously or unexpectedly interact with metals to prevent corrosion. The expired drug's health properties could provide an additional benefit for the protected metal."
+        "Dalam skenario ini, obat kadaluarsa mungkin mengandung senyawa atau bahan kimia yang secara tidak terduga menunjukkan sifat perlindungan terhadap korosi pada logam. Ketika diaplikasikan pada permukaan logam, senyawa tersebut membentuk lapisan pelindung yang mencegah korosi."
       ]
     },
     {
-      "tag": "definition_acid",
+      "tag": "pengertian_asam",
       "patterns": [
-        "What is an acid?",
-        "Acid is?",
-        "What is the definition of acid?",
-        "What is the meaning of acid?",
-        "Explain the definition of proton?"
+        "asam adalah?",
+        "Pengertian asam?",
+        "Apa itu definisi asam?",
+        "tolong jelaskan asam?",
+        "apakah yang dimaksud dengan asam?"
+      ],
+      "responses": [
+        "Asam dapat didefinisikan sebagai zat yang dapat menyumbangkan proton (ion H+) kepada zat lain.Asam merupakan elektrolit, yaitu zat yang dapat menghantarkan listrik dalam larutannya."
+      ]
+    },
+    {
+      "tag": "pengertian_basa",
+      "patterns": [
+        "basa adalah?",
+        "Pengertian basa?",
+        "Apa itu definisi basa?",
+        "tolong jelaskan basa?",
+        "apakah yang dimaksud dengan basa?"
+      ],
+      "responses": [
+        "Basa adalah zat kimia yang dapat memberikan rasa pahit, mengubah warna indikator asam-basa menjadi biru, menghantarkan listrik, dan bereaksi dengan asam untuk membentuk garam dan air. Sifat-sifat ini disebabkan oleh kemampuan basa untuk menerima ion hidrogen (H+) dari zat lain."
+      ]
+    },
+    {
+      "tag": "pengertian_elektron",
+      "patterns": [
+        "elektron adalah?",
+        "Pengertian elektron?",
+        "Apa itu definisi elektron?",
+        "tolong jelaskan elektron?",
+        "apakah yang dimaksud dengan elektron?"
+      ],
+      "responses": [
+        "Elektron adalah bagian dari atom yang bermuatan negatif. Elektron mengelilingi inti atom seperti planet mengelilingi matahari. Jumlah elektron dalam atom sama dengan jumlah proton.",
+        "Elektron adalah salah satu dari tiga partikel dasar yang membentuk atom, bersama dengan proton dan neutron. Elektron mengelilingi inti atom dalam lintasan yang disebut orbit. Jumlah elektron yang dimiliki atom sama dengan jumlah protonnya."
+      ]
+    },
+    {
+      "tag": "pengertian_proton",
+      "patterns": [
+        "proton adalah?",
+        "Pengertian proton?",
+        "Apa itu definisi proton?",
+        "tolong jelaskan proton?",
+        "apakah yang dimaksud dengan proton?"
+      ],
+      "responses": [
+        "Proton adalah partikel subatom yang memiliki muatan positif dan menjadi salah satu elemen pembentuk inti atom. Jumlah proton dalam inti atom menentukan jenis unsur kimia yang membentuknya.",
+        "Proton merupakan partikel bermuatan positif yang terletak di dalam inti atom. Jumlah proton yang berbeda dalam inti atomlah yang menyebabkan perbedaan antara unsur-unsur dalam sifat dan perilakunya."
+      ]
+    },
+    {
+      "tag": "pengertian_neutron",
+      "patterns": [
+        "neutron adalah?",
+        "Pengertian neutron?",
+        "Apa itu definisi neutron?",
+        "tolong jelaskan neutron?",
+        "apakah yang dimaksud dengan neutron?"
+      ],
+      "responses": [
+        "Neutron adalah partikel subatom netral yang bersama proton membentuk inti atom. Peran utama neutron adalah menjaga stabilitas inti atom dengan interaksi melalui gaya nuklir kuat.",
+        "Dalam inti atom, neutron adalah partikel netral yang membantu menjaga kestabilan inti bersama dengan proton melalui interaksi gaya nuklir kuat."
         
+      ]
+    },    
+    {
+      "tag": "pengertian-ionisasi",
+      "patterns": [
+        "ionisasi adalah?",
+        "Pengertian ionisasi?",
+        "Apa itu definisi ionisasi?",
+        "tolong jelaskan ionisasi?",
+        "apakah yang dimaksud dengan ionisasi?"
       ],
       "responses": [
-        "An acid can be described as a chemical substance that has a sour taste, can change the color of acid-base indicators, conducts electricity, and reacts with bases to form salts. Acids play an important role in everyday life, including in industry, agriculture, food, and the human body.",
-        "An acid is a chemical substance that possesses unique properties, including a sour taste, the ability to change the color of acid-base indicators, conductivity of electricity, and the ability to react with bases to form salts. These unique properties make acids essential in human life."
+        "Ionisasi adalah proses perubahan atom atau molekul menjadi ion dengan menambahkan atau mengurangi partikel bermuatan seperti elektron atau lainnya. Proses ionisasi ke muatan positif atau negatif sedikit berbeda.",
+        "Ionisasi adalah proses pembentukan ion dari atom atau molekul. Ion adalah atom atau molekul yang bermuatan listrik. Ionisasi dapat terjadi dengan menambahkan atau mengurangi elektron dari atom atau molekul."
       ]
     },
     {
-      "tag": "definition_base",
+      "tag": "pengertian-energi-ionisasi",
       "patterns": [
-        "What is a base?",
-        "Base is?",
-        "What does base mean?",
-        "Explain the definition of base?"
+        "energi ionisasi adalah?",
+        "Pengertian energi ionisasi?",
+        "Apa itu definisi energi ionisasi?",
+        "tolong jelaskan energi ionisasi?",
+        "apakah yang dimaksud dengan energi ionisasi?"
       ],
       "responses": [
-        "A base can be described as a chemical substance that has a bitter taste, can change the color of acid-base indicators to blue, conducts electricity, and reacts with acids to form salts. Bases play an important role in everyday life, including in industry, agriculture, food, and the human body.",
-        "A base is a chemical substance that can give a bitter taste, change the color of acid-base indicators to blue, conduct electricity, and react with acids to form salts and water. These properties are due to the base's ability to accept hydrogen ions (H+) from other substances."
+        "Energi ionisasi adalah energi yang diperlukan untuk melepaskan elektron dari suatu atom atau molekul. Energi ionisasi pertama adalah energi yang diperlukan untuk melepaskan satu elektron pertama dari atom atau molekul netral. Energi ionisasi kedua adalah energi yang diperlukan untuk melepaskan satu elektron kedua dari atom atau molekul yang telah kehilangan satu elektron, dan seterusnya.",
+        "Energi ionisasi adalah energi yang diperlukan untuk 'melepaskan' elektron dari atom atau molekul. Energi ionisasi pertama adalah energi yang diperlukan untuk 'melepaskan' elektron pertama dari atom atau molekul netral. Energi ionisasi kedua adalah energi yang diperlukan untuk 'melepaskan' elektron kedua dari atom atau molekul yang telah kehilangan satu elektron, dan seterusnya."
+      ]
+    },    
+    {
+      "tag": "pengertian_atom",
+      "patterns": [
+        "atom adalah?",
+        "Pengertian atom?",
+        "Apa itu definisi atom?",
+        "tolong jelaskan atom?",
+        "apakah yang dimaksud dengan atom?"
+      ],
+      "responses": [
+        "Atom adalah unit dasar materi yang tidak dapat dipecah lagi tanpa kehilangan sifat-sifat kimianya. Terdiri dari inti atom yang padat yang mengandung proton bermuatan positif dan neutron netral, serta elektron yang mengelilingi inti dalam orbit.",
+        "Atom merupakan bagian terkecil dari suatu unsur yang masih mempertahankan sifat-sifat kimianya. Terdiri dari inti atom yang mengandung proton dan neutron, serta elektron yang berputar dalam orbital mengelilingi inti."
+      ]
+    },    
+    {
+      "tag": "pengertian_struktur_atom",
+      "patterns": [
+        "struktur atom adalah?",
+        "Pengertian struktur atom?",
+        "Apa itu definisi struktur atom?",
+        "tolong jelaskan struktur atom?",
+        "apakah yang dimaksud dengan struktur atom?"
+      ],
+      "responses": [
+        "Struktur atom merujuk pada susunan komponen-komponen dasar atom yang meliputi inti atom yang padat yang terdiri dari proton bermuatan positif dan neutron netral. Elektron, bermuatan negatif, bergerak dalam orbital di sekitar inti dalam tingkat energi yang berbeda.",
+        "Pengertian struktur atom adalah konfigurasi dari komponen-komponen atom, yaitu inti atom yang mengandung proton dan neutron, serta elektron yang mengelilingi inti dalam orbit dengan tingkat energi yang berbeda."
+      ]
+    },    
+    {
+      "tag": "model_atom",
+      "patterns": [
+        "model_atom adalah?",
+        "Pengertian model_atom?",
+        "Apa itu definisi model_atom?",
+        "tolong jelaskan model_atom?",
+        "apakah yang dimaksud dengan model_atom?"
+      ],
+      "responses": [
+        "Model atom adalah representasi atau konsep teoretis yang digunakan untuk menjelaskan perilaku, struktur, dan sifat atom berdasarkan penelitian ilmiah, eksperimen, dan teori dalam bidang fisika dan kimia.",
+        "Model atom adalah penjelasan visual atau teoritis tentang susunan, perilaku, dan interaksi antara komponen-komponen utama atom, seperti proton, neutron, dan elektron. Model ini berkembang seiring waktu seiring dengan perkembangan ilmu pengetahuan."
       ]
     },
     {
-      "tag": "definition_electron",
+      "tag": "sifat_atom",
       "patterns": [
-        "What is an electron?",
-        "Electron is?",
-        "Explain what an electron is",
-        "What is meant by electron"
+        "Apa saja sifat-sifat atom?",
+        "Sifat-sifat apa yang dimiliki atom?",
+        "Berikan gambaran tentang sifat-sifat atom."
       ],
       "responses": [
-        "An electron is one of the three fundamental particles that make up an atom, along with protons and neutrons. Electrons surround the atom's nucleus in orbits. The number of electrons an atom has is equal to its number of protons.",
-        "An electron is one of the fundamental particles that form an atom and has a negative charge. Electrons orbit around the atom's nucleus, which consists of protons (positively charged) and neutrons (neutral). The atomic structure with electrons orbiting around the nucleus is known as the Bohr atomic model."
+        "Sifat-sifat atom meliputi ukuran, massa, muatan, dan distribusi elektron dalam atom. Atom memiliki ukuran yang sangat kecil, dengan radius sekitar 0,1."
       ]
     },
     {
-      "tag": "definition_proton",
+      "tag": "pengertian_tabel_periodik",
       "patterns": [
-        "What is a proton?",
-        "Proton is?",
-        "Definition of proton",
-        "What does proton mean",
-        "Explain the definition of proton?"
+        "tabel periodik adalah?",
+        "Pengertian tabel periodik?",
+        "Apa itu definisi tabel periodik?",
+        "tolong jelaskan tabel periodik?",
+        "apakah yang dimaksud dengan tabel periodik?"
       ],
       "responses": [
-        "A proton is a subatomic particle that carries a positive charge and is one of the constituents of an atom's nucleus. The number of protons in an atom's nucleus determines the type of chemical element it forms.",
-        "A proton is a positively charged particle located within the nucleus of an atom. The varying number of protons in the nucleus of an atom is what distinguishes different elements in their properties and behaviors.",
-        "In chemistry, a proton is a positively charged particle found in the nucleus of an atom. The chemical properties of an element are heavily influenced by the number of protons in its nucleus."
+        "Tabel periodik adalah penyusunan unsur-unsur kimia yang disusun secara teratur berdasarkan jumlah proton dalam inti atom. Ini membantu dalam memahami pola sifat-sifat kimia yang teratur antar unsur..",
+        "Tabel periodik adalah tata letak unsur-unsur kimia yang disusun berdasarkan urutan peningkatan nomor atom, memungkinkan kita untuk melihat pola berulang dalam sifat-sifat kimia antar unsur tersebut."
+      ]
+    },    
+    {
+      "tag": "pengertian_tata_nama_senyawa",
+      "patterns": [
+        "tata nama senyawa adalah?",
+        "Pengertian tata nama senyawa?",
+        "Apa itu definisi tata nama senyawa?",
+        "tolong jelaskan tata nama senyawa?",
+        "apakah yang dimaksud dengan tata nama senyawa?"
+      ],
+      "responses": [
+        "Tata nama senyawa adalah aturan penamaan yang digunakan dalam kimia untuk memberi nama senyawa-senyawa kimia berdasarkan komposisi unsur-unsur yang membentuk senyawa tersebut.",
+        "Tata nama senyawa kimia adalah serangkaian aturan yang digunakan untuk memberi nama pada senyawa kimia, yang memperjelas komposisi serta struktur kimia dari senyawa tersebut."
+      ]
+    },    
+    {
+      "tag": "sistem_penamaan_senyawa",
+      "patterns": [
+        "Ada berapa jenis sistem penamaan senyawa kimia?",
+        "Bagaimana penamaan senyawa kimia diatur?",
+        "Jenis-jenis penamaan senyawa kimia?",
+        "Sistem penamaan apa yang digunakan dalam kimia?"
+      ],
+      "responses": [
+        "Ada dua jenis utama sistem penamaan senyawa kimia: sistem penamaan IUPAC untuk senyawa organik dan aturan khusus untuk senyawa anorganik. IUPAC memiliki aturan yang terperinci untuk menamai senyawa organik berdasarkan struktur molekul, sedangkan senyawa anorganik mengikuti aturan khusus tergantung pada jenis senyawa, seperti senyawa ionik atau senyawa biner.",
+        "Sistem penamaan senyawa kimia terutama dibagi menjadi dua jenis: sistem IUPAC yang merupakan standar internasional untuk menamai senyawa organik, dan aturan khusus untuk menamai senyawa anorganik yang bergantung pada jenis senyawa itu sendiri, seperti senyawa ionik atau senyawa biner"
       ]
     },
     {
-      "tag": "definition_neutron",
+      "tag": "tata_nama_senyawa_anorganik",
       "patterns": [
-        "What is a neutron?",
-        "Neutron is",
-        "Explain what a neutron is",
-        "Definition of neutron",
-        "What does proton neutron"
+        "Bagaimana tata nama senyawa anorganik diatur?",
+        "Aturan penamaan untuk senyawa anorganik?",
+        "Jelaskan tata nama senyawa anorganik?",
+        "Apa yang dimaksud dengan tata nama senyawa anorganik?"
       ],
       "responses": [
-        "A neutron is a neutral subatomic particle that, together with protons, forms the nucleus of an atom. The primary role of neutrons is to maintain the stability of the atomic nucleus through interactions via the strong nuclear force.",
-        "A neutron is one of the components of an atomic nucleus that influences its stability. Together with protons, neutrons form the nucleus of an atom.",
-        "Within an atomic nucleus, a neutron is a neutral particle that helps maintain nucleus stability alongside protons through interactions via the strong nuclear force."
+        "Tata nama senyawa anorganik mengikuti aturan khusus tergantung pada jenis senyawa. Beberapa contoh sistem penamaan untuk senyawa anorganik termasuk penamaan senyawa ionik, senyawa biner, senyawa kovalen, dan senyawa kompleks. Setiap jenis senyawa memiliki aturan penamaan yang berbeda, seperti penggunaan awalan dan sufiks tertentu, penggunaan angka oksidasi, serta identifikasi struktur kimianya.",
+        "Tata nama senyawa anorganik sering mengikuti aturan khusus sesuai dengan jenis senyawanya. Contohnya, pada senyawa ionik, nama senyawa terbentuk dari penulisan nama kation diikuti nama anion. Untuk senyawa biner, penggunaan awalan seperti 'hidro-', 'oksida-', 'sulfida-', dan lainnya sering diterapkan untuk menamai senyawa berdasarkan komponennya."
       ]
     },    
     {
-      "tag": "definition_ionization",
+      "tag": "tatanama_senyawa_organik",
       "patterns": [
-        "What is ionization?",
-        "What is the definition of ionization?",
-        "What does ionization mean?",
-        "explain the definition of ionization?",
-        "Ionization is?"
+        "Apa yang dimaksud dengan tata nama senyawa organik?",
+        "Bagaimana tata nama senyawa organik diatur?",
+        "Aturan penamaan untuk senyawa organik?",
+        "Jelaskan tata nama senyawa organik?"
       ],
       "responses": [
-        "Ionization is the process of changing an atom or molecule into an ion by adding or removing charged particles such as electrons or others. The process of ionization into positive or negative charges is slightly different.",
-        "Ionization is the process in which an atom or molecule gains or loses one or more electrons to form ions. In this process, the atom or molecule becomes electrically charged due to the loss or gain of electrons. The resulting ions can be positive ions (called cations) if the atom loses electrons, or negative ions (called anions) if the atom gains electrons."
+        "Tata nama senyawa organik mengacu pada sistem penamaan kimia untuk senyawa yang terutama terdiri dari atom karbon. IUPAC adalah badan yang mengatur dan mengembangkan aturan penamaan senyawa organik. Misalnya, pada senyawa alkena, penamaan didasarkan pada urutan nomor karbon terendah pada rantai karbon yang membentuk ikatan rangkap.",
+        "Penamaan senyawa organik mengikuti aturan yang disusun oleh IUPAC, yang mengidentifikasi senyawa berdasarkan rantai karbon, ikatan rangkap, dan substituen yang terkait dengan rantai utama. Misalnya, senyawa dengan ikatan rangkap ganda diidentifikasi dengan kata akhir '-ena', seperti etena untuk senyawa dengan satu ikatan rangkap ganda."
       ]
     },
     {
-      "tag": "definition_ionization_energy",
+      "tag": "persamaan_reaksi",
       "patterns": [
-        "What is the definition of ionization energy?",
-        "What is ionization energy?",
-        "Explain ionization energy?",
-        "Ionization energy is?"
+        "persamaan reaksi adalah?",
+        "Pengertian persamaan reaksi?",
+        "Apa itu definisi persamaan reaksi?",
+        "tolong jelaskan persamaan reaksi?",
+        "apakah yang dimaksud dengan persamaan reaksi?"
       ],
       "responses": [
-        "Ionization energy is the energy required to remove an electron from an atom or molecule. The first ionization energy is the energy required to remove the first electron from a neutral atom or molecule. The second ionization energy is the energy required to remove the second electron from an atom or molecule that has already lost one electron, and so on.",
-        "Ionization energy is the energy required to 'remove' an electron from an atom or molecule. The first ionization energy is the energy required to 'remove' the first electron from a neutral atom or molecule. The second ionization energy is the energy required to 'remove' the second electron from an atom or molecule that has already lost one electron, and so on."
+        "Persamaan reaksi kimia adalah pernyataan yang ditulis dengan rumus kimia yang memberikan informasi identitas dan kuantitas zat-zat yang terlibat dalam suatu perubahan kimia ataupun fisika.Contoh sederhana: pembakaran metana: CH4 + 2O2 -> CO2 + 2H2O.",
+        "Persamaan reaksi kimia adalah cara representasi menggunakan rumus kimia untuk menyajikan perubahan yang terjadi dalam suatu reaksi kimia. Tujuannya adalah untuk menunjukkan zat-zat reaktan yang bereaksi dan produk yang dihasilkan. Setiap reaksi mematuhi hukum kekekalan massa dan atom. Contoh sederhana: pembakaran metana: CH4 + 2O2 -> CO2 + 2H2O."
       ]
     },    
     {
-      "tag": "definition_atom",
+      "tag": "hukum_dasar_kimia",
       "patterns": [
-        "What is an atom?",
-        "Atom is?",
-        "Definition of atom?",
-        "What does atom mean?",
-        "Explain about atom?",
-        "Atom explanation"
+        "Apa itu hukum dasar kimia?",
+        "Boleh minta penjelasan tentang hukum dasar kimia?",
+        "Apa yang dimaksud dengan hukum kekekalan massa?",
+        "Bagaimana hukum perbandingan tetap?",
+        "Apa saja hukum dasar dalam kimia?"
       ],
       "responses": [
-        "An atom is the basic unit of matter that cannot be further divided without losing its chemical properties. It consists of a dense atomic nucleus containing positively charged protons and neutral neutrons, as well as electrons orbiting the nucleus.",
-        "An atom is the smallest unit of an element that still retains its chemical properties. It consists of an atomic nucleus containing protons and neutrons, as well as electrons that orbit around the nucleus.",
-        "An atom is the fundamental unit of matter consisting of a dense nucleus containing positively charged protons and neutral neutrons. Negatively charged electrons move in orbitals around the atomic nucleus."
+        "Hukum dasar kimia adalah seperangkat prinsip yang mendasari perilaku zat-zat kimia. Beberapa di antaranya adalah:Hukum-hukum ini mencakup Hukum Kekekalan Massa, Hukum Proust, Hukum Dalton, Hukum Gay-Lussac, dan Hipotesis Avogadro.",
+        "Dalam kimia, terdapat beberapa hukum dasar yang mendasari prinsip-prinsip kimia modern. Hukum-hukum ini antara lain Hukum Kekekalan Massa, Hukum Proust, Hukum Dalton, Hukum Gay-Lussac, dan Hipotesis Avogadro.",
+        "Hukum dasar kimia mencakup serangkaian prinsip yang membentuk fondasi kimia modern. Beberapa di antaranya adalah Hukum Kekekalan Massa, Hukum Proust, Hukum Dalton, Hukum Gay-Lussac, dan Hipotesis Avogadro."
       ]
-    },    
+    },   
     {
-      "tag": "definition_atomic_structure",
+      "tag": "hukum_kekekalan_massa",
       "patterns": [
-        "What is atomic structure?",
-        "Atomic structure is?",
-        "Definition of atomic structure",
-        "What does atomic structure mean?",
-        "Explain about atomic structure?"
+        "Apa yang dimaksud dengan Hukum Kekekalan Massa?",
+        "Apa itu Hukum Lavoisier?",
+        "Hukum Lavoisier itu apa?"
       ],
       "responses": [
-        "Atomic structure refers to the arrangement of the basic components of an atom, including the dense atomic nucleus consisting of positively charged protons and neutral neutrons. Electrons, negatively charged, move in orbitals around the nucleus in different energy levels.",
-        "Atomic structure is the configuration of the components of an atom, namely the atomic nucleus containing protons and neutrons, as well as electrons orbiting the nucleus in orbitals with different energy levels.",
-        "The definition of atomic structure includes the layout of the components of an atom, where the dense atomic nucleus consists of positively charged protons and neutral neutrons, while electrons move in orbitals around the nucleus."
-      ]
-    },    
-    {
-      "tag": "atomic_model",
-      "patterns": [
-        "What is an atomic model?",
-        "Atomic model is?",
-        "Definition of atomic model",
-        "Explain about atomic model?"
-      ],
-      "responses": [
-        "An atomic model is a representation or theoretical concept used to explain the behavior, structure, and properties of atoms based on scientific research, experiments, and theories in the fields of physics and chemistry.",
-        "An atomic model is a visual or theoretical explanation of the arrangement, behavior, and interaction between the main components of an atom, such as protons, neutrons, and electrons. This model evolves over time as science advances.",
-        "An atomic model is a visual or theoretical concept used to understand the structure of atoms and the behavior of particles within them. Various models have been developed over time to attempt to explain the properties and behaviors of atoms under various conditions."
+        "Hukum Kekekalan Massa, juga dikenal sebagai Hukum Lavoisier, menyatakan bahwa dalam suatu sistem tertutup, massa total tidak bisa diciptakan atau dimusnahkan selama suatu reaksi kimia. Massa dari semua reaktan yang terlibat dalam reaksi sama dengan massa produk yang dihasilkan.",
+        "Hukum Kekekalan Massa, atau Hukum Lavoisier, menyatakan bahwa dalam suatu reaksi kimia, massa total zat-zat yang bereaksi sama dengan massa total produk yang dihasilkan. Massa tidak diciptakan atau dimusnahkan, hanya berubah bentuk atau redistribusi dalam reaksi kimia.",
+        "Prinsip Hukum Lavoisier menyatakan bahwa dalam suatu sistem tertutup, massa total tetap konstan meskipun dapat mengalami perubahan fisik atau kimia. Implikasinya, jumlah massa zat-zat dalam reaksi kimia tidak berubah secara total, hanya berpindah atau berubah bentuk."
       ]
     },
     {
-      "tag": "atomic_properties",
+      "tag": "hukum_perbandingan_tetap",
       "patterns": [
-        "What are the properties of atoms?",
-        "What properties do atoms have?",
-        "List the properties of atoms."
+        "Apa yang dinyatakan dalam Hukum Proust?",
+        "prinsip Hukum Perbandingan Tetap?",
+        "defisini hukum perbandingan tetap?"
       ],
       "responses": [
-        "The properties of atoms include size, mass, charge, and the distribution of electrons within the atom.",
-        "Atoms have very small sizes, with radii ranging from about 0.1 nanometers to several angstroms (Å).",
-        "Atomic mass is related to the number of protons and neutrons in the atomic nucleus, while electrons have a much smaller mass compared to protons and neutrons."
+        "Hukum Proust, atau Hukum Perbandingan Tetap, menyatakan bahwa dalam senyawa kimia, rasio massa dari unsur-unsur yang membentuk senyawa tersebut akan selalu berada pada perbandingan tetap.",
+        "Hukum Perbandingan Tetap, yang juga dikenal sebagai Hukum Proust, mengemukakan bahwa dalam suatu senyawa kimia, rasio massa elemen yang membentuk senyawa tersebut akan selalu tetap, tidak peduli berapa banyak senyawa yang dibentuk atau diuraikan."
       ]
     },
     {
-      "tag": "periodic_table_definition",
+      "tag": "hukum_kelipatan_perbandingan",
       "patterns": [
-        "What is the periodic table?",
-        "Periodic table is?",
-        "Definition of the periodic table of elements?",
-        "What is meant by the periodic table?",
-        "Explain the periodic table?"
+        "Apa yang dimaksud dengan Hukum Kelipatan Perbandingan?",
+        "Bagaimana Hukum Dalton menjelaskan perbandingan massa?",
+        "Hukum Kelipatan Perbandingan dijelaskan oleh siapa?"
       ],
       "responses": [
-        "The periodic table is an arrangement of chemical elements organized systematically based on the number of protons in the atomic nucleus. It helps in understanding the regular patterns of chemical properties among elements.",
-        "The periodic table is a layout of chemical elements arranged in order of increasing atomic number, allowing us to observe recurring patterns in the chemical properties among these elements."
-      ]
-    },    
-    {
-      "tag": "naming_compounds_definition",
-      "patterns": [
-        "What is naming compounds?",
-        "Naming compounds is?",
-        "Definition of chemical compound naming?",
-        "What is meant by naming compounds?",
-        "Explain about naming compounds"
-      ],
-      "responses": [
-        "Naming compounds is a set of rules used in chemistry to name chemical compounds based on the composition of elements that form the compound.",
-        "Chemical compound naming is a set of rules used to name chemical compounds, which clarify the composition and chemical structure of the compound.",
-        "The names of chemical compounds are created based on the composition of their constituent elements. These names reflect the structure and chemical composition of the compound."
-      ]
-    },    
-    {
-      "tag": "compound_naming_systems",
-      "patterns": [
-        "How many types of chemical compound naming systems are there?",
-        "How is the naming of chemical compounds organized?",
-        "What are the types of chemical compound naming?",
-        "Which naming system is used in chemistry?"
-      ],
-      "responses": [
-        "There are two main types of chemical compound naming systems: the IUPAC naming system for organic compounds and specific rules for inorganic compounds. IUPAC has detailed rules for naming organic compounds based on molecular structure, while inorganic compounds follow specific rules depending on the type of compound, such as ionic compounds or binary compounds.",
-        "The naming system for chemical compounds is usually divided into two main categories: the IUPAC naming for organic compounds which follows specific rules based on their molecular structure, and specific rules used to name inorganic compounds. IUPAC organic naming often relies on carbon chains, functional groups, and isomerism."
+        "Hukum Kelipatan Perbandingan, yang dikemukakan oleh John Dalton, menyatakan bahwa jika dua unsur membentuk lebih dari satu senyawa kimia, perbandingan massa unsur yang satu dengan unsur yang lain untuk membentuk senyawa-senyawa tersebut adalah rasio bilangan bulat kecil.",
+        "Hukum Kelipatan Perbandingan, juga dikenal sebagai Hukum Dalton, dijelaskan oleh John Dalton. Hukum ini menyatakan bahwa perbandingan massa dua unsur yang membentuk senyawa kimia dapat dijelaskan dalam rasio bilangan bulat kecil."
       ]
     },
     {
-      "tag": "inorganic_compound_naming",
+      "tag": "hukum_perbandingan_volum",
       "patterns": [
-        "How are inorganic compound names organized?",
-        "Naming rules for inorganic compounds?",
-        "Explain the naming of inorganic compounds?",
-        "What is meant by the naming of inorganic compounds?"
+        "Apa yang dijelaskan oleh Hukum Perbandingan Volum?",
+        "Siapa yang menemukan Hukum Perbandingan Volum?",
+        "Jelaskan Hukum Perbandingan Volum.",
+        "berikan definisi hukum perbandingan volum"
       ],
       "responses": [
-        "The naming of inorganic compounds follows specific rules depending on the type of compound. Some examples of naming systems for inorganic compounds include naming of ionic compounds, binary compounds, covalent compounds, and complex compounds. Each type of compound has different naming rules, such as the use of specific prefixes and suffixes, oxidation numbers, and identification of its chemical structure.",
-        "The naming of inorganic compounds often follows specific rules according to their type. For example, in ionic compounds, the compound name is formed by writing the name of the cation followed by the name of the anion. For binary compounds, the use of prefixes such as 'hydro-', 'oxide-', 'sulfide-', and others is often applied to name compounds based on their components."
+        "Hukum Perbandingan Volum, atau dikenal sebagai Hukum Gay-Lussac, menyatakan bahwa pada suhu dan tekanan yang sama, volume gas-gas reaktan dan produk dalam suatu reaksi kimia berada dalam perbandingan bilangan bulat yang sederhana. Ini berarti bahwa volume gas-gas tersebut dapat diekspresikan dalam rasio angka yang sederhana.",
+        "Hukum Perbandingan Volum, atau Hukum Gay-Lussac, ditemukan oleh ilmuwan Prancis Joseph Louis Gay-Lussac pada awal abad ke-19. Hukum ini menyatakan bahwa volume gas-gas dalam suatu reaksi kimia berada pada perbandingan volumetrik yang sederhana, jika suhu dan tekanannya tetap."
       ]
     },    
     {
-      "tag": "organic_compound_naming",
+      "tag": "hipotesis_avogadro",
       "patterns": [
-        "What is meant by the naming of organic compounds?",
-        "How are organic compound names organized?",
-        "Naming rules for organic compounds?",
-        "Explain the naming of organic compounds?"
+        "Apakah konsekuensi dari Hukum Avogadro?",
+        "Bagaimana Hipotesis Avogadro berhubungan dengan gas?",
+        "Kenapa Hukum Avogadro penting dalam kimia?"
       ],
       "responses": [
-        "Organic compound naming refers to the chemical naming system for compounds primarily consisting of carbon atoms. IUPAC is the body that regulates and develops the naming rules for organic compounds. For example, in alkene compounds, naming is based on the lowest carbon number sequence on the carbon chain forming the double bond.",
-        "The naming of organic compounds follows rules established by IUPAC, which identifies compounds based on carbon chains, double bonds, and substituents attached to the main chain. For example, compounds with double bonds are identified with the suffix '-ene', such as ethene for compounds with one double bond."
+        "Konsekuensi dari Hukum Avogadro adalah bahwa gas-gas yang memiliki volume yang sama pada tekanan dan suhu yang sama juga memiliki jumlah partikel yang sama, yang dapat diukur dengan menggunakan molekul atau mol.",
+        "Hipotesis Avogadro menjelaskan bahwa, pada kondisi yang sama, volume yang sama dari gas-gas yang berbeda akan mengandung jumlah partikel yang sama, yang berperan penting dalam mengukur jumlah zat dalam kimia.",
+        "Hukum Avogadro penting dalam kimia karena memberikan dasar untuk konsep molekul dan mol, memungkinkan pengukuran yang konsisten dan standar dalam perbandingan jumlah partikel dalam gas yang berbeda."
+      ]
+    },    
+    {
+      "tag": "stoikiometri",
+      "patterns": [
+        "stoikiometri adalah?",
+        "Pengertian stoikiometri?",
+        "Apa itu definisi stoikiometri?",
+        "tolong jelaskan stoikiometri?",
+        "apakah yang dimaksud dengan stoikiometri?"
+      ],
+      "responses": [
+        "Stoikiometri adalah cabang ilmu kimia yang mempelajari hubungan kuantitatif antara reaktan dan produk dalam suatu reaksi kimia. Stoikiometri diterapkan untuk menghitung jumlah relatif reaktan dan produk dalam suatu reaksi, menentukan perbandingan mol, massa, atau volume."
+      ]
+    },    
+    {
+      "tag": "ikatan_hidrogen",
+      "patterns": [
+        "ikatan hidrogen adalah?",
+        "Pengertian ikatan hidrogen?",
+        "Apa itu definisi ikatan hidrogen?",
+        "tolong jelaskan ikatan hidrogen?",
+        "apakah yang dimaksud dengan ikatan hidrogen?"
+      ],
+      "responses": [
+        "Ikatan hidrogen merupakan gaya tarik-menarik antara atom hidrogen yang terikat pada atom yang memiliki elektronegativitas tinggi seperti oksigen, nitrogen, atau fluorin. Hal ini terjadi karena perbedaan keelektronegatifan antara atom hidrogen dan atom yang terikat, menciptakan polaritas dan interaksi elektrostatik.",
+        "Ikatan hidrogen adalah interaksi antara atom hidrogen dengan atom oksigen, nitrogen, atau fluorin yang memiliki sifat elektronegatif tinggi. Ini terjadi ketika atom hidrogen yang terikat pada atom yang cukup elektronegatif menarik elektron, menciptakan kecenderungan polaritas."
       ]
     },
     {
-      "tag": "chemical_reaction_equation",
+      "tag": "larutan_elektrolit",
       "patterns": [
-        "What is a chemical reaction equation?",
-        "Can I have an example of a chemical reaction equation?",
-        "How do you formulate a chemical reaction equation?",
-        "Definition of a chemical reaction equation?"
+        "elektrolit adalah?",
+        "Pengertian elektrolit?",
+        "Apa itu definisi elektrolit?",
+        "tolong jelaskan elektrolit?",
+        "apakah yang dimaksud dengan elektrolit?"
       ],
       "responses": [
-        "A chemical reaction equation is a statement written with chemical formulas that provides information about the identities and quantities of substances involved in a chemical or physical change. A simple example is the combustion of methane: CH4 + 2O2 -> CO2 + 2H2O.",
-        "A chemical reaction equation is a representation using chemical formulas to present the changes that occur in a chemical reaction. Its purpose is to show the reactant substances that react and the products produced. Every reaction adheres to the laws of conservation of mass and atoms. A simple example is the combustion of methane: CH4 + 2O2 -> CO2 + 2H2O."
+        "Larutan elektrolit adalah larutan yang mengandung ion-ion yang dapat menghantarkan arus listrik. Biasanya, larutan ini terdiri dari senyawa ionik yang terlarut dalam pelarut seperti air, memisahkan menjadi ion positif dan negatif yang berkontribusi pada konduktivitas listrik larutan. \nContoh larutan elektrolit meliputi larutan garam, asam, dan basa yang dapat terionisasi dalam air, membentuk ion-ion bermuatan yang dapat mempengaruhi konduktivitas listrik."
       ]
-    },    
+    },   
     {
-      "tag": "fundamental_chemical_laws",
+      "tag": "larutan_non_elektrolit",
       "patterns": [
-        "What is a fundamental chemical law?",
-        "What does fundamental chemical law mean?",
-        "Can you explain the fundamental chemical laws?",
-        "What is the law of conservation of mass?",
-        "How does the law of definite proportions work?"
+        "non-elektrolit adalah?",
+        "Pengertian non-elektrolit?",
+        "Apa itu definisi non-elektrolit?",
+        "tolong jelaskan non-elektrolit?",
+        "apakah yang dimaksud dengan non-elektrolit?"
       ],
       "responses": [
-        "Fundamental chemical laws are a set of principles that underlie the behavior of chemical substances. Some of these include: The laws include the Law of Conservation of Mass, Law of Definite Proportions, Dalton's Law, Gay-Lussac's Law, and Avogadro's Hypothesis.",
-        "In chemistry, there are several fundamental laws that underlie modern chemical principles. These laws include the Law of Conservation of Mass, Law of Definite Proportions, Dalton's Law, Gay-Lussac's Law, and Avogadro's Hypothesis."
-      ]
-    },    
-    {
-      "tag": "law_of_conservation_of_mass",
-      "patterns": [
-        "What is the Law of Conservation of Mass?",
-        "What does the Law of Conservation of Mass mean?",
-        "Can you define the Law of Conservation of Mass?",
-        "Explain the Law of Conservation of Mass"
-      ],
-      "responses": [
-        "The Law of Conservation of Mass, also known as Lavoisier's Law, states that in a closed system, the total mass cannot be created or destroyed during a chemical reaction. The mass of all reactants involved in a reaction equals the mass of the products produced.",
-        "The Law of Conservation of Mass, or Lavoisier's Law, states that in a chemical reaction, the total mass of the reacting substances is equal to the total mass of the products formed. Mass is neither created nor destroyed, only transformed or redistributed in a chemical reaction."
-      ]
-    },    
-    {
-      "tag": "law_of_definite_proportions",
-      "patterns": [
-        "What is the Law of Definite Proportions?",
-        "What does the Law of Definite Proportions mean?",
-        "Can you define the Law of Definite Proportions?",
-        "Explain the Law of Definite Proportions"
-      ],
-      "responses": [
-        "The Law of Definite Proportions, also known as Proust's Law, states that in a chemical compound, the elements are always combined in fixed ratios by mass, regardless of the amount of the compound formed or decomposed.",
-        "The Law of Definite Proportions, or Proust's Law, asserts that in a chemical compound, the ratio of masses of the elements forming the compound is always constant, irrespective of the quantity of the compound formed or decomposed."
+        "Larutan non-elektrolit adalah larutan yang tidak mengandung ion-ion bermuatan yang dapat menghantarkan arus listrik. Biasanya, senyawa-senyawa kovalen polar atau senyawa tidak polar yang larut dalam air membentuk larutan non-elektrolit. \nContoh larutan non-elektrolit meliputi larutan gula, urea, atau alkohol dalam air. Senyawa-senyawa ini tidak terdisosiasi menjadi ion-ion bermuatan, sehingga larutan tidak menghantarkan listrik."
       ]
     },
     {
-      "tag": "law_of_multiple_proportions",
+      "tag": "reaksi_redoks",
       "patterns": [
-        "What is the Law of Multiple Proportions?",
-        "What does the Law of Multiple Proportions mean?",
-        "Can you define the Law of Multiple Proportions?",
-        "Explain the Law of Multiple Proportions"
+        "reaksi redoks adalah?",
+        "Pengertian reaksi redoks?",
+        "Apa itu definisi reaksi redoks?",
+        "tolong jelaskan reaksi redoks?",
+        "apakah yang dimaksud dengan reaksi redoks?"
       ],
       "responses": [
-        "The Law of Multiple Proportions, proposed by John Dalton, states that if two elements form more than one compound, the masses of one element that combine with a fixed mass of the other element are in ratios of small whole numbers.",
-        "The Law of Multiple Proportions, also known as Dalton's Law, as described by John Dalton, states that the masses of one element that combine with a fixed mass of another element to form different compounds are in ratios of small whole numbers."
+        "Reaksi redoks adalah jenis reaksi kimia yang melibatkan transfer elektron antara zat-zat kimia. Ini terdiri dari reaksi reduksi (penambahan elektron) dan oksidasi (pengurangan elektron). \nContoh reaksi redoks termasuk reaksi pembakaran, reaksi korosi logam, atau reaksi penguraian air menggunakan listrik. Dalam reaksi tersebut, terjadi perubahan oksidasi dan reduksi pada zat-zat yang terlibat."
+      ]
+    }, 
+    {
+      "tag": "senyawa_hidrokarbon",
+      "patterns": [
+        "hidrokarbon adalah?",
+        "Pengertian hidrokarbon?",
+        "Apa itu definisi hidrokarbon?",
+        "tolong jelaskan hidrokarbon?",
+        "apakah yang dimaksud dengan hidrokarbon?"
+      ],
+      "responses": [
+        "Senyawa hidrokarbon adalah senyawa kimia yang terdiri dari atom karbon dan hidrogen. Molekul-molekul ini membentuk struktur rangkaian karbon, yang dapat menjadi rantai lurus, bercabang, atau berlingkar. \nContohnya mencakup metana (CH4), etana (C2H6), dan bensin yang merupakan campuran hidrokarbon."
       ]
     },
     {
-      "tag": "law_of_combining_volumes",
+      "tag": "pengertian_caffeine",
       "patterns": [
-        "What is the Law of Combining Volumes?",
-        "What does the Law of Combining Volumes mean?",
-        "Can you define the Law of Combining Volumes?",
-        "Explain the Law of Combining Volumes",
-        "Who discovered the Law of Combining Volumes?"
+        "Kafein adalah?",
+        "Pengertian Kafein?",
+        "Apa itu definisi Kafein?",
+        "tolong jelaskan Kafein?",
+        "apakah yang dimaksud dengan Kafein?"
       ],
       "responses": [
-        "The Law of Combining Volumes, also known as Gay-Lussac's Law, states that at constant temperature and pressure, the volumes of gases involved in a chemical reaction are in simple integer ratios. This means that the volumes of these gases can be expressed in simple ratio of numbers.",
-        "The Law of Combining Volumes, or Gay-Lussac's Law, was discovered by the French scientist Joseph Louis Gay-Lussac in the early 19th century. This law states that the volumes of gases involved in a chemical reaction are in simple volumetric ratios if the temperature and pressure are kept constant."
+        "Kafein adalah bahan yang secara alami terkandung dalam lebih dari 60 tumbuhan, tapi paling banyak ditemukan dalam kopi, teh dan kakao. kafein bekerja dengan cara merangsang (meningkatkan aktivitas) otak dan sistem saraf, sekaligus meningkatkan sirkulasi hormon kortisol dan adrenalin dalam tubuh. \nKemudian Kafein merupakan senyawa dengan Rumus Kimia C8H10N4O2. Senyawa dengan Tata Nama Kimia 1,3,7-trimethylpurine-2,6-dione ini memiliki Persentase Energi Ionisasi sebesar 92.0%"
+      ]
+    }, 
+    {
+      "tag": "pengertian_acenocoumarol",
+      "patterns": [
+        "acenocoumarol adalah?",
+        "Pengertian acenocoumarol?",
+        "Apa itu definisi acenocoumarol?",
+        "tolong jelaskan acenocoumarol?",
+        "apakah yang dimaksud dengan acenocoumarol?"
+      ],
+      "responses": [
+        "Acenocoumarol adalah obat antikoagulan yang digunakan untuk mencegah pembekuan darah. Ini termasuk dalam golongan obat yang disebut antagonis vitamin K dan digunakan untuk mengobati atau mencegah pembekuan darah yang tidak diinginkan, seperti trombosis vena dalam, emboli paru, atau stroke akibat bekuan darah. \nKemudian Acenocoumarol merupakan senyawa dengan Rumus Kimia C 19 H 15 N O 6. Senyawa dengan Tata Nama Kimia 4-hidroxi-3-[1(4-nitrofenil)-3-oxobutil] crome-2-ona ini memiliki Persentase Energi Ionisasi sebesar 92.25%"
       ]
     },    
     {
-      "tag": "avogadro_hypothesis",
+      "tag": "pengertian_acetaminophen",
       "patterns": [
-        "What are the consequences of Avogadro's Law?",
-        "How is Avogadro's Hypothesis related to gases?",
-        "Why is Avogadro's Law important in chemistry?"
+        "Acetaminophen adalah?",
+        "Pengertian Acetaminophen?",
+        "Apa itu definisi Acetaminophen?",
+        "tolong jelaskan Acetaminophen?",
+        "apakah yang dimaksud dengan Acetaminophen?"
       ],
       "responses": [
-        "The consequence of Avogadro's Law is that gases with the same volume at the same pressure and temperature also have the same number of particles, which can be measured using molecules or moles.",
-        "Avogadro's Hypothesis explains that, under the same conditions, the same volume of different gases will contain the same number of particles, which is important in measuring the amount of substance in chemistry.",
-        "Avogadro's Law is important in chemistry because it provides the basis for the concept of molecules and moles, allowing for consistent and standard measurement in comparing the number of particles in different gases."
-      ]
-    },    
-    {
-      "tag": "stoichiometry",
-      "patterns": [
-        "What is stoichiometry?",
-        "What does stoichiometry mean?",
-        "Define stoichiometry",
-        "Explanation of stoichiometry"
-      ],
-      "responses": [
-        "Stoichiometry is a branch of chemistry that deals with the quantitative relationships between reactants and products in a chemical reaction.",
-        "Stoichiometry is applied to calculate the relative amounts of reactants and products in a reaction, determining the mole, mass, or volume ratios."
-      ]
-    },    
-    {
-      "tag": "hydrogen_bonding",
-      "patterns": [
-        "What is hydrogen bonding?",
-        "What does hydrogen bonding mean?",
-        "Define hydrogen bonding",
-        "Explanation of hydrogen bonding"
-      ],
-      "responses": [
-        "Hydrogen bonding is an attractive force between a hydrogen atom bonded to an atom with high electronegativity such as oxygen, nitrogen, or fluorine. This occurs due to the difference in electronegativity between the hydrogen atom and the bonded atom, creating polarity and electrostatic interactions.",
-        "Hydrogen bonding is the interaction between a hydrogen atom and an atom of oxygen, nitrogen, or fluorine that has high electronegativity. It occurs when the hydrogen atom bonded to a sufficiently electronegative atom attracts electrons, creating a tendency for polarity."
-      ]
-    },    
-    {
-      "tag": "electrolyte_solution",
-      "patterns": [
-        "What is an electrolyte solution?",
-        "Define electrolyte solution",
-        "Explanation of electrolyte solution",
-        "What does electrolyte solution mean?"
-      ],
-      "responses": [
-        "An electrolyte solution is a solution that contains ions capable of conducting electricity. Typically, these solutions consist of ionic compounds dissolved in a solvent such as water, separating into positive and negative ions that contribute to the electrical conductivity of the solution.",
-        "An electrolyte solution is a solution that contains charged ions capable of conducting electricity. It forms when ionic compounds or compounds soluble in water dissociate into ions that can move freely."
-      ]
-    },    
-    {
-      "tag": "non_electrolyte_solution",
-      "patterns": [
-        "What is a non-electrolyte?",
-        "Define non-electrolyte",
-        "Explanation of non-electrolyte",
-        "What does non-electrolyte mean?"
-      ],
-      "responses": [
-        "A non-electrolyte solution is a solution that does not contain charged ions capable of conducting electricity. Typically, polar covalent compounds or non-polar compounds soluble in water form non-electrolyte solutions.",
-        "A non-electrolyte solution is a solution that does not contain ions capable of conducting electricity. It usually consists of polar covalent compounds or non-polar compounds that do not ionize in water."
+        "Acetaminophen, juga dikenal sebagai parasetamol, adalah obat pereda rasa sakit dan penurun demam yang umum digunakan. Ini bekerja dengan cara mengurangi produksi zat kimia dalam tubuh yang menyebabkan rasa sakit dan panas. \nKemudian Acetaminophen merupakan senyawa dengan Rumus Kimia C8H9NO2. Senyawa dengan Tata Nama Kimia N-(4-hydroxyphenyl)acetamide ini memiliki Persentase Energi Ionisasi sebesar 85.8%"
       ]
     },
     {
-      "tag": "redox_reaction",
+      "tag": "pengertian_acetazolamide",
       "patterns": [
-        "What is a redox reaction?",
-        "Define redox reaction",
-        "Explanation of redox reaction",
-        "What does redox reaction mean?"
+        "acetazolamide adalah?",
+        "Pengertian acetazolamide?",
+        "Apa itu definisi acetazolamide?",
+        "tolong jelaskan acetazolamide?",
+        "apakah yang dimaksud dengan acetazolamide?"
       ],
       "responses": [
-        "A redox reaction is a type of chemical reaction that involves the transfer of electrons between chemical species. It consists of oxidation reactions (loss of electrons) and reduction reactions (gain of electrons).",
-        "A redox reaction is a chemical reaction in which there is a transfer of electrons between chemical species. Simultaneously, there is a substance that loses electrons (oxidized) and a substance that gains electrons (reduced)."
-      ]
-    },    
-    {
-      "tag": "hydrocarbon_compounds",
-      "patterns": [
-        "What is a hydrocarbon compound?",
-        "Define hydrocarbon compound",
-        "Explanation of hydrocarbon compound",
-        "What does hydrocarbon compound mean?"
-      ],
-      "responses": [
-        "A hydrocarbon compound is a chemical compound composed of carbon and hydrogen atoms. These molecules form carbon chain structures, which can be straight chains, branched, or cyclic.",
-        "A hydrocarbon compound is a group of organic compounds consisting of carbon and hydrogen atoms. Examples include methane, ethane, propane, butane, various types of petroleum, and other aliphatic compounds.",
-        "Hydrocarbons are chemical compounds composed only of carbon and hydrogen atoms. Examples include methane (CH4), ethane (C2H6), and gasoline, which is a mixture of hydrocarbons."
+        "Acetazolamide adalah obat yang termasuk dalam golongan diuretik, yang digunakan untuk mengurangi kelebihan cairan dalam tubuh dengan meningkatkan produksi urin. Selain itu, obat ini juga dapat digunakan untuk mengurangi tekanan di dalam mata pada kondisi medis tertentu. \nKemudian Acetazolamide merupakan senyawa dengan Rumus Kimia C4H6N4O3S2. Senyawa dengan Tata Nama Kimia N-(5-sulfamoyl-1,3,4-thiadiazol-2-yl)acetamide ini memiliki Persentase Energi Ionisasi sebesar 93.0%"
       ]
     },
     {
-      "tag": "caffeine_definition",
+      "tag": "pengertian_asam_asetat",
       "patterns": [
-        "What is caffeine?",
-        "Define caffeine",
-        "Can you explain caffeine?",
-        "What does caffeine mean?"
+        "asam asetat adalah?",
+        "Pengertian asam asetat?",
+        "Apa itu definisi asam asetat?",
+        "tolong jelaskan asam asetat?",
+        "apakah yang dimaksud dengan asam asetat?"
       ],
       "responses": [
-        "Caffeine is a substance that naturally occurs in more than 60 plants, but is most commonly found in coffee, tea, and cacao. Caffeine works by stimulating (increasing activity in) the brain and nervous system, while also boosting the circulation of hormones cortisol and adrenaline in the body."
-      ]
-    },    
-    {
-      "tag": "acenocoumarol_definition",
-      "patterns": [
-        "What is Acenocoumarol?",
-        "Define Acenocoumarol",
-        "Can you explain Acenocoumarol?",
-        "What does Acenocoumarol mean?"
-      ],
-      "responses": [
-        "Acenocoumarol is an anticoagulant medicine used to prevent blood clotting. It belongs to a group of drugs called vitamin K antagonists and is used to treat or prevent unwanted blood clotting, such as deep vein thrombosis, pulmonary embolism, or stroke due to blood clots.",
-        "Acenocoumarol medication works by inhibiting the activity of vitamin K needed for the formation of blood clotting factors, helping to prevent the formation of blood clots that can block blood vessels."
-      ]
-    },    
-    {
-      "tag": "acetaminophen_definition",
-      "patterns": [
-        "What is Acetaminophen?",
-        "Define Acetaminophen",
-        "Can you explain Acetaminophen?",
-        "What does Acetaminophen mean?"
-      ],
-      "responses": [
-        "Acetaminophen, also known as paracetamol, is a common pain reliever and fever reducer. It works by reducing the production of chemicals in the body that cause pain and fever.",
-        "Acetaminophen, also known as paracetamol, is an analgesic or pain reliever medication. It can be found in various forms such as capsules, liquids, drops, tablets, and even used in intravenous fluids. Additionally, it is an over-the-counter medication available at pharmacies."
+        "Acetic Acid, atau bisa disebut Asam asetat adalah antibiotik yang bisa digunakan untuk mengobati infeksi yang disebabkan oleh bakteri atau jamur. Ada juga asam asetat otic yang dikhususkan untuk telinga dan digunakan untuk mengobati infeksi di saluran telinga. \nKemudian Acetic acid merupakan sebuah senyawa dengan Rumus Kimia C2H4O2. Senyawa dengan Tata Nama Kimia acetic acid ini memiliki Persentase Energi Ionisasi sebesar 92.0%."
       ]
     },
     {
-      "tag": "acetazolamide_definition",
+      "tag": "pengertian_acepromazine",
       "patterns": [
-        "What is Acetazolamide?",
-        "Define Acetazolamide",
-        "Can you explain Acetazolamide?",
-        "What does Acetazolamide mean?"
+        "Acepromazine adalah?",
+        "Pengertian Acepromazine?",
+        "Apa itu definisi Acepromazine?",
+        "tolong jelaskan Acepromazine?",
+        "apakah yang dimaksud dengan Acepromazine?"
       ],
       "responses": [
-        "Acetazolamide is a medication classified as a diuretic, which is used to reduce excess fluid in the body by increasing urine production. Additionally, it can be used to lower pressure inside the eye in certain medical conditions.",
-        "Acetazolamide is a medication used to treat glaucoma, epilepsy, or altitude sickness. It can also be used to alleviate fluid buildup (edema) in patients with heart failure."
+        "Acepromazine adalah obat yang termasuk dalam golongan fenotiazin, yang umumnya digunakan sebagai obat penenang, anti-mual, dan ansiolitik pada hewan, terutama pada hewan peliharaan seperti anjing dan kucing. \nKemudian Acepromazine merupakan sebuah senyawa dengan Rumus Kimia C19H22N2OS. Senyawa dengan Tata Nama Kimia 1-{10-[3-(dimethylamino)propyl]-10H-phenothiazin-2-yl}ethan-1-one ini memiliki Persentase Energi Ionisasi sebesar 93.18%"
       ]
-    },
-    {
-      "tag": "acetic_acid_definition",
-      "patterns": [
-        "What is Acetic Acid?",
-        "Define Acetic Acid",
-        "Can you explain Acetic Acid?",
-        "What does Acetic Acid mean?"
-      ],
-      "responses": [
-        "Acetic Acid, also known as Ethanoic Acid, is an antibiotic that can be used to treat infections caused by bacteria or fungi. There is also acetic acid otic specifically for the ears and used to treat infections in the ear canal. However, this medication will not treat inner ear infections (also called otitis media)."
-      ]
-    },
-    {
-      "tag": "acepromazine_definition",
-      "patterns": [
-        "What is Acepromazine?",
-        "Define Acepromazine",
-        "Can you explain Acepromazine?",
-        "What does Acepromazine mean?"
-      ],
-      "responses": [
-        "Acepromazine is a medication belonging to the phenothiazine group, commonly used as a tranquilizer, antiemetic, and anxiolytic in animals, particularly in pets such as dogs and cats.",
-        "Acepromazine is a medication that can calm and reduce nausea in animals, especially dogs and cats. This medication belongs to the phenothiazine group."
-      ]
-    },    
+    },   
     {
       "tag": "acetylmethadol_definition",
       "patterns": [
@@ -1347,7 +1320,7 @@
         "apakah yang dimaksud dengan Cephapirin"
       ],
       "responses": [
-        "Cephapirin atau Cefapirin adalah antibiotik sefalosporin generasi pertama yang tersedia dalam formulasi injeksi. Cefapirin sebagian terikat plasma dan efektif melawan organisme gram negatif dan gram positif. Obat ini juga memiliki peran dalam kedokteran hewan sebagai Metricure, persiapan intrauterin, dan dikombinasikan dengan prednisolon di Mastiplan, persiapan intramammary. Keduanya dilisensikan pada sapi."
+        "Cephapirin atau Cefapirin adalah antibiotik sefalosporin generasi pertama yang tersedia dalam formulasi injeksi. Cefapirin sebagian terikat plasma dan efektif melawan organisme gram negatif dan gram positif. Obat ini juga memiliki peran dalam kedokteran hewan sebagai Metricure, persiapan intrauterin, dan dikombinasikan dengan prednisolon di Mastiplan, persiapan intramammary. Keduanya dilisensikan pada sapi. \nKemudian Cephapirin merupakan sebuah senyawa dengan Rumus Kimia C17H17N3O6S2. Senyawa dengan Tata Nama Kimia **(6R,7R)-3-[(acetyloxy)methyl]-8-oxo-7-[2-(pyridin-4-ylsulfanyl)acetamido]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid ** ini memiliki Persentase Energi Ionisasi sebesar 82.5%"
       ]
     },
     {
