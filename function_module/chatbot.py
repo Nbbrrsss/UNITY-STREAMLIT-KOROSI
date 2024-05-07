@@ -54,7 +54,7 @@ def chatbot():
     y = lbl_enc.fit_transform(df_chatbot['tag'])
 
     # Memuat model yang telah dilatih sebelumnya
-    model_path = 'model/my_model_unity.keras'  # Perbarui dengan path yang benar
+    model_path = 'model/my_model_unity2.keras'  # Perbarui dengan path yang benar
     loaded_model = load_model(model_path)  # Memuat model yang telah dilatih
 
     response_user = []  # List untuk menyimpan respons dari pengguna
