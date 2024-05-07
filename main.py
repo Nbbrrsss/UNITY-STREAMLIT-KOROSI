@@ -41,7 +41,7 @@ data_unduh = dth.data_unduh()
 with st.sidebar:
     st.image('labmatics.png', width=350)
     menuweb = st.radio(
-        "Menu Website", ["Home", "ChatBot", "Machine Learning Ops","Analisis Data"])
+        "Menu Website", ["Home", "ChatBot", "Efisiensi Anti Korosi","Analisis Data"])
 
 st.image("Group 10.png", width=350)
 if menuweb == "Home":
@@ -186,7 +186,7 @@ if menuweb == "ChatBot":
     chatbot()
 
 # ========================= Halaman App ========================================================================================================================================================================================================================================================================================================================================================================
-if menuweb == "Machine Learning":
+if menuweb == "Efisiensi Anti Korosi":
     # Streamlit App Header
     st.title("Prediksi IE% Korosi dalam senyawa")
     st.markdown(
