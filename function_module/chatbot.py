@@ -14,7 +14,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.preprocessing import LabelEncoder
 
 def chatbot():
-    with open('model/intents indo.json', 'r', encoding="utf-8") as f:
+    with open('model/intents copy.json', 'r', encoding="utf-8") as f:
         data = json.load(f)  # Membaca data dari file JSON
 
     # Membuat DataFrame dari data JSON
@@ -54,7 +54,7 @@ def chatbot():
     y = lbl_enc.fit_transform(df_chatbot['tag'])
 
     # Memuat model yang telah dilatih sebelumnya
-    model_path = 'model/my_model_unity.keras'  # Perbarui dengan path yang benar
+    model_path = 'model/my_model.keras'  # Perbarui dengan path yang benar
     loaded_model = load_model(model_path)  # Memuat model yang telah dilatih
 
     response_user = []  # List untuk menyimpan respons dari pengguna
