@@ -186,14 +186,14 @@ if menuweb == "ChatBot":
     chatbot()
 
 # ========================= Halaman App ========================================================================================================================================================================================================================================================================================================================================================================
-if menuweb == "Machine Learning Ops":
+if menuweb == "Machine Learning":
     # Streamlit App Header
     st.title("Prediksi IE% Korosi dalam senyawa")
     st.markdown(
         "Silakan prediksi Efisiensi Korosi Senyawa menggunakan parameter-parameter yang ada!")
     st.error('Berdasarkan eksperimen, Model Terbaik lebih disarankan untuk memprediksi Senyawa dengan baik karena memiliki nilai akurasi yang tinggi dan nilai error yang rendah. Kombinasi model yang lain sebaiknya hanya digunakan sebagai referensi atau mungkin hanya menjadi pembanding.')
     opsi_model = st.selectbox(
-        "", ['Analisis Model Terbaik', 'Experiment Machine Learning'])
+        "", ['Experiment Machine Learning','Analisis Model Terbaik'])
 
     st.write("---")
 

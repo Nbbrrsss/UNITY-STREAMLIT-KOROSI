@@ -51,9 +51,9 @@ data_unduh = dth.data_unduh()
 
 def base_machine_learning():
     opsi_experiment = st.selectbox(
-        "Pilih Experiment yang ingin dilakukan", ['Model Kustomisasi', 'Latih Data Baru'])
+        "Pilih Experiment yang ingin dilakukan", ['Model Kustomisasi', 'Latih Model Prediksi Baru'])
     st.write("---")
-    if opsi_experiment == 'Latih Data Baru' :
+    if opsi_experiment == 'Latih Model Prediksi Baru' :
         train_new_data()
 
     else :
@@ -164,20 +164,20 @@ def base_machine_learning():
 
             with col8:
                 molecular_weight = st.number_input(
-                    "Masukkan Molecular Weight (g/mol): ", value=0.0)
-                pKa = st.number_input("Masukkan pKa: ", value=0.0)
-                log_P = st.number_input("Masukkan Log P: ", value=0.0)
-                log_S = st.number_input("Masukkan Log S: ", value=0.0)
+                    "Masukkan Molecular Weight (g/mol): ", value=194.1)
+                pKa = st.number_input("Masukkan pKa: ", value=14.0)
+                log_P = st.number_input("Masukkan Log P: ", value=-0.07)
+                log_S = st.number_input("Masukkan Log S: ", value=-0.97)
                 polar_surface_area = st.number_input(
-                    "Masukkan Polar Surface Area (Å2): ", value=0.0)
+                    "Masukkan Polar Surface Area (Å2): ", value=58.4)
             with col9:
                 polarizability = st.number_input(
-                    "Masukkan Polarizability (Å3): ", value=0.0)
-                HOMO = st.number_input("Masukkan HOMO (eV): ", value=0.0)
-                LUMO = st.number_input("Masukkan LUMO (eV): ", value=0.0)
+                    "Masukkan Polarizability (Å3): ", value=18.9)
+                HOMO = st.number_input("Masukkan HOMO (eV): ", value=-5.8)
+                LUMO = st.number_input("Masukkan LUMO (eV): ", value=-1.9)
                 electronegativity = st.number_input(
-                    "Masukkan Electronegativity (eV): ", value=0.0)
-                delta_N_Fe = st.number_input("Masukkan ΔN_Fe: ", value=0.0)
+                    "Masukkan Electronegativity (eV): ", value=3.9)
+                delta_N_Fe = st.number_input("Masukkan ΔN_Fe: ", value=0.82)
 
             with col8:
                 y_new_pred = ""
@@ -260,7 +260,7 @@ def base_machine_learning():
 
                         y_new_pred = str(y_new_pred[0].round(2))
                         st.subheader(
-                            "Prediksi Efisiensi Korosi sebesar "+y_new_pred+" %")
+                            "Efisiensi Korosi sebesar "+y_new_pred+" %")
                     else:
                         st.warning(
                             "Mohon isi semua nilai sebelum melakukan prediksi.")
@@ -273,13 +273,12 @@ def base_machine_learning():
                 df_uploaded = pd.read_csv(uploaded_file)
                 df_concat = df_uploaded.copy()
 
-                df_uploaded = df_uploaded[['Molecular_weight MW (g/mol)', 'pKa', 'Log P', 'Log S',
-                                            'Polar Surface Area (Å2)', 'Polarizability (Å3)', 'HOMO (eV)',
-                                            'LUMO (eV)', 'Electronegativity (eV)', ' ΔN_Fe ']]
-
                 # Define columns to scale
                 columns_to_scale = ['Molecular_weight MW (g/mol)', 'pKa', 'Log P', 'Log S', 'Polar Surface Area (Å2)',
                                     'Polarizability (Å3)', 'HOMO (eV)', 'LUMO (eV)', 'Electronegativity (eV)', ' ΔN_Fe ']
+                
+                df_uploaded = df_uploaded[columns_to_scale]
+
 
                 if to_filternormalisasi == "MinMaxScaler()":
                     try:
@@ -342,11 +341,11 @@ def base_machine_learning():
                 predictions_df = pd.DataFrame({namamodel: predictions})
 
                 # Concatenate data prediksi dengan data inputan
-                merged_df = pd.concat([df_concat, predictions_df], axis=1)
+                merged_df = pd.concat([df_concat[columns_to_scale], predictions_df], axis=1)
                 st.dataframe(merged_df)
 
                 st.download_button(
-                    label="Download Predictions",
+                    label="Download Prediksi",
                     data=merged_df.to_csv(index=False),
                     file_name=f"predictions_{namamodel}.csv",
                     key="download_predictions",
@@ -364,12 +363,12 @@ def analisis_model_terbaik():
     st.subheader("Gradient Boosting Regressor with Polynomial Regression")
     st.write(f"R2-Squared: ",float(0.9999)," || Root Mean Squared Error: ", float(0.0003))
 
+    st.subheader("Algoritma Machine Learning")
+    st.write('Untuk melatih data menjadi model Machine Learning yang baik, Gradient Boosting Regressor (GBR) dalam machine learning digunakan untuk memodelkan dan memprediksi variabel target yang bersifat kontinu. Ini adalah algoritma ensemble yang kuat yang bekerja dengan cara menggabungkan beberapa model kecil yang disebut pohon keputusan (decision trees) menjadi model yang lebih kompleks.')
     st.subheader("Scaling")
     st.write('Scaling data dilakukan untuk memastikan setiap fitur memiliki skala nilai yang konsisten, scaling dilakukan dengan menerapkan metode MinMax. MinMax Scaler adalah metode penskalaan yang mengubah ulang nilai-nilai setiap fitur dalam sebuah dataset ke dalam rentang yang umum. Metode ini melibatkan pengurangan nilai minimum dari setiap fitur dari semua nilai dalam fitur tersebut, kemudian membaginya dengan rentang nilai dalam fitur tersebut.')
     st.subheader("Splitting Data")
     st.write('Sebelum melakukan process modelling yang lebih lanjut, data displit menggunakan HOCV 60 : 40. Sehingga Data akan dibagi menjadi 2 jenis dengan partisi yang berbeda yaitu Data Training dengan partisi 60\% dan Data Testing 40/%.')
-    st.subheader("Algoritma Machine Learning")
-    st.write('Untuk melatih data menjadi model Machine Learning yang baik, Gradient Boosting Regressor (GBR) dalam machine learning digunakan untuk memodelkan dan memprediksi variabel target yang bersifat kontinu. Ini adalah algoritma ensemble yang kuat yang bekerja dengan cara menggabungkan beberapa model kecil yang disebut pohon keputusan (decision trees) menjadi model yang lebih kompleks.')
     st.subheader("Optimasi Model")
     st.write('Model perlu dioptimalkan dengan menggunakan Polynomial Regression. Polynomial Regression digunakan untuk meningkatkan kemampuan model regresi dalam menangkap pola yang lebih kompleks dalam data. Dengan menerapkan polinomial, model regresi dapat memperhitungkan hubungan yang tidak linier antara variabel independen dan variabel dependen. Hal ini memungkinkan model untuk menyesuaikan dengan lebih baik terhadap data yang memiliki pola yang melengkung atau tidak linear.')
     
@@ -391,6 +390,7 @@ def train_new_data():
 
         # Heatmap korelasi
         st.subheader("Matriks Korelasi")
+        st.write("Matriks korelasi adalah ilustrasi untuk melihat seberapa erat hubungan antara variabel dalam dataset.")
         correlation_matrix = df_for_training.corr(numeric_only = True)
 
         fig_heatmap = px.imshow(correlation_matrix, labels=dict(color="Korelasi"),
