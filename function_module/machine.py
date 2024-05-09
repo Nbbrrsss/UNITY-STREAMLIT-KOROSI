@@ -173,11 +173,11 @@ def base_machine_learning():
             with col9:
                 polarizability = st.number_input(
                     "**Masukkan Polarizability (Å3)**   *example : 18.9*", value=0.0)
-                HOMO = st.number_input("**Masukkan HOMO (eV)**   *example : -5.8*", value=0.0)
+                HOMO = st.number_input("**Masukkan HOMO (eV)**   *example : -5.9*", value=0.0)
                 LUMO = st.number_input("**Masukkan LUMO (eV)**   *example : -1.9*", value=0.0)
                 electronegativity = st.number_input(
                     "**Masukkan Electronegativity (eV)**   *example : 4.9*", value=0.0)
-                delta_N_Fe = st.number_input("**Masukkan ΔN_Fe**   *example : 0.82*", value=0.0)
+                delta_N_Fe = st.number_input("**Masukkan ΔN_Fe**   *example : 0.89*", value=0.0)
 
             with col8:
                 y_new_pred = ""
