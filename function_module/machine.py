@@ -164,7 +164,7 @@ def base_machine_learning():
 
             with col8:
                 molecular_weight = st.number_input(
-                    "Masukkan Molecular Weight (g/mol): ", value=194.1)
+                    "Masukkan Molecular Weight (g/mol) -- ex : 194.1", value=0.0)
                 pKa = st.number_input("Masukkan pKa: ", value=14.0)
                 log_P = st.number_input("Masukkan Log P: ", value=-0.07)
                 log_S = st.number_input("Masukkan Log S: ", value=-0.97)
