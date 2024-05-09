@@ -165,19 +165,19 @@ def base_machine_learning():
             with col8:
                 molecular_weight = st.number_input(
                     "**Masukkan Molecular Weight (g/mol)**   *example : 199.9*", value=0.0)
-                pKa = st.number_input("**Masukkan pKa** *example : 15.0*", value=0.0)
-                log_P = st.number_input("Masukkan Log P: ", value=-0.07)
-                log_S = st.number_input("Masukkan Log S: ", value=-0.97)
+                pKa = st.number_input("**Masukkan pKa**   *example : 15.0*", value=0.0)
+                log_P = st.number_input("**Masukkan Log P**   *example : -0.09* ", value=0.0)
+                log_S = st.number_input("**Masukkan Log S**   *example : -0.97*", value=0.0)
                 polar_surface_area = st.number_input(
-                    "Masukkan Polar Surface Area (Å2): ", value=58.4)
+                    "**Masukkan Polar Surface Area (Å2)**   *example : 59.9*", value=0.0)
             with col9:
                 polarizability = st.number_input(
-                    "Masukkan Polarizability (Å3): ", value=18.9)
-                HOMO = st.number_input("Masukkan HOMO (eV): ", value=-5.8)
-                LUMO = st.number_input("Masukkan LUMO (eV): ", value=-1.9)
+                    "**Masukkan Polarizability (Å3)**   *example : 18.9*", value=0.0)
+                HOMO = st.number_input("**Masukkan HOMO (eV)**   *example : -5.8*", value=0.0)
+                LUMO = st.number_input("**Masukkan LUMO (eV)**   *example : -1.9*", value=0.0)
                 electronegativity = st.number_input(
-                    "Masukkan Electronegativity (eV): ", value=3.9)
-                delta_N_Fe = st.number_input("Masukkan ΔN_Fe: ", value=0.82)
+                    "**Masukkan Electronegativity (eV)**   *example : 4.9*", value=0.0)
+                delta_N_Fe = st.number_input("**Masukkan ΔN_Fe**   *example : 0.82*", value=0.0)
 
             with col8:
                 y_new_pred = ""
