@@ -122,35 +122,35 @@ def base_machine_learning():
             x_normalisasi = X
 
         ## kfold cv
-        # if float_split >= 3 :
-        #     model.fit(x_normalisasi, y)
+        if float_split >= 3 :
+            model.fit(x_normalisasi, y)
 
-        #     kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
+            kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
-        #     # Define scoring metrics
-        #     scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
+            # Define scoring metrics
+            scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
-        #     # Lakukan validasi
-        #     r2_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
-        #     rmse_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
-        #     mae_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
+            # Lakukan validasi
+            r2_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
+            rmse_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
+            mae_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
 
-        #     rmse = np.mean(rmse_scores)
-        #     r2 = np.mean(r2_scores)
-        #     mae = np.mean(mae_scores)
+            rmse = np.mean(rmse_scores)
+            r2 = np.mean(r2_scores)
+            mae = np.mean(mae_scores)
 
-        # else :
-        X_train, X_test, y_train, y_test = train_test_split(
-            x_normalisasi, y, test_size=float_split,random_state=42)
-
-        model.fit(X_train, y_train)
-
-        y_pred = model.predict(X_train)
-
-        mae = mean_absolute_error(y_train,y_pred)
-        mse = mean_squared_error(y_train, y_pred)
-        rmse = np.sqrt(mse)
-        r2 = r2_score(y_train, y_pred)
+        else :
+            X_train, X_test, y_train, y_test = train_test_split(
+                x_normalisasi, y, test_size=float_split,random_state=42)
+    
+            model.fit(X_train, y_train)
+    
+            y_pred = model.predict(X_train)
+    
+            mae = mean_absolute_error(y_train,y_pred)
+            mse = mean_squared_error(y_train, y_pred)
+            rmse = np.sqrt(mse)
+            r2 = r2_score(y_train, y_pred)
 
         # Display the mean squared error
         st.write(f"R2-Squared: ",r2," || Root Mean Squared Error: ", round(rmse, 6)," || Mean Absolute Error ",round(mae,6))
@@ -478,49 +478,49 @@ def train_new_data():
 
         model_new_training = kolom_algoritma_training[to_filteralgoritma_training]
 
-        ## kfold cv
-        # if float_split >= 3 :
-        #     model_new_training.fit(x_normalisasi, y)
+        # kfold cv
+        if float_split >= 3 :
+            model_new_training.fit(x_normalisasi, y)
 
-        #     kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
+            kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
-        #     # Define scoring metrics
-        #     scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
+            # Define scoring metrics
+            scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
-        #     # Lakukan validasi silang
-        #     r2_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
-        #     rmse_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
-        #     mae_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
+            # Lakukan validasi silang
+            r2_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
+            rmse_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
+            mae_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
 
-        #     rmse_training = np.mean(rmse_scores)
-        #     r2_training = np.mean(r2_scores)
-        #     mae_training = np.mean(mae_scores)
+            rmse_training = np.mean(rmse_scores)
+            r2_training = np.mean(r2_scores)
+            mae_training = np.mean(mae_scores)
 
-        #     # Display the mean squared error
-        #     st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
+            # Display the mean squared error
+            st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
             
-        #     fig, ax = plt.subplots(figsize=(8, 6))
-        #     ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores, marker='o')
-        #     ax.set_xlabel('Fold')
-        #     ax.set_ylabel('Accuracy')
-        #     ax.set_title('K-Fold Cross Validation Performance')
-        #     ax.set_ylim(0, 1)
-        #     ax.grid(True)
+            fig, ax = plt.subplots(figsize=(8, 6))
+            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores, marker='o')
+            ax.set_xlabel('Fold')
+            ax.set_ylabel('Accuracy')
+            ax.set_title('K-Fold Cross Validation Performance')
+            ax.set_ylim(0, 1)
+            ax.grid(True)
 
-        #     # Menampilkan plot di aplikasi Streamlit
-        #     st.pyplot(fig)
+            # Menampilkan plot di aplikasi Streamlit
+            st.pyplot(fig)
 
-        # else :
-        X_train, X_test, y_train, y_test = train_test_split(
-            x_normalisasi, y, test_size=float_split,random_state=42)
-
-        model_new_training.fit(X_train, y_train)
-
-        y_pred = model_new_training.predict(X_train)
-
-        mae_training = mean_absolute_error(y_train,y_pred)
-        mse_training = mean_squared_error(y_train, y_pred)
-        rmse_training = np.sqrt(mse_training)
+        else :
+            X_train, X_test, y_train, y_test = train_test_split(
+                x_normalisasi, y, test_size=float_split,random_state=42)
+    
+            model_new_training.fit(X_train, y_train)
+    
+            y_pred = model_new_training.predict(X_train)
+    
+            mae_training = mean_absolute_error(y_train,y_pred)
+            mse_training = mean_squared_error(y_train, y_pred)
+            rmse_training = np.sqrt(mse_training)
         r2_training = r2_score(y_train, y_pred)
 
         # Display the mean squared error
