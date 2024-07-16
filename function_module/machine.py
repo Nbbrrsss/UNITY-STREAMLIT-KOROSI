@@ -508,7 +508,7 @@ def train_new_data():
                 # mae_scores_fold = cross_val_score(model_new_training, X_train, y_train, scoring=scoring['mae'])
 
                 predict = model_new_training.predict(X_train)
-                
+
                 r2_scores_fold = r2_scores(y_train, predict)
                 rmse_scores_fold = mean_squared_error(y_train, predict, squared=False)
                 mae_scores_fold = mean_absolute_error(y_train, predict)
@@ -525,7 +525,7 @@ def train_new_data():
             st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
             
             fig, ax = plt.subplots(figsize=(8, 6))
-            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores[:kfold.n_splits], marker='o')
+            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores, marker='o')
             ax.set_xlabel('Fold')
             ax.set_ylabel('Accuracy')
             ax.set_title('K-Fold Cross Validation Performance')
