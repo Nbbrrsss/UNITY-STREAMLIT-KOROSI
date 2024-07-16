@@ -527,19 +527,19 @@ def train_new_data():
             mae_training = mean_absolute_error(y_train,y_pred)
             mse_training = mean_squared_error(y_train, y_pred)
             rmse_training = np.sqrt(mse_training)
-        r2_training = r2_score(y_train, y_pred)
+            r2_training = r2_score(y_train, y_pred)
 
-        # Display the mean squared error
-        st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
-        fig, ax = plt.subplots()
-        ax.scatter(y_train, y_pred, c='b', label='Data Point')
-        ax.plot([min(y_train), max(y_train)], [min(y_train), max(y_train)], color='m', linestyle='dotted', label='Garis Prediksi')
-        ax.set_xlabel("Nilai Aktual")
-        ax.set_ylabel("Nilai Prediksi")
-        ax.set_title("Nilai Prediksi dan Aktual")
-        ax.legend()
+            # Display the mean squared error
+            st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
+            fig, ax = plt.subplots()
+            ax.scatter(y_train, y_pred, c='b', label='Data Point')
+            ax.plot([min(y_train), max(y_train)], [min(y_train), max(y_train)], color='m', linestyle='dotted', label='Garis Prediksi')
+            ax.set_xlabel("Nilai Aktual")
+            ax.set_ylabel("Nilai Prediksi")
+            ax.set_title("Nilai Prediksi dan Aktual")
+            ax.legend()
 
-        st.pyplot(fig)
+            st.pyplot(fig)
 
 # def model_terbaik() :
 #     kolom_filteralgoritma_best = {
