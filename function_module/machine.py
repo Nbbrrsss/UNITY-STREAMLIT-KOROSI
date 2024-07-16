@@ -489,6 +489,10 @@ def train_new_data():
             x_normalisasi = pd.DataFrame(x_normalisasi, columns=X.columns)
             kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
+            r2_scores = []
+            rmse_scores = []
+            mae_scores = []
+
             for train_index, test_index in kfold.split(X):
                 X_train, X_test = x_normalisasi.iloc[train_index], x_normalisasi.iloc[test_index]
                 y_train, y_test = y.iloc[train_index], y.iloc[test_index]
@@ -499,9 +503,13 @@ def train_new_data():
             scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
             # Lakukan validasi silang
-            r2_scores = cross_val_score(model_new_training, X_train, y_train, cv=kfold, scoring=scoring['r2'])
-            rmse_scores = cross_val_score(model_new_training, X_train, y_train, cv=kfold, scoring=scoring['rmse'])
-            mae_scores = cross_val_score(model_new_training, X_train, y_train, cv=kfold, scoring=scoring['mae'])
+            r2_scores_fold = cross_val_score(model_new_training, X_test, y_test, scoring=scoring['r2'])
+            rmse_scores_fold = cross_val_score(model_new_training, X_test, y_test, scoring=scoring['rmse'])
+            mae_scores_fold = cross_val_score(model_new_training, X_test, y_test, scoring=scoring['mae'])
+
+            r2_scores.extend(r2_scores_fold)
+            rmse_scores.extend(rmse_scores_fold)
+            mae_scores.extend(mae_scores_fold)
 
             rmse_training = np.mean(rmse_scores)
             r2_training = np.mean(r2_scores)
@@ -511,7 +519,7 @@ def train_new_data():
             st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
             
             fig, ax = plt.subplots(figsize=(8, 6))
-            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores, marker='o')
+            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores[:kfold.n_splits], marker='o')
             ax.set_xlabel('Fold')
             ax.set_ylabel('Accuracy')
             ax.set_title('K-Fold Cross Validation Performance')
