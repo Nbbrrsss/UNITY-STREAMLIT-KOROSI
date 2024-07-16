@@ -489,6 +489,7 @@ def train_new_data():
             x_normalisasi = pd.DataFrame(x_normalisasi, columns=X.columns)
             kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
+            # list for evaluations score each fold
             r2_scores = []
             rmse_scores = []
             mae_scores = []
@@ -502,17 +503,13 @@ def train_new_data():
                 # Define scoring metrics
                 scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
-                # Lakukan validasi silang
-                # r2_scores_fold = cross_val_score(model_new_training, X_train, y_train, scoring=scoring['r2'])
-                # rmse_scores_fold = cross_val_score(model_new_training, X_train, y_train, scoring=scoring['rmse'])
-                # mae_scores_fold = cross_val_score(model_new_training, X_train, y_train, scoring=scoring['mae'])
-
                 predicted_y = model_new_training.predict(X_train)
 
                 r2_scores_fold = r2_score(y_train, predicted_y)
                 rmse_scores_fold = mean_squared_error(y_train, predicted_y, squared=False)
                 mae_scores_fold = mean_absolute_error(y_train, predicted_y)
 
+                #append evaluation score
                 r2_scores.append(r2_scores_fold)
                 rmse_scores.append(rmse_scores_fold)
                 mae_scores.append(mae_scores_fold)
@@ -521,7 +518,7 @@ def train_new_data():
             r2_training = np.mean(r2_scores)
             mae_training = np.mean(mae_scores)
 
-            # Display the mean squared error
+            # Display the evaluation
             st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
             
             fig, ax = plt.subplots(figsize=(8, 6))
