@@ -18,7 +18,7 @@ df2 = dth.df2()
 data_unduh = dth.data_unduh()
 
 def analisis() :
-    tab_data,tabkorelasi,tabprediksidata = st.tabs(["DataSet","Korelasi","Hasil Prediksi Pengujian"])
+    tab_data,tabkorelasi,tabprediksidata = st.tabs(["Dataset","Correlation","Test Prediction Results"])
 
     with tab_data:
         # Menampilkan DataFrame
