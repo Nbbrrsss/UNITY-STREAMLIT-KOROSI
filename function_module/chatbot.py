@@ -74,7 +74,7 @@ def chatbot():
 
     # Dapatkan input pengguna
     # Menampilkan input chat dan mendapatkan prompt dari pengguna
-    prompt = st.chat_input("Ketik untuk memulai percakapan")
+    prompt = st.chat_input("Type in to start a conversation")
 
     # Proses input pengguna dan tampilkan respons
     if prompt:

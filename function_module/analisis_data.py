@@ -29,7 +29,7 @@ def analisis() :
         data_model_analisis.reset_index(drop=True, inplace=True)
         st.write(data_model_analisis)
 
-        st.title("Deskripsi Fitur Kimia")
+        st.title("Description of Chemical Features")
         # Deskripsi untuk setiap fitur
         features_descriptions = {
             "Molecular Weight (MW)": "The molecular mass of a compound, measured in atomic mass units (daltons or g/mol).",
@@ -133,7 +133,7 @@ def analisis() :
             fig.add_trace(go.Scatter(x=df_prediksi_data.index, y=df_prediksi_data['IE EXP (%)GBR_poli 6040 Polynomial 2'],
                                     mode='lines+markers', name='Prediksi Model'))
 
-            fig.update_layout(title='Perbandingan Data Asli dengan GBR 60:40 Polynomial',
+            fig.update_layout(title='Original Data Comparison with GBR 60:40 Polynomial',
                             xaxis_title='Urutan Data',
                             yaxis_title='IE EXP (%)')
             
