@@ -499,9 +499,9 @@ def train_new_data():
             scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
             # Lakukan validasi silang
-            r2_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
-            rmse_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
-            mae_scores = cross_val_score(model_new_training, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
+            r2_scores = cross_val_score(model_new_training, X_train, y_train, cv=kfold, scoring=scoring['r2'])
+            rmse_scores = cross_val_score(model_new_training, X_train, y_train, cv=kfold, scoring=scoring['rmse'])
+            mae_scores = cross_val_score(model_new_training, X_train, y_train, cv=kfold, scoring=scoring['mae'])
 
             rmse_training = np.mean(rmse_scores)
             r2_training = np.mean(r2_scores)
