@@ -89,6 +89,9 @@ def base_machine_learning():
             '0.2': 'HOCV 80:20',
             '0.3': 'HOCV 70:30',
             '0.4': 'HOCV 60:40',
+            '3': 'KFCV 3',
+            '5': 'KFCV 5',
+            '10': 'KFCV 10',
         }
 
         to_filtersplit = st.selectbox("Masukkan Rasio Splitting Data", options=list(
@@ -457,6 +460,9 @@ def train_new_data():
             '0.2': 'HOCV 80:20',
             '0.3': 'HOCV 70:30',
             '0.4': 'HOCV 60:40',
+            '3': 'KFCV 3',
+            '5': 'KFCV 5',
+            '10': 'KFCV 10',
         }
 
         to_filtersplit_training = st.selectbox("Masukkan Rasio Splitting Data", options=list(
