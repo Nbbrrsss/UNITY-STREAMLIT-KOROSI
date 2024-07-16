@@ -507,11 +507,11 @@ def train_new_data():
                 # rmse_scores_fold = cross_val_score(model_new_training, X_train, y_train, scoring=scoring['rmse'])
                 # mae_scores_fold = cross_val_score(model_new_training, X_train, y_train, scoring=scoring['mae'])
 
-                predict = model_new_training.predict(X_train)
+                predicted_y = model_new_training.predict(X_train)
 
-                r2_scores_fold = r2_scores(y_train, predict)
-                rmse_scores_fold = mean_squared_error(y_train, predict, squared=False)
-                mae_scores_fold = mean_absolute_error(y_train, predict)
+                r2_scores_fold = r2_scores(y_train, predicted_y)
+                rmse_scores_fold = mean_squared_error(y_train, predicted_y, squared=False)
+                mae_scores_fold = mean_absolute_error(y_train, predicted_y)
 
                 r2_scores.append(r2_scores_fold)
                 rmse_scores.append(rmse_scores_fold)
