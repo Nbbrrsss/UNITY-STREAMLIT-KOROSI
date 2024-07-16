@@ -486,9 +486,14 @@ def train_new_data():
 
         # kfold cv
         if float_split >= 3 :
-            model_new_training.fit(x_normalisasi, y)
 
             kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
+
+            for train_index, test_index in kfold.split(X):
+                X_train, X_test = x_normalisasi.iloc[train_index], x_normalisasi.iloc[test_index]
+                y_train, y_test = y.iloc[train_index], y.iloc[test_index]
+
+            model_new_training.fit(X_train, y_train)
 
             # Define scoring metrics
             scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
