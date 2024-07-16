@@ -519,7 +519,7 @@ def train_new_data():
             st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
             
             fig, ax = plt.subplots(figsize=(8, 6))
-            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores[:kfold.n_splits], marker='o')
+            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores, marker='o')
             ax.set_xlabel('Fold')
             ax.set_ylabel('Accuracy')
             ax.set_title('K-Fold Cross Validation Performance')
