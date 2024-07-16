@@ -486,7 +486,7 @@ def train_new_data():
 
         # kfold cv
         if float_split >= 3 :
-
+            x_normalisasi = pd.DataFrame(x_normalisasi, columns=X.columns)
             kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
             for train_index, test_index in kfold.split(X):
