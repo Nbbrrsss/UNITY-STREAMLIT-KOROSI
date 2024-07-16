@@ -51,9 +51,9 @@ data_unduh = dth.data_unduh()
 
 def base_machine_learning():
     opsi_experiment = st.selectbox(
-        "Pilih Experiment yang ingin dilakukan", ['Model Kustomisasi', 'Latih Model Prediksi Baru'])
+        "Select the Experiment you want to do", ['Customized Model', 'Train New Prediction Model'])
     st.write("---")
-    if opsi_experiment == 'Latih Model Prediksi Baru' :
+    if opsi_experiment == 'Train New Prediction Model' :
         train_new_data()
 
     else :
@@ -72,17 +72,17 @@ def base_machine_learning():
             "NuSVR": "NuSVR"
         }
 
-        to_filteralgoritma = st.selectbox("Masukkan Jenis Algoritma", options=list(
+        to_filteralgoritma = st.selectbox("Algorithm Type", options=list(
             kolom_filteralgoritma.keys()), format_func=lambda x: kolom_filteralgoritma[x])
 
         kolom_filternormalisasi = {
             'MinMaxScaler()': 'Min Max',
             'StandardScaler()': 'Standard',
             'RobustScaler()': 'Robust',
-            'None': 'Tanpa Normalisasi',
+            'None': 'None',
         }
 
-        to_filternormalisasi = st.selectbox("Masukkan Jenis Normalisasi", options=list(
+        to_filternormalisasi = st.selectbox("Normalization Type", options=list(
             kolom_filternormalisasi.keys()), format_func=lambda x: kolom_filternormalisasi[x])
 
         kolom_filtersplit = {
@@ -94,7 +94,7 @@ def base_machine_learning():
             '10': 'KFCV 10',
         }
 
-        to_filtersplit = st.selectbox("Masukkan Rasio Splitting Data", options=list(
+        to_filtersplit = st.selectbox("Data Splitting Ratio", options=list(
             kolom_filtersplit.keys()), format_func=lambda x: kolom_filtersplit[x])
 
         namamodel = f"{to_filteralgoritma}_{to_filtersplit}_{to_filternormalisasi}"
@@ -106,7 +106,7 @@ def base_machine_learning():
             model = joblib.load(f"model/model_biasa/{namamodel}.joblib")
         except Exception as e:
             st.warning(
-                f"Gagal memuat {namamodel} dengan joblib. Menggunakan pickle sebagai alternatif. Kesalahan: {e}")
+                f"Failed load {namamodel} with joblib. use pickle as alternative. Error: {e}")
             with open(f'model/model_biasa/{namamodel}.pkl', 'rb') as f:
                 model = pickle.load(f)
 
@@ -159,7 +159,7 @@ def base_machine_learning():
         st.write(f"R2-Squared: ",r2," || Root Mean Squared Error: ", round(rmse, 6)," || Mean Absolute Error ",round(mae,6))
 
 
-        tab4, tab5 = st.tabs(["Prediksi input data", "Prediksi input file"])
+        tab4, tab5 = st.tabs(["Data input prediction", "File input prediction"])
 
         with tab4:
             # Input manual
@@ -167,24 +167,24 @@ def base_machine_learning():
 
             with col8:
                 molecular_weight = st.number_input(
-                    "**Masukkan Molecular Weight (g/mol)**   *example : 199.9*", value=0.0)
-                pKa = st.number_input("**Masukkan pKa**   *example : 15.0*", value=0.0)
-                log_P = st.number_input("**Masukkan Log P**   *example : -0.09* ", value=0.0)
-                log_S = st.number_input("**Masukkan Log S**   *example : -0.97*", value=0.0)
+                    "**Input Molecular Weight (g/mol)**   *example : 199.9*", value=0.0)
+                pKa = st.number_input("**Input pKa**   *example : 15.0*", value=0.0)
+                log_P = st.number_input("**Input Log P**   *example : -0.09* ", value=0.0)
+                log_S = st.number_input("**Input Log S**   *example : -0.97*", value=0.0)
                 polar_surface_area = st.number_input(
-                    "**Masukkan Polar Surface Area (Å2)**   *example : 59.9*", value=0.0)
+                    "**Input Polar Surface Area (Å2)**   *example : 59.9*", value=0.0)
             with col9:
                 polarizability = st.number_input(
-                    "**Masukkan Polarizability (Å3)**   *example : 18.9*", value=0.0)
-                HOMO = st.number_input("**Masukkan HOMO (eV)**   *example : -5.9*", value=0.0)
-                LUMO = st.number_input("**Masukkan LUMO (eV)**   *example : -1.9*", value=0.0)
+                    "**Input Polarizability (Å3)**   *example : 18.9*", value=0.0)
+                HOMO = st.number_input("**Input HOMO (eV)**   *example : -5.9*", value=0.0)
+                LUMO = st.number_input("**Input LUMO (eV)**   *example : -1.9*", value=0.0)
                 electronegativity = st.number_input(
-                    "**Masukkan Electronegativity (eV)**   *example : 4.9*", value=0.0)
-                delta_N_Fe = st.number_input("**Masukkan ΔN_Fe**   *example : 0.89*", value=0.0)
+                    "**Input Electronegativity (eV)**   *example : 4.9*", value=0.0)
+                delta_N_Fe = st.number_input("**Input ΔN_Fe**   *example : 0.89*", value=0.0)
 
             with col8:
                 y_new_pred = ""
-                if st.button("Prediksi CIE%"):
+                if st.button("CIE% prediction"):
                     if all([molecular_weight, pKa, log_P, log_S, polar_surface_area, polarizability, HOMO, LUMO, electronegativity, delta_N_Fe]):
                         x_user = pd.DataFrame({
                             'Molecular_weight MW (g/mol)': [molecular_weight],
@@ -263,13 +263,13 @@ def base_machine_learning():
 
                         y_new_pred = str(y_new_pred[0].round(2))
                         st.subheader(
-                            "Efisiensi Korosi sebesar "+y_new_pred+" %")
+                            "Corrosion Efficiency "+y_new_pred+" %")
                     else:
                         st.warning(
-                            "Mohon isi semua nilai sebelum melakukan prediksi.")
+                            "Please fill in all values before making a prediction.")
         with tab5:
             # Upload CSV file
-            uploaded_file = st.file_uploader("Upload file CSV untuk diprediksi", type=["csv"])
+            uploaded_file = st.file_uploader("Upload CSV file to be predicted", type=["csv"])
 
             if uploaded_file is not None:
                 # Read CSV file
@@ -339,7 +339,7 @@ def base_machine_learning():
                 # prediksi data
                 predictions = model.predict(df_uploaded)
 
-                st.write("Prediksi IE data yang diunggah: ")
+                st.write("IE% prediction of uploaded data: ")
 
                 predictions_df = pd.DataFrame({namamodel: predictions})
 
@@ -348,7 +348,7 @@ def base_machine_learning():
                 st.dataframe(merged_df)
 
                 st.download_button(
-                    label="Download Prediksi",
+                    label="Download Prediction Results",
                     data=merged_df.to_csv(index=False),
                     file_name=f"predictions_{namamodel}.csv",
                     key="download_predictions",
@@ -360,28 +360,28 @@ def analisis_model_terbaik():
         model_untuk_analisis = joblib.load(f"model/best_model/new_version/modelcatboost_forweb.joblib")
     except Exception as e:
         st.warning(
-            f"Gagal memuat model dengan joblib. Menggunakan pickle sebagai alternatif. Kesalahan: {e}")
+            f"Failed to load the model with joblib. Using pickle as an alternative. Error: {e}")
         with open(f'model/best_model/new_version/modelcatboost_forweb.pkl', 'rb') as f:
             model_untuk_analisis = pickle.load(f)
     st.subheader("Gradient Boosting Regressor with Polynomial Regression")
     st.write(f"R2-Squared: ",float(0.9999)," || Root Mean Squared Error: ", float(0.0003))
 
-    st.subheader("Algoritma Machine Learning")
-    st.write('Untuk melatih data menjadi model Machine Learning yang baik, Gradient Boosting Regressor (GBR) dalam machine learning digunakan untuk memodelkan dan memprediksi variabel target yang bersifat kontinu. Ini adalah algoritma ensemble yang kuat yang bekerja dengan cara menggabungkan beberapa model kecil yang disebut pohon keputusan (decision trees) menjadi model yang lebih kompleks.')
+    st.subheader("Machine Learning Algorithms")
+    st.write('To train data into a good Machine Learning model, Gradient Boosting Regressor (GBR) in machine learning is used to model and predict continuous target variables. It is a powerful ensemble algorithm that works by combining several small models called decision trees into a more complex model.')
     st.subheader("Scaling")
-    st.write('Scaling data dilakukan untuk memastikan setiap fitur memiliki skala nilai yang konsisten, scaling dilakukan dengan menerapkan metode MinMax. MinMax Scaler adalah metode penskalaan yang mengubah ulang nilai-nilai setiap fitur dalam sebuah dataset ke dalam rentang yang umum. Metode ini melibatkan pengurangan nilai minimum dari setiap fitur dari semua nilai dalam fitur tersebut, kemudian membaginya dengan rentang nilai dalam fitur tersebut.')
+    st.write('Scaling the data is done to ensure each feature has a consistent value scale, scaling is done by applying the MinMax method. MinMax Scaler is a scaling method that rescales the values of each feature in a dataset into a common range. It involves subtracting the minimum value of each feature from all the values in that feature, then dividing it by the range of values in that feature.')
     st.subheader("Splitting Data")
-    st.write('Sebelum melakukan process modelling yang lebih lanjut, data displit menggunakan HOCV 60 : 40. Sehingga Data akan dibagi menjadi 2 jenis dengan partisi yang berbeda yaitu Data Training dengan partisi 60\% dan Data Testing 40/%.')
-    st.subheader("Optimasi Model")
-    st.write('Model perlu dioptimalkan dengan menggunakan Polynomial Regression. Polynomial Regression digunakan untuk meningkatkan kemampuan model regresi dalam menangkap pola yang lebih kompleks dalam data. Dengan menerapkan polinomial, model regresi dapat memperhitungkan hubungan yang tidak linier antara variabel independen dan variabel dependen. Hal ini memungkinkan model untuk menyesuaikan dengan lebih baik terhadap data yang memiliki pola yang melengkung atau tidak linear.')
+    st.write('Before doing further process modeling, the data is displaced using HOCV 60: 40. So that the data will be divided into 2 types with different partitions, namely Training Data with a partition of 60\% and Testing Data 40/%.')
+    st.subheader("Model Optimization")
+    st.write('The model needs to be optimized by using Polynomial Regression. Polynomial Regression is used to improve the regression model\'s ability to capture more complex patterns in the data. By applying polynomials, the regression model can account for non-linear relationships between the independent variable and the dependent variable. This allows the model to better adapt to data that has a curved or non-linear pattern.')
     
-    st.subheader("Evaluasi Performa Machine Learning")
+    st.subheader("Machine Learning Performance Evaluation")
     st.image('assets/graf1.png', use_column_width=True)
     st.image('assets/plot_prediksi.png', use_column_width=True)
     st.image('assets/graf 2.png', use_column_width=True)
 
 def train_new_data():
-    upload_new_trainingdata = st.file_uploader("Upload Training Data dalam bentuk CSV", type=["csv"])
+    upload_new_trainingdata = st.file_uploader("Upload Training Data in CSV form", type=["csv"])
 
     if upload_new_trainingdata is not None : 
         df_new_data_ft = pd.read_csv(upload_new_trainingdata)
@@ -392,8 +392,8 @@ def train_new_data():
                                             'LUMO (eV)', 'Electronegativity (eV)', ' ΔN_Fe ', 'IE EXP (%)']]
 
         # Heatmap korelasi
-        st.subheader("Matriks Korelasi")
-        st.write("Matriks korelasi adalah ilustrasi untuk melihat seberapa erat hubungan antara variabel dalam dataset.")
+        st.subheader("Correlation Matrix")
+        st.write("A correlation matrix is an illustration to see how closely related the variables in a dataset are.")
         correlation_matrix = df_for_training.corr(numeric_only = True)
 
         fig_heatmap = px.imshow(correlation_matrix, labels=dict(color="Korelasi"),
@@ -421,7 +421,7 @@ def train_new_data():
         kolom_df_training.remove('IE EXP (%)')
 
         # Pilih prediktor
-        kolom_training = st.multiselect("Pilih Deskriptor Model Machine Learning", kolom_df_training, placeholder = "Tentukan kolom yang menjadi fitur prediktor, Secara default menggunakan keseluruhan fitur")
+        kolom_training = st.multiselect("Select Machine Learning Model Descriptors", kolom_df_training, placeholder = "Tentukan kolom yang menjadi fitur prediktor, Secara default menggunakan keseluruhan fitur")
         if len(kolom_training) > 0 : 
             kolom_training.append("IE EXP (%)")
             df_training_selected = df_for_training[kolom_training]
@@ -443,17 +443,17 @@ def train_new_data():
             "NuSVR":  NuSVR()
         }
 
-        to_filteralgoritma_training = st.selectbox("Masukkan Jenis Algoritma", options=list(
+        to_filteralgoritma_training = st.selectbox("Algorithm Type", options=list(
             kolom_algoritma_training.keys()))
         
         kolom_normalisasi_training = {
             'MinMax Scaler': "MinMaxScaler()",
             'Standard Scaler': 'StandardScaler()',
             'Robust Scaler': 'RobustScaler()',
-            'None': 'Tanpa Normalisasi',
+            'None': 'None',
         }
 
-        to_filternormalisasi_training = st.selectbox("Masukkan Jenis Normalisasi", options=list(
+        to_filternormalisasi_training = st.selectbox("Normalization Type", options=list(
             kolom_normalisasi_training.keys()))
 
         kolom_split_training = {
@@ -465,7 +465,7 @@ def train_new_data():
             '10': 'KFCV 10',
         }
 
-        to_filtersplit_training = st.selectbox("Masukkan Rasio Splitting Data", options=list(
+        to_filtersplit_training = st.selectbox("Data Splitting Ratio", options=list(
             kolom_split_training.keys()), format_func=lambda x: kolom_split_training[x])
         
         X = df_training_selected.drop("IE EXP (%)",axis=1)
@@ -476,7 +476,7 @@ def train_new_data():
 
         float_split = float(to_filtersplit_training)
 
-        if kolom_normalisasi_training[to_filternormalisasi_training] != "Tanpa Normalisasi":
+        if kolom_normalisasi_training[to_filternormalisasi_training] != "None":
             scaler = eval(kolom_normalisasi_training[to_filternormalisasi_training])
             x_normalisasi = scaler.fit_transform(X)
         else:
@@ -549,9 +549,9 @@ def train_new_data():
             fig, ax = plt.subplots()
             ax.scatter(y_train, y_pred, c='b', label='Data Point')
             ax.plot([min(y_train), max(y_train)], [min(y_train), max(y_train)], color='m', linestyle='dotted', label='Garis Prediksi')
-            ax.set_xlabel("Nilai Aktual")
-            ax.set_ylabel("Nilai Prediksi")
-            ax.set_title("Nilai Prediksi dan Aktual")
+            ax.set_xlabel("Actual Value")
+            ax.set_ylabel("Predicted Value")
+            ax.set_title("Predicted and Actual Values")
             ax.legend()
 
             st.pyplot(fig)
