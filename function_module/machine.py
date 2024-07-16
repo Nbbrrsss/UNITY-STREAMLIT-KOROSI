@@ -503,9 +503,9 @@ def train_new_data():
             scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
 
             # Lakukan validasi silang
-            r2_scores_fold = cross_val_score(model_new_training, X_test, y_test, scoring=scoring['r2'])
-            rmse_scores_fold = cross_val_score(model_new_training, X_test, y_test, scoring=scoring['rmse'])
-            mae_scores_fold = cross_val_score(model_new_training, X_test, y_test, scoring=scoring['mae'])
+            r2_scores_fold = cross_val_score(model_new_training, X_train, y_train, scoring=scoring['r2'])
+            rmse_scores_fold = cross_val_score(model_new_training, X_train, y_train, scoring=scoring['rmse'])
+            mae_scores_fold = cross_val_score(model_new_training, X_train, y_train, scoring=scoring['mae'])
 
             r2_scores.extend(r2_scores_fold)
             rmse_scores.extend(rmse_scores_fold)
@@ -519,7 +519,7 @@ def train_new_data():
             st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
             
             fig, ax = plt.subplots(figsize=(8, 6))
-            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores[:kfold.n_splits], marker='o')
+            ax.plot(np.arange(1, kfold.n_splits + 1), r2_scores, marker='o')
             ax.set_xlabel('Fold')
             ax.set_ylabel('Accuracy')
             ax.set_title('K-Fold Cross Validation Performance')
