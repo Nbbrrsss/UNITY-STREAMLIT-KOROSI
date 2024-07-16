@@ -421,7 +421,7 @@ def train_new_data():
         kolom_df_training.remove('IE EXP (%)')
 
         # Pilih prediktor
-        kolom_training = st.multiselect("Select Machine Learning Model Descriptors", kolom_df_training, placeholder = "Tentukan kolom yang menjadi fitur prediktor, Secara default menggunakan keseluruhan fitur")
+        kolom_training = st.multiselect("Select Machine Learning Model Descriptors", kolom_df_training, placeholder = "Specify the column that becomes the predictor feature, By default using the entire feature")
         if len(kolom_training) > 0 : 
             kolom_training.append("IE EXP (%)")
             df_training_selected = df_for_training[kolom_training]
@@ -548,7 +548,7 @@ def train_new_data():
             st.write(f"R2-Squared: ",r2_training," || Root Mean Squared Error: ", round(rmse_training,6)," || Mean Absolute Error ",round(mae_training,6))
             fig, ax = plt.subplots()
             ax.scatter(y_train, y_pred, c='b', label='Data Point')
-            ax.plot([min(y_train), max(y_train)], [min(y_train), max(y_train)], color='m', linestyle='dotted', label='Garis Prediksi')
+            ax.plot([min(y_train), max(y_train)], [min(y_train), max(y_train)], color='m', linestyle='dotted', label='Prediction Line')
             ax.set_xlabel("Actual Value")
             ax.set_ylabel("Predicted Value")
             ax.set_title("Predicted and Actual Values")
