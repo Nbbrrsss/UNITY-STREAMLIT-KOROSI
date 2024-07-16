@@ -509,7 +509,7 @@ def train_new_data():
 
                 predicted_y = model_new_training.predict(X_train)
 
-                r2_scores_fold = r2_scores(y_train, predicted_y)
+                r2_scores_fold = r2_score(y_train, predicted_y)
                 rmse_scores_fold = mean_squared_error(y_train, predicted_y, squared=False)
                 mae_scores_fold = mean_absolute_error(y_train, predicted_y)
 
