@@ -56,11 +56,7 @@ def chatbot():
     # Memuat model yang telah dilatih sebelumnya
     model_path = 'model/my_model_english.h5'  # Perbarui dengan path yang benar
     # Memuat model
-    try:
-        loaded_model = load_model(model_path)
-        st.write("Model loaded successfully")
-    except Exception as e:
-        st.write(f"Error loading model: {e}")
+    loaded_model = load_model(model_path)
 
 
     response_user = []  # List untuk menyimpan respons dari pengguna
