@@ -1,0 +1,3811 @@
+{"intents": [
+  {
+      "tag": "greetings",
+      "patterns": [
+        "hello", 
+        "Hi",
+        "hello bot",
+        "Hi bot",
+        "Can you help me?"
+      ],
+      "responses": [
+        "Hello! Can I help you?", 
+        "Hi! How can I help you?", 
+        "Hi! How are you? Anything to ask?", 
+        "Hello! How can I help you?",
+        "Hi! How can I help you today?",
+        "Hi there! How can I help you?",
+        "Welcome! What can I do for you?"
+      ]
+    },
+    {
+      "tag": "notfound",
+      "patterns": [" ", " ", " ", " ", " "],
+      "responses": ["I'm sorry, I don't understand. Please double-check your question, or you can ask me about Corrosion or corrosion inhibitors."]
+    },    
+    {
+      "tag": "good_morning",
+      "patterns": ["Morning", "Good Morning","Good Morning Bot"],
+      "responses": ["Good morning! How can I help you today?", "Morning! Anything to ask?"]
+    },
+    {
+      "tag": "good_afternoon",
+      "patterns": ["Afternoon", "Good Afternoon", "Good Afternoon Bot"],
+      "responses": ["Good Afternoon! How can I help you today?", "Afternoon! Anything to ask?"]
+    },
+    {
+      "tag": "good_evening",
+      "patterns": ["Evening", "Good evening", "Good evening Bot"],
+      "responses": ["Good Evening! How can I help you today?", "Evening! Anything to ask?"]
+    },
+    {
+      "tag": "good_night",
+      "patterns": ["Night", "Good Night", "Good Night Bot"],
+      "responses": ["Good Night! How can I help you today?", "Night! Anything to ask?"]
+    },
+    {
+      "tag": "introduction",
+      "patterns": ["What is your name?", "Who are you?", "May I know you?", "What's your name?", "What can you do?"],
+      "responses": [
+        "I am CorrosionShieldBot, an intelligent bot focused on providing information about corrosion prevention from expired drug compounds.",
+        "Hello! I am CorrosionShieldBot, ready to assist you with information about corrosion inhibitors and drug compounds.",
+        "I am CorrosionShieldBot. My name reflects my focus on protecting metals from corrosion and providing information about expired drug compounds."
+      ]
+    },
+    {
+      "tag": "definition_inhibitor",
+      "patterns": [
+        "What is an inhibitor?",
+        "Definition of inhibitor?",
+        "What is an inhibitor?",
+        "Explain inhibitor"
+      ],
+      "responses": [
+        "Inhibitor, in the context of chemistry, is a substance or chemical compound added to a system to decrease the rate of a chemical reaction or prevent a particular reaction from occurring.",
+        "The definition of an inhibitor is a substance that inhibits or reduces the activity or effect of a biological or chemical process.",
+        "The basic concept of an inhibitor involves its ability to slow down or inhibit a process, such as a chemical reaction or biological activity."
+      ]
+    },
+    {
+      "tag": "types_of_inhibitor",
+      "patterns": [
+        "What are the types of inhibitors?",
+        "List various types of inhibitors?",
+        "List different types of inhibitors?",
+        "What are the diverse types of inhibitors?"
+      ],
+      "responses": [
+        "Inhibitors come in various types used in preventing metal corrosion. Generally, there are several main categories of inhibitors commonly used: Inorganic Inhibitors, Organic Inhibitors, Volatile Inhibitors, Solid Metal Inhibitors, Thin Film Inhibitors, Alternative Variants.",
+        "Inhibitors in preventing metal corrosion have various variations widely used. Generally, there are several core categories of inhibitors commonly used: Inorganic Inhibitors, Organic Inhibitors, Volatile Inhibitors, Solid Metal Inhibitors, and Thin Film Inhibitors, as well as Alternative Options.",
+        "In the effort to prevent metal corrosion, there are many types of inhibitors used. In general context, there are several core groups of inhibitors often utilized such as: Inorganic Inhibitors, Organic Inhibitors, Volatile Inhibitors, Solid Metal Inhibitors, and Thin Film Inhibitors along with Various Alternative Options."
+      ]
+    },
+    {
+      "tag": "inhibitor_mechanism",
+      "patterns": [
+        "Inhibitor mechanism?",
+        "How does an inhibitor work?",
+        "Inhibitor working mechanism?"
+      ],
+      "responses": [
+        "Inhibitors work by forming a protective layer or interfering with the chemical reactions that cause corrosion on metals. They can form thin layers to protect the metal or alter the involved chemical processes, preventing damage from corrosion.",
+        "Inhibitors play a role in protecting metals from corrosion by forming a protective layer or interfering with chemical processes that can damage them. They can form thin coatings that prevent direct contact of the metal with corrosive substances or alter the way these substances react, thus protecting the metal from corrosion damage.",
+        "In the prevention of metal corrosion, inhibitors play a crucial role by forming a protective layer or inhibiting damaging chemical reactions. Inhibitors can form a shield on the metal or alter the interactions of chemical substances that cause damage, thus protecting the metal from the adverse effects of corrosion."
+      ]
+    },
+    {
+      "tag": "definition_corrosion",
+      "patterns": [
+        "What is corrosion?",
+        "Definition of corrosion?",
+        "Explain the concept of corrosion?",
+        "Corrosion is?"
+      ],
+      "responses": [
+        "Corrosion is a natural process in which metals undergo damage or degradation due to chemical reactions with their environment.",
+        "The definition of corrosion is the damage or degradation of metals due to chemical reactions with their environment, particularly with water and oxygen.",
+        "The basic concept of corrosion involves the occurrence of chemical reactions between metals and their environment, resulting in compounds that weaken the metal's structure."
+      ]
+    },
+    {
+      "tag": "corrosion_process",
+      "patterns": [
+        "What is the corrosion process?",
+        "Explain corrosion process?",
+        "How does corrosion occur?"
+      ],
+      "responses": [
+        "The corrosion process involves the deterioration of metals due to chemical reactions with their environment. Typically, corrosion occurs when metals are exposed to substances such as water, oxygen, acids, or salts. The process can take various forms, including rusting in iron or steel, tarnishing in silver, or pitting in aluminum. Corrosion can weaken metals, leading to structural damage and potentially compromising their functionality."
+      ]
+    },
+    {
+      "tag": "corrosion_impact",
+      "patterns": [
+        "What are the impacts of corrosion?",
+        "Explain the effects of corrosion?",
+        "How does corrosion affect?"
+      ],
+      "responses": [
+        "The impacts of corrosion can be significant and wide-ranging. Corrosion can lead to structural damage, reducing the integrity and lifespan of metal components. In industrial settings, corrosion can result in equipment failure, production downtime, and increased maintenance costs. Additionally, corrosion can compromise safety, particularly in critical infrastructure such as bridges, pipelines, and aircraft. Economically, corrosion costs billions of dollars annually due to repair and replacement expenses. Moreover, corrosion may also have environmental consequences, such as contamination of soil and water sources."
+      ]
+    },  
+    {
+      "tag": "corrosion_prevention",
+      "patterns": [
+        "What is corrosion prevention?",
+        "How to prevent corrosion?",
+        "Please explain about corrosion prevention."
+      ],
+      "responses": [
+        "Corrosion prevention is a series of steps or actions taken to inhibit or prevent corrosion on metals. Some methods of corrosion prevention include: Coating, Cathodic Protection, Using Corrosion Inhibitors, Material Selection. Corrosion prevention is important to maintain the structural integrity and aesthetics of metals, as well as to enhance the lifespan of equipment and infrastructure made from metal."
+      ]
+    },    
+    {
+      "tag": "definition_corrosion_inhibitor",
+      "patterns": [
+        "What is a corrosion inhibitor?", 
+        "Definition of corrosion inhibitor?", 
+        "Explain the concept of corrosion inhibitor?",
+        "Corrosion inhibitor is?"
+      ],
+      "responses": [
+        "A corrosion inhibitor is a chemical compound or substance added to a corrosive environment or metal surface to reduce or prevent corrosion. Corrosion inhibitors aim to protect metals from damage caused by chemical reactions with corrosive substances in their surroundings.",
+        "A corrosion inhibitor is a substance inserted into an environment prone to cause corrosion or onto the surface of metal to prevent or reduce damage resulting from chemical reactions with corrosive substances. Its main purpose is to protect the metal from damage caused by corrosion."
+      ]
+    },
+    {
+      "tag": "definition_drug",
+      "patterns": [
+        "What is a drug?",
+        "Definition of drug",
+        "Explain the concept of drug"
+      ],
+      "responses": [
+        "A drug is a chemical substance used to prevent, reduce, or treat diseases or symptoms of diseases in humans or animals.",
+        "The definition of a drug is a chemical compound or substance that has pharmacological effects and is used for medical purposes.",
+        "The basic concept of a drug involves its ability to influence biological systems in a specific way to achieve the desired effect."
+      ]
+    },    
+    {
+      "tag": "drug_function",
+      "patterns": [
+        "What is the function of a drug?",
+        "Explain the function of drug",
+        "Purpose of drug",
+        "What do drug do?"
+      ],
+      "responses": [
+        "The functions of medicine include treating disease, alleviating symptoms, preventing disease, and restoring or maintaining health."
+      ]
+    },
+    {
+      "tag": "how_drug_work",
+      "patterns": [
+        "How do drug work?",
+        "Explain how drug function",
+        "Mechanism of action of drug",
+        "What is the working mechanism of drug?"
+      ],
+      "responses": [
+        "The mode of action of a drug varies depending on the type, but generally involves interaction with a biological target or biochemical pathway to produce the desired response."
+      ]
+    },
+    {
+      "tag": "definition_expiry",
+      "patterns": [
+        "What is expiry?",
+        "Definition of expiry",
+        "Explain the concept of expiry"
+      ],
+      "responses": [
+        "Expiry refers to the last valid period of a product, during which the product is considered no longer safe or effective to use.",
+        "The definition of expiry is the date or period of time when a product, such as medicine or food, is no longer considered beneficial or safe for consumption.",
+        "The basic concept of expiry involves determining the time limit at which a product is deemed unreliable or no longer beneficial."
+      ]
+    },
+    {
+      "tag": "reasons_expiry",
+      "patterns": [
+        "Why do drugs expire?",
+        "What causes medications to expire?",
+        "Reasons for drug expiry"
+      ],
+      "responses": [
+        "Drugs can expire due to various factors, including chemical degradation, loss of potency, and changes in physical properties over time. Exposure to light, moisture, air, and temperature fluctuations can accelerate degradation processes in medications, leading to decreased effectiveness or safety concerns. Moreover, prolonged storage or improper handling can also contribute to drug expiry by compromising their integrity and quality."
+      ]
+    },
+    {
+      "tag": "definition_expired_drug",
+      "patterns": [
+        "What is an expired drug?",
+        "Definition of expired drug",
+        "Explain the concept of expired drug",
+        "Expired drug is?"
+      ],
+      "responses": [
+        "An expired drug is a medication that has passed the expiration date set by the manufacturer.",
+        "The definition of an expired drug is a medication that is no longer considered safe or effective for consumption after passing the expiration date.",
+        "The concept of an expired drug involves determining the time limit at which the medication is deemed unable to provide the desired benefits or may even potentially cause health issues."
+      ]
+    },
+    {
+      "tag": "impact_of_consuming_expired_drugs",
+      "patterns": [
+        "What are the consequences of consuming expired drugs?",
+        "Effects of using expired medications",
+        "Impact of taking expired drugs"
+      ],
+      "responses": [
+        "Consuming expired drugs can have various adverse effects on health. Expired medications may have degraded in potency or undergone chemical changes, rendering them less effective or even harmful. Ingesting expired drugs may fail to treat the intended condition, leading to prolonged illness or worsening symptoms."
+      ]
+    },  
+    {
+      "tag": "expired_drug_corrosion_inhibitor",
+      "patterns": [
+        "How can expired drugs become corrosion inhibitors?",
+        "Describe how expired drugs are involved in corrosion prevention",
+        "The relationship between expired drugs and protecting metals from corrosion"
+      ],
+      "responses": [
+        "In this scenario, expired drugs may contain compounds or chemicals that unexpectedly exhibit protective properties against corrosion on metals. When applied to the metal surface, these compounds form a protective layer that prevents corrosion.",
+        "Expired drugs may contain ingredients that miraculously or unexpectedly interact with metals to prevent corrosion. The expired drug's health properties could provide an additional benefit for the protected metal."
+      ]
+    },
+    {
+      "tag": "definition_acid",
+      "patterns": [
+        "What is an acid?",
+        "Acid is?",
+        "What is the definition of acid?",
+        "What is the meaning of acid?",
+        "Explain the definition of proton?"
+        
+      ],
+      "responses": [
+        "An acid can be described as a chemical substance that has a sour taste, can change the color of acid-base indicators, conducts electricity, and reacts with bases to form salts. Acids play an important role in everyday life, including in industry, agriculture, food, and the human body.",
+        "An acid is a chemical substance that possesses unique properties, including a sour taste, the ability to change the color of acid-base indicators, conductivity of electricity, and the ability to react with bases to form salts. These unique properties make acids essential in human life."
+      ]
+    },
+    {
+      "tag": "definition_base",
+      "patterns": [
+        "What is a base?",
+        "Base is?",
+        "What does base mean?",
+        "Explain the definition of base?"
+      ],
+      "responses": [
+        "A base can be described as a chemical substance that has a bitter taste, can change the color of acid-base indicators to blue, conducts electricity, and reacts with acids to form salts. Bases play an important role in everyday life, including in industry, agriculture, food, and the human body.",
+        "A base is a chemical substance that can give a bitter taste, change the color of acid-base indicators to blue, conduct electricity, and react with acids to form salts and water. These properties are due to the base's ability to accept hydrogen ions (H+) from other substances."
+      ]
+    },
+    {
+      "tag": "definition_electron",
+      "patterns": [
+        "What is an electron?",
+        "Electron is?",
+        "Explain what an electron is",
+        "What is meant by electron"
+      ],
+      "responses": [
+        "An electron is one of the three fundamental particles that make up an atom, along with protons and neutrons. Electrons surround the atom's nucleus in orbits. The number of electrons an atom has is equal to its number of protons.",
+        "An electron is one of the fundamental particles that form an atom and has a negative charge. Electrons orbit around the atom's nucleus, which consists of protons (positively charged) and neutrons (neutral). The atomic structure with electrons orbiting around the nucleus is known as the Bohr atomic model."
+      ]
+    },
+    {
+      "tag": "definition_proton",
+      "patterns": [
+        "What is a proton?",
+        "Proton is?",
+        "Definition of proton",
+        "What does proton mean",
+        "Explain the definition of proton?"
+      ],
+      "responses": [
+        "A proton is a subatomic particle that carries a positive charge and is one of the constituents of an atom's nucleus. The number of protons in an atom's nucleus determines the type of chemical element it forms.",
+        "A proton is a positively charged particle located within the nucleus of an atom. The varying number of protons in the nucleus of an atom is what distinguishes different elements in their properties and behaviors.",
+        "In chemistry, a proton is a positively charged particle found in the nucleus of an atom. The chemical properties of an element are heavily influenced by the number of protons in its nucleus."
+      ]
+    },
+    {
+      "tag": "definition_neutron",
+      "patterns": [
+        "What is a neutron?",
+        "Neutron is",
+        "Explain what a neutron is",
+        "Definition of neutron",
+        "What does proton neutron"
+      ],
+      "responses": [
+        "A neutron is a neutral subatomic particle that, together with protons, forms the nucleus of an atom. The primary role of neutrons is to maintain the stability of the atomic nucleus through interactions via the strong nuclear force.",
+        "A neutron is one of the components of an atomic nucleus that influences its stability. Together with protons, neutrons form the nucleus of an atom.",
+        "Within an atomic nucleus, a neutron is a neutral particle that helps maintain nucleus stability alongside protons through interactions via the strong nuclear force."
+      ]
+    },    
+    {
+      "tag": "definition_ionization",
+      "patterns": [
+        "What is ionization?",
+        "What is the definition of ionization?",
+        "What does ionization mean?",
+        "explain the definition of ionization?",
+        "Ionization is?"
+      ],
+      "responses": [
+        "Ionization is the process of changing an atom or molecule into an ion by adding or removing charged particles such as electrons or others. The process of ionization into positive or negative charges is slightly different.",
+        "Ionization is the process in which an atom or molecule gains or loses one or more electrons to form ions. In this process, the atom or molecule becomes electrically charged due to the loss or gain of electrons. The resulting ions can be positive ions (called cations) if the atom loses electrons, or negative ions (called anions) if the atom gains electrons."
+      ]
+    },
+    {
+      "tag": "definition_ionization_energy",
+      "patterns": [
+        "What is the definition of ionization energy?",
+        "What is ionization energy?",
+        "Explain ionization energy?",
+        "Ionization energy is?"
+      ],
+      "responses": [
+        "Ionization energy is the energy required to remove an electron from an atom or molecule. The first ionization energy is the energy required to remove the first electron from a neutral atom or molecule. The second ionization energy is the energy required to remove the second electron from an atom or molecule that has already lost one electron, and so on.",
+        "Ionization energy is the energy required to 'remove' an electron from an atom or molecule. The first ionization energy is the energy required to 'remove' the first electron from a neutral atom or molecule. The second ionization energy is the energy required to 'remove' the second electron from an atom or molecule that has already lost one electron, and so on."
+      ]
+    },    
+    {
+      "tag": "definition_atom",
+      "patterns": [
+        "What is an atom?",
+        "Atom is?",
+        "Definition of atom?",
+        "What does atom mean?",
+        "Explain about atom?",
+        "Atom explanation"
+      ],
+      "responses": [
+        "An atom is the basic unit of matter that cannot be further divided without losing its chemical properties. It consists of a dense atomic nucleus containing positively charged protons and neutral neutrons, as well as electrons orbiting the nucleus.",
+        "An atom is the smallest unit of an element that still retains its chemical properties. It consists of an atomic nucleus containing protons and neutrons, as well as electrons that orbit around the nucleus.",
+        "An atom is the fundamental unit of matter consisting of a dense nucleus containing positively charged protons and neutral neutrons. Negatively charged electrons move in orbitals around the atomic nucleus."
+      ]
+    },    
+    {
+      "tag": "definition_atomic_structure",
+      "patterns": [
+        "What is atomic structure?",
+        "Atomic structure is?",
+        "Definition of atomic structure",
+        "What does atomic structure mean?",
+        "Explain about atomic structure?"
+      ],
+      "responses": [
+        "Atomic structure refers to the arrangement of the basic components of an atom, including the dense atomic nucleus consisting of positively charged protons and neutral neutrons. Electrons, negatively charged, move in orbitals around the nucleus in different energy levels.",
+        "Atomic structure is the configuration of the components of an atom, namely the atomic nucleus containing protons and neutrons, as well as electrons orbiting the nucleus in orbitals with different energy levels.",
+        "The definition of atomic structure includes the layout of the components of an atom, where the dense atomic nucleus consists of positively charged protons and neutral neutrons, while electrons move in orbitals around the nucleus."
+      ]
+    },    
+    {
+      "tag": "atomic_model",
+      "patterns": [
+        "What is an atomic model?",
+        "Atomic model is?",
+        "Definition of atomic model",
+        "Explain about atomic model?"
+      ],
+      "responses": [
+        "An atomic model is a representation or theoretical concept used to explain the behavior, structure, and properties of atoms based on scientific research, experiments, and theories in the fields of physics and chemistry.",
+        "An atomic model is a visual or theoretical explanation of the arrangement, behavior, and interaction between the main components of an atom, such as protons, neutrons, and electrons. This model evolves over time as science advances.",
+        "An atomic model is a visual or theoretical concept used to understand the structure of atoms and the behavior of particles within them. Various models have been developed over time to attempt to explain the properties and behaviors of atoms under various conditions."
+      ]
+    },
+    {
+      "tag": "atomic_properties",
+      "patterns": [
+        "What are the properties of atoms?",
+        "What properties do atoms have?",
+        "List the properties of atoms."
+      ],
+      "responses": [
+        "The properties of atoms include size, mass, charge, and the distribution of electrons within the atom.",
+        "Atoms have very small sizes, with radii ranging from about 0.1 nanometers to several angstroms (Å).",
+        "Atomic mass is related to the number of protons and neutrons in the atomic nucleus, while electrons have a much smaller mass compared to protons and neutrons."
+      ]
+    },
+    {
+      "tag": "periodic_table_definition",
+      "patterns": [
+        "What is the periodic table?",
+        "Periodic table is?",
+        "Definition of the periodic table of elements?",
+        "What is meant by the periodic table?",
+        "Explain the periodic table?"
+      ],
+      "responses": [
+        "The periodic table is an arrangement of chemical elements organized systematically based on the number of protons in the atomic nucleus. It helps in understanding the regular patterns of chemical properties among elements.",
+        "The periodic table is a layout of chemical elements arranged in order of increasing atomic number, allowing us to observe recurring patterns in the chemical properties among these elements."
+      ]
+    },    
+    {
+      "tag": "naming_compounds_definition",
+      "patterns": [
+        "What is naming compounds?",
+        "Naming compounds is?",
+        "Definition of chemical compound naming?",
+        "What is meant by naming compounds?",
+        "Explain about naming compounds"
+      ],
+      "responses": [
+        "Naming compounds is a set of rules used in chemistry to name chemical compounds based on the composition of elements that form the compound.",
+        "Chemical compound naming is a set of rules used to name chemical compounds, which clarify the composition and chemical structure of the compound.",
+        "The names of chemical compounds are created based on the composition of their constituent elements. These names reflect the structure and chemical composition of the compound."
+      ]
+    },    
+    {
+      "tag": "compound_naming_systems",
+      "patterns": [
+        "How many types of chemical compound naming systems are there?",
+        "How is the naming of chemical compounds organized?",
+        "What are the types of chemical compound naming?",
+        "Which naming system is used in chemistry?"
+      ],
+      "responses": [
+        "There are two main types of chemical compound naming systems: the IUPAC naming system for organic compounds and specific rules for inorganic compounds. IUPAC has detailed rules for naming organic compounds based on molecular structure, while inorganic compounds follow specific rules depending on the type of compound, such as ionic compounds or binary compounds.",
+        "The naming system for chemical compounds is usually divided into two main categories: the IUPAC naming for organic compounds which follows specific rules based on their molecular structure, and specific rules used to name inorganic compounds. IUPAC organic naming often relies on carbon chains, functional groups, and isomerism."
+      ]
+    },
+    {
+      "tag": "inorganic_compound_naming",
+      "patterns": [
+        "How are inorganic compound names organized?",
+        "Naming rules for inorganic compounds?",
+        "Explain the naming of inorganic compounds?",
+        "What is meant by the naming of inorganic compounds?"
+      ],
+      "responses": [
+        "The naming of inorganic compounds follows specific rules depending on the type of compound. Some examples of naming systems for inorganic compounds include naming of ionic compounds, binary compounds, covalent compounds, and complex compounds. Each type of compound has different naming rules, such as the use of specific prefixes and suffixes, oxidation numbers, and identification of its chemical structure.",
+        "The naming of inorganic compounds often follows specific rules according to their type. For example, in ionic compounds, the compound name is formed by writing the name of the cation followed by the name of the anion. For binary compounds, the use of prefixes such as 'hydro-', 'oxide-', 'sulfide-', and others is often applied to name compounds based on their components."
+      ]
+    },    
+    {
+      "tag": "organic_compound_naming",
+      "patterns": [
+        "What is meant by the naming of organic compounds?",
+        "How are organic compound names organized?",
+        "Naming rules for organic compounds?",
+        "Explain the naming of organic compounds?"
+      ],
+      "responses": [
+        "Organic compound naming refers to the chemical naming system for compounds primarily consisting of carbon atoms. IUPAC is the body that regulates and develops the naming rules for organic compounds. For example, in alkene compounds, naming is based on the lowest carbon number sequence on the carbon chain forming the double bond.",
+        "The naming of organic compounds follows rules established by IUPAC, which identifies compounds based on carbon chains, double bonds, and substituents attached to the main chain. For example, compounds with double bonds are identified with the suffix '-ene', such as ethene for compounds with one double bond."
+      ]
+    },
+    {
+      "tag": "chemical_reaction_equation",
+      "patterns": [
+        "What is a chemical reaction equation?",
+        "Can I have an example of a chemical reaction equation?",
+        "How do you formulate a chemical reaction equation?",
+        "Definition of a chemical reaction equation?"
+      ],
+      "responses": [
+        "A chemical reaction equation is a statement written with chemical formulas that provides information about the identities and quantities of substances involved in a chemical or physical change. A simple example is the combustion of methane: CH4 + 2O2 -> CO2 + 2H2O.",
+        "A chemical reaction equation is a representation using chemical formulas to present the changes that occur in a chemical reaction. Its purpose is to show the reactant substances that react and the products produced. Every reaction adheres to the laws of conservation of mass and atoms. A simple example is the combustion of methane: CH4 + 2O2 -> CO2 + 2H2O."
+      ]
+    },    
+    {
+      "tag": "fundamental_chemical_laws",
+      "patterns": [
+        "What is a fundamental chemical law?",
+        "What does fundamental chemical law mean?",
+        "Can you explain the fundamental chemical laws?",
+        "What is the law of conservation of mass?",
+        "How does the law of definite proportions work?"
+      ],
+      "responses": [
+        "Fundamental chemical laws are a set of principles that underlie the behavior of chemical substances. Some of these include: The laws include the Law of Conservation of Mass, Law of Definite Proportions, Dalton's Law, Gay-Lussac's Law, and Avogadro's Hypothesis.",
+        "In chemistry, there are several fundamental laws that underlie modern chemical principles. These laws include the Law of Conservation of Mass, Law of Definite Proportions, Dalton's Law, Gay-Lussac's Law, and Avogadro's Hypothesis."
+      ]
+    },    
+    {
+      "tag": "law_of_conservation_of_mass",
+      "patterns": [
+        "What is the Law of Conservation of Mass?",
+        "What does the Law of Conservation of Mass mean?",
+        "Can you define the Law of Conservation of Mass?",
+        "Explain the Law of Conservation of Mass"
+      ],
+      "responses": [
+        "The Law of Conservation of Mass, also known as Lavoisier's Law, states that in a closed system, the total mass cannot be created or destroyed during a chemical reaction. The mass of all reactants involved in a reaction equals the mass of the products produced.",
+        "The Law of Conservation of Mass, or Lavoisier's Law, states that in a chemical reaction, the total mass of the reacting substances is equal to the total mass of the products formed. Mass is neither created nor destroyed, only transformed or redistributed in a chemical reaction."
+      ]
+    },    
+    {
+      "tag": "law_of_definite_proportions",
+      "patterns": [
+        "What is the Law of Definite Proportions?",
+        "What does the Law of Definite Proportions mean?",
+        "Can you define the Law of Definite Proportions?",
+        "Explain the Law of Definite Proportions"
+      ],
+      "responses": [
+        "The Law of Definite Proportions, also known as Proust's Law, states that in a chemical compound, the elements are always combined in fixed ratios by mass, regardless of the amount of the compound formed or decomposed.",
+        "The Law of Definite Proportions, or Proust's Law, asserts that in a chemical compound, the ratio of masses of the elements forming the compound is always constant, irrespective of the quantity of the compound formed or decomposed."
+      ]
+    },
+    {
+      "tag": "law_of_multiple_proportions",
+      "patterns": [
+        "What is the Law of Multiple Proportions?",
+        "What does the Law of Multiple Proportions mean?",
+        "Can you define the Law of Multiple Proportions?",
+        "Explain the Law of Multiple Proportions"
+      ],
+      "responses": [
+        "The Law of Multiple Proportions, proposed by John Dalton, states that if two elements form more than one compound, the masses of one element that combine with a fixed mass of the other element are in ratios of small whole numbers.",
+        "The Law of Multiple Proportions, also known as Dalton's Law, as described by John Dalton, states that the masses of one element that combine with a fixed mass of another element to form different compounds are in ratios of small whole numbers."
+      ]
+    },
+    {
+      "tag": "law_of_combining_volumes",
+      "patterns": [
+        "What is the Law of Combining Volumes?",
+        "What does the Law of Combining Volumes mean?",
+        "Can you define the Law of Combining Volumes?",
+        "Explain the Law of Combining Volumes",
+        "Who discovered the Law of Combining Volumes?"
+      ],
+      "responses": [
+        "The Law of Combining Volumes, also known as Gay-Lussac's Law, states that at constant temperature and pressure, the volumes of gases involved in a chemical reaction are in simple integer ratios. This means that the volumes of these gases can be expressed in simple ratio of numbers.",
+        "The Law of Combining Volumes, or Gay-Lussac's Law, was discovered by the French scientist Joseph Louis Gay-Lussac in the early 19th century. This law states that the volumes of gases involved in a chemical reaction are in simple volumetric ratios if the temperature and pressure are kept constant."
+      ]
+    },    
+    {
+      "tag": "avogadro_hypothesis",
+      "patterns": [
+        "What are the consequences of Avogadro's Law?",
+        "How is Avogadro's Hypothesis related to gases?",
+        "Why is Avogadro's Law important in chemistry?"
+      ],
+      "responses": [
+        "The consequence of Avogadro's Law is that gases with the same volume at the same pressure and temperature also have the same number of particles, which can be measured using molecules or moles.",
+        "Avogadro's Hypothesis explains that, under the same conditions, the same volume of different gases will contain the same number of particles, which is important in measuring the amount of substance in chemistry.",
+        "Avogadro's Law is important in chemistry because it provides the basis for the concept of molecules and moles, allowing for consistent and standard measurement in comparing the number of particles in different gases."
+      ]
+    },    
+    {
+      "tag": "stoichiometry",
+      "patterns": [
+        "What is stoichiometry?",
+        "What does stoichiometry mean?",
+        "Define stoichiometry",
+        "Explanation of stoichiometry"
+      ],
+      "responses": [
+        "Stoichiometry is a branch of chemistry that deals with the quantitative relationships between reactants and products in a chemical reaction.",
+        "Stoichiometry is applied to calculate the relative amounts of reactants and products in a reaction, determining the mole, mass, or volume ratios."
+      ]
+    },    
+    {
+      "tag": "hydrogen_bonding",
+      "patterns": [
+        "What is hydrogen bonding?",
+        "What does hydrogen bonding mean?",
+        "Define hydrogen bonding",
+        "Explanation of hydrogen bonding"
+      ],
+      "responses": [
+        "Hydrogen bonding is an attractive force between a hydrogen atom bonded to an atom with high electronegativity such as oxygen, nitrogen, or fluorine. This occurs due to the difference in electronegativity between the hydrogen atom and the bonded atom, creating polarity and electrostatic interactions.",
+        "Hydrogen bonding is the interaction between a hydrogen atom and an atom of oxygen, nitrogen, or fluorine that has high electronegativity. It occurs when the hydrogen atom bonded to a sufficiently electronegative atom attracts electrons, creating a tendency for polarity."
+      ]
+    },    
+    {
+      "tag": "electrolyte_solution",
+      "patterns": [
+        "What is an electrolyte solution?",
+        "Define electrolyte solution",
+        "Explanation of electrolyte solution",
+        "What does electrolyte solution mean?"
+      ],
+      "responses": [
+        "An electrolyte solution is a solution that contains ions capable of conducting electricity. Typically, these solutions consist of ionic compounds dissolved in a solvent such as water, separating into positive and negative ions that contribute to the electrical conductivity of the solution.",
+        "An electrolyte solution is a solution that contains charged ions capable of conducting electricity. It forms when ionic compounds or compounds soluble in water dissociate into ions that can move freely."
+      ]
+    },    
+    {
+      "tag": "non_electrolyte_solution",
+      "patterns": [
+        "What is a non-electrolyte?",
+        "Define non-electrolyte",
+        "Explanation of non-electrolyte",
+        "What does non-electrolyte mean?"
+      ],
+      "responses": [
+        "A non-electrolyte solution is a solution that does not contain charged ions capable of conducting electricity. Typically, polar covalent compounds or non-polar compounds soluble in water form non-electrolyte solutions.",
+        "A non-electrolyte solution is a solution that does not contain ions capable of conducting electricity. It usually consists of polar covalent compounds or non-polar compounds that do not ionize in water."
+      ]
+    },
+    {
+      "tag": "redox_reaction",
+      "patterns": [
+        "What is a redox reaction?",
+        "Define redox reaction",
+        "Explanation of redox reaction",
+        "What does redox reaction mean?"
+      ],
+      "responses": [
+        "A redox reaction is a type of chemical reaction that involves the transfer of electrons between chemical species. It consists of oxidation reactions (loss of electrons) and reduction reactions (gain of electrons).",
+        "A redox reaction is a chemical reaction in which there is a transfer of electrons between chemical species. Simultaneously, there is a substance that loses electrons (oxidized) and a substance that gains electrons (reduced)."
+      ]
+    },    
+    {
+      "tag": "hydrocarbon_compounds",
+      "patterns": [
+        "What is a hydrocarbon compound?",
+        "Define hydrocarbon compound",
+        "Explanation of hydrocarbon compound",
+        "What does hydrocarbon compound mean?"
+      ],
+      "responses": [
+        "A hydrocarbon compound is a chemical compound composed of carbon and hydrogen atoms. These molecules form carbon chain structures, which can be straight chains, branched, or cyclic.",
+        "A hydrocarbon compound is a group of organic compounds consisting of carbon and hydrogen atoms. Examples include methane, ethane, propane, butane, various types of petroleum, and other aliphatic compounds.",
+        "Hydrocarbons are chemical compounds composed only of carbon and hydrogen atoms. Examples include methane (CH4), ethane (C2H6), and gasoline, which is a mixture of hydrocarbons."
+      ]
+    },
+    {
+      "tag": "caffeine_definition",
+      "patterns": [
+        "What is caffeine?",
+        "Define caffeine",
+        "Can you explain caffeine?",
+        "What does caffeine mean?"
+      ],
+      "responses": [
+        "Caffeine is a substance that naturally occurs in more than 60 plants, but is most commonly found in coffee, tea, and cacao. Caffeine works by stimulating (increasing activity in) the brain and nervous system, while also boosting the circulation of hormones cortisol and adrenaline in the body."
+      ]
+    },    
+    {
+      "tag": "acenocoumarol_definition",
+      "patterns": [
+        "What is Acenocoumarol?",
+        "Define Acenocoumarol",
+        "Can you explain Acenocoumarol?",
+        "What does Acenocoumarol mean?"
+      ],
+      "responses": [
+        "Acenocoumarol is an anticoagulant medicine used to prevent blood clotting. It belongs to a group of drugs called vitamin K antagonists and is used to treat or prevent unwanted blood clotting, such as deep vein thrombosis, pulmonary embolism, or stroke due to blood clots.",
+        "Acenocoumarol medication works by inhibiting the activity of vitamin K needed for the formation of blood clotting factors, helping to prevent the formation of blood clots that can block blood vessels."
+      ]
+    },    
+    {
+      "tag": "acetaminophen_definition",
+      "patterns": [
+        "What is Acetaminophen?",
+        "Define Acetaminophen",
+        "Can you explain Acetaminophen?",
+        "What does Acetaminophen mean?"
+      ],
+      "responses": [
+        "Acetaminophen, also known as paracetamol, is a common pain reliever and fever reducer. It works by reducing the production of chemicals in the body that cause pain and fever.",
+        "Acetaminophen, also known as paracetamol, is an analgesic or pain reliever medication. It can be found in various forms such as capsules, liquids, drops, tablets, and even used in intravenous fluids. Additionally, it is an over-the-counter medication available at pharmacies."
+      ]
+    },
+    {
+      "tag": "acetazolamide_definition",
+      "patterns": [
+        "What is Acetazolamide?",
+        "Define Acetazolamide",
+        "Can you explain Acetazolamide?",
+        "What does Acetazolamide mean?"
+      ],
+      "responses": [
+        "Acetazolamide is a medication classified as a diuretic, which is used to reduce excess fluid in the body by increasing urine production. Additionally, it can be used to lower pressure inside the eye in certain medical conditions.",
+        "Acetazolamide is a medication used to treat glaucoma, epilepsy, or altitude sickness. It can also be used to alleviate fluid buildup (edema) in patients with heart failure."
+      ]
+    },
+    {
+      "tag": "acetic_acid_definition",
+      "patterns": [
+        "What is Acetic Acid?",
+        "Define Acetic Acid",
+        "Can you explain Acetic Acid?",
+        "What does Acetic Acid mean?"
+      ],
+      "responses": [
+        "Acetic Acid, also known as Ethanoic Acid, is an antibiotic that can be used to treat infections caused by bacteria or fungi. There is also acetic acid otic specifically for the ears and used to treat infections in the ear canal. However, this medication will not treat inner ear infections (also called otitis media)."
+      ]
+    },
+    {
+      "tag": "acepromazine_definition",
+      "patterns": [
+        "What is Acepromazine?",
+        "Define Acepromazine",
+        "Can you explain Acepromazine?",
+        "What does Acepromazine mean?"
+      ],
+      "responses": [
+        "Acepromazine is a medication belonging to the phenothiazine group, commonly used as a tranquilizer, antiemetic, and anxiolytic in animals, particularly in pets such as dogs and cats.",
+        "Acepromazine is a medication that can calm and reduce nausea in animals, especially dogs and cats. This medication belongs to the phenothiazine group."
+      ]
+    },    
+    {
+      "tag": "acetylmethadol_definition",
+      "patterns": [
+        "What is Acetylmethadol?",
+        "Define Acetylmethadol",
+        "Can you explain Acetylmethadol?",
+        "What does Acetylmethadol mean?"
+      ],
+      "responses": [
+        "Acetylmethadol, also known as LAAM (Levo-Alpha-Acetyl-Methadol), is an opioid medication that was previously used for the treatment of opioid dependence. It works similarly to other opioid medications, helping to reduce cravings for other opioids and alleviate withdrawal symptoms."
+      ]
+    },
+    {
+      "tag": "alphameprodine_definition",
+      "patterns": [
+        "What is Alphameprodine?",
+        "Define Alphameprodine",
+        "Can you explain Alphameprodine?",
+        "What does Alphameprodine mean?"
+      ],
+      "responses": [
+        "Alphameprodine is a narcotic or opioid medication that has been withdrawn from circulation in several countries due to its side effects and potential for addiction. Its use should only be done based on a doctor's prescription, and information regarding dosage and usage should be obtained from reliable medical sources."
+      ]
+    },
+    {
+      "tag": "alphaprodine_definition",
+      "patterns": [
+        "What is Alphaprodine?",
+        "Define Alphaprodine",
+        "Can you explain Alphaprodine?",
+        "What does Alphaprodine mean?"
+      ],
+      "responses": [
+        "Alphaprodine is a narcotic analgesic medication classified as an opioid or semi-synthetic opioid. It is intended to relieve moderate to severe pain. The use of Alphaprodine needs to be closely monitored due to its potential for addiction and serious side effects. Further information about the use of Alphaprodine should be obtained from a doctor who can provide more accurate and medically specific information."
+      ]
+    },    
+    {
+      "tag": "alprenolol_definition",
+      "patterns": [
+        "What is Alprenolol?",
+        "Define Alprenolol",
+        "Can you explain Alprenolol?",
+        "What does Alprenolol mean?"
+      ],
+      "responses": [
+        "Alprenolol is a beta-blocker medication used to treat high blood pressure, heart rhythm disorders, and other cardiovascular conditions. It works by blocking the effects of epinephrine on beta receptors in the heart and blood vessels, helping to lower blood pressure and reduce the workload on the heart."
+      ]
+    },
+    {
+      "tag": "amantadine_definition",
+      "patterns": [
+        "What is Amantadine?",
+        "Define Amantadine",
+        "Can you explain Amantadine?",
+        "What does Amantadine mean?"
+      ],
+      "responses": [
+        "Amantadine is a medication that can be used as an antiviral and antiparkinsonian agent. It is indicated for several conditions such as the treatment and therapy of Parkinson's disease and certain types of influenza A."
+      ]
+    },
+    {
+      "tag": "aminobenzoic_acid_definition",
+      "patterns": [
+        "What is Aminobenzoic acid?",
+        "Define Aminobenzoic acid",
+        "Can you explain Aminobenzoic acid?",
+        "What does Aminobenzoic acid mean?"
+      ],
+      "responses": [
+        "Aminobenzoic acid is a member of the complex of B vitamins. This medication is used as a skin protector against the harmful effects of sunlight such as sunburn and premature aging (such as wrinkled, rough skin)."
+      ]
+    },    
+    {
+      "tag": "aminocaproic_acid_definition",
+      "patterns": [
+        "What is Aminocaproic acid?",
+        "Define Aminocaproic acid",
+        "Can you explain Aminocaproic acid?",
+        "What does Aminocaproic acid mean?"
+      ],
+      "responses": [
+        "Aminocaproic acid is an antifibrinolytic agent that works by inhibiting plasminogen activators which have fibrinolytic properties. This medication is a synthetic form of a protein naturally found in the body that helps blood to clot."
+      ]
+    },
+    {
+      "tag": "aminophylline_definition",
+      "patterns": [
+        "What is Aminophylline?",
+        "Define Aminophylline",
+        "Can you explain Aminophylline?",
+        "What does Aminophylline mean?"
+      ],
+      "responses": [
+        "Aminophylline is a medication used to treat various respiratory disorders, including shortness of breath, asthma, bronchitis, chronic obstructive pulmonary disease (COPD), and many others."
+      ]
+    },    
+    {
+      "tag": "aminohippuric_acid_definition",
+      "patterns": [
+        "What is Aminohippuric acid?",
+        "Define Aminohippuric acid",
+        "Can you explain Aminohippuric acid?",
+        "What does Aminohippuric acid mean?"
+      ],
+      "responses": [
+        "Aminohippuric acid is a derivative injection of hippuric acid used in the measurement of effective renal plasma flow (ERPF) and the functional capacity of the renal excretory system."
+      ]
+    },
+    {
+      "tag": "aminosalicylic_acid_definition",
+      "patterns": [
+        "What is Aminosalicylic Acid?",
+        "Define Aminosalicylic Acid",
+        "Can you explain Aminosalicylic Acid?",
+        "What does Aminosalicylic Acid mean?"
+      ],
+      "responses": [
+        "Aminosalicylic acid is an anti-mycobacterial agent used with other anti-tuberculosis drugs (most commonly isoniazid) for the treatment of all forms of active tuberculosis caused by susceptible strains of tubercle bacilli."
+      ]
+    },
+    {
+      "tag": "amitriptyline_definition",
+      "patterns": [
+        "What is Amitriptyline?",
+        "Define Amitriptyline",
+        "Can you explain Amitriptyline?",
+        "What does Amitriptyline mean?"
+      ],
+      "responses": [
+        "Amitriptyline is a medication used to alleviate symptoms of depression. Additionally, it can also be used to treat neuropathic pain, migraines, and nocturnal enuresis (bedwetting) in children."
+      ]
+    },    
+    {
+      "tag": "amobarbital_definition",
+      "patterns": [
+        "What is Amobarbital?",
+        "Define Amobarbital",
+        "Can you explain Amobarbital?",
+        "What does Amobarbital mean?"
+      ],
+      "responses": [
+        "Amobarbital is a medication used in the treatment of severe insomnia. Additionally, it is also a sedative used in anesthesia procedures prior to surgery. This medication should not be used without proper prescription and guidance from a doctor."
+      ]
+    },
+    {
+      "tag": "amoxicillin_definition",
+      "patterns": [
+        "What is Amoxicillin?",
+        "Define Amoxicillin",
+        "Can you explain Amoxicillin?",
+        "What does Amoxicillin mean?"
+      ],
+      "responses": [
+        "Amoxicillin is an antibiotic medication used to treat various bacterial infections, such as ear infections, tonsillitis, or bronchitis. This medication should only be used based on a doctor's prescription."
+      ]
+    },
+    {
+      "tag": "amphetamine_definition",
+      "patterns": [
+        "What is Amphetamine?",
+        "Define Amphetamine",
+        "Can you explain Amphetamine?",
+        "What does Amphetamine mean?"
+      ],
+      "responses": [
+        "Amphetamine is a central nervous system stimulant medication used to treat attention deficit hyperactivity disorder (ADHD) and narcolepsy. It works by increasing the activity of dopamine and norepinephrine in the brain."
+      ]
+    },    
+    {
+      "tag": "amphotericin_definition",
+      "patterns": [
+        "What is Amphotericin B?",
+        "Define Amphotericin B",
+        "Can you explain Amphotericin B?",
+        "What does Amphotericin B mean?"
+      ],
+      "responses": [
+        "Amphotericin B is a medication used to treat serious and life-threatening fungal infections. It is available in oral (tablet) and injectable forms. Amphotericin B works by stopping the growth and reproduction of fungi."
+      ]
+    },
+    {
+      "tag": "anileridine_definition",
+      "patterns": [
+        "What is Anileridine?",
+        "Define Anileridine",
+        "Can you explain Anileridine?",
+        "What does Anileridine mean?"
+      ],
+      "responses": [
+        "Anileridine is a synthetic opioid and potent analgesic. It is a narcotic pain reliever used to treat moderate to severe pain. Narcotic analgesics work in the central nervous system (CNS) to alleviate pain. Some of its side effects are also due to actions on the CNS."
+      ]
+    },
+    {
+      "tag": "anisindione_definition",
+      "patterns": [
+        "What is Anisindione?",
+        "Define Anisindione",
+        "Can you explain Anisindione?",
+        "What does Anisindione mean?"
+      ],
+      "responses": [
+        "Anisindione is a synthetic anticoagulant and a derivative of indanedione. Its anticoagulant action is mediated by inhibiting vitamin K-mediated gamma-carboxylation of precursor proteins essential in the liver for the formation of active procoagulant factors II, VII, IX, and X, as well as anticoagulant proteins C and S."
+      ]
+    },
+    {
+      "tag": "antazoline_definition",
+      "patterns": [
+        "What is Antazoline?",
+        "Define Antazoline",
+        "Can you explain Antazoline?",
+        "What does Antazoline mean?"
+      ],
+      "responses": [
+        "Antazoline is a medication used to relieve red, watery, and itchy eyes due to allergies. This eye drop medication is usually combined with other eye medications, such as naphazoline."
+      ]
+    },
+    {
+      "tag": "antipyrine_definition",
+      "patterns": [
+        "What is Antipyrine?",
+        "Define Antipyrine",
+        "Can you explain Antipyrine?",
+        "What does Antipyrine mean?"
+      ],
+      "responses": [
+        "Antipyrine is a medication with analgesic, anti-inflammatory, and antipyretic effects. It is often used alone or combined with other medications to enhance therapeutic effects."
+      ]
+    },    
+    {
+      "tag": "apomorphine_definition",
+      "patterns": [
+        "What is Apomorphine?",
+        "Define Apomorphine",
+        "Can you explain Apomorphine?",
+        "What does Apomorphine mean?"
+      ],
+      "responses": [
+        "Apomorphine is a dopamine agonist that plays a role in improving motor function and reducing 'off' periods (periods when the effects of levodopa medication wear off) in Parkinson's disease patients, such as tremors, muscle stiffness, slow movements, and imbalance. Additionally, apomorphine is used to treat erectile dysfunction and acute alcohol intoxication."
+      ]
+    },
+    {
+      "tag": "aprobarbital_definition",
+      "patterns": [
+        "What is Aprobarbital?",
+        "Define Aprobarbital",
+        "Can you explain Aprobarbital?",
+        "What does Aprobarbital mean?"
+      ],
+      "responses": [
+        "Aprobarbital is a barbiturate derivative synthesized in the 1920s by Ernst Preiswerk. It was found to exhibit sedative, hypnotic, and anticonvulsant effects. The primary indication for the use of aprobarbital later became insomnia treatment."
+      ]
+    },
+    {
+      "tag": "arecoline_definition",
+      "patterns": [
+        "What is Arecoline?",
+        "Define Arecoline",
+        "Can you explain Arecoline?",
+        "What does Arecoline mean?"
+      ],
+      "responses": [
+        "Arecoline is a natural alkaloid found in the betel nut of the Areca palm. This compound has cytomodulatory effects and is involved in the pathogenesis of oral cancer and oral submucosal fibrosis."
+      ]
+    },
+    {
+      "tag": "vitamin_c_definition",
+      "patterns": [
+        "What is Vitamin C?",
+        "Define Vitamin C",
+        "Can you explain Vitamin C?",
+        "What does Vitamin C mean?"
+      ],
+      "responses": [
+        "Ascorbic acid, commonly known as vitamin C, is one of the essential vitamins and supplements for the human body. Ascorbic acid has been shown to help reduce inflammation, lower blood pressure, and maintain immune function."
+      ]
+    },    
+    {
+      "tag": "aspirin_definition",
+      "patterns": [
+        "What is Aspirin?",
+        "Define Aspirin",
+        "Can you explain Aspirin?",
+        "What does Aspirin mean?"
+      ],
+      "responses": [
+        "Aspirin is a medication used to relieve pain, fever, and inflammation. Also known as acetylsalicylic acid, this drug is also used to prevent blood clots, reducing the risk of heart attacks or strokes in patients with cardiovascular disease."
+      ]
+    },
+    {
+      "tag": "atropine_definition",
+      "patterns": [
+        "What is Atropine?",
+        "Define Atropine",
+        "Can you explain Atropine?",
+        "What does Atropine mean?"
+      ],
+      "responses": [
+        "Atropine is a medication used to treat slow heart rate (bradycardia) and insecticide poisoning. It can also be used before eye examinations or as premedication before anesthesia procedures."
+      ]
+    },
+    {
+      "tag": "barbital_definition",
+      "patterns": [
+        "What is Barbital?",
+        "Define Barbital",
+        "Can you explain Barbital?",
+        "What does Barbital mean?"
+      ],
+      "responses": [
+        "Barbital is a group of drugs used to treat seizures, severe insomnia, or anxiety disorders. These drugs can also be used in the anesthesia process during surgery. Barbital should only be used as directed by a doctor."
+      ]
+    },
+    {
+      "tag": "barbital_acid_definition",
+      "patterns": [
+        "What is Barbital Acid?",
+        "Define Barbital Acid",
+        "Can you explain Barbital Acid?",
+        "What does Barbital Acid mean?"
+      ],
+      "responses": [
+        "Barbital Acid is an organic compound based on the pyrimidine heterocyclic framework. It is a odorless powder that is soluble in water. Barbital acid is the parent compound of barbiturate drugs."
+      ]
+    },    
+    {
+      "tag": "bemegride_definition",
+      "patterns": [
+        "What is Bemegride?",
+        "Define Bemegride",
+        "Can you explain Bemegride?",
+        "What does Bemegride mean?"
+      ],
+      "responses": [
+        "Bemegride is a central nervous system stimulant used to induce convulsions in experimental animals. It has also been used as a respiratory stimulant and in the treatment of barbiturate overdoses."
+      ]
+    },
+    {
+      "tag": "benzilic_acid_definition",
+      "patterns": [
+        "What is Benzilic Acid?",
+        "Define Benzilic Acid",
+        "Can you explain Benzilic Acid?",
+        "What does Benzilic Acid mean?"
+      ],
+      "responses": [
+        "Benzilic Acid is a white crystalline aromatic acid, soluble in many primary alcohols, used in the preparation of glycolate drugs including clidinium, dilantin, flutropium, and mepenzolate which are muscarinic acetylcholine receptor antagonists."
+      ]
+    },
+    {
+      "tag": "benzocaine_definition",
+      "patterns": [
+        "What is Benzocaine?",
+        "Define Benzocaine",
+        "Can you explain Benzocaine?",
+        "What does Benzocaine mean?"
+      ],
+      "responses": [
+        "Benzocaine, also known as benzokain, is a local anesthetic or numbing medication available as a mouthwash, gel, ointment, and powder. It works by inhibiting nerve signals in the body."
+      ]
+    },
+    {
+      "tag": "benzylpenicillin_definition",
+      "patterns": [
+        "What is Benzathine Benzylpenicillin?",
+        "Define Benzathine Benzylpenicillin",
+        "Can you explain Benzathine Benzylpenicillin?",
+        "What does Benzathine Benzylpenicillin mean?"
+      ],
+      "responses": [
+        "Benzathine Benzylpenicillin is a narrow-spectrum antibiotic administered only through injection or infusion. It can treat conditions caused by bacterial infections such as syphilis, gonorrhea, and meningitis. However, its use should be carefully monitored."
+      ]
+    },
+    {
+      "tag": "benzoic_acid_definition",
+      "patterns": [
+        "What is Benzoic Acid?",
+        "Define Benzoic Acid",
+        "Can you explain Benzoic Acid?",
+        "What does Benzoic Acid mean?"
+      ],
+      "responses": [
+        "Benzoic Acid is a fungistatic compound commonly used as a food and product preservative. When ingested, it is conjugated to glycine in the liver and excreted as hippuric acid."
+      ]
+    },
+    {
+      "tag": "benznidazole_definition",
+      "patterns": [
+        "What is Benznidazole?",
+        "Define Benznidazole",
+        "Can you explain Benznidazole?",
+        "What does Benznidazole mean?"
+      ],
+      "responses": [
+        "Benznidazole is a nitroimidazole compound similar to metronidazole and is associated with serum enzyme elevation during therapy in up to 10% of patients but not associated with clinically apparent acute liver injury cases. This antibiotic is used to treat Chagas disease in children aged 2 to 12 years."
+      ]
+    },
+    {
+      "tag": "benzfetamine_definition",
+      "patterns": [
+        "What is Benzfetamine?",
+        "Define Benzfetamine",
+        "Can you explain Benzfetamine?",
+        "What does Benzfetamine mean?"
+      ],
+      "responses": [
+        "Benzfetamine is a substitute amphetamine used in the short term along with a low-calorie diet, exercise, and doctor-approved behavior modification program to help you lose weight."
+      ]
+    },
+    {
+      "tag": "benzylamine_definition",
+      "patterns": [
+        "What is Benzylamine?",
+        "Define Benzylamine",
+        "Can you explain Benzylamine?",
+        "What does Benzylamine mean?"
+      ],
+      "responses": [
+        "Benzylamine is a primary amine compound having benzyl as a substituent N. It has been isolated from Moringa oleifera (horseradish tree). It has a role as an EC 3.5.5.1 (nitrilase) inhibitor, plant metabolite, and allergen. It is a primary amine and an aralkylamine."
+      ]
+    },
+    {
+      "tag": "benzquinamide_definition",
+      "patterns": [
+        "What is Benzquinamide?",
+        "Define Benzquinamide",
+        "Can you explain Benzquinamide?",
+        "What does Benzquinamide mean?"
+      ],
+      "responses": [
+        "Benzquinamide is a monocarboxylic amino acid. It has roles as an antiemetic, tranquilizer, H1 receptor antagonist, muscarinic antagonist, and antipsychotic agent."
+      ]
+    },    
+    {
+      "tag": "betahistine_definition",
+      "patterns": [
+        "What is Betahistine?",
+        "Define Betahistine",
+        "Can you explain Betahistine?",
+        "What does Betahistine mean?"
+      ],
+      "responses": [
+        "Betahistine is a medication used to relieve symptoms of vertigo, hearing loss, and ringing in the ears (tinnitus) caused by Meniere's disease. This medication should only be used with a doctor's prescription."
+      ]
+    },
+    {
+      "tag": "betadine_definition",
+      "patterns": [
+        "What is Betadine?",
+        "Define Betadine",
+        "Can you explain Betadine?",
+        "What does Betadine mean?"
+      ],
+      "responses": [
+        "Betadine is an antiseptic product used to prevent the growth and kill infectious microorganisms. This antiseptic medication is available in the form of liquid, ointment, spray, and stick."
+      ]
+    },
+    {
+      "tag": "ethyl_biscoumacetate_definition",
+      "patterns": [
+        "What is Ethyl biscoumacetate?",
+        "Define Ethyl biscoumacetate",
+        "Can you explain Ethyl biscoumacetate?",
+        "What does Ethyl biscoumacetate mean?"
+      ],
+      "responses": [
+        "Ethyl biscoumacetate or ethyl biscumacetate is a coumarin used as an anticoagulant. It has actions similar to Warfarin."
+      ]
+    },
+    {
+      "tag": "brucine_definition",
+      "patterns": [
+        "What is Brucine?",
+        "Define Brucine",
+        "Can you explain Brucine?",
+        "What does Brucine mean?"
+      ],
+      "responses": [
+        "Brucine is an alkaloid closely related to strychnine, most commonly found in the Strychnos nux-vomica tree. Brucine poisoning is rare, as it is usually ingested along with strychnine, which is more toxic than brucine. In synthetic chemistry, it can be used as a tool for stereospecific chemical synthesis."
+      ]
+    },
+    {
+      "tag": "bupivacaine_definition",
+      "patterns": [
+        "What is Bupivacaine?",
+        "Define Bupivacaine",
+        "Can you explain Bupivacaine?",
+        "What does Bupivacaine mean?"
+      ],
+      "responses": [
+        "Bupivacaine is a medication used to numb pain or provide anesthesia during surgical procedures, medical procedures, or childbirth. This medication is used as a regional anesthesia, meaning it will only affect a specific area of the body."
+      ]
+    },
+    {
+      "tag": "butabarbital_definition",
+      "patterns": [
+        "What is Butabarbital?",
+        "Define Butabarbital",
+        "Can you explain Butabarbital?",
+        "What does Butabarbital mean?"
+      ],
+      "responses": [
+        "Butabarbital is a medication used in the treatment of severe insomnia. This medication is not intended for long-term use. Additionally, it can also be used as a sedative before surgery."
+      ]
+    },
+    {
+      "tag": "butylparaben_definition",
+      "patterns": [
+        "What is Butylparaben?",
+        "Define Butylparaben",
+        "Can you explain Butylparaben?",
+        "What does Butylparaben mean?"
+      ],
+      "responses": [
+        "Butylparaben is one of the most common bactericidal/fungicidal additives in cosmetics, serving as a component of paraben preservatives commonly used to prevent microbial growth in products. This preservative is also frequently found in cosmetic products."
+      ]
+    },
+    {
+      "tag": "capreomycin_definition",
+      "patterns": [
+        "What is Capreomycin?",
+        "Define Capreomycin",
+        "Can you explain Capreomycin?",
+        "What does Capreomycin mean?"
+      ],
+      "responses": [
+        "Capreomycin is an antibiotic used in the treatment of tuberculosis caused by the bacteria Mycobacterium tuberculosis. This medication is also one of the options besides kanamycin or amikacin in the treatment of drug-resistant tuberculosis. This medication was previously listed in the World Health Organization's List of Essential Medicines before being removed from the list in 2019."
+      ]
+    },
+    {
+      "tag": "carbachol_definition",
+      "patterns": [
+        "What is Carbachol?",
+        "Define Carbachol",
+        "Can you explain Carbachol?",
+        "What does Carbachol mean?"
+      ],
+      "responses": [
+        "Carbachol is a prescription medication used to treat glaucoma symptoms and inhibit perioperative intraocular pressure. Carbachol can be used alone or with other medications."
+      ]
+    },
+    {
+      "tag": "carbenicillin_definition",
+      "patterns": [
+        "What is Carbenicillin?",
+        "Define Carbenicillin",
+        "Can you explain Carbenicillin?",
+        "What does Carbenicillin mean?"
+      ],
+      "responses": [
+        "Carbenicillin or Karbenisilin is an antibiotic in the penicillin drug group. It fights bacteria in your body. Carbenicillin is used to treat various types of bacterial infections, such as urinary tract infections. Carbenicillin can also be used for other purposes not listed in the medication guide."
+      ]
+    },
+    {
+      "tag": "carbenoxolone_definition",
+      "patterns": [
+        "What is Carbenoxolone?",
+        "Define Carbenoxolone",
+        "Can you explain Carbenoxolone?",
+        "What does Carbenoxolone mean?"
+      ],
+      "responses": [
+        "Carbenoxolone is a synthetic derivative of glycyrrhizinic acid (a constituent of licorice root) that has a structure closely resembling steroids and contains substances not far different from those in licorice root. It is often used to prevent symptoms of acid reflux disease (gastroesophageal reflux disease/GERD), canker sores, or diseases causing mouth ulcers (mouth ulceration)."
+      ]
+    },
+    {
+      "tag": "cephalexin_definition",
+      "patterns": [
+        "What is Cephalexin?",
+        "Define Cephalexin",
+        "Can you explain Cephalexin?",
+        "What does Cephalexin mean?"
+      ],
+      "responses": [
+        "Cephalexin is an antibiotic medication used to treat infectious diseases caused by bacterial infections, such as Staphylococcus aureus, Streptococcus pneumoniae, Haemophilus influenzae, or Escherichia coli."
+      ]
+    },
+    {
+      "tag": "cephaloglycin_definition",
+      "patterns": [
+        "What is Cephaloglycin?",
+        "Define Cephaloglycin",
+        "Can you explain Cephaloglycin?",
+        "What does Cephaloglycin mean?"
+      ],
+      "responses": [
+        "Cephaloglycin is an antibiotic related to cephalosporin but is no longer commonly used. It is an orally absorbed derivative of cephalosporin C. The bactericidal activity of Cephaloglycin is produced by inhibiting cell wall synthesis through an affinity for penicillin-binding proteins (PBPs)."
+      ]
+    },
+    {
+      "tag": "definition_cephaloridine",
+      "patterns": [
+        "Cephaloridine is?",
+        "What is Cephaloridine?",
+        "Define Cephaloridine?",
+        "Please explain Cephaloridine?",
+        "What does Cephaloridine mean?"
+      ],
+      "responses": [
+        "Cephaloridine, or cefaloridine, is a first-generation semisynthetic cephalosporin. It is derived from cephalosporin C and is a zwitterion at physiological pH."
+      ]
+    },
+    {
+      "tag": "definition_cephalothin",
+      "patterns": [
+        "Cephalothin is?",
+        "What is Cephalothin?",
+        "Define Cephalothin?",
+        "Please explain Cephalothin?",
+        "What does Cephalothin mean?"
+      ],
+      "responses": [
+        "Cephalothin is an antibiotic used to treat and prevent various bacterial infections. It is known as a cephalosporin antibiotic that works by stopping the growth of bacteria."
+      ]
+    },
+    {
+      "tag": "definition_cephapirin",
+      "patterns": [
+        "Cephapirin is?",
+        "What is Cephapirin?",
+        "Define Cephapirin?",
+        "Please explain Cephapirin?",
+        "What does Cephapirin mean?"
+      ],
+      "responses": [
+        "Cephapirin, or cefapirin, is a first-generation cephalosporin antibiotic available in injectable formulations. Cefapirin is partially plasma-bound and effective against both gram-negative and gram-positive organisms. It also has a role in veterinary medicine as Metricure, an intrauterine preparation, and in combination with prednisolone in Mastiplan, an intramammary preparation. Both are licensed in cattle."
+      ]
+    },
+    {
+      "tag": "definition_cefazolin",
+      "patterns": [
+        "Cefazolin is?",
+        "What is Cefazolin?",
+        "Define Cefazolin?",
+        "Please explain Cefazolin?",
+        "What does Cefazolin mean?"
+      ],
+      "responses": [
+        "Cefazolin is a medication used to treat bacterial infections such as urinary tract infections, sepsis, bone and joint infections, or pneumonia. It can also be used to prevent bacterial infection in someone who is about to undergo or has just undergone surgery."
+      ]
+    },
+    {
+      "tag": "definition_cephradine",
+      "patterns": [
+        "Cephradine is?",
+        "What is Cephradine?",
+        "Define Cephradine?",
+        "Please explain Cephradine?",
+        "What does Cephradine mean?"
+      ],
+      "responses": [
+        "Cephradine belongs to a group of drugs called cephalosporin antibiotics. Cephradine fights bacteria in the body. It is used to treat infections caused by bacteria, including upper respiratory tract infections, ear infections, skin infections, and urinary tract infections."
+      ]
+    },    
+    {
+      "tag": "definition_cyclizine",
+      "patterns": [
+        "Cyclizine is?",
+        "What is Cyclizine?",
+        "Define Cyclizine?",
+        "Please explain Cyclizine?",
+        "What does Cyclizine mean?"
+      ],
+      "responses": [
+        "Cyclizine is an antihistamine medicine. It is used to prevent or treat nausea, vomiting, and dizziness caused by motion sickness. It can also be used to reduce lightheadedness, dizziness, and loss of balance (vertigo) caused by conditions affecting the inner ear."
+      ]
+    },
+    {
+      "tag": "definition_cyclobarbital",
+      "patterns": [
+        "Cyclobarbital is?",
+        "What is Cyclobarbital?",
+        "Define Cyclobarbital?",
+        "Please explain Cyclobarbital?",
+        "What does Cyclobarbital mean?"
+      ],
+      "responses": [
+        "Cyclobarbital is a barbiturate derivative. This medicine is available in Russia as a fixed-dose combination with diazepam (100 mg cyclobarbital + 10 mg diazepam, brand name Reladorm) for the treatment of insomnia but was discontinued in 2019."
+      ]
+    },
+    {
+      "tag": "definition_cyclopentamine",
+      "patterns": [
+        "Cyclopentamine is?",
+        "What is Cyclopentamine?",
+        "Define Cyclopentamine?",
+        "Please explain Cyclopentamine?",
+        "What does Cyclopentamine mean?"
+      ],
+      "responses": [
+        "Cyclopentamine is a sympathomimetic drug, meaning it works on the sympathetic nervous system (the system responsible for the body's response during movement or running) as it is believed to have activity similar to the effects of adrenaline, noradrenaline, and dopamine."
+      ]
+    },
+    {
+      "tag": "definition_cyclopentolate",
+      "patterns": [
+        "Cyclopentolate is?",
+        "What is Cyclopentolate?",
+        "Define Cyclopentolate?",
+        "Please explain Cyclopentolate?",
+        "What does Cyclopentolate mean?"
+      ],
+      "responses": [
+        "Cyclopentolate is an eye drop medication used to address inflammation inside the eye, such as uveitis (inflammation of the uvea) and iritis (inflammation of the iris). It is also used to dilate the pupil so that the patient's eyes can be examined more easily by the doctor."
+      ]
+    },
+    {
+      "tag": "definition_cycloserine",
+      "patterns": [
+        "Cycloserine is?",
+        "What is Cycloserine?",
+        "Define Cycloserine?",
+        "Please explain Cycloserine?",
+        "What does Cycloserine mean?"
+      ],
+      "responses": [
+        "Cycloserine is an antibiotic medicine. Cycloserine is an antibiotic commonly used to treat bacterial infections such as tuberculosis (TB). In some cases, it may also be used to treat urinary tract infections (UTIs)."
+      ]
+    },
+    {
+      "tag": "definition_cimetidine",
+      "patterns": [
+        "Cimetidine is?",
+        "What is Cimetidine?",
+        "Define Cimetidine?",
+        "Please explain Cimetidine?",
+        "What does Cimetidine mean?"
+      ],
+      "responses": [
+        "Cimetidine is a medication used to treat excessive stomach acid, such as in gastroesophageal reflux disease (GERD) or Zollinger-Ellison syndrome. It is also used in the management of stomach ulcers, duodenal ulcers, or erosive esophagitis which are included as complications of excessive stomach acid."
+      ]
+    },
+    {
+      "tag": "definition_cinchonidine",
+      "patterns": [
+        "Cinchonidine is?",
+        "What is Cinchonidine?",
+        "Define Cinchonidine?",
+        "Please explain Cinchonidine?",
+        "What does Cinchonidine mean?"
+      ],
+      "responses": [
+        "Cinchonidine is an alkaloid found in Cinchona officinalis and Gongronema latifolium. It is used in asymmetric synthesis in organic chemistry."
+      ]
+    },    
+    {
+      "tag": "definition_cinchocaine",
+      "patterns": [
+        "Cinchocaine is?",
+        "What is Cinchocaine?",
+        "Define Cinchocaine?",
+        "Please explain Cinchocaine?",
+        "What does Cinchocaine mean?"
+      ],
+      "responses": [
+        "Cinchocaine is a type of local anesthetic. Cinchocaine is available in the form of ointment and suppositories used to relieve symptoms of pain and itching due to hemorrhoids. This medication works by temporarily stopping nerve function so that you do not feel pain."
+      ]
+    },
+    {
+      "tag": "definition_cytarabine",
+      "patterns": [
+        "Cytarabine is?",
+        "What is Cytarabine?",
+        "Define Cytarabine?",
+        "Please explain Cytarabine?",
+        "What does Cytarabine mean?"
+      ],
+      "responses": [
+        "Cytarabine is a medication used to treat certain types of blood cancer, including acute myeloid leukemia, acute lymphoblastic leukemia, and chronic myeloid leukemia. It can also be used to prevent and treat the spread of leukemia to the membranes surrounding the brain (meninges)."
+      ]
+    },
+    {
+      "tag": "definition_citric_acid",
+      "patterns": [
+        "Citric Acid is?",
+        "What is Citric Acid?",
+        "Define Citric Acid?",
+        "Please explain Citric Acid?",
+        "What does Citric Acid mean?"
+      ],
+      "responses": [
+        "Citric Acid, also known as ascorbic acid, is an acid used to brighten the skin, minimize the appearance of dark spots, and reduce fine lines. Citric acid is a keratolytic or exfoliant substance that can cause shedding of dead skin cells."
+      ]
+    },
+    {
+      "tag": "definition_clindamycin",
+      "patterns": [
+        "Clindamycin is?",
+        "What is Clindamycin?",
+        "Define Clindamycin?",
+        "Please explain Clindamycin?",
+        "What does Clindamycin mean?"
+      ],
+      "responses": [
+        "Clindamycin is a medication used to treat various bacterial infections, such as infections in the lungs, skin, blood, female reproductive organs, or internal organs. It's important to note that antibiotics cannot be used to treat viral infections, such as the flu."
+      ]
+    },
+    {
+      "tag": "definition_codeine",
+      "patterns": [
+        "Codeine is?",
+        "What is Codeine?",
+        "Define Codeine?",
+        "Please explain Codeine?",
+        "What does Codeine mean?"
+      ],
+      "responses": [
+        "Codeine is a medication used to relieve severe pain that cannot be managed with other pain relievers. Additionally, it can also be used to relieve cough. Codeine can be found in single-entity preparations or in combination with other drugs."
+      ]
+    },
+    {
+      "tag": "definition_colchicine",
+      "patterns": [
+        "Colchicine is?",
+        "What is Colchicine?",
+        "Define Colchicine?",
+        "Please explain Colchicine?",
+        "What does Colchicine mean?"
+      ],
+      "responses": [
+        "Colchicine is a medication used to treat or prevent pain that arises from conditions such as gout or gout attacks. It can also be used to help manage familial Mediterranean fever (FMF), a genetic disorder."
+      ]
+    },
+    {
+      "tag": "definition_dacarbazine",
+      "patterns": [
+        "Dacarbazine is?",
+        "What is Dacarbazine?",
+        "Define Dacarbazine?",
+        "Please explain Dacarbazine?",
+        "What does Dacarbazine mean?"
+      ],
+      "responses": [
+        "Dacarbazine is a chemotherapy drug used to treat advanced stage cancers, including soft tissue cancers, melanoma skin cancer, and Hodgkin's lymphoma. This medication can be given as a single therapy or combined with other cancer drugs."
+      ]
+    },
+    {
+      "tag": "definition_dantrolene",
+      "patterns": [
+        "Dantrolene is?",
+        "What is Dantrolene?",
+        "Define Dantrolene?",
+        "Please explain Dantrolene?",
+        "What does Dantrolene mean?"
+      ],
+      "responses": [
+        "Dantrolene is a medication used to treat muscle tightness, spasms, and cramps due to certain nerve disorders such as spinal cord injury, stroke, cerebral palsy, and multiple sclerosis. Dantrolene is one of the drugs classified as muscle relaxants. It works by relaxing muscles. Dantrolene helps reduce muscle pain and stiffness, improve your ability to move, and assist you in performing daily activities."
+      ]
+    },
+    {
+      "tag": "definition_dapsone",
+      "patterns": [
+        "Dapsone is?",
+        "What is Dapsone?",
+        "Define Dapsone?",
+        "Please explain Dapsone?",
+        "What does Dapsone mean?"
+      ],
+      "responses": [
+        "Dapsone is a medication used to treat leprosy, dermatitis herpetiformis, and acne. In leprosy treatment, dapsone can be combined with rifampicin or clofazimine. Dapsone will stop the growth of bacteria by inhibiting the folate metabolism pathway. It's important to note that this medication cannot be used to treat viral infections, such as the flu."
+      ]
+    },
+    {
+      "tag": "definition_daunorubicin",
+      "patterns": [
+        "Daunorubicin is?",
+        "What is Daunorubicin?",
+        "Define Daunorubicin?",
+        "Please explain Daunorubicin?",
+        "What does Daunorubicin mean?"
+      ],
+      "responses": [
+        "Daunorubicin is an anthracycline group antineoplastic drug used in the management of leukemia in children or adults. This drug works by inhibiting DNA replication and RNA synthesis. Daunorubicin is administered only through the intravenous route. Administration via intramuscular or subcutaneous routes is not allowed because this drug has corrosive properties."
+      ]
+    },    
+    {
+      "tag": "definition_debrisoquine",
+      "patterns": [
+        "Debrisoquine is?",
+        "What is Debrisoquine?",
+        "Define Debrisoquine?",
+        "Please explain Debrisoquine?",
+        "What does Debrisoquine mean?"
+      ],
+      "responses": [
+        "Debrisoquine is an antihypertensive drug. It works to lower blood pressure by reducing certain chemical levels in the blood. This allows your blood vessels (veins and arteries) to dilate, making blood circulation smoother."
+      ]
+    },
+    {
+      "tag": "definition_dehydrocholic_acid",
+      "patterns": [
+        "Dehydrocholic acid is?",
+        "What is Dehydrocholic acid?",
+        "Define Dehydrocholic acid?",
+        "Please explain Dehydrocholic acid?",
+        "What does Dehydrocholic acid mean?"
+      ],
+      "responses": [
+        "Dehydrocholic acid is a synthetic bile acid, produced by the oxidation of cholic acid. It acts as a choleretic, increasing bile output to cleanse the increased load of bile acids."
+      ]
+    },
+    {
+      "tag": "definition_deserpidine",
+      "patterns": [
+        "Deserpidine is?",
+        "What is Deserpidine?",
+        "Define Deserpidine?",
+        "Please explain Deserpidine?",
+        "What does Deserpidine mean?"
+      ],
+      "responses": [
+        "Deserpidine is a medication with antipsychotic and antihypertensive properties used to control high blood pressure and to alleviate psychotic behavior."
+      ]
+    },
+    {
+      "tag": "definition_desipramine",
+      "patterns": [
+        "Desipramine is?",
+        "What is Desipramine?",
+        "Define Desipramine?",
+        "Please explain Desipramine?",
+        "What does Desipramine mean?"
+      ],
+      "responses": [
+        "Desipramine is primarily used for the treatment of depression. It may also be useful for treating symptoms of attention deficit hyperactivity disorder (ADHD). The evidence of its benefits is only in the short term, and due to concerns about its side effects, its overall usefulness is unclear."
+      ]
+    },
+    {
+      "tag": "definition_dextromethorphan",
+      "patterns": [
+        "Dextromethorphan is?",
+        "What is Dextromethorphan?",
+        "Define Dextromethorphan?",
+        "Please explain Dextromethorphan?",
+        "What does Dextromethorphan mean?"
+      ],
+      "responses": [
+        "Dextromethorphan is a medication used to relieve dry cough or non-productive cough. It is commonly found in flu and cold medications. Dextromethorphan is available in tablet, capsule, syrup, and powder forms."
+      ]
+    },
+    {
+      "tag": "definition_dextromoramide",
+      "patterns": [
+        "Dextromoramide is?",
+        "What is Dextromoramide?",
+        "Define Dextromoramide?",
+        "Please explain Dextromoramide?",
+        "What does Dextromoramide mean?"
+      ],
+      "responses": [
+        "Dextromoramide is an analgesic commonly used to relieve moderate to severe pain. It belongs to the class of opioid analgesics and is used as a substitute for morphine in some cases, especially in cases where morphine is not suitable due to side effects or undesirable effects."
+      ]
+    },
+    {
+      "tag": "definition_diethanolamine",
+      "patterns": [
+        "Diethanolamine is?",
+        "What is Diethanolamine?",
+        "Define Diethanolamine?",
+        "Please explain Diethanolamine?",
+        "What does Diethanolamine mean?"
+      ],
+      "responses": [
+        "Diethanolamine is a colorless, oily organic compound. It has an ammonia-like odor. It is denser than water. Diethanolamine (DEA) is often used in the preparation of diethanolamides and diethanolamine salts of fatty acids formulated into soaps, as well as surfactants used in liquid detergents, dishwashing detergents, cosmetics, shampoos, and hair conditioners."
+      ]
+    },
+    {
+      "tag": "definition_diethylamine",
+      "patterns": [
+        "Diethylamine is?",
+        "What is Diethylamine?",
+        "Define Diethylamine?",
+        "Please explain Diethylamine?",
+        "What does Diethylamine mean?"
+      ],
+      "responses": [
+        "Diethylamine is a medication used to reduce pain caused by rheumatism and other mild muscle conditions including low back pain, fibrositis, sciatica, bruises, and tense muscles."
+      ]
+    },    
+    {
+      "tag": "definition_diphenhydramine",
+      "patterns": [
+        "Diphenhydramine is?",
+        "What is Diphenhydramine?",
+        "Define Diphenhydramine?",
+        "Please explain Diphenhydramine?",
+        "What does Diphenhydramine mean?"
+      ],
+      "responses": [
+        "Diphenhydramine is a medication used to relieve symptoms of allergies and the common cold. Additionally, it can be used to treat motion sickness, as well as tremor and muscle rigidity in Parkinson's disease patients."
+      ]
+    },
+    {
+      "tag": "definition_diphenoxylate",
+      "patterns": [
+        "Diphenoxylate is?",
+        "What is Diphenoxylate?",
+        "Define Diphenoxylate?",
+        "Please explain Diphenoxylate?",
+        "What does Diphenoxylate mean?"
+      ],
+      "responses": [
+        "Diphenoxylate is a medication used in the management and treatment of diarrhea. It falls into the class of antimotility drugs. This explains the indications, actions, and contraindications of Diphenoxylate/Atropine as a valuable agent in treating acute and chronic diarrhea."
+      ]
+    },
+    {
+      "tag": "definition_dihydrocodeine",
+      "patterns": [
+        "Dihydrocodeine is?",
+        "What is Dihydrocodeine?",
+        "Define Dihydrocodeine?",
+        "Please explain Dihydrocodeine?",
+        "What does Dihydrocodeine mean?"
+      ],
+      "responses": [
+        "Dihydrocodeine is a medication used to alleviate pain. It is an opioid analgesic, sometimes known as an opioid analgesic. Used to control and reduce moderate to severe pain. Dihydrocodeine acts on opioid receptors in the brain and inhibits pain."
+      ]
+    },
+    {
+      "tag": "definition_dihydroergocornine",
+      "patterns": [
+        "Dihydroergocornine is?",
+        "What is Dihydroergocornine?",
+        "Define Dihydroergocornine?",
+        "Please explain Dihydroergocornine?",
+        "What does Dihydroergocornine mean?"
+      ],
+      "responses": [
+        "Dihydroergocornine is an ergot alkaloid. Alongside dihydroergocristine and dihydroergocryptine, it is one of the three components of ergoloid."
+      ]
+    },
+    {
+      "tag": "definition_dihydroergocryptine",
+      "patterns": [
+        "Dihydroergocryptine is?",
+        "What is Dihydroergocryptine?",
+        "Define Dihydroergocryptine?",
+        "Please explain Dihydroergocryptine?",
+        "What does Dihydroergocryptine mean?"
+      ],
+      "responses": [
+        "Dihydroergocryptin (DHEC) is a medication used to treat Parkinson's Disease (shaking palsy). The drug is derived from ergot alkaloids. It can be used primarily as a dopamine D2 agonist as well as a partial D1 agonist."
+      ]
+    },
+    {
+      "tag": "definition_dihydroergocristine",
+      "patterns": [
+        "Dihydroergocristine is?",
+        "What is Dihydroergocristine?",
+        "Define Dihydroergocristine?",
+        "Please explain Dihydroergocristine?",
+        "What does Dihydroergocristine mean?"
+      ],
+      "responses": [
+        "Dihydroergocristine is a medication used in the treatment of cerebrovascular events and peripheral blood vessels. The drug has a role as an adrenergic antagonist and a vasodilator agent. Dihydroergocristine originates from the hydride, ergotaman, and ergocristine."
+      ]
+    },
+    {
+      "tag": "definition_dihydroergotamine",
+      "patterns": [
+        "Dihydroergotamine is?",
+        "What is Dihydroergotamine?",
+        "Define Dihydroergotamine?",
+        "Please explain Dihydroergotamine?",
+        "What does Dihydroergotamine mean?"
+      ],
+      "responses": [
+        "Dihydroergotamine is used to treat migraine headaches. Dihydroergotamine belongs to a class of drugs called ergot alkaloids. Dihydroergotamine was first registered with the FDA on April 12, 1946, first registered by a company called BAUSCH."
+      ]
+    },
+    {
+      "tag": "definition_dihydrostreptomycin",
+      "patterns": [
+        "Dihydrostreptomycin is?",
+        "What is Dihydrostreptomycin?",
+        "Define Dihydrostreptomycin?",
+        "Please explain Dihydrostreptomycin?",
+        "What does Dihydrostreptomycin mean?"
+      ],
+      "responses": [
+        "Dihydrostreptomycin is an aminoglycoside antibiotic. In humans, the use of dihydrostreptomycin has been associated with ototoxicity. The FDA withdrew its approval for the use of all drug products containing dihydrostreptomycin sulfate."
+      ]
+    },    
+    {
+      "tag": "definition_dinoprostone",
+      "patterns": [
+        "Dinoprostone is?",
+        "What is Dinoprostone?",
+        "Define Dinoprostone?",
+        "Please explain Dinoprostone?",
+        "What does Dinoprostone mean?"
+      ],
+      "responses": [
+        "Dinoprostone is a medication used to help prepare the cervix (the lower opening of the uterus) for childbirth. It is used in women who have a normal pregnancy and who are at or near their due date for delivery."
+      ]
+    },
+    {
+      "tag": "definition_dipyridamole",
+      "patterns": [
+        "Dipyridamole is?",
+        "What is Dipyridamole?",
+        "Define Dipyridamole?",
+        "Please explain Dipyridamole?",
+        "What does Dipyridamole mean?"
+      ],
+      "responses": [
+        "Dipyridamole is a medication used to prevent blood clots from forming after heart valve replacement surgery. Blood clots that block blood vessels can lead to strokes, pulmonary emboli, or heart attacks."
+      ]
+    },
+    {
+      "tag": "definition_disopyramide",
+      "patterns": [
+        "Disopyramide is?",
+        "What is Disopyramide?",
+        "Define Disopyramide?",
+        "Please explain Disopyramide?",
+        "What does Disopyramide mean?"
+      ],
+      "responses": [
+        "Disopyramide is a medication used to treat certain serious (possibly fatal) conditions associated with irregular heartbeats, such as persistent ventricular tachycardia. It is used to restore normal heart rhythm and maintain a stable heartbeat."
+      ]
+    },
+    {
+      "tag": "definition_doxepine",
+      "patterns": [
+        "Doxepine is?",
+        "What is Doxepine?",
+        "Define Doxepine?",
+        "Please explain Doxepine?",
+        "What does Doxepine mean?"
+      ],
+      "responses": [
+        "Doxepine or topical doxepin is a medication used to relieve itching due to certain skin conditions, such as atopic dermatitis or neurodermatitis. The available form of doxepine in Indonesia is a cream containing 5% doxepin hydrochloride."
+      ]
+    },
+    {
+      "tag": "definition_doxycycline",
+      "patterns": [
+        "Doxycycline is?",
+        "What is Doxycycline?",
+        "Define Doxycycline?",
+        "Please explain Doxycycline?",
+        "What does Doxycycline mean?"
+      ],
+      "responses": [
+        "Doxycycline is a medication used to treat various diseases caused by bacterial infections. This antibiotic is also used in the treatment of severe acne and malaria prevention. Doxycycline is available in capsule form and its use should be with a doctor's prescription."
+      ]
+    },
+    {
+      "tag": "definition_doxylamine",
+      "patterns": [
+        "Doxylamine is?",
+        "What is Doxylamine?",
+        "Define Doxylamine?",
+        "Please explain Doxylamine?",
+        "What does Doxylamine mean?"
+      ],
+      "responses": [
+        "Doxylamine is a medication used to relieve allergy symptoms and allergic rhinitis. It is usually combined with a cough suppressant (antitussive) or decongestant to relieve symptoms of the common cold. Sometimes, it is also used in the short-term management of insomnia."
+      ]
+    },
+    {
+      "tag": "definition_doxorubicin",
+      "patterns": [
+        "Doxorubicin is?",
+        "What is Doxorubicin?",
+        "Define Doxorubicin?",
+        "Please explain Doxorubicin?",
+        "What does Doxorubicin mean?"
+      ],
+      "responses": [
+        "Doxorubicin is a chemotherapy drug used to treat various types of cancer, such as breast cancer, prostate cancer, stomach cancer, thyroid cancer, liver cancer, or lymphoma."
+      ]
+    },
+    {
+      "tag": "definition_ephedrine",
+      "patterns": [
+        "Ephedrine is?",
+        "What is Ephedrine?",
+        "Define Ephedrine?",
+        "Please explain Ephedrine?",
+        "What does Ephedrine mean?"
+      ],
+      "responses": [
+        "Ephedrine is a medication used to address respiratory and lung-related issues. It is also often utilized for temporary relief of shortness of breath, chest tightness, wheezing due to bronchial asthma, and a number of other conditions as determined by a doctor."
+      ]
+    },    
+    {
+      "tag": "definition_emetine",
+      "patterns": [
+        "What is Emetine?",
+        "Definition of Emetine?",
+        "What is the meaning of Emetine?",
+        "Please explain Emetine?",
+        "What is meant by Emetine?"
+      ],
+      "responses": [
+        "Emetine is a drug used as an anti-protozoal in the treatment of amoebiasis. This drug is also commonly used to induce vomiting in patients."
+      ]
+    },
+    {
+      "tag": "definition_epinephrine",
+      "patterns": [
+        "What is Epinephrine?",
+        "Definition of Epinephrine?",
+        "What is the meaning of Epinephrine?",
+        "Please explain Epinephrine?",
+        "What is meant by Epinephrine?"
+      ],
+      "responses": [
+        "Epinephrine or adrenaline is an endogenous catecholamine from the adrenal glands, which in the form of medicine is often used to treat anaphylaxis, bradycardia, cardiac arrest, hypotension due to septic shock, and to induce and maintain mydriasis during ocular surgery."
+      ]
+    },
+    {
+      "tag": "definition_equilenin",
+      "patterns": [
+        "What is Equilenin?",
+        "Definition of Equilenin?",
+        "What is the meaning of Equilenin?",
+        "Please explain Equilenin?",
+        "What is meant by Equilenin?"
+      ],
+      "responses": [
+        "Equilenin is a steroid estrogen produced by horses. It has a total of five double bonds in rings A and B. High concentrations of equilenin are found in the urine of pregnant mares."
+      ]
+    },    
+    {
+      "tag": "definition_ergometrine",
+      "patterns": [
+        "What is Ergometrine?",
+        "Definition of Ergometrine?",
+        "What is the meaning of Ergometrine?",
+        "Please explain Ergometrine?",
+        "What is meant by Ergometrine?"
+      ],
+      "responses": [
+        "Ergometrine is a medication used to prevent and treat bleeding after childbirth or abortion. The way this medication works is by increasing uterine contractions, which can reduce blood loss after childbirth. It also causes constriction of blood vessels at the periphery and in the brain."
+      ]
+    },
+    {
+      "tag": "definition_ergotamine",
+      "patterns": [
+        "What is Ergotamine?",
+        "Definition of Ergotamine?",
+        "What is the meaning of Ergotamine?",
+        "Please explain Ergotamine?",
+        "What is meant by Ergotamine?"
+      ],
+      "responses": [
+        "Ergotamine is a medication used to relieve or prevent one-sided headaches or migraines. Ergotamine can be found in combination drug products with caffeine. Ergotamine works by affecting serotonin receptors and causing vasoconstriction effects on blood vessels."
+      ]
+    },
+    {
+      "tag": "definition_erythromycin",
+      "patterns": [
+        "What is Erythromycin?",
+        "Definition of Erythromycin?",
+        "What is the meaning of Erythromycin?",
+        "Please explain Erythromycin?",
+        "What is meant by Erythromycin?"
+      ],
+      "responses": [
+        "Erythromycin is a medication used to treat bacterial infections in various parts of the body, such as the skin, respiratory tract, gastrointestinal tract, urinary tract, and genital organs. This medication is available in various dosage forms, including tablets, capsules, dry syrup, topical liquid medication, creams, and gels."
+      ]
+    },
+    {
+      "tag": "definition_scopolamine",
+      "patterns": [
+        "What is Scopolamine?",
+        "Definition of Scopolamine?",
+        "What is the meaning of Scopolamine?",
+        "Please explain Scopolamine?",
+        "What is meant by Scopolamine?"
+      ],
+      "responses": [
+        "Scopolamine is a medication used to relieve cramps in the stomach, intestines, or urinary tract. Scopolamine is also known by the name hyoscine. Hyoscine consists of two types, namely hyoscine butylbromide and hyoscine hydrobromide."
+      ]
+    },        
+    {
+      "tag": "definition_spectinomycin",
+      "patterns": [
+        "What is Spectinomycin?",
+        "Definition of Spectinomycin?",
+        "What is the meaning of Spectinomycin?",
+        "Please explain Spectinomycin?",
+        "What is meant by Spectinomycin?"
+      ],
+      "responses": [
+        "Spectinomycin is an antibiotic that belongs to the aminocyclitol class closely related to aminoglycoside antibiotics. This antibiotic is administered in its salt form, spectinomycin hydrochloride (spectinomycin - HCl), which works by binding to the 30S ribosome in bacteria, causing failure in mRNA reading and thus preventing bacteria from synthesizing the proteins needed for their growth."
+      ]
+    },
+    {
+      "tag": "definition_ethinylestradiol",
+      "patterns": [
+        "What is Ethinylestradiol?",
+        "Definition of Ethinylestradiol?",
+        "What is the meaning of Ethinylestradiol?",
+        "Please explain Ethinylestradiol?",
+        "What is meant by Ethinylestradiol?"
+      ],
+      "responses": [
+        "Ethinylestradiol or ethinyl estradiol is a semi-synthetic estrogen commonly used as a component of oral combination contraceptives, along with progesterone or progestin. Ethinylestradiol is also used as hormone replacement therapy to alleviate symptoms and prevent osteoporosis in postmenopausal women."
+      ]
+    },
+    {
+      "tag": "definition_ethambutol",
+      "patterns": [
+        "What is Ethambutol?",
+        "Definition of Ethambutol?",
+        "What is the meaning of Ethambutol?",
+        "Please explain Ethambutol?",
+        "What is meant by Ethambutol?"
+      ],
+      "responses": [
+        "Ethambutol is used to treat tuberculosis (TB). This medication is usually combined with several other antibiotics, such as rifampicin and isoniazid, to stop the growth of the bacteria causing tuberculosis."
+      ]
+    },
+    {
+      "tag": "definition_ethanolamine",
+      "patterns": [
+        "What is Ethanolamine?",
+        "Definition of Ethanolamine?",
+        "What is the meaning of Ethanolamine?",
+        "Please explain Ethanolamine?",
+        "What is meant by Ethanolamine?"
+      ],
+      "responses": [
+        "Ethanolamine (EA) is a valuable source of carbon and/or nitrogen for bacteria capable of catabolizing it. Because it originates from the phospholipid membrane phosphatidylethanolamine, this compound is common in the digestive tract, which is rich in membranes due to the turnover of intestinal epithelium and resident microbiota."
+      ]
+    },    
+    {
+      "tag": "definition_ethylamine",
+      "patterns": [
+        "What is Ethylamine?",
+        "Definition of Ethylamine?",
+        "What is the meaning of Ethylamine?",
+        "Please explain Ethylamine?",
+        "What is meant by Ethylamine?"
+      ],
+      "responses": [
+        "Ethylamine is a colorless gas with a strong ammonia-like odor. It condenses just below room temperature into a liquid that can be mixed with nearly all solvents. It is a nucleophilic base, typical for amines. Ethylamine is widely used in the chemical industry and organic synthesis."
+      ]
+    },
+    {
+      "tag": "definition_etidocaine",
+      "patterns": [
+        "What is Etidocaine?",
+        "Definition of Etidocaine?",
+        "What is the meaning of Etidocaine?",
+        "Please explain Etidocaine?",
+        "What is meant by Etidocaine?"
+      ],
+      "responses": [
+        "Etidocaine is an amino amide in which the acid 2-[ethyl(propyl)amino]butanoate and 2,6-dimethylaniline have combined to form an amide bond. Used as a local anesthetic (amide caine), this drug has a rapid onset and long-lasting properties, similar to bupivacaine, and is administered by injection during surgical procedures and childbirth. It plays a role as a local anesthetic."
+      ]
+    },
+    {
+      "tag": "definition_ethoheptazine",
+      "patterns": [
+        "What is Ethoheptazine?",
+        "Definition of Ethoheptazine?",
+        "What is the meaning of Ethoheptazine?",
+        "Please explain Ethoheptazine?",
+        "What is meant by Ethoheptazine?"
+      ],
+      "responses": [
+        "Ethoheptazine, marketed under the name Zactane, is an opioid analgesic based on phenazepine. The drug was discovered in the 1950s and is related to other drugs like proheptazine. Ethoheptazine is no longer marketed in the United States."
+      ]
+    },
+    {
+      "tag": "definition_ethoxzolamide",
+      "patterns": [
+        "What is Ethoxzolamide?",
+        "Definition of Ethoxzolamide?",
+        "What is the meaning of Ethoxzolamide?",
+        "Please explain Ethoxzolamide?",
+        "What is meant by Ethoxzolamide?"
+      ],
+      "responses": [
+        "Ethoxzolamide is a sulfonamide used as a diuretic and in glaucoma. It inhibits the activity of carbonic anhydrase in the proximal renal tubules to decrease the reabsorption of water, sodium, potassium, and bicarbonate. Its pharmacological activity carries a risk of hypokalemia."
+      ]
+    },    
+    {
+      "tag": "definition_phenacetin",
+      "patterns": [
+        "What is Phenacetin?",
+        "Definition of Phenacetin?",
+        "What is the meaning of Phenacetin?",
+        "Please explain Phenacetin?",
+        "What is meant by Phenacetin?"
+      ],
+      "responses": [
+        "Phenacetin is an analgesic and antipyretic medication used in human and veterinary medicine for many years. It was introduced into therapy in 1887 and widely used in analgesic mixtures until it became implicated in kidney disease (nephropathy) due to analgesic abuse and discontinued due to its serious side effects."
+      ]
+    },
+    {
+      "tag": "definition_phenazocine",
+      "patterns": [
+        "What is Phenazocine?",
+        "Definition of Phenazocine?",
+        "What is the meaning of Phenazocine?",
+        "Please explain Phenazocine?",
+        "What is meant by Phenazocine?"
+      ],
+      "responses": [
+        "Phenazocine is an opioid analgesic medication related to Pentazocine (P274300) and has a similar profile of effects. Its use produces analgesia and euphoria and in some cases dysphoria and hallucinations at high doses."
+      ]
+    },
+    {
+      "tag": "definition_phendimetrazine",
+      "patterns": [
+        "What is Phendimetrazine?",
+        "Definition of Phendimetrazine?",
+        "What is the meaning of Phendimetrazine?",
+        "Please explain Phendimetrazine?",
+        "What is meant by Phendimetrazine?"
+      ],
+      "responses": [
+        "Phendimetrazine is a medication used in combination with approved exercise, behavior change, and low-calorie diet program to help you lose weight. It is used by certain overweight people, such as those who are obese or have weight-related medical problems."
+      ]
+    },
+    {
+      "tag": "definition_pheneticillin",
+      "patterns": [
+        "What is Pheneticillin?",
+        "Definition of Pheneticillin?",
+        "What is the meaning of Pheneticillin?",
+        "Please explain Pheneticillin?",
+        "What is meant by Pheneticillin?"
+      ],
+      "responses": [
+        "Pheneticillin (Penicillin) is an antibiotic used to treat bacterial infections. Diseases that can be treated with penicillin include respiratory infections, middle ear infections, or rheumatic fever."
+      ]
+    },    
+    {
+      "tag": "definition_fenformin",
+      "patterns": [
+        "What is Fenformin?",
+        "Definition of Fenformin?",
+        "What is the meaning of Fenformin?",
+        "Please explain Fenformin?",
+        "What is meant by Fenformin?"
+      ],
+      "responses": [
+        "Fenformin (Phenformin) is an antidiabetic drug of the biguanide class. It was marketed as DBI by Ciba-Geigy but was withdrawn from most markets by the late 1970s due to a high risk of lactic acidosis, which was fatal in 50% of cases."
+      ]
+    },
+    {
+      "tag": "definition_phenylbutazone",
+      "patterns": [
+        "What is Phenylbutazone?",
+        "Definition of Phenylbutazone?",
+        "What is the meaning of Phenylbutazone?",
+        "Please explain Phenylbutazone?",
+        "What is meant by Phenylbutazone?"
+      ],
+      "responses": [
+        "Phenylbutazone is a prescription medicine that effectively treats pain and inflammation in people with rheumatoid arthritis, gout, and osteoarthritis. The drug is classified as a nonsteroidal anti-inflammatory. Phenylbutazone has anti-inflammatory, antipyretic, and analgesic effects. It works by reducing the production of prostaglandins in the body. It is a compound that can stimulate uterine muscle contractions."
+      ]
+    },
+    {
+      "tag": "definition_phenylephrine",
+      "patterns": [
+        "What is Phenylephrine?",
+        "Definition of Phenylephrine?",
+        "What is the meaning of Phenylephrine?",
+        "Please explain Phenylephrine?",
+        "What is meant by Phenylephrine?"
+      ],
+      "responses": [
+        "Phenylephrine is a medication used to relieve nasal congestion due to the common cold, hay fever, or sinusitis. The drug is effective in relieving symptoms but cannot cure the underlying cause of nasal congestion."
+      ]
+    },
+    {
+      "tag": "definition_phenylethylamine",
+      "patterns": [
+        "What is Phenylethylamine?",
+        "Definition of Phenylethylamine?",
+        "What is the meaning of Phenylethylamine?",
+        "Please explain Phenylethylamine?",
+        "What is meant by Phenylethylamine?"
+      ],
+      "responses": [
+        "Phenylethylamine (PEA) is a central nervous system stimulant. Normal levels of PEA produced in the body support healthy energy levels as well as attention and focus, well-being, happiness, and cognitive function."
+      ]
+    },
+    {
+      "tag": "definition_phenylpropanolamine",
+      "patterns": [
+        "What is Phenylpropanolamine?",
+        "Definition of Phenylpropanolamine?",
+        "What is the meaning of Phenylpropanolamine?",
+        "Please explain Phenylpropanolamine?",
+        "What is meant by Phenylpropanolamine?"
+      ],
+      "responses": [
+        "Phenylpropanolamine or phenylpropanolamine HCl is a medication used to relieve nasal congestion due to the common cold, hay fever (allergic rhinitis), or sinus inflammation (sinusitis). Phenylpropanolamine can be found in combination with other medications."
+      ]
+    },
+    {
+      "tag": "definition_phenyltoloxamine",
+      "patterns": [
+        "What is Phenyltoloxamine?",
+        "Definition of Phenyltoloxamine?",
+        "What is the meaning of Phenyltoloxamine?",
+        "Please explain Phenyltoloxamine?",
+        "What is meant by Phenyltoloxamine?"
+      ],
+      "responses": [
+        "Phenyltoloxamine is an antihistamine that reduces the effects of natural chemical histamine in the body. Histamine can produce symptoms such as sneezing, itching, watery eyes, and runny nose."
+      ]
+    },    
+    {
+      "tag": "definition_phenindamine",
+      "patterns": [
+        "What is Phenindamine?",
+        "Definition of Phenindamine?",
+        "What is the meaning of Phenindamine?",
+        "Please explain Phenindamine?",
+        "What is meant by Phenindamine?"
+      ],
+      "responses": [
+        "Phenindamine is a medication classified as an antihistamine. It blocks the chemical histamine's effects that occur naturally in the body. Phenindamine is used to treat sneezing, runny nose, itching, rash, and other allergy symptoms, as well as other symptoms of the common cold."
+      ]
+    },
+    {
+      "tag": "definition_phenyramidol",
+      "patterns": [
+        "What is Phenyramidol?",
+        "Definition of Phenyramidol?",
+        "What is the meaning of Phenyramidol?",
+        "Please explain Phenyramidol?",
+        "What is meant by Phenyramidol?"
+      ],
+      "responses": [
+        "Phenyramidol is a mild to moderate analgesic and muscle relaxant used to relieve mild to moderate musculoskeletal pain, neck and shoulder pain, lower back pain, or pain and discomfort associated with muscle spasms that may be caused by muscle injury or strain. It is recommended to use this medication in conjunction with rest and physical therapy for best results."
+      ]
+    },
+    {
+      "tag": "definition_pheniramine",
+      "patterns": [
+        "What is Pheniramine?",
+        "Definition of Pheniramine?",
+        "What is the meaning of Pheniramine?",
+        "Please explain Pheniramine?",
+        "What is meant by Pheniramine?"
+      ],
+      "responses": [
+        "Pheniramine is an antihistamine approved for treating allergy symptoms such as nasal congestion and swollen eyes. It has also been used to treat dermatitis (skin inflammation) and motion sickness. Pheniramine may be listed as pheniramine maleate on the drug label. Pheniramine can be found in over-the-counter multi-symptom medications."
+      ]
+    },
+    {
+      "tag": "definition_phenytoin",
+      "patterns": [
+        "What is Phenytoin?",
+        "Definition of Phenytoin?",
+        "What is the meaning of Phenytoin?",
+        "Please explain Phenytoin?",
+        "What is meant by Phenytoin?"
+      ],
+      "responses": [
+        "Phenytoin is a medication used to control seizures in people with epilepsy. The drug is also used to manage trigeminal neuralgia and to prevent and treat seizures occurring during or after neurosurgery."
+      ]
+    },
+    {
+      "tag": "definition_phenmetrazine",
+      "patterns": [
+        "What is Phenmetrazine?",
+        "Definition of Phenmetrazine?",
+        "What is the meaning of Phenmetrazine?",
+        "Please explain Phenmetrazine?",
+        "What is meant by Phenmetrazine?"
+      ],
+      "responses": [
+        "Phenmetrazine is a sympathomimetic drug primarily used as an appetite suppressant. Its actions and mechanism are similar to dextroamphetamine. Phenmetrazine was originally marketed under the trade name Preludin as an anorectic agent. It has since been withdrawn from the market. Some parties consider it to have a higher addiction potential than amphetamines and it has been abused in many countries, for example, Sweden."
+      ]
+    },    
+    {
+      "tag": "definition_phenobarbital",
+      "patterns": [
+        "What is Phenobarbital?",
+        "Definition of Phenobarbital?",
+        "What is the meaning of Phenobarbital?",
+        "Please explain Phenobarbital?",
+        "What is meant by Phenobarbital?"
+      ],
+      "responses": [
+        "Phenobarbital is a medication used to control and alleviate seizures. Additionally, it is beneficial as a sedative medication commonly used before surgery, and to treat insomnia or difficulty sleeping."
+      ]
+    },
+    {
+      "tag": "definition_phenolphthalein",
+      "patterns": [
+        "What is Phenolphthalein?",
+        "Definition of Phenolphthalein?",
+        "What is the meaning of Phenolphthalein?",
+        "Please explain Phenolphthalein?",
+        "What is meant by Phenolphthalein?"
+      ],
+      "responses": [
+        "Phenolphthalein is an organic compound used as a laboratory reagent and pH indicator. It provides a laxative effect by stimulating the intestinal mucosa and constricting smooth muscle. However, phenolphthalein is no longer used as a laxative due to its suspected carcinogenic properties."
+      ]
+    },
+    {
+      "tag": "definition_fenoprofen",
+      "patterns": [
+        "What is Fenoprofen?",
+        "Definition of Fenoprofen?",
+        "What is the meaning of Fenoprofen?",
+        "Please explain Fenoprofen?",
+        "What is meant by Fenoprofen?"
+      ],
+      "responses": [
+        "Fenoprofen is a nonsteroidal anti-inflammatory drug (NSAID) effective in reducing fever, pain, and inflammation. Fenoprofen belongs to the class of drugs called nonsteroidal anti-inflammatory drugs (NSAIDs). Other NSAID drugs include ibuprofen (Motrin), indomethacin (Indocin), nabumetone (Relafen), naproxen (Aleve), and several others."
+      ]
+    },
+    {
+      "tag": "definition_phentermine",
+      "patterns": [
+        "What is Phentermine?",
+        "Definition of Phentermine?",
+        "What is the meaning of Phentermine?",
+        "Please explain Phentermine?",
+        "What is meant by Phentermine?"
+      ],
+      "responses": [
+        "Phentermine is used to facilitate weight loss in overweight individuals. It is used in conjunction with diet and exercise to treat obesity, particularly in people with risk factors such as high blood pressure, high cholesterol, or diabetes."
+      ]
+    },
+    {
+      "tag": "definition_phenoxypropazine",
+      "patterns": [
+        "What is Phenoxypropazine?",
+        "Definition of Phenoxypropazine?",
+        "What is the meaning of Phenoxypropazine?",
+        "Please explain Phenoxypropazine?",
+        "What is meant by Phenoxypropazine?"
+      ],
+      "responses": [
+        "Phenoxypropazine is a non-selective and irreversible monoamine oxidase enzyme (MAOI) inhibitor, which belongs to the hydrazine chemical class. This drug was marketed as an antidepressant in 1961 but was later withdrawn in 1966 due to its hepatotoxic potential."
+      ]
+    },    
+    {
+      "tag": "definition_phentolamine",
+      "patterns": [
+        "What is Phentolamine?",
+        "Definition of Phentolamine?",
+        "What is the meaning of Phentolamine?",
+        "Please explain Phentolamine?",
+        "What is meant by Phentolamine?"
+      ],
+      "responses": [
+        "Phentolamine is an alpha-adrenergic blocker medication that can be used to treat certain health conditions, such as: pheochromocytoma (tumor of the adrenal gland), hypertension, impotence (erectile dysfunction), peripheral vascular disease."
+      ]
+    },
+    {
+      "tag": "definition_fluorouracil",
+      "patterns": [
+        "What is Fluorouracil?",
+        "Definition of Fluorouracil?",
+        "What is the meaning of Fluorouracil?",
+        "Please explain Fluorouracil?",
+        "What is meant by Fluorouracil?"
+      ],
+      "responses": [
+        "Fluorouracil is a standard regimen used in the therapy of multiple solid tumors, both as an adjuvant in curative therapy and as palliative therapy for managing metastases."
+      ]
+    },
+    {
+      "tag": "definition_gentamicin",
+      "patterns": [
+        "What is Gentamicin?",
+        "Definition of Gentamicin?",
+        "What is the meaning of Gentamicin?",
+        "Please explain Gentamicin?",
+        "What is meant by Gentamicin?"
+      ],
+      "responses": [
+        "Gentamicin is a medication used to treat bacterial infections in various parts of the body, ranging from the outer ear, eyes, skin, to the brain. It is important to note that this medication cannot be used to treat infections caused by viruses or fungi."
+      ]
+    },
+    {
+      "tag": "definition_glycolic_acid",
+      "patterns": [
+        "What is Glycolic acid?",
+        "Definition of Glycolic acid?",
+        "What is the meaning of Glycolic acid?",
+        "Please explain Glycolic acid?",
+        "What is meant by Glycolic acid?"
+      ],
+      "responses": [
+        "Glycolic acid is one of the alpha hydroxy acids (AHAs) derived from sugar cane. Glycolic acid is widely used as an active ingredient in various beauty products, such as creams, serums, and facial toners."
+      ]
+    },
+    {
+      "tag": "definition_glucuronic_acid",
+      "patterns": [
+        "What is D-Glucuronic acid?",
+        "Definition of D-Glucuronic acid?",
+        "What is the meaning of D-Glucuronic acid?",
+        "Please explain D-Glucuronic acid?",
+        "What is meant by D-Glucuronic acid?"
+      ],
+      "responses": [
+        "D-Glucuronic acid (D-glucopyranuronate) is a D-glucuronate acid in the form of cyclic pyranose. It plays a role as an algal metabolite. It is the conjugate acid of D-glucopyranuronate. It is the enantiomer of L-glucopyranuronate."
+      ]
+    },    
+    {
+      "tag": "definition_glutethimide",
+      "patterns": [
+        "What is glutethimide?",
+        "Definition of glutethimide?",
+        "What is the meaning of glutethimide?",
+        "Please explain glutethimide?",
+        "What is meant by glutethimide?"
+      ],
+      "responses": [
+        "Glutethimide is a hypnotic and sedative drug. Its use has largely been replaced by other drugs due to the potential for severe psychological or physical dependence. It is a Depressant substance."
+      ]
+    },
+    {
+      "tag": "definition_guanethidine",
+      "patterns": [
+        "What is Guanethidine?",
+        "Definition of Guanethidine?",
+        "What is the meaning of Guanethidine?",
+        "Please explain Guanethidine?",
+        "What is meant by Guanethidine?"
+      ],
+      "responses": [
+        "Guanethidine is a commonly used medication class called an antihypertensive. It is used to treat high blood pressure (hypertension). Guanethidine works by controlling nerve impulses along certain nerve pathways."
+      ]
+    },
+    {
+      "tag": "definition_guanoxan",
+      "patterns": [
+        "What is Guanoxan?",
+        "Definition of Guanoxan?",
+        "What is the meaning of Guanoxan?",
+        "Please explain Guanoxan?",
+        "What is meant by Guanoxan?"
+      ],
+      "responses": [
+        "Guanoxan is an antihypertensive agent whose mechanism of action is similar to guanethidine. However, it can cause liver damage. Guanoxan was approved in the UK but withdrawn from the market due to hepatotoxicity."
+      ]
+    },
+    {
+      "tag": "definition_diamorphine",
+      "patterns": [
+        "What is Diamorphine?",
+        "Definition of Diamorphine?",
+        "What is the meaning of Diamorphine?",
+        "Please explain Diamorphine?",
+        "What is meant by Diamorphine?"
+      ],
+      "responses": [
+        "Diamorphine (Diamorfin) is an opioid analgesic agent used to alleviate severe pain associated with surgical procedures, myocardial infarction, or pain in severely ill patients and to relieve dyspnea in acute pulmonary edema."
+      ]
+    },    
+    {
+      "tag": "definition_hexylcaine",
+      "patterns": [
+        "What is Hexylcaine?",
+        "Definition of Hexylcaine?",
+        "What is the meaning of Hexylcaine?",
+        "Please explain Hexylcaine?",
+        "What is meant by Hexylcaine?"
+      ],
+      "responses": [
+        "Hexylcaine hydrochloride, also known as cyclaine and osmokain, is a short-acting local anesthetic that works by inhibiting sodium channels. Patients who overdose may present with symptoms of headache, tinnitus, numbness and tingling around the mouth and tongue, seizures, inability to breathe, and decreased cardiac function. Hexylcaine has been discontinued in the US market."
+      ]
+    },
+    {
+      "tag": "definition_hexobarbital",
+      "patterns": [
+        "What is Hexobarbital?",
+        "Definition of Hexobarbital?",
+        "What is the meaning of Hexobarbital?",
+        "Please explain Hexobarbital?",
+        "What is meant by Hexobarbital?"
+      ],
+      "responses": [
+        "Hexobarbital is a barbiturate derivative that has hypnotic and sedative effects. It was used in the 1940s and 1950s as an anesthetic for surgery. Additionally, the agent exhibits a fairly rapid onset of action and also has a short duration of action."
+      ]
+    },
+    {
+      "tag": "definition_hydrocodone",
+      "patterns": [
+        "What is Hydrocodone?",
+        "Definition of Hydrocodone?",
+        "What is the meaning of Hydrocodone?",
+        "Please explain Hydrocodone?",
+        "What is meant by Hydrocodone?"
+      ],
+      "responses": [
+        "Hydrocodone is a medication used to relieve moderate to severe pain. It can be combined with ibuprofen or acetaminophen. Hydrocodone is an opioid analgesic medication that works by inhibiting the transmission of pain signals in the central nervous system. Thus, pain sensation can be reduced."
+      ]
+    },
+    {
+      "tag": "definition_hydrocortisone",
+      "patterns": [
+        "What is Hydrocortisone?",
+        "Definition of Hydrocortisone?",
+        "What is the meaning of Hydrocortisone?",
+        "Please explain Hydrocortisone?",
+        "What is meant by Hydrocortisone?"
+      ],
+      "responses": [
+        "Hydrocortisone is a medication used to reduce inflammation, suppress excessive immune system reactions, and treat cortisol deficiency."
+      ]
+    },
+    {
+      "tag": "definition_hydromorphone",
+      "patterns": [
+        "What is Hydromorphone?",
+        "Definition of Hydromorphone?",
+        "What is the meaning of Hydromorphone?",
+        "Please explain Hydromorphone?",
+        "What is meant by Hydromorphone?"
+      ],
+      "responses": [
+        "Hydromorphone or hydromorphone hydrochloride is a medication used to relieve moderate to severe pain. This medication should not be used indiscriminately and must be used according to a doctor's prescription."
+      ]
+    },
+    {
+      "tag": "definition_histamine",
+      "patterns": [
+        "What is Histamine?",
+        "Definition of Histamine?",
+        "What is the meaning of Histamine?",
+        "Please explain Histamine?",
+        "What is meant by Histamine?"
+      ],
+      "responses": [
+        "Histamine is a chemical produced by white blood cells in the body when you experience an allergic reaction or infection. However, if this substance is produced excessively, its effects can cause health problems and disrupt some bodily functions."
+      ]
+    },
+    {
+      "tag": "definition_ibuprofen",
+      "patterns": [
+        "What is Ibuprofen?",
+        "Definition of Ibuprofen?",
+        "What is the meaning of Ibuprofen?",
+        "Please explain Ibuprofen?",
+        "What is meant by Ibuprofen?"
+      ],
+      "responses": [
+        "Ibuprofen is a medication used to relieve pain, reduce fever, and has anti-inflammatory effects. Ibuprofen can be used to relieve menstrual pain, headaches, toothaches, muscle pain, or joint pain due to arthritis. This medication is available in tablet, capsule, and syrup forms."
+      ]
+    },    
+    {
+      "tag": "definition_imidazole",
+      "patterns": [
+        "What is Imidazole?",
+        "Definition of Imidazole?",
+        "What is the meaning of Imidazole?",
+        "Please explain Imidazole?",
+        "What is meant by Imidazole?"
+      ],
+      "responses": [
+        "Imidazole is a heterocyclic ring containing nitrogen that has biological and pharmaceutical significance. Therefore, imidazole compounds have been an interesting source for researchers for over a century. The imidazole ring is a constituent of several important natural products, including purines, histamine, histidine, and nucleic acids."
+      ]
+    },
+    {
+      "tag": "definition_imipramine",
+      "patterns": [
+        "What is Imipramine?",
+        "Definition of Imipramine?",
+        "What is the meaning of Imipramine?",
+        "Please explain Imipramine?",
+        "What is meant by Imipramine?"
+      ],
+      "responses": [
+        "Imipramine is a medication used to alleviate symptoms of depression. Additionally, it can be used in the treatment of persistent bedwetting (enuresis) in children aged over 6 years."
+      ]
+    },
+    {
+      "tag": "definition_indoprofen",
+      "patterns": [
+        "What is Indoprofen?",
+        "Definition of Indoprofen?",
+        "What is the meaning of Indoprofen?",
+        "Please explain Indoprofen?",
+        "What is meant by Indoprofen?"
+      ],
+      "responses": [
+        "Indoprofen is a drug with analgesic and anti-inflammatory properties. Following reports of adverse reactions including reports of carcinogenicity in animal studies, this product was withdrawn from the market worldwide."
+      ]
+    },
+    {
+      "tag": "definition_indoramin",
+      "patterns": [
+        "What is Indoramin?",
+        "Definition of Indoramin?",
+        "What is the meaning of Indoramin?",
+        "Please explain Indoramin?",
+        "What is meant by Indoramin?"
+      ],
+      "responses": [
+        "Indoramin is a medication used to alleviate symptoms of benign prostatic hyperplasia, such as difficulty urinating, weak urine stream, or frequent urination. Additionally, it can be used to lower blood pressure in hypertension."
+      ]
+    },
+    {
+      "tag": "definition_isocarboxazid",
+      "patterns": [
+        "What is Isocarboxazid?",
+        "Definition of Isocarboxazid?",
+        "What is the meaning of Isocarboxazid?",
+        "Please explain Isocarboxazid?",
+        "What is meant by Isocarboxazid?"
+      ],
+      "responses": [
+        "Isocarboxazid is a medication used to alleviate symptoms of depression, including anxiety, panic disorder, or excessive fear. Isocarboxazid should not be used indiscriminately and must be prescribed by a doctor."
+      ]
+    },
+    {
+      "tag": "definition_isoniazid",
+      "patterns": [
+        "What is Isoniazid?",
+        "Definition of Isoniazid?",
+        "What is the meaning of Isoniazid?",
+        "Please explain Isoniazid?",
+        "What is meant by Isoniazid?"
+      ],
+      "responses": [
+        "Isoniazid is an antibiotic medication used to treat tuberculosis (TB). In the treatment of TB, isoniazid will be combined with other TB medications, such as rifampicin, ethambutol, or pyrazinamide."
+      ]
+    },    
+    {
+      "tag": "definition_isoproterenol",
+      "patterns": [
+        "What is Isoproterenol?",
+        "Definition of Isoproterenol?",
+        "What is the meaning of Isoproterenol?",
+        "Please explain Isoproterenol?",
+        "What is meant by Isoproterenol?"
+      ],
+      "responses": [
+        "Isoproterenol is a non-selective beta-adrenergic receptor agonist indicated for treating heart block, Adams-Stokes attacks, bronchospasm during anesthesia, cardiac arrest, hypovolemic shock, septic shock, hypoperfusion, congestive heart failure, and cardiogenic shock."
+      ]
+    },
+    {
+      "tag": "definition_isoxsuprine",
+      "patterns": [
+        "What is Isoxsuprine?",
+        "Definition of Isoxsuprine?",
+        "What is the meaning of Isoxsuprine?",
+        "Please explain Isoxsuprine?",
+        "What is meant by Isoxsuprine?"
+      ],
+      "responses": [
+        "Isoxsuprine is a medication used to treat diseases with impaired blood flow, such as Raynaud's disease, arteriosclerosis, Buerger's disease, or cerebrovascular insufficiency. This medication is available in tablet and injectable forms."
+      ]
+    },
+    {
+      "tag": "definition_kanamycin",
+      "patterns": [
+        "What is Kanamycin?",
+        "Definition of Kanamycin?",
+        "What is the meaning of Kanamycin?",
+        "Please explain Kanamycin?",
+        "What is meant by Kanamycin?"
+      ],
+      "responses": [
+        "Kanamycin is a medication used to treat bacterial infections that are difficult to treat with other drugs. Some infectious diseases that can be treated with kanamycin include septicemia, complicated urinary tract infections, peritonitis, or respiratory tract infections."
+      ]
+    },
+    {
+      "tag": "definition_levodopa",
+      "patterns": [
+        "What is Levodopa?",
+        "Definition of Levodopa?",
+        "What is the meaning of Levodopa?",
+        "Please explain Levodopa?",
+        "What is meant by Levodopa?"
+      ],
+      "responses": [
+        "Levodopa is a medication used to alleviate symptoms of Parkinson's disease, such as tremors, muscle stiffness, and difficulty moving. To enhance treatment effectiveness, levodopa is often combined with carbidopa or benserazide."
+      ]
+    },
+    {
+      "tag": "definition_levomepromazine",
+      "patterns": [
+        "What is Levomepromazine?",
+        "Definition of Levomepromazine?",
+        "What is the meaning of Levomepromazine?",
+        "Please explain Levomepromazine?",
+        "What is meant by Levomepromazine?"
+      ],
+      "responses": [
+        "Levomepromazine is a medication used to reduce disturbing symptoms in palliative care, alleviate symptoms of schizophrenia. Levomepromazine is also referred to as an antipsychotic commonly used as an antiemetic to alleviate nausea and vomiting in palliative care settings."
+      ]
+    },
+    {
+      "tag": "definition_levorphanol",
+      "patterns": [
+        "What is Levorphanol?",
+        "Definition of Levorphanol?",
+        "What is the meaning of Levorphanol?",
+        "Please explain Levorphanol?",
+        "What is meant by Levorphanol?"
+      ],
+      "responses": [
+        "Levorphanol is a potent synthetic opioid analgesic indicated for the management of moderate to severe pain or as preoperative therapy if opioid analgesia is appropriate. Levorphanol is similar to morphine in its mechanism of action, but it is 8 times more potent than morphine."
+      ]
+    },
+    {
+      "tag": "definition_lidocaine",
+      "patterns": [
+        "What is Lidocaine?",
+        "Definition of Lidocaine?",
+        "What is the meaning of Lidocaine?",
+        "Please explain Lidocaine?",
+        "What is meant by Lidocaine?"
+      ],
+      "responses": [
+        "Lidocaine is a medication used to numb or produce a numbing effect on specific parts of the body (local anesthetic). This medication can also be used to manage certain types of arrhythmias, thus falling into the category of antiarrhythmic drugs."
+      ]
+    },
+    {
+      "tag": "definition_lincomycin",
+      "patterns": [
+        "What is Lincomycin?",
+        "Definition of Lincomycin?",
+        "What is the meaning of Lincomycin?",
+        "Please explain Lincomycin?",
+        "What is meant by Lincomycin?"
+      ],
+      "responses": [
+        "Lincomycin is an antibiotic used to treat severe bacterial infections in the lungs, bones, joints, and skin. Lincomycin is usually prescribed to patients allergic to penicillin antibiotics."
+      ]
+    },
+    {
+      "tag": "definition_mecamylamine",
+      "patterns": [
+        "What is Mecamylamine?",
+        "Definition of Mecamylamine?",
+        "What is the meaning of Mecamylamine?",
+        "Please explain Mecamylamine?",
+        "What is meant by Mecamylamine?"
+      ],
+      "responses": [
+        "Mecamylamine is an effective oral antihypertensive agent and ganglionic blocker, and is a secondary amine. Mecamylamine is indicated for the management of moderate to severe essential hypertension and in cases of uncomplicated malignant hypertension."
+      ]
+    },
+    {
+      "tag": "definition_mefenamic_acid",
+      "patterns": [
+        "What is Mefenamic Acid?",
+        "Definition of Mefenamic Acid?",
+        "What is the meaning of Mefenamic Acid?",
+        "Please explain Mefenamic Acid?",
+        "What is meant by Mefenamic Acid?"
+      ],
+      "responses": [
+        "Mefenamic acid is a medication used to relieve pain due to menstrual pain, injuries, toothaches, headaches, or joint inflammation. Mefenamic acid is available in tablet, capsule, and liquid suspension forms."
+      ]
+    },
+    {
+      "tag": "definition_mephentermine",
+      "patterns": [
+        "What is Mephentermine?",
+        "Definition of Mephentermine?",
+        "What is the meaning of Mephentermine?",
+        "Please explain Mephentermine?",
+        "What is meant by Mephentermine?"
+      ],
+      "responses": [
+        "Mephentermine is used to control or maintain blood pressure in patients with hypotension and to balance blood pressure during spinal anesthesia performed by midwives or obstetricians before childbirth."
+      ]
+    },
+    {
+      "tag": "definition_meperidine",
+      "patterns": [
+        "What is Meperidine?",
+        "Definition of Meperidine?",
+        "What is the meaning of Meperidine?",
+        "Please explain Meperidine?",
+        "What is meant by Meperidine?"
+      ],
+      "responses": [
+        "Meperidine is a synthetic opioid agonist belonging to the phenylpiperidine class. Meperidine can cause fewer smooth muscle spasms, constipation, and depression of cough reflex compared to morphine at equipotent doses. It has a slightly faster onset of action compared to morphine and a slightly shorter duration of action."
+      ]
+    },
+    {
+      "tag": "definition_mepivacaine",
+      "patterns": [
+        "What is Mepivacaine?",
+        "Definition of Mepivacaine?",
+        "What is the meaning of Mepivacaine?",
+        "Please explain Mepivacaine?",
+        "What is meant by Mepivacaine?"
+      ],
+      "responses": [
+        "Mepivacaine is a local anesthetic commonly used for dental procedures. This medication is also used as a spinal or epidural anesthetic. It works by blocking nerve impulses that send pain signals to your brain."
+      ]
+    },    
+    {
+      "tag": "definition_metaproterenol",
+      "patterns": [
+        "What is Metaproterenol?",
+        "Definition of Metaproterenol?",
+        "What is the meaning of Metaproterenol?",
+        "Please explain Metaproterenol?",
+        "What is meant by Metaproterenol?"
+      ],
+      "responses": [
+        "Metaproterenol is a bronchodilator. It works by relaxing the muscles in the airways to improve breathing. Metaproterenol is used to treat conditions such as asthma, bronchitis, and emphysema."
+      ]
+    },
+    {
+      "tag": "definition_methadone",
+      "patterns": [
+        "What is Methadone?",
+        "Definition of Methadone?",
+        "What is the meaning of Methadone?",
+        "Please explain Methadone?",
+        "What is meant by Methadone?"
+      ],
+      "responses": [
+        "Methadone is a medication used to relieve severe pain and to treat opioid dependence. Methadone should not be used indiscriminately and must be used according to a doctor's prescription."
+      ]
+    },
+    {
+      "tag": "definition_metamfetamin",
+      "patterns": [
+        "What is Metamfetamin?",
+        "Definition of Metamfetamin?",
+        "What is the meaning of Metamfetamin?",
+        "Please explain Metamfetamin?",
+        "What is meant by Metamfetamin?"
+      ],
+      "responses": [
+        "Metamfetamine is a medication used to treat attention deficit hyperactivity disorder (ADHD). This medication is also used to promote weight loss in obese patients who have not succeeded with diet and exercise."
+      ]
+    },
+    {
+      "tag": "definition_methapyrilene",
+      "patterns": [
+        "What is Methapyrilene?",
+        "Definition of Methapyrilene?",
+        "What is the meaning of Methapyrilene?",
+        "Please explain Methapyrilene?",
+        "What is meant by Methapyrilene?"
+      ],
+      "responses": [
+        "Methapyrilene is a medication with relatively strong sedative effects, so its primary use is as a treatment for insomnia rather than as an antihistamine. It has been shown to be a strong carcinogen, so the drug's manufacturers voluntarily withdrew it from the market."
+      ]
+    },
+    {
+      "tag": "definition_methaqualone",
+      "patterns": [
+        "What is Methaqualone?",
+        "Definition of Methaqualone?",
+        "What is the meaning of Methaqualone?",
+        "Please explain Methaqualone?",
+        "What is meant by Methaqualone?"
+      ],
+      "responses": [
+        "Methaqualone (Quaaludes) is a synthetic central nervous system depressant, similar to barbiturates. Its active ingredient, methaqualone, is an anxiolytic (anxiety-reducing) and sedative-hypnotic drug that induces drowsiness."
+      ]
+    },
+    {
+      "tag": "definition_metharbital",
+      "patterns": [
+        "What is Metharbital?",
+        "Definition of Metharbital?",
+        "What is the meaning of Metharbital?",
+        "Please explain Metharbital?",
+        "What is meant by Metharbital?"
+      ],
+      "responses": [
+        "Metharbital is a barbiturate anticonvulsant, a barbiturate used for short-term treatment of insomnia. It belongs to a class of drugs called central nervous system (CNS) depressants, which induce drowsiness and relieve tension or anxiety."
+      ]
+    },    
+    {
+      "tag": "definition_methazolamide",
+      "patterns": [
+        "What is Methazolamide?",
+        "Definition of Methazolamide?",
+        "What is the meaning of Methazolamide?",
+        "Please explain Methazolamide?",
+        "What is meant by Methazolamide?"
+      ],
+      "responses": [
+        "Methazolamide is often used as a medication to lower pressure inside the eye (intraocular pressure) in patients with certain types of glaucoma. Lowering high pressure inside the eye helps to prevent vision loss and nerve damage."
+      ]
+    },
+    {
+      "tag": "definition_methenamine",
+      "patterns": [
+        "What is Methenamine?",
+        "Definition of Methenamine?",
+        "What is the meaning of Methenamine?",
+        "Please explain Methenamine?",
+        "What is meant by Methenamine?"
+      ],
+      "responses": [
+        "Methenamine is an antibiotic medication commonly used to treat urinary tract infections. Usually, doctors will prescribe this medication when various other drugs fail to treat the infection you are experiencing."
+      ]
+    },
+    {
+      "tag": "definition_methicillin",
+      "patterns": [
+        "What is Methicillin?",
+        "Definition of Methicillin?",
+        "What is the meaning of Methicillin?",
+        "Please explain Methicillin?",
+        "What is meant by Methicillin?"
+      ],
+      "responses": [
+        "Methicillin-resistant Staphylococcus aureus (MRSA) is a bacteria that is resistant to several types of antibiotics, such as amoxicillin and penicillin. MRSA infections can be characterized by the appearance of skin bumps resembling pimples and are painful to the touch."
+      ]
+    },
+    {
+      "tag": "definition_methylphenidate",
+      "patterns": [
+        "What is Methylphenidate?",
+        "Definition of Methylphenidate?",
+        "What is the meaning of Methylphenidate?",
+        "Please explain Methylphenidate?",
+        "What is meant by Methylphenidate?"
+      ],
+      "responses": [
+        "Methylphenidate is a medication used to control symptoms of attention deficit hyperactivity disorder (ADHD). This medication is also used in the treatment of narcolepsy, a sleep disorder that can cause sudden sleepiness in affected individuals."
+      ]
+    },
+    {
+      "tag": "definition_methyprylon",
+      "patterns": [
+        "What is Methyprylon?",
+        "Definition of Methyprylon?",
+        "What is the meaning of Methyprylon?",
+        "Please explain Methyprylon?",
+        "What is meant by Methyprylon?"
+      ],
+      "responses": [
+        "Methyprylon is a sedative medication from the piperidinedione derivative family previously used for the treatment of insomnia. However, with the introduction of newer medications with fewer side effects, such as benzodiazepines, the clinical use of methyprylon is now limited."
+      ]
+    },
+    {
+      "tag": "definition_methysergide",
+      "patterns": [
+        "What is Methysergide?",
+        "Definition of Methysergide?",
+        "What is the meaning of Methysergide?",
+        "Please explain Methysergide?",
+        "What is meant by Methysergide?"
+      ],
+      "responses": [
+        "Methysergide is an ergot alkaloid used for the prophylaxis of migraines and cluster headaches. It has been shown to inhibit or block the effects of serotonin, a substance that may be involved in the mechanism of vascular headaches."
+      ]
+    },
+    {
+      "tag": "definition_metoprolol",
+      "patterns": [
+        "What is Metoprolol?",
+        "Definition of Metoprolol?",
+        "What is the meaning of Metoprolol?",
+        "Please explain Metoprolol?",
+        "What is meant by Metoprolol?"
+      ],
+      "responses": [
+        "Metoprolol is used to lower heart rate, blood pressure, and workload on the heart. This medication is typically used to treat high blood pressure, chest pain (angina), and heart failure."
+      ]
+    },
+    {
+      "tag": "definition_methotrexate",
+      "patterns": [
+        "What is Methotrexate?",
+        "Definition of Methotrexate?",
+        "What is the meaning of Methotrexate?",
+        "Please explain Methotrexate?",
+        "What is meant by Methotrexate?"
+      ],
+      "responses": [
+        "Methotrexate is a medication used to treat cancer, such as breast cancer, choriocarcinoma, leukemia, bone cancer, lymphoma, or mycosis fungoides. Additionally, this medication can also be used in the treatment of autoimmune diseases, such as psoriasis, rheumatoid arthritis, Crohn's disease, or lupus."
+      ]
+    },    
+    {
+      "tag": "definition_methoxamine",
+      "patterns": [
+        "What is Methoxamine?",
+        "Definition of Methoxamine?",
+        "What is the meaning of Methoxamine?",
+        "Please explain Methoxamine?",
+        "What is meant by Methoxamine?"
+      ],
+      "responses": [
+        "Methoxamine is a potent sympathomimetic amine that increases both systolic and diastolic blood pressure. Methoxamine is indicated for the prevention and treatment of acute hypotensive states occurring with spinal anesthesia."
+      ]
+    },
+    {
+      "tag": "definition_metronidazole",
+      "patterns": [
+        "What is Metronidazole?",
+        "Definition of Metronidazole?",
+        "What is the meaning of Metronidazole?",
+        "Please explain Metronidazole?",
+        "What is meant by Metronidazole?"
+      ],
+      "responses": [
+        "Metronidazole is an antibiotic used to treat bacterial infections in various organs of the body, including the digestive tract, lungs, blood, urinary tract, and genitals. This medication can also be used to treat certain parasitic infections, such as trichomoniasis or amebiasis."
+      ]
+    },
+    {
+      "tag": "definition_minocycline",
+      "patterns": [
+        "What is Minocycline?",
+        "Definition of Minocycline?",
+        "What is the meaning of Minocycline?",
+        "Please explain Minocycline?",
+        "What is meant by Minocycline?"
+      ],
+      "responses": [
+        "Minocycline is an antibiotic medication used to treat diseases caused by bacterial infections, such as gonorrhea, syphilis, or nongonococcal urethritis. Additionally, minocycline is used to treat acne or periodontitis."
+      ]
+    },
+    {
+      "tag": "definition_molindone",
+      "patterns": [
+        "What is Molindone?",
+        "Definition of Molindone?",
+        "What is the meaning of Molindone?",
+        "Please explain Molindone?",
+        "What is meant by Molindone?"
+      ],
+      "responses": [
+        "Molindone is a conventional antipsychotic agent used in the therapy of schizophrenia. Molindone therapy is generally associated with minor serum aminotransferase elevations but has rarely been linked to clinically apparent acute liver injury."
+      ]
+    },
+    {
+      "tag": "definition_nafcillin",
+      "patterns": [
+        "What is Nafcillin?",
+        "Definition of Nafcillin?",
+        "What is the meaning of Nafcillin?",
+        "Please explain Nafcillin?",
+        "What is meant by Nafcillin?"
+      ],
+      "responses": [
+        "Nafcillin is an antibiotic in the penicillin group of drugs used to treat various types of infections, especially those caused by staphylococcus bacteria ('staph' infections). Nafcillin is available in generic form."
+      ]
+    },
+    {
+      "tag": "definition_nalorphine",
+      "patterns": [
+        "What is Nalorphine?",
+        "Definition of Nalorphine?",
+        "What is the meaning of Nalorphine?",
+        "Please explain Nalorphine?",
+        "What is meant by Nalorphine?"
+      ],
+      "responses": [
+        "Nalorphine is a medication used to counteract respiratory depression produced by narcotic overdoses. It is a morphine derivative that acts as an antagonist to the depressant and stimulant effects of morphine and related narcotics."
+      ]
+    },    
+    {
+      "tag": "definition_naloxone",
+      "patterns": [
+        "What is Naloxone?",
+        "Definition of Naloxone?",
+        "What is the meaning of Naloxone?",
+        "Please explain Naloxone?",
+        "What is meant by Naloxone?"
+      ],
+      "responses": [
+        "Naloxone is a medication used to counteract opioid drug overdoses. Some types of drugs that fall under opioids include codeine, morphine, methadone, oxycodone, heroin, fentanyl, and hydrocodone. Naloxone is available in injectable form."
+      ]
+    },
+    {
+      "tag": "definition_naproxen",
+      "patterns": [
+        "What is Naproxen?",
+        "Definition of Naproxen?",
+        "What is the meaning of Naproxen?",
+        "Please explain Naproxen?",
+        "What is meant by Naproxen?"
+      ],
+      "responses": [
+        "Naproxen is a medication used to relieve pain, fever, swelling, and redness caused by inflammation. This medication can be used to alleviate pain during menstruation, pain due to tendon inflammation, gout, rheumatoid arthritis, osteoarthritis, or ankylosing spondylitis."
+      ]
+    },
+    {
+      "tag": "definition_nicotinamide",
+      "patterns": [
+        "What is Nicotinamide?",
+        "Definition of Nicotinamide?",
+        "What is the meaning of Nicotinamide?",
+        "Please explain Nicotinamide?",
+        "What is meant by Nicotinamide?"
+      ],
+      "responses": [
+        "Nicotinamide, or niacinamide, is a supplement used to prevent and treat vitamin B3 deficiency. One condition that can occur due to deficiency or lack of vitamin B3 is pellagra. Nicotinamide is available in tablet and gel forms."
+      ]
+    },
+    {
+      "tag": "definition_nitrazepam",
+      "patterns": [
+        "What is Nitrazepam?",
+        "Definition of Nitrazepam?",
+        "What is the meaning of Nitrazepam?",
+        "Please explain Nitrazepam?",
+        "What is meant by Nitrazepam?"
+      ],
+      "responses": [
+        "Nitrazepam is a medication used to address difficulties sleeping. The use of this medication should not be done indiscriminately. To avoid mistakes, understand the instructions for use, dosage, side effects, and other provisions in the following review."
+      ]
+    },
+    {
+      "tag": "definition_nitrofurantoin",
+      "patterns": [
+        "What is Nitrofurantoin?",
+        "Definition of Nitrofurantoin?",
+        "What is the meaning of Nitrofurantoin?",
+        "Please explain Nitrofurantoin?",
+        "What is meant by Nitrofurantoin?"
+      ],
+      "responses": [
+        "Nitrofurantoin is an antibiotic medication used to treat urinary tract infections, including inflammation of the bladder (cystitis) or kidney infections. Nitrofurantoin works by inhibiting the formation of bacterial cell wall protein."
+      ]
+    },    
+    {
+      "tag": "definition_novobiocin",
+      "patterns": [
+        "What is Novobiocin?",
+        "Definition of Novobiocin?",
+        "What is the meaning of Novobiocin?",
+        "Please explain Novobiocin?",
+        "What is meant by Novobiocin?"
+      ],
+      "responses": [
+        "Novobiocin is an aminocoumarin antibiotic produced by the actinomycete Streptomyces niveus. Novobiocin binds to DNA gyrase and inhibits adenosine triphosphatase (ATPase) activity."
+      ]
+    },
+    {
+      "tag": "definition_orphenadrine",
+      "patterns": [
+        "What is Orphenadrine?",
+        "Definition of Orphenadrine?",
+        "What is the meaning of Orphenadrine?",
+        "Please explain Orphenadrine?",
+        "What is meant by Orphenadrine?"
+      ],
+      "responses": [
+        "Orphenadrine is an anticholinergic with dominant central effects and only weak peripheral effects. Orphenadrine is indicated as an adjunct to rest, physical therapy, and other measures for the relief of discomfort associated with painful musculoskeletal conditions."
+      ]
+    },
+    {
+      "tag": "definition_oxacillin",
+      "patterns": [
+        "What is Oxacillin?",
+        "Definition of Oxacillin?",
+        "What is the meaning of Oxacillin?",
+        "Please explain Oxacillin?",
+        "What is meant by Oxacillin?"
+      ],
+      "responses": [
+        "Oxacillin is a medication used to treat infections caused by bacteria resistant to penicillin G antibiotics. Staphylococcus infections can cause various diseases such as pneumonia, endocarditis, or bone and muscle infections (osteomyelitis)."
+      ]
+    },
+    {
+      "tag": "definition_oxycodone",
+      "patterns": [
+        "What is Oxycodone?",
+        "Definition of Oxycodone?",
+        "What is the meaning of Oxycodone?",
+        "Please explain Oxycodone?",
+        "What is meant by Oxycodone?"
+      ],
+      "responses": [
+        "Oxycodone is a pain reliever. It is commonly used to alleviate moderate to severe pain, such as postoperative pain or pain due to cancer."
+      ]
+    },
+    {
+      "tag": "definition_oxyphenbutazone",
+      "patterns": [
+        "What is Oxyphenbutazone?",
+        "Definition of Oxyphenbutazone?",
+        "What is the meaning of Oxyphenbutazone?",
+        "Please explain Oxyphenbutazone?",
+        "What is meant by Oxyphenbutazone?"
+      ],
+      "responses": [
+        "Oxyphenbutazone is a nonsteroidal anti-inflammatory drug (NSAID). The drug is a metabolite of phenylbutazone. Oxyphenbutazone was withdrawn from the market worldwide in the mid-1980s due to bone marrow suppression and the risk of Stevens-Johnson syndrome."
+      ]
+    },
+    {
+      "tag": "definition_oxymorphone",
+      "patterns": [
+        "What is Oxymorphone?",
+        "Definition of Oxymorphone?",
+        "What is the meaning of Oxymorphone?",
+        "Please explain Oxymorphone?",
+        "What is meant by Oxymorphone?"
+      ],
+      "responses": [
+        "Oxymorphone is a semi-synthetic opioid derivative of morphine. It is a potent analgesic. Opioid analgesics exert their primary pharmacologic effects on the central nervous system and the gastrointestinal tract."
+      ]
+    },    
+    {
+      "tag": "definition_oxypurinol",
+      "patterns": [
+        "What is Oxypurinol?",
+        "Definition of Oxypurinol?",
+        "What is the meaning of Oxypurinol?",
+        "Please explain Oxypurinol?",
+        "What is meant by Oxypurinol?"
+      ],
+      "responses": [
+        "Oxypurinol is an inhibitor of the enzyme xanthine oxidase, blocking the conversion of oxypurines hypoxanthine and xanthine into uric acid. Increased oxypurin concentration and inhibition of xanthine oxidase by oxypurin through negative feedback result in decreased uric acid concentration in the blood and urine."
+      ]
+    },
+    {
+      "tag": "definition_oxytetracycline",
+      "patterns": [
+        "What is Oxytetracycline?",
+        "Definition of Oxytetracycline?",
+        "What is the meaning of Oxytetracycline?",
+        "Please explain Oxytetracycline?",
+        "What is meant by Oxytetracycline?"
+      ],
+      "responses": [
+        "Oxytetracycline is an antibiotic medication used to treat bacterial infections on the skin and eyes. It can also be used to prevent infection in open wounds, as well as to treat acne and rosacea. Oxytetracycline is available in the form of skin ointment and eye ointment."
+      ]
+    },
+    {
+      "tag": "definition_papaverine",
+      "patterns": [
+        "What is Papaverine?",
+        "Definition of Papaverine?",
+        "What is the meaning of Papaverine?",
+        "Please explain Papaverine?",
+        "What is meant by Papaverine?"
+      ],
+      "responses": [
+        "Papaverine is a medication used to widen blood vessels, allowing for smoother blood flow and reduced blood pressure. Besides acting on blood vessels, it can also work on smooth muscles in specific organs such as the stomach, urinary tract, or bile ducts."
+      ]
+    },
+    {
+      "tag": "definition_pentazocine",
+      "patterns": [
+        "What is Pentazocine?",
+        "Definition of Pentazocine?",
+        "What is the meaning of Pentazocine?",
+        "Please explain Pentazocine?",
+        "What is meant by Pentazocine?"
+      ],
+      "responses": [
+        "Pentazocine is a medication used to relieve moderate to severe pain. It is also used as part of anesthesia for surgery. Pentazocine belongs to the class of opioid pain medications sometimes also referred to as narcotics."
+      ]
+    },
+    {
+      "tag": "definition_prilocaine",
+      "patterns": [
+        "What is Prilocaine?",
+        "Definition of Prilocaine?",
+        "What is the meaning of Prilocaine?",
+        "Please explain Prilocaine?",
+        "What is meant by Prilocaine?"
+      ],
+      "responses": [
+        "Prilocaine is a local anesthetic that is similar to lidocaine and is often combined with it. Prilocaine is commonly used to reduce pain during various medical procedures, including certain dental treatments such as tooth extraction."
+      ]
+    },
+    {
+      "tag": "definition_procarbazine",
+      "patterns": [
+        "What is Procarbazine?",
+        "Definition of Procarbazine?",
+        "What is the meaning of Procarbazine?",
+        "Please explain Procarbazine?",
+        "What is meant by Procarbazine?"
+      ],
+      "responses": [
+        "Procarbazine is an antineoplastic agent in the class of alkylating agents and is used to treat various forms of cancer. Alkylating agents are so named because of their ability to add alkyl groups to many electronegative groups under conditions existing within cells."
+      ]
+    },    
+    {
+      "tag": "definition_promazine",
+      "patterns": [
+        "What is Promazine?",
+        "Definition of Promazine?",
+        "What is the meaning of Promazine?",
+        "Please explain Promazine?",
+        "What is meant by Promazine?"
+      ],
+      "responses": [
+        "Promazine is a phenothiazine used to treat schizophrenia. It is used as an adjunct for the short-term treatment of moderate to severe psychomotor agitation. It is also used to treat agitation or anxiety in the elderly."
+      ]
+    },
+    {
+      "tag": "definition_propranolol",
+      "patterns": [
+        "What is Propranolol?",
+        "Definition of Propranolol?",
+        "What is the meaning of Propranolol?",
+        "Please explain Propranolol?",
+        "What is meant by Propranolol?"
+      ],
+      "responses": [
+        "Propranolol is a medication used to treat various conditions related to the heart and blood vessels, such as arrhythmia, angina pectoris, hypertension, hypertrophic subaortic stenosis, or portal hypertension."
+      ]
+    },
+    {
+      "tag": "definition_pseudoephedrine",
+      "patterns": [
+        "What is Pseudoephedrine?",
+        "Definition of Pseudoephedrine?",
+        "What is the meaning of Pseudoephedrine?",
+        "Please explain Pseudoephedrine?",
+        "What is meant by Pseudoephedrine?"
+      ],
+      "responses": [
+        "Pseudoephedrine is a medication used to relieve symptoms of nasal congestion due to the common cold, flu, allergies, sinusitis, or bronchitis. It is available in the form of tablets, syrups, and drops."
+      ]
+    },
+    {
+      "tag": "definition_quinidine",
+      "patterns": [
+        "What is Quinidine?",
+        "Definition of Quinidine?",
+        "What is the meaning of Quinidine?",
+        "Please explain Quinidine?",
+        "What is meant by Quinidine?"
+      ],
+      "responses": [
+        "Quinidine is an antiarrhythmic drug used to treat various types of heart rhythm disturbances or arrhythmias, such as atrial fibrillation and atrial flutter. Quinidine belongs to the group of prescription-only medications."
+      ]
+    },
+    {
+      "tag": "definition_reserpine",
+      "patterns": [
+        "What is Reserpine?",
+        "Definition of Reserpine?",
+        "What is the meaning of Reserpine?",
+        "Please explain Reserpine?",
+        "What is meant by Reserpine?"
+      ],
+      "responses": [
+        "Reserpine is a medication used to lower blood pressure in patients with hypertension. It can also be used to manage severe agitation in psychosis, a condition where the individual has difficulty distinguishing reality from delusions."
+      ]
+    },
+    {
+      "tag": "definition_riboflavin",
+      "patterns": [
+        "What is Riboflavin?",
+        "Definition of Riboflavin?",
+        "What is the meaning of Riboflavin?",
+        "Please explain Riboflavin?",
+        "What is meant by Riboflavin?"
+      ],
+      "responses": [
+        "Riboflavin or vitamin B2 is a supplement to prevent and treat riboflavin deficiency. In the body, this vitamin plays an important role in maintaining the health of the eyes, nervous system, skin, digestive tract, and brain. Riboflavin also aids in the formation of red blood cells."
+      ]
+    },
+    {
+      "tag": "definition_rifampicin",
+      "patterns": [
+        "What is Rifampicin?",
+        "Definition of Rifampicin?",
+        "What is the meaning of Rifampicin?",
+        "Please explain Rifampicin?",
+        "What is meant by Rifampicin?"
+      ],
+      "responses": [
+        "Rifampicin or rifampin is an antibiotic medication used to treat and prevent certain diseases caused by bacterial infections, such as tuberculosis. For treatment, rifampicin usually needs to be combined with other antibiotics."
+      ]
+    },    
+    {
+      "tag": "definition_saccharin",
+      "patterns": [
+        "What is Saccharin?",
+        "Definition of Saccharin?",
+        "What is the meaning of Saccharin?",
+        "Please explain Saccharin?",
+        "What is meant by Saccharin?"
+      ],
+      "responses": [
+        "Saccharin is a type of artificial sweetener used as a sugar substitute. This sweetener is considered to have many advantages over regular sugar. However, its use still needs to be limited, as saccharin can also pose various risks when consumed excessively."
+      ]
+    },
+    {
+      "tag": "definition_secobarbital",
+      "patterns": [
+        "What is Secobarbital?",
+        "Definition of Secobarbital?",
+        "What is the meaning of Secobarbital?",
+        "Please explain Secobarbital?",
+        "What is meant by Secobarbital?"
+      ],
+      "responses": [
+        "Secobarbital is a sedative medication used to assist in the treatment of severe insomnia. This medication should not be used long-term. Additionally, it can also be used to reduce anxiety before surgical procedures."
+      ]
+    },
+    {
+      "tag": "definition_succinylsulfathiazole",
+      "patterns": [
+        "What is Succinylsulfathiazole?",
+        "Definition of Succinylsulfathiazole?",
+        "What is the meaning of Succinylsulfathiazole?",
+        "Please explain Succinylsulfathiazole?",
+        "What is meant by Succinylsulfathiazole?"
+      ],
+      "responses": [
+        "Succinylsulfathiazole is a short-acting sulfonamide with properties similar to sulfamethoxazole. It is now rarely used systemically due to its toxicity. Sulfathiazole is present in formulations for the topical treatment of vaginal infections and is also used in combination with other drugs in the treatment of skin infections."
+      ]
+    },
+    {
+      "tag": "definition_sulfaguanidine",
+      "patterns": [
+        "What is Sulfaguanidine?",
+        "Definition of Sulfaguanidine?",
+        "What is the meaning of Sulfaguanidine?",
+        "Please explain Sulfaguanidine?",
+        "What is meant by Sulfaguanidine?"
+      ],
+      "responses": [
+        "Sulfaguanidine is an antibiotic medication belonging to the sulfonamide group. It is known as the first drug of the sulfonamide group used to treat infections related to the intestines. This medication is also used in veterinary medicine and serves as an anti-infective agent."
+      ]
+    },
+    {
+      "tag": "definition_sulfamerazine",
+      "patterns": [
+        "What is Sulfamerazine?",
+        "Definition of Sulfamerazine?",
+        "What is the meaning of Sulfamerazine?",
+        "Please explain Sulfamerazine?",
+        "What is meant by Sulfamerazine?"
+      ],
+      "responses": [
+        "Sulfamerazine is an antibacterial agent used in the treatment of various bacterial infections, such as bronchitis, prostatitis, and urinary tract infections. It acts as a competitive inhibitor of the enzyme dihydropteroate synthetase (DHPS), an enzyme involved in folate synthesis in bacteria."
+      ]
+    },
+    {
+      "tag": "definition_sulfameter",
+      "patterns": [
+        "What is Sulfameter?",
+        "Definition of Sulfameter?",
+        "What is the meaning of Sulfameter?",
+        "Please explain Sulfameter?",
+        "What is meant by Sulfameter?"
+      ],
+      "responses": [
+        "Sulfameter is a long-acting sulfonamide antibacterial agent used to treat urinary tract infections and leprosy."
+      ]
+    },    
+    {
+      "tag": "definition_sulfamethizole",
+      "patterns": [
+        "What is Sulfamethizole?",
+        "Definition of Sulfamethizole?",
+        "What is the meaning of Sulfamethizole?",
+        "Please explain Sulfamethizole?",
+        "What is meant by Sulfamethizole?"
+      ],
+      "responses": [
+        "Sulfamethizole is a sulfonamide antibiotic used to treat various bacterial infections that are susceptible to it."
+      ]
+    },
+    {
+      "tag": "definition_sulfamethoxazole",
+      "patterns": [
+        "What is Sulfamethoxazole?",
+        "Definition of Sulfamethoxazole?",
+        "What is the meaning of Sulfamethoxazole?",
+        "Please explain Sulfamethoxazole?",
+        "What is meant by Sulfamethoxazole?"
+      ],
+      "responses": [
+        "Sulfamethoxazole is an antibiotic medication used to treat various diseases caused by bacterial infections. This medication is always combined with trimethoprim to enhance its effectiveness. The combination of these two antibiotics is known as cotrimoxazole."
+      ]
+    },
+    {
+      "tag": "definition_sulfanilamide",
+      "patterns": [
+        "What is Sulfanilamide?",
+        "Definition of Sulfanilamide?",
+        "What is the meaning of Sulfanilamide?",
+        "Please explain Sulfanilamide?",
+        "What is meant by Sulfanilamide?"
+      ],
+      "responses": [
+        "Sulfanilamide is a medication used to treat Candida fungus infections in the vulva and vagina (vulvovaginal candidiasis). Sulfanilamide works by stopping the growth of the fungus causing the infection."
+      ]
+    },
+    {
+      "tag": "definition_sulfapyridine",
+      "patterns": [
+        "What is Sulfapyridine?",
+        "Definition of Sulfapyridine?",
+        "What is the meaning of Sulfapyridine?",
+        "Please explain Sulfapyridine?",
+        "What is meant by Sulfapyridine?"
+      ],
+      "responses": [
+        "Sulfapyridine is a sulfonamide antibiotic used to treat dermatitis herpetiformis, benign mucosal membrane pemphigoid, and pyoderma gangrenosum."
+      ]
+    },
+    {
+      "tag": "definition_talbutal",
+      "patterns": [
+        "What is Talbutal?",
+        "Definition of Talbutal?",
+        "What is the meaning of Talbutal?",
+        "Please explain Talbutal?",
+        "What is meant by Talbutal?"
+      ],
+      "responses": [
+        "Talbutal is a short- to intermediate-acting barbiturate that is a non-selective central nervous system (CNS) depressant. Like other barbiturates, talbutal can produce all levels of CNS mood alteration from excitation to mild sedation, hypnosis, and deep coma."
+      ]
+    },
+    {
+      "tag": "definition_thenyldiamine",
+      "patterns": [
+        "What is Thenyldiamine?",
+        "Definition of Thenyldiamine?",
+        "What is the meaning of Thenyldiamine?",
+        "Please explain Thenyldiamine?",
+        "What is meant by Thenyldiamine?"
+      ],
+      "responses": [
+        "Thenyldiamine is an ingredient in products indicated for the treatment of rhinitis caused by the common cold."
+      ]
+    },
+    {
+      "tag": "definition_theobromine",
+      "patterns": [
+        "What is Theobromine?",
+        "Definition of Theobromine?",
+        "What is the meaning of Theobromine?",
+        "Please explain Theobromine?",
+        "What is meant by Theobromine?"
+      ],
+      "responses": [
+        "Theobromine is the main alkaloid found in Theobroma cacao and other plants used as a vasodilator, diuretic, and heart stimulant. Similar to caffeine, theobromine may be useful in overcoming fatigue and orthostatic hypotension."
+      ]
+    },    
+    {
+      "tag": "definition_theophylline",
+      "patterns": [
+        "What is Theophylline?",
+        "Definition of Theophylline?",
+        "What is the meaning of Theophylline?",
+        "Please explain Theophylline?",
+        "What is meant by Theophylline?"
+      ],
+      "responses": [
+        "Theophylline, also known as theophylline, is a medication used to alleviate symptoms of wheezing, shortness of breath, or coughing due to asthma and chronic obstructive pulmonary disease (COPD), including emphysema or chronic bronchitis. Theophylline can also reduce irritation in the airways. This medication should be taken with a doctor's prescription."
+      ]
+    },
+    {
+      "tag": "definition_tetracaine",
+      "patterns": [
+        "What is Tetracaine?",
+        "Definition of Tetracaine?",
+        "What is the meaning of Tetracaine?",
+        "Please explain Tetracaine?",
+        "What is meant by Tetracaine?"
+      ],
+      "responses": [
+        "Tetracaine, also known as amethocaine, is a medication used to numb sensations (numbness) during childbirth, surgery, or certain medical procedures. It works by blocking nerve signals in your body."
+      ]
+    },
+    {
+      "tag": "definition_thiopental",
+      "patterns": [
+        "What is Thiopental?",
+        "Definition of Thiopental?",
+        "What is the meaning of Thiopental?",
+        "Please explain Thiopental?",
+        "What is meant by Thiopental?"
+      ],
+      "responses": [
+        "Thiopental is a medication used to initiate the anesthesia process, lower pressure inside the brain due to injury or certain conditions, or manage status epilepticus. This medication will be administered in a hospital by a doctor or medical personnel under the supervision of a doctor."
+      ]
+    },
+    {
+      "tag": "definition_triethylamine",
+      "patterns": [
+        "What is Triethylamine?",
+        "Definition of Triethylamine?",
+        "What is the meaning of Triethylamine?",
+        "Please explain Triethylamine?",
+        "What is meant by Triethylamine?"
+      ],
+      "responses": [
+        "Triethylamine is a colorless, highly volatile liquid with a strong, fishy odor reminiscent of ammonia. Like diisopropylethylamine (Hünig's base), triethylamine is commonly used in organic synthesis, typically as a base."
+      ]
+    },
+    {
+      "tag": "definition_trimethobenzamide",
+      "patterns": [
+        "What is Trimethobenzamide?",
+        "Definition of Trimethobenzamide?",
+        "What is the meaning of Trimethobenzamide?",
+        "Please explain Trimethobenzamide?",
+        "What is meant by Trimethobenzamide?"
+      ],
+      "responses": [
+        "Trimethobenzamide is an antiemetic used to treat post-operative nausea and vomiting and nausea associated with gastroenteritis."
+      ]
+    },    
+    {
+      "tag": "definition_trimethoprim",
+      "patterns": [
+        "What is Trimethoprim?",
+        "Definition of Trimethoprim?",
+        "What is the meaning of Trimethoprim?",
+        "Please explain Trimethoprim?",
+        "What is meant by Trimethoprim?"
+      ],
+      "responses": [
+        "Trimethoprim is an antibiotic used to treat diseases caused by bacterial infections, such as urinary tract infections and middle ear infections (otitis media). To enhance its effectiveness, trimethoprim is usually combined with sulfamethoxazole."
+      ]
+    },
+    {
+      "tag": "definition_tripelennamine",
+      "patterns": [
+        "What is Tripelennamine?",
+        "Definition of Tripelennamine?",
+        "What is the meaning of Tripelennamine?",
+        "Please explain Tripelennamine?",
+        "What is meant by Tripelennamine?"
+      ],
+      "responses": [
+        "Tripelennamine is an H1 histamine antagonist used to treat hypersensitivity reactions, coughs, and colds. It provides effective temporary relief for sneezing, watery and itchy eyes, as well as colds due to fever and other upper respiratory allergies."
+      ]
+    },
+    {
+      "tag": "definition_tromethamine",
+      "patterns": [
+        "What is Tromethamine?",
+        "Definition of Tromethamine?",
+        "What is the meaning of Tromethamine?",
+        "Please explain Tromethamine?",
+        "What is meant by Tromethamine?"
+      ],
+      "responses": [
+        "Tromethamine is a proton acceptor used for the prevention and correction of metabolic acidosis associated with various clinical conditions, such as heart bypass surgery."
+      ]
+    },    
+    {
+      "tag": "definition_tuaminoheptane",
+      "patterns": [
+        "What is Tuaminoheptane?",
+        "Definition of Tuaminoheptane?",
+        "What is the meaning of Tuaminoheptane?",
+        "Please explain Tuaminoheptane?",
+        "What is meant by Tuaminoheptane?"
+      ],
+      "responses": [
+        "Tuaminoheptane is a sympathomimetic agent and vasoconstrictor that was previously used as a nasal decongestant. It has also been used as a stimulant."
+      ]
+    },
+    {
+      "tag": "definition_urea",
+      "patterns": [
+        "What is Urea?",
+        "Definition of Urea?",
+        "What is the meaning of Urea?",
+        "Please explain Urea?",
+        "What is meant by Urea?"
+      ],
+      "responses": [
+        "Urea is a keratolytic emollient used to treat hyperkeratotic lesions and moisturize the skin. Urea is beneficial for the treatment of hyperkeratosis conditions."
+      ]
+    },
+    {
+      "tag": "definition_vinbarbital",
+      "patterns": [
+        "What is Vinbarbital?",
+        "Definition of Vinbarbital?",
+        "What is the meaning of Vinbarbital?",
+        "Please explain Vinbarbital?",
+        "What is meant by Vinbarbital?"
+      ],
+      "responses": [
+        "Vinbarbital is a hypnotic drug that is a derivative of barbituric acid. It is also used for analgesia and anesthesia in obstetrics. It was developed by Sharp and Dohme in 1939."
+      ]
+    },
+    {
+      "tag": "definition_vincristine",
+      "patterns": [
+        "What is Vincristine?",
+        "Definition of Vincristine?",
+        "What is the meaning of Vincristine?",
+        "Please explain Vincristine?",
+        "What is meant by Vincristine?"
+      ],
+      "responses": [
+        "Vincristine is a chemotherapy drug used in the treatment of certain types of cancer. It is commonly combined with other chemotherapy drugs to treat blood cancers in adults and some types of cancer in children."
+      ]
+    },    
+    {
+      "tag": "definition_viomycin",
+      "patterns": [
+        "What is Viomycin?",
+        "Definition of Viomycin?",
+        "What is the meaning of Viomycin?",
+        "Please explain Viomycin?",
+        "What is meant by Viomycin?"
+      ],
+      "responses": [
+        "Viomycin is a tuberactinomycin antibiotic used to treat Mycobacterium tuberculosis until it was replaced by less toxic capreomycin. This drug binds to RNA on bacterial ribosomes and inhibits protein synthesis."
+      ]
+    },
+    {
+      "tag": "definition_warfarin",
+      "patterns": [
+        "What is Warfarin?",
+        "Definition of Warfarin?",
+        "What is the meaning of Warfarin?",
+        "Please explain Warfarin?",
+        "What is meant by Warfarin?"
+      ],
+      "responses": [
+        "Warfarin is used to prevent or treat blood clots that can cause blockages in blood vessels. This drug should be taken regularly and under the supervision of a doctor."
+      ]
+    },
+    {
+      "tag": "definition_ethosuximide",
+      "patterns": [
+        "What is Ethosuximide?",
+        "Definition of Ethosuximide?",
+        "What is the meaning of Ethosuximide?",
+        "Please explain Ethosuximide?",
+        "What is meant by Ethosuximide?"
+      ],
+      "responses": [
+        "Ethosuximide is an anticonvulsant used to treat absence seizures. It is very effective in the treatment of absence seizures not accompanied by other types of seizures."
+      ]
+    },
+    {
+      "tag": "definition_glycine",
+      "patterns": [
+        "What is Glycine?",
+        "Definition of Glycine?",
+        "What is the meaning of Glycine?",
+        "Please explain Glycine?",
+        "What is meant by Glycine?"
+      ],
+      "responses": [
+        "Glycine is an amino acid or protein building block. Essentially, the body can produce glycine naturally, but it can also be obtained from foods around us such as meat, fish, dairy products, and legumes."
+      ]
+    },    
+    {
+      "tag": "definition_hexetidine",
+      "patterns": [
+        "What is Hexetidine?",
+        "Definition of Hexetidine?",
+        "What is the meaning of Hexetidine?",
+        "Please explain Hexetidine?",
+        "What is meant by Hexetidine?"
+      ],
+      "responses": [
+        "Hexetidine is a type of antiseptic medication. It contains antiviral and antibacterial properties to kill germs in the mouth such as candidiasis, mouth ulcers, and poor oral hygiene."
+      ]
+    },
+    {
+      "tag": "definition_methacycline",
+      "patterns": [
+        "What is Methacycline?",
+        "Definition of Methacycline?",
+        "What is the meaning of Methacycline?",
+        "Please explain Methacycline?",
+        "What is meant by Methacycline?"
+      ],
+      "responses": [
+        "Methacycline (Metacycline) is a tetracycline antibiotic. Similar to other tetracyclines, it has a broad spectrum of antimicrobial activity. It is active against most Gram-positive and Gram-negative bacteria and against agents causing ornithosis, psittacosis, trachoma, and some Protozoa."
+      ]
+    },
+    {
+      "tag": "definition_sulfadiazine",
+      "patterns": [
+        "What is Sulfadiazine?",
+        "Definition of Sulfadiazine?",
+        "What is the meaning of Sulfadiazine?",
+        "Please explain Sulfadiazine?",
+        "What is meant by Sulfadiazine?"
+      ],
+      "responses": [
+        "Sulfadiazine is a medication used to treat diseases caused by bacterial infections, such as urinary tract infections, ear infections, or brain infections. Additionally, it can also be used in the treatment of toxoplasmosis or the prevention of rheumatic fever."
+      ]
+    }    
+  ]
+}
