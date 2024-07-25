@@ -54,7 +54,8 @@ def chatbot():
     y = lbl_enc.fit_transform(df_chatbot['tag'])
 
     # Memuat model yang telah dilatih sebelumnya
-    model_path = 'model/my_model_english.keras'  # Perbarui dengan path yang benar
+    model_path = 'model/my_model_english.h5'  # Perbarui dengan path yang benar
+    # Memuat model
     try:
         loaded_model = load_model(model_path)
         st.write("Model loaded successfully")
