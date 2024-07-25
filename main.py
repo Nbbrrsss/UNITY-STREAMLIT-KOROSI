@@ -45,6 +45,9 @@ with st.sidebar:
 
 st.image("Group 10.png", width=350)
 if menuweb == "Home":
+    import tensorflow as tf
+    st.write(f"TensorFlow version: {tf.__version__}")
+
     st.title("Corrosion Inhibitor Drugs Compounds")
     st.markdown("Corrosion inhibitor compounds are substances or chemical compounds that are added to a potentially corrosive environment to prevent or reduce the rate of corrosion of metals or other materials. Corrosion inhibitors aim to protect metal surfaces from oxidation or other chemical reactions that can reduce their strength or shorten their service life.")
 
