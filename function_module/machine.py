@@ -167,20 +167,20 @@ def base_machine_learning():
 
             with col8:
                 molecular_weight = st.number_input(
-                    "**Input Molecular Weight (g/mol)**   *example : 199.9*", value=0.0)
-                pKa = st.number_input("**Input pKa**   *example : 15.0*", value=0.0)
-                log_P = st.number_input("**Input Log P**   *example : -0.09* ", value=0.0)
-                log_S = st.number_input("**Input Log S**   *example : -0.97*", value=0.0)
+                    "**Input Molecular Weight (g/mol)**   *example : 199.9*", value=199.9)
+                pKa = st.number_input("**Input pKa**   *example : 15.0*", value=15.0)
+                log_P = st.number_input("**Input Log P**   *example : -0.09* ", value=-0.09)
+                log_S = st.number_input("**Input Log S**   *example : -0.97*", value=-0.97)
                 polar_surface_area = st.number_input(
-                    "**Input Polar Surface Area (Å2)**   *example : 59.9*", value=0.0)
+                    "**Input Polar Surface Area (Å2)**   *example : 59.9*", value=59.9)
             with col9:
                 polarizability = st.number_input(
-                    "**Input Polarizability (Å3)**   *example : 18.9*", value=0.0)
-                HOMO = st.number_input("**Input HOMO (eV)**   *example : -5.9*", value=0.0)
-                LUMO = st.number_input("**Input LUMO (eV)**   *example : -1.9*", value=0.0)
+                    "**Input Polarizability (Å3)**   *example : 18.9*", value=18.9)
+                HOMO = st.number_input("**Input HOMO (eV)**   *example : -5.9*", value=-5.9)
+                LUMO = st.number_input("**Input LUMO (eV)**   *example : -1.9*", value=-1.9)
                 electronegativity = st.number_input(
-                    "**Input Electronegativity (eV)**   *example : 4.9*", value=0.0)
-                delta_N_Fe = st.number_input("**Input ΔN_Fe**   *example : 0.89*", value=0.0)
+                    "**Input Electronegativity (eV)**   *example : 4.9*", value=4.9)
+                delta_N_Fe = st.number_input("**Input ΔN_Fe**   *example : 0.89*", value=0.89)
 
             with col8:
                 y_new_pred = ""
