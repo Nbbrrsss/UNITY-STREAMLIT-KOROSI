@@ -126,17 +126,33 @@ def base_machine_learning():
 
         ## kfold cv
         if float_split >= 3 :
-            model.fit(x_normalisasi, y)
-
+            x_normalisasi = pd.DataFrame(x_normalisasi, columns=X.columns)
             kfold = KFold(n_splits=int(float_split), shuffle=True, random_state=42)
 
-            # Define scoring metrics
-            scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
+            # list for evaluations score each fold
+            r2_scores = []
+            rmse_scores = []
+            mae_scores = []
 
-            # Lakukan validasi
-            r2_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['r2'])
-            rmse_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['rmse'])
-            mae_scores = cross_val_score(model, x_normalisasi, y, cv=kfold, scoring=scoring['mae'])
+            for train_index, test_index in kfold.split(X):
+                X_train, X_test = x_normalisasi.iloc[train_index], x_normalisasi.iloc[test_index]
+                y_train, y_test = y.iloc[train_index], y.iloc[test_index]
+
+                model.fit(X_train, y_train)
+
+                # Define scoring metrics
+                scoring = {'r2': make_scorer(r2_score), 'mae': make_scorer(mean_absolute_error), 'rmse': make_scorer(mean_squared_error, squared=False)}
+
+                predicted_y = model.predict(X_train)
+
+                r2_scores_fold = r2_score(y_train, predicted_y)
+                rmse_scores_fold = mean_squared_error(y_train, predicted_y, squared=False)
+                mae_scores_fold = mean_absolute_error(y_train, predicted_y)
+
+                #append evaluation score
+                r2_scores.append(r2_scores_fold)
+                rmse_scores.append(rmse_scores_fold)
+                mae_scores.append(mae_scores_fold)
 
             rmse = np.mean(rmse_scores)
             r2 = np.mean(r2_scores)
